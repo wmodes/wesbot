@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  background-color: #343541;
+  color: #D9D9E3;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  flex-grow: 1; /* Allow #chat-wrapper to grow and take up available space */
+}
+
+body, #content {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+#content {
+  display: flex;
+  flex-direction: row;
+}
+
+#sidebar {
+  width: 180px;
+  /* Customize the sidebar's background color */
+  background-color: #202123;
+  /* Customize the text color inside the sidebar */
+  color: #fff;
+  /* Add some padding for content within the sidebar */
+  padding: 20px;
+  /* Stack the elements vertically within the sidebar */
+  display: flex;
+  flex-direction: column;
+}
+
+#main-panel {
+  /* Allow #main-panel to take up the remaining space */
+  flex: 1;
+  /* Customize the background color of the main panel */
+  background-color: #343541;
+  /* Customize the text color inside the main panel */
+  color: #fff;
+  /* Use flexbox to align the footer to the bottom */
+  display: flex;
+  flex-direction: column;
+  /* Ensure #chat-wrapper takes up the vertical space above the footer */
+  justify-content: space-between;
+  height: calc(100vh - 20px);
+  padding: 10px;
+}
+
+#sidebar h1.site-title {
+  /* Add some spacing below the site title in the sidebar */
+  margin-bottom: 20px;
+}
+
+#footer {
+  /* Set the footer to align itself at the flex-end (bottom) of the container */
+  align-self: flex-end;
+  width: 100%; /* Fill the container left to right */
+  /* padding: 1rem; */
+  background-color: #353640; /* Customize the footer's background color */
+}
+
+/*
+ * input
+ */
+
+#user-input-wrapper {
+  width: 60%;
+  align-items: center;
+  /* width: 95%; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 10px 20px 10px 20px;
+  /* background-color: #353640; */
+  background-color: #434654;
+  border-radius: 10px;
+  position: relative;
+  margin: 0 auto;
+}
+
+#user-input {
+  max-height: 200px;
+  height: 56px;
+  overflow-y: hidden;
+  width: 100%;
+  margin: 0;
+  background-color: transparent;
+  color: #ECECF1;
+  padding: 0;
+  border: 0; /* Remove the border */
+  resize: none; /* Disable resizing */
+} 
+
+#user-input:focus {
+  outline: none;
+}
+
+#user-input::placeholder {
+  color: #999;
+}
+
+#submit-button {
+  color: #ECECF1;
+  background-color: transparent;
+  border: 0;
+}
+
+#submit-button svg {
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  fill: currentColor;
+}
+
+/*
+ * chat
+ */
+
+/* This is the scrollable area that contains the chat messages */
+#chat-wrapper {
+  /* Add vertical scroll when content exceeds the maximum height */
+  overflow-y: auto; 
+  text-align: center;
+}
+
+#chat {
+  width: 50%;
+  min-width: 500px;
+  height: auto;
+  padding: .5rem;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  overflow: hidden;
+  /* Center the chat container horizontally within its parent */
+  margin: 0 auto; 
+  /* Ensure it's a block-level element */
+  display: block; 
+  /* Reset text alignment for chat content */
+  text-align: left; 
+}
+
+.user-input, .chat-response {
+  padding: 20px;
+}
+
+.user-input {
+  background-color: #343541;
+  color: #ECECF1;
+}
+
+.chat-response {
+  background-color: #434654;
+  color: #D1D5DA;
+}
+
+/*
+ * sidebar
+ */
+
+#sidebar {
+  text-align: center; /* Center the content horizontally */
+}
+
+h1.site-title {
+  font-family: 'Roboto', sans-serif; /* Apply the Roboto Thin font */
+  font-weight: 100;
+  font-size: 45px;
+  margin-top: 0;
+  margin-bottom: 10px; /* Add spacing below the site title */
+}
+
+#logo {
+  width: 150px; /* Set the logo's width to 300px */
+  margin: 0 auto; /* Center the logo horizontally */
+}
+
+#logo img {
+  max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+  height: auto; /* Maintain the image's aspect ratio */
+}
+
+#sidebar .description {
+  text-align: left;
+  font-size: 80%;
+  line-height: 1.5;
+  color: #D1D5D9;
+}
+
+#new-chat-button {
+  transition: all .15s cubic-bezier(.4,0,.2,1);
+  font-size: .875rem;
+  line-height: 1.25rem;
+  padding: 0.25rem 0.75rem;
+  background-color: transparent;
+  border: 1px solid #D1D5D9;
+  border-radius: 0.375rem;
+  align-items: center;
+  cursor: pointer;
+  flex-grow: 1;
+  min-height: 35px;
+  color: #D1D5D9;
+}
+
+#new-chat-button:hover {
+  background-color: #D1D5D9;
+  color: #343541;
+}
+
+.code {
+  background-color: #000;
+  border: 0;
+  color: #ECECF1
+  padding: 10px;
+  white-space: pre-wrap; /* Preserve spaces and line breaks */
+  font-family: monospace; /* Use a monospaced font for code */
+  font-size: 14px; /* Adjust the font size as needed */
+}
+
+.code-type {
+  background-color: #343541;
+  color: #ECECF1;
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 80%;
+}
+
+.code .content {
+  padding: 20px; /* Add some padding */
+}
