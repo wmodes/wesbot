@@ -8,9 +8,11 @@ def configure_openai():
     # Set the OpenAI organization and API key
     openai.organization = "org-6Sx3QSqdmkskgXbQf8AsccbW"
     openai.api_key = os.getenv("OPENAI_API_KEY")
+    # list the models available to you
     openai.Model.list()
 
 def create_app():
+    configure_openai() 
     app = Flask(__name__)
     chatbot = Chatbot()  # Create an instance of the Chatbot class
 
@@ -34,6 +36,5 @@ def create_app():
     return app
 
 if __name__ == '__main__':
-    configure_openai()  # Call the configuration function
     app = create_app()
     app.run(debug=True)
