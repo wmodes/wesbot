@@ -1,4 +1,4 @@
-from wesbot import app as application
+#from wesbot import app as application
 
 def application(env, start_response):
     start_response('200 OK', [('Content-Type','text/html')])

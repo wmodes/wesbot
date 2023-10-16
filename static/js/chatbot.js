@@ -2,32 +2,14 @@
 //Global variable to store the ongoing chat
 var chat = [];
 
-// Check if the browser supports local storage
-if (typeof(Storage) !== "undefined") {
-  // Retrieve the chat from local storage
-  chat = getChat();
-  
-  if (chat.length === 0) {
-    // If the stored chat is empty, initiate the chat
-    $(document).ready(function() {
-      initiateChat("");
-    });
-  } else {
-    // If the stored chat is not empty, display the chat
-    for (var i = 0; i < chat.length; i++)  {
-      if (chat[i].role === "user") {
-        displayUserInput(chat[i].content);
-      } else if (chat[i].role === "assistant") {
-        displayResponse(chat[i].content);
-      }
-    }
-  }
-} else {
-  // Browser does not support local storage, initiate chat normally
-  $(document).ready(function() {
-    initiateChat("");
-  });
-}
+// Initialize a variable to keep track of the token count
+let tokenCount = 0;
+const systemTokenCount = 702;
+const systemCharacterCount = 4523;
+
+//
+// USER INPUT
+//
 
 // Handle submission when the "Submit" button is clicked
 $("#submit-button").on("click", function(e) {
@@ -43,6 +25,10 @@ $("#user-input").on("keypress", function(e) {
   }
 });
 
+//
+// HANDLE INPUT AND RESPONSE
+//
+
 function initiateChat(userInput) {
   sendRequest(userInput);
 }
@@ -51,20 +37,13 @@ function handleUserInput() {
   var userInput = $("#user-input").val();
   if (userInput) {
     displayUserInput(userInput)
+    addMessageToChat(userInput);
     sendRequest(userInput);
     $("#user-input").val(''); // Clear the input field
   }
 }
 
 function sendRequest(userInput) {
-  if (userInput) {
-    // Replace line breaks with <br> tags
-    // userInput = userInput.replace(/\n/g, '<br>');
-
-    // Append the user's input to the chat
-    chat.push({ role: "user", content: userInput });
-  }
-
   // display entire chat to console:
   console.log("Full chat:", chat);
 
@@ -99,19 +78,42 @@ function handleResults(response, userInput) {
   displayResponse(response); // Display the results
 }
 
+//
+// LOCAL STORAGE
+//
+
+// Check if the browser supports local storage
+if (typeof(Storage) !== "undefined") {
+  // Retrieve the chat from local storage
+  chat = getChat();
+  
+  if (chat.length === 0) {
+    // If the stored chat is empty, initiate the chat
+    $(document).ready(function() {
+      initiateChat("");
+    });
+  } else {
+    // If the stored chat is not empty, display the chat
+    displayEntireChat();
+  }
+} else {
+  // Browser does not support local storage, initiate chat normally
+  $(document).ready(function() {
+    initiateChat("");
+  });
+}
+
 // Function to store the chat in local storage
 function storeChat() {
   // Calculate the size of the chat in bytes (an estimate)
   var chatSize = JSON.stringify(chat).length;
 
   // Check if the chat size exceeds the 5MB limit
-  if (chatSize > 5 * 1024 * 1024) {
-    // Calculate the maximum size needed to store the last system message
-    var maxStorageSize = JSON.stringify([{ role: "system", content: config.system_content }]).length;
+  if (chatSize + systemCharacterCount > 5 * 1024 * 1024) {
 
     // Determine how many elements to remove from the front of the array
     var elementsToRemove = 0;
-    while (chatSize + maxStorageSize > 5 * 1024 * 1024) {
+    while (chatSize + systemCharacterCount > 5 * 1024 * 1024) {
       chatSize -= JSON.stringify(chat[elementsToRemove]).length;
       elementsToRemove++;
     }
@@ -135,6 +137,20 @@ function getChat() {
   }
 
   return chat;
+}
+
+//
+// DISPLAY CHAT
+//
+
+function displayEntireChat() {
+  for (var i = 0; i < chat.length; i++)  {
+    if (chat[i].role === "user") {
+      displayUserInput(chat[i].content);
+    } else if (chat[i].role === "assistant") {
+      displayResponse(chat[i].content);
+    }
+  }
 }
 
 function displayUserInput(userInput) {
@@ -168,6 +184,10 @@ function clearChat() {
   $("#chat").empty(); // Remove all chat elements
 }
 
+//
+// RENDER OUTPUT
+//
+
 // Render output for safety and appearance
 function renderOutput(text) {
   text = text.replace(/</g, '&lt;');
@@ -186,4 +206,35 @@ function renderOutput(text) {
 
   text = text.replace(/\n/g, '<br>');
   return text;
+}
+
+//
+// TOKENIZATION
+//
+
+// Function to calculate token count
+function calculateTokenCount(message) {
+  // This is a simplified way to count tokens and may not be as accurate as OpenAI's official libraries
+  return message.content.split(/\s+/).length;
+}
+
+// Function to add a new message to the conversation and update token count
+function addMessageToChat(userInput) {
+  const newMessage = { role: "user", content: userInput };
+  //TODO: Implement the logic to add a new message to the conversation and update token count
+  const newMessageTokens = calculateTokenCount(newMessage);
+
+  // Check if adding the new message will exceed the token limit
+  while (tokenCount + newMessageTokens > 4096) {
+    // Remove the oldest message from the chat
+    const oldestMessage = chat.shift();
+    const oldestMessageTokens = calculateTokenCount(oldestMessage);
+
+    // Update the token count
+    tokenCount -= oldestMessageTokens;
+  }
+
+  chat.push(newMessage);
+  tokenCount += newMessageTokens;
+  console.log("Token count:", tokenCount);
 }

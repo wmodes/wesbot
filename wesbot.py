@@ -16,14 +16,8 @@ def create_app():
 
     @app.route('/')
     def chatbot_interaction():
-        user_input = request.args.get('user_input')
-
-        if user_input:
-            response = chatbot.get_response(user_input)
-        else:
-            response = config.starter_content
-
-        return render_template('chat.html', user_input=user_input, response=response)
+        data = {"system_content" : config.system_content}
+        return render_template('chat.html', data=data)
 
     @app.route('/api/chatbot', methods=['POST'])  # Create a new route for handling POST requests
     def chatbot_api():

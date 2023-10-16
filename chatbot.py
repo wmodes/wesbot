@@ -13,7 +13,7 @@ class Chatbot:
         openai.organization = "org-6Sx3QSqdmkskgXbQf8AsccbW"
 
         # Set the logging level
-        logging.basicConfig(level=logging.INFO)
+        logging.basicConfig(level=logging.DEBUG)
 
     def get_response(self, messages):
         """

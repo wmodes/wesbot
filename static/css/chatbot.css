@@ -57,7 +57,7 @@ body, #content {
 
 #sidebar h1.site-title {
   /* Add some spacing below the site title in the sidebar */
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 
 #footer {
