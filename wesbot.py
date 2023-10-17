@@ -4,15 +4,14 @@ from flask import Flask, request, render_template, jsonify  # Import 'jsonify' f
 from chatbot import Chatbot
 import config
 
-def configure_openai():
+
+def create_app():    
     # Set the OpenAI organization and API key
     openai.organization = "org-6Sx3QSqdmkskgXbQf8AsccbW"
     openai.api_key = os.getenv("OPENAI_API_KEY")
     # list the models available to you
     openai.Model.list()
 
-def create_app():
-    configure_openai() 
     app = Flask(__name__)
     chatbot = Chatbot()  # Create an instance of the Chatbot class
 
