@@ -47,3 +47,4 @@ __pycache__/
 # Project specific
 /.venv
 /.env
+#secrets.py

@@ -1,18 +1,15 @@
 import openai
-import os
 import logging
 import json
 import config
-from dotenv import load_dotenv
+import secrets
 
 class Chatbot:
 
     def __init__(self):
-        
-        load_dotenv()
 
         # Set your OpenAI API key and organization (if applicable)
-        openai.api_key = os.getenv("OPENAI_API_KEY")
+        openai.api_key = secrets.OPENAI_API_KEY
         openai.organization = "org-6Sx3QSqdmkskgXbQf8AsccbW"
         openai.Model.list()
 
