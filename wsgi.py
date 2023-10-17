@@ -1,6 +1,8 @@
-from wesbot import create_app
+# from wesbot import app
 
-application = create_app()
+# application = app()
 
-if __name__ == "__main__":
-    application.run()
+from wesbot import app
+
+def application():
+  return app

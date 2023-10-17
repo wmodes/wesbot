@@ -5,22 +5,22 @@ from chatbot import Chatbot
 import config
 
 
-def create_app():    
+def app():    
     # Set the OpenAI organization and API key
     openai.organization = "org-6Sx3QSqdmkskgXbQf8AsccbW"
     openai.api_key = os.getenv("OPENAI_API_KEY")
     # list the models available to you
     openai.Model.list()
 
-    app = Flask(__name__)
+    flask_app = Flask(__name__)
     chatbot = Chatbot()  # Create an instance of the Chatbot class
 
-    @app.route('/')
+    @flask_app.route('/')
     def chatbot_interaction():
         data = {"system_content" : config.system_content}
         return render_template('chat.html', data=data)
 
-    @app.route('/api/chatbot', methods=['POST'])  # Create a new route for handling POST requests
+    @flask_app.route('/api/chatbot', methods=['POST'])  # Create a new route for handling POST requests
     def chatbot_api():
         # Get the JSON data from the POST request's body
         data = request.get_json()
@@ -32,8 +32,8 @@ def create_app():
 
         return jsonify(response=response)  # Return the response as JSON
 
-    return app
+    return flask_app
 
 if __name__ == '__main__':
-    app = create_app()
+    app = app()
     app.run(debug=True)
