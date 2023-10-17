@@ -1,11 +1,9 @@
-from wesbot import app
+# wsgi.py
 
-application = app()
+from app import app
 
-# from wesbot import app
+def application(environ, start_response):
+    """WSGI application."""
 
-# def application():
-#   return app
+    return app(environ, start_response)
 
-# if __name__ == "__main__":
-#     application.run()
