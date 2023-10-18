@@ -43,6 +43,6 @@ def routes(chatbot):
         print("response:", response)
 
         # Return the response as JSON
-        return flask.jsonify(response=response)
+        return flask.jsonify(response)
 
     return routes_blueprint

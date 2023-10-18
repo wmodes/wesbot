@@ -92,6 +92,7 @@ function sendRequest(userInput) {
 
 function handleResults(response) {
   // extract the assistant response from the response object
+  console.log("handleResults Response:", response)
   reply = response['reply'];
   console.log("Reply:", reply);
   // add the reply to the chat

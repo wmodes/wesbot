@@ -61,11 +61,19 @@ class Chatbot:
             tokens = response['usage']['total_tokens']
 
             response = {
-                "reply": reply,
+                'reply': reply,
                 'tokens': tokens,
+                'status': 'success',
               }
             return response
 
         except openai.error.OpenAIError as e:
             print(e)
-            return "I'm sorry, I had an error generating a response."
+            reply = "I'm sorry, I had an error generating a response."
+
+            response = {
+                'reply': reply,
+                'tokens': -1,
+                'status': 'error',
+              }
+            return response
