@@ -1,7 +1,7 @@
 # WesBot
 
 ## Description
-WesBot is an AI-powered chatbot that brings your instructor, Wes, into a virtual realm where you can interact with him to get answers to your questions and guidance in the intricate world of new media, art, and game design. We've kidnapped your instructor, digitized their brain, and placed them in a sophisticated, multi-layered recurrent neural network to provide you with a unique learning experience.
+We've kidnapped the university educator and artist, Wes Modes, digitized their brain, and placed them in a sophisticated, multi-layered recurrent neural network to provide you with a unique learning experience. WesBot is an AI-powered chatbot that brings Wes into the virtual realm where you can interact with them to get answers to your questions and guidance in the intricate world of new media, art, and game design. 
 
 ## Technology
 - Python
@@ -84,6 +84,6 @@ ssh [your_login]@[your_server_domain] deploy default.git
 ssh [your_login]@[your_server_domain] clean default.git
 ```
 
-Wes, your AI-powered instructor, is ready to answer your questions and provide guidance in the world of new media, art, and game design.
+Your AI-powered instructor, is ready to answer your questions and provide guidance in the world of new media, art, and game design.
 
 Enjoy your learning journey with WesBot!
