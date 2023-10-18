@@ -37,6 +37,8 @@ body, #content {
   /* Stack the elements vertically within the sidebar */
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  /* height: 100%; */
 }
 
 #main-panel {
@@ -53,11 +55,6 @@ body, #content {
   justify-content: space-between;
   height: calc(100vh - 20px);
   padding: 10px;
-}
-
-#sidebar h1.site-title {
-  /* Add some spacing below the site title in the sidebar */
-  margin-bottom: 0;
 }
 
 #footer {
@@ -171,6 +168,11 @@ body, #content {
   text-align: center; /* Center the content horizontally */
 }
 
+#sidebar h1.site-title {
+  /* Add some spacing below the site title in the sidebar */
+  margin-bottom: 0;
+}
+
 h1.site-title {
   font-family: 'Roboto', sans-serif; /* Apply the Roboto Thin font */
   font-weight: 100;
@@ -215,6 +217,16 @@ h1.site-title {
   background-color: #D1D5D9;
   color: #343541;
 }
+
+#disclaimer {
+  font-size: 70%;
+  margin-top: auto; /* This pushes the disclaimer to the bottom */
+  color: #D1D5D9;
+}
+
+/* 
+ * Code block
+ */
 
 .code {
   background-color: #000;
