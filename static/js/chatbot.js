@@ -15,16 +15,17 @@
    Date: 2023
 */
 
+// Configurable variables
+const tokenMax = 4000;
+const tokenPaddingFactor = 0.2;
+const tokenEstTHumbRuleFactor = 2.5
 
 //Global variable to store the ongoing chat
 var chat = [];
 // Global variable to store the total number of chat tokens
-const totalChatTokenCount = 0;
+let totalChatTokenCount = 0;
 // const systemTokenCount = estimateTokenCount(systemContent);
 const systemCharacterCount = systemContent.replace(/\s/g, '').length;
-
-// console.log(`System Content Token Count: ${systemTokenCount}`);
-console.log(`System Content Character Count: ${systemCharacterCount}`);
 
 //
 // USER INPUT
@@ -64,7 +65,7 @@ function handleUserInput() {
 
 function sendRequest(userInput) {
   // display entire chat to console:
-  console.log("Full chat:", chat);
+  // console.log("Full chat:", chat);
 
   // Create an object with the chat
   var requestData = {
@@ -85,29 +86,39 @@ function sendRequest(userInput) {
       console.error("Ajax request failed - " + status + ": " + error);
       
       // Provide a generic error message to handleResults
-      handleResults("Chatbot: An error occurred. Please try again later.");
+      handleResults({
+        reply: "I'm sorry, I had an error generating a response. Please try again later",
+        tokens: -1,
+        status: "error",
+      });
     }
   });
 }
 
 function handleResults(response) {
+  if (response['status'] === "error") {
+    // check if the response is an error
+    // if so, display the error message
+    displayResponse(response['reply']);
+    return;
+  }
+  // console.log("handleResults Response:", response)
   // extract the assistant response from the response object
-  console.log("handleResults Response:", response)
   reply = response['reply'];
-  console.log("Reply:", reply);
+  // console.log("Reply:", reply);
   // add the reply to the chat
   chat.push({ role: "assistant", content: reply });
 
   // extract the token count from the response object
   tokenCount = response['tokens'];
-  console.log("Token Count:", tokenCount);
+  // console.log("Token Count:", tokenCount);
   // record the token count
-  totalChatTokens = tokenCount;
+  totalChatTokenCount = tokenCount;
 
   // Store the chat
   storeChat(); 
   // Display the results
-  displayResponse(response); 
+  displayResponse(reply); 
 }
 
 //
@@ -118,6 +129,8 @@ function handleResults(response) {
 if (typeof(Storage) !== "undefined") {
   // Retrieve the chat from local storage
   chat = getChat();
+  // estimate the token count of the chat
+  totalChatTokenCount = estimateTokenCount(chat);
   
   if (chat.length === 0) {
     // If the stored chat is empty, initiate the chat
@@ -264,8 +277,8 @@ function estimateTokenCount(data) {
   // Flatten the data structure into a single string using JSON.stringify
   const flattenedText = JSON.stringify(data);
 
-  // Estimate tokens based on character count divided by 4
-  const estimatedTokens = Math.ceil(flattenedText.length / 4);
+  // Estimate tokens based on character count divided by tokenEstTHumbRuleFactor
+  const estimatedTokens = Math.ceil(flattenedText.length / tokenEstTHumbRuleFactor);
 
   return estimatedTokens;
 }
@@ -283,17 +296,18 @@ function addUserMsgToChat(userInput) {
   // temporary variable to store the est token count
   let estTotalTokenCount = totalChatTokenCount + estMsgTokenCount ;
 
-  // Check if the total token count exceeds the model's maximum context length (4096 tokens)
-  if (estTotalTokenCount > 4096) {
+  // Check if the total token count exceeds the model's maximum context length
+  // minus a padding factor padded to leave 20% extra capacity
+  if (estTotalTokenCount > tokenMax * (1 - tokenPaddingFactor)) {
     // Remove the oldest message(s) from the chat to bring it under the token limit
-    while (estTotalTokenCount > 4096) {
+    while (estTotalTokenCount > tokenMax * (1 - tokenPaddingFactor)) {
       const oldestMessage = chat.shift();
-      console.log("Trimming oldest message:", oldestMessage)
+      // console.log("Trimming oldest message:", oldestMessage)
       const estOldMsgTokenCount = estimateTokenCount(oldestMessage);
       estTotalTokenCount -= estOldMsgTokenCount;
     }
   }
 
-  console.log("Reported total token count:", totalChatTokenCount);  
-  console.log("Est new total token count:", estTotalTokenCount);
+  // console.log("Reported total token count:", totalChatTokenCount);  
+  // console.log("Est new total token count:", estTotalTokenCount);
 }

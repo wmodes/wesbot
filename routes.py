@@ -35,14 +35,19 @@ def routes(chatbot):
         # Extract the 'messages' field from the JSON data
         messages = data.get("messages")
 
-        print("messages:", messages)
+        # print("messages:", messages)
 
         # Generate a response to the messages
         response = chatbot.get_response(messages)
 
-        print("response:", response)
+        # Response is an object of the form: 
+        #   { reply: 'Hey there! How can I help you today?', 
+        #     tokens: 1978,
+        #     status: 'success' }
 
-        # Return the response as JSON
+        # print("response:", response)
+
+        # Pass on the response
         return flask.jsonify(response)
 
     return routes_blueprint
