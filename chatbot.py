@@ -1,6 +1,19 @@
+"""
+chatbot.py - A Python module for an OpenAI-powered chatbot.
+
+This module defines a Chatbot class that interacts with the OpenAI API to generate responses to conversations.
+
+Features:
+- Initializes with OpenAI API key and organization (if applicable).
+- Provides a method to get responses to conversations.
+- Handles exceptions and error messages gracefully.
+
+Author: Wes Modes
+Date: 2023
+"""
+
 import openai
 import logging
-import json
 import config
 import secrets
 
@@ -11,7 +24,7 @@ class Chatbot:
         # Set your OpenAI API key and organization (if applicable)
         openai.api_key = secrets.OPENAI_API_KEY
         openai.organization = "org-6Sx3QSqdmkskgXbQf8AsccbW"
-        openai.Model.list()
+        # openai.Model.list()
 
         # Set the logging level
         logging.basicConfig(level=logging.DEBUG)
@@ -38,19 +51,20 @@ class Chatbot:
         try:
             # Use the OpenAI API to generate a response
             response = openai.ChatCompletion.create(
-                model="gpt-3.5-turbo",
+                model=config.model,
                 messages=messages,
             )
 
-            # Pretty-print the JSON object
-            formatted_response = json.dumps(response, indent=4)
-            # Print the formatted JSON
-            # print("response:", formatted_response)
-
-            # Extract and return the generated response
+            # Extract the generated response
             reply = response['choices'][0]['message']['content']
-            # print("Reply:", reply)
-            return reply
+            # Extract number of tokens
+            tokens = response['usage']['total_tokens']
+
+            response = {
+                "reply": reply,
+                'tokens': tokens,
+              }
+            return response
 
         except openai.error.OpenAIError as e:
             print(e)

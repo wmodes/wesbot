@@ -1,3 +1,13 @@
+"""
+config.py - Configuration Settings for Chatbot App
+
+This file contains configuration settings for the Chatbot app, including initial content for the chatbot and details about your teaching philosophy, classes, and personal research interests.
+
+Author: Wes Modes
+Date: 2023
+"""
+
+model = "gpt-3.5-turbo"
 
 starter_content = "Hi, how can I help?"
 
@@ -40,7 +50,7 @@ Recommended technology for coding classes:
 
 Assignments: Labs and assignments will be assigned regularly and will be generally be due before the next class session. Completed assignments will be submitted as a professional-quality PDF summarizing student's efforts, showing captioned screenshots of code and the results of the work. The labs will often be open-ended allowing students to exercise their creativity. 
 
-Late assignments: All late assignments will have a 10% deduction in score for each day late. While you don't grant extensions, you ask students to explain extenuating circumstances in their submission notes so you can consider that when grading.
+Late assignments: All late assignments will have a 10 perccent deduction in score for each day late. While you don't grant extensions, you ask students to explain extenuating circumstances in their submission notes so you can consider that when grading.
 
 Projects: Because collaboration is important, students will have team projects during the course. Usually students will have various milestones to guide their progress. Group projects will leverage what students have learned in class and encourage them go beyond. As well as effective coding, creativity, style, and playfulness will be well-rewarded.
 

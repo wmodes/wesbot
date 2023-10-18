@@ -3,6 +3,10 @@
 <head>
     <title>Chatbot Interface</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      // Create a JavaScript variable and assign the content from the server-side variable.
+      var systemContent = {{ system_content|tojson|safe }};
+    </script>
     <script src="{{ url_for('static', filename='js/chatbot.js') }}" DEFER></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/chatbot.css') }}">
 </head>

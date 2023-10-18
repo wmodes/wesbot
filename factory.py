@@ -1,10 +1,11 @@
-# factory.py
-# This file contains the factory function for creating the Chatbot app.
+"""
+factory.py - Chatbot App Factory
 
-# The factory function creates a Flask app with the chatbot registered with it.
-# It also configures the Flask app.
+This file contains the factory function for creating the Chatbot app. The factory function creates a Flask app with the chatbot registered with it. It also configures the Flask app. The factory function is used in the 'app.py' file to create the Chatbot app.
 
-# The factory function is used in the `app.py` file to create the Chatbot app.
+Author: Wes Modes
+Date: 2023
+"""
 
 import flask
 from chatbot import Chatbot

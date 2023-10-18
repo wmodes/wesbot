@@ -1,8 +1,11 @@
-# app.py
-# This file is the entry point for the Chatbot app.
+"""
+app.py - Chatbot App Entry Point
 
-# It creates the Chatbot app using the factory function in the `factory.py` file.
-# It then starts the Flask app.
+This file is the entry point for the Chatbot app. It creates the Chatbot app using the factory function in the 'factory.py' file. It then starts the Flask app.
+
+Author: Wes Modes
+Date: 2023
+"""
 
 from factory import create_app
 

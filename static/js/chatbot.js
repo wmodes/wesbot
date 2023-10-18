@@ -1,11 +1,30 @@
+/*
+   chatbot.js - A JavaScript file for implementing a chatbot.
+
+   This file contains the code for handling user input, sending requests to a chatbot API, 
+   storing and displaying the chat, and other related functions.
+
+   Features:
+   - Handles user input from a form or Enter key press.
+   - Sends user input to a chatbot API for responses.
+   - Stores the chat conversation in local storage.
+   - Displays the chat history, including user inputs and chatbot responses.
+   - Handles token count and message management.
+
+   Author: Wes modes
+   Date: 2023
+*/
+
 
 //Global variable to store the ongoing chat
 var chat = [];
+// Global variable to store the total number of chat tokens
+const totalChatTokenCount = 0;
+// const systemTokenCount = estimateTokenCount(systemContent);
+const systemCharacterCount = systemContent.replace(/\s/g, '').length;
 
-// Initialize a variable to keep track of the token count
-let tokenCount = 0;
-const systemTokenCount = 702;
-const systemCharacterCount = 4523;
+// console.log(`System Content Token Count: ${systemTokenCount}`);
+console.log(`System Content Character Count: ${systemCharacterCount}`);
 
 //
 // USER INPUT
@@ -37,7 +56,7 @@ function handleUserInput() {
   var userInput = $("#user-input").val();
   if (userInput) {
     displayUserInput(userInput)
-    addMessageToChat(userInput);
+    addUserMsgToChat(userInput);
     sendRequest(userInput);
     $("#user-input").val(''); // Clear the input field
   }
@@ -58,8 +77,8 @@ function sendRequest(userInput) {
     url: "/api/chatbot",
     contentType: "application/json", // Set the content type to JSON
     data: JSON.stringify(requestData),
-    success: function(data) {
-      handleResults(data.response);
+    success: function(response) {
+      handleResults(response);
     },
     error: function(xhr, status, error) {
       // Log detailed error information to the console
@@ -71,11 +90,23 @@ function sendRequest(userInput) {
   });
 }
 
-function handleResults(response, userInput) {
-  chat.push({ role: "assistant", content: response });
+function handleResults(response) {
+  // extract the assistant response from the response object
+  reply = response['reply'];
+  console.log("Reply:", reply);
+  // add the reply to the chat
+  chat.push({ role: "assistant", content: reply });
 
-  storeChat(); // Store the chat
-  displayResponse(response); // Display the results
+  // extract the token count from the response object
+  tokenCount = response['tokens'];
+  console.log("Token Count:", tokenCount);
+  // record the token count
+  totalChatTokens = tokenCount;
+
+  // Store the chat
+  storeChat(); 
+  // Display the results
+  displayResponse(response); 
 }
 
 //
@@ -146,9 +177,14 @@ function getChat() {
 function displayEntireChat() {
   for (var i = 0; i < chat.length; i++)  {
     if (chat[i].role === "user") {
-      displayUserInput(chat[i].content);
+      // check if user input exists
+      if (chat[i].hasOwnProperty('content')) {
+        displayUserInput(chat[i].content);
+      }
     } else if (chat[i].role === "assistant") {
-      displayResponse(chat[i].content);
+      if (chat[i].hasOwnProperty('content')) {
+        displayResponse(chat[i].content);
+      } 
     }
   }
 }
@@ -212,29 +248,51 @@ function renderOutput(text) {
 // TOKENIZATION
 //
 
-// Function to calculate token count
-function calculateTokenCount(message) {
-  // This is a simplified way to count tokens and may not be as accurate as OpenAI's official libraries
-  return message.content.split(/\s+/).length;
+// Function to estimate token count
+// function estimateTokenCount(data) {
+//   // Flatten the data structure into a single string using JSON.stringify
+//   const flattenedText = JSON.stringify(data);
+
+//   // Estimate tokens in the flattened text
+//   return flattenedText.split(/\s+/).length;
+// }
+
+// A helpful rule of thumb is that one token generally corresponds to ~4 characters of text 
+// for common English text. This translates to roughly ¾ of a word (so 100 tokens ~= 75 words).
+function estimateTokenCount(data) {
+  // Flatten the data structure into a single string using JSON.stringify
+  const flattenedText = JSON.stringify(data);
+
+  // Estimate tokens based on character count divided by 4
+  const estimatedTokens = Math.ceil(flattenedText.length / 4);
+
+  return estimatedTokens;
 }
 
+
 // Function to add a new message to the conversation and update token count
-function addMessageToChat(userInput) {
+function addUserMsgToChat(userInput) {
   const newMessage = { role: "user", content: userInput };
-  //TODO: Implement the logic to add a new message to the conversation and update token count
-  const newMessageTokens = calculateTokenCount(newMessage);
+  // add new message to chat
+  chat.push(newMessage);
 
-  // Check if adding the new message will exceed the token limit
-  while (tokenCount + newMessageTokens > 4096) {
-    // Remove the oldest message from the chat
-    const oldestMessage = chat.shift();
-    const oldestMessageTokens = calculateTokenCount(oldestMessage);
+  // estimate new message token count
+  const estMsgTokenCount = estimateTokenCount(newMessage);
 
-    // Update the token count
-    tokenCount -= oldestMessageTokens;
+  // temporary variable to store the est token count
+  let estTotalTokenCount = totalChatTokenCount + estMsgTokenCount ;
+
+  // Check if the total token count exceeds the model's maximum context length (4096 tokens)
+  if (estTotalTokenCount > 4096) {
+    // Remove the oldest message(s) from the chat to bring it under the token limit
+    while (estTotalTokenCount > 4096) {
+      const oldestMessage = chat.shift();
+      console.log("Trimming oldest message:", oldestMessage)
+      const estOldMsgTokenCount = estimateTokenCount(oldestMessage);
+      estTotalTokenCount -= estOldMsgTokenCount;
+    }
   }
 
-  chat.push(newMessage);
-  tokenCount += newMessageTokens;
-  console.log("Token count:", tokenCount);
+  console.log("Reported total token count:", totalChatTokenCount);  
+  console.log("Est new total token count:", estTotalTokenCount);
 }
