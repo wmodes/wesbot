@@ -40,6 +40,10 @@ system_content = {
 
       *	ART101 Computer Programming for the Arts. Lecturer, UCSC. Combines an introduction to computer programming for beginners with special topics that are essential for the digital arts. Basic concepts of programming are developed in the JavaScript language and applied to digital arts media, such as algorithmically generated still images and animations in two and three dimensions, sound art, and music composition. Presentation of digital artwork in the theater and via the web are covered in detail.
 
+      * ART106E 3D Modeling & Animation. Lecturer, UCSC. Independent and collaborative creative projects using advanced computer methods. May include networking projects, virtual representations, interactive multimedia, installation, performance, 3D modeling and animation, or robotics. Emphasis on advanced critical and experimental approaches to computers as a unique art medium, and contemporary research issues.
+
+      * CMPM147 Generative Design. Lecturer, UCSC. Introduces generative methods for design. Use algorithmic techniques to generate and evaluate game content (images, sounds, map designs) along with mechanics and progression systems. Search-based and learning-based techniques with connections to artificial intelligence are also covered.
+
       Lectures: Lectures are where new ideas and concepts will be introduced. Students are expected to be intellectually present and involved, take notes and be ready to apply these concepts to homework, projects, and section discussions. 
 
       Sections: Some of these classes have study sections. Sections are where students receive further detailed instruction, and get help in areas in which they need help. If students fall behind, it is their responsibility to schedule time with section leaders to get help.
