@@ -302,7 +302,7 @@ function addUserMsgToChat(userInput) {
     // Remove the oldest message(s) from the chat to bring it under the token limit
     while (estTotalTokenCount > tokenMax * (1 - tokenPaddingFactor)) {
       const oldestMessage = chat.shift();
-      // console.log("Trimming oldest message:", oldestMessage)
+      // con  sole.log("Trimming oldest message:", oldestMessage)
       const estOldMsgTokenCount = estimateTokenCount(oldestMessage);
       estTotalTokenCount -= estOldMsgTokenCount;
     }

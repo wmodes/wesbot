@@ -16,6 +16,7 @@ import openai
 import logging
 import config
 import secrets
+import re
 
 class Chatbot:
 
@@ -48,11 +49,13 @@ class Chatbot:
         # Create the system message a message object with the role 'system' and domain-specific content
         logging.info("Domain: %s", self.domain_focus)
         # Each domain-specific content is preceeded by the default domain focus
-        system_content = config.system_content[config.default_domain_focus]
+        system_content = config.domain_content[config.default_domain_focus]
         # Now add the domain-specific content if it exists and isn't still the default
-        if (self.domain_focus in config.system_content) and \
-           (self.domain_focus != config.default_domain_focus):
-            system_content = self.domain_focus + "\n" + system_content
+        if (self.domain_focus in config.domain_content):
+            if (self.domain_focus != config.default_domain_focus):
+                system_content = system_content + "\n" + config.domain_content[self.domain_focus]
+        else:
+            print("Domain focus not found in domain content: " + self.domain_focus)
            
         logging.debug("system_content: %s", system_content)
 
@@ -75,15 +78,15 @@ class Chatbot:
             tokens = response['usage']['total_tokens']
 
             # Check for a domain change
-            #   If the reply is preceeeded by [[topic]] and some number of line feeds,
-            #   then extract the topic, remove it from reply, and change the domain focus.
-            if reply.startswith("[[") and reply.find("]]") > 0:
+            # Use a regular expression to find [[topic]] at the beginning of the reply
+            match = re.match(r'^\[\[(.*?)\]\]', reply)
+            if match:
                 # Extract the topic
-                topic = reply[2:reply.find("]]")]
-                # Remove the topic from the reply and any following whitespace
-                reply = reply[reply.find("]]")+2:].lstrip()
+                topic = match.group(1)
+                # Remove the matched portion from the reply and any following whitespace
+                # reply = re.sub(r'^\[\[.*?\]\]', '', reply).lstrip()
                 # Change the domain focus
-                self.domain_focus = topic
+                self.domain_focus = topic.strip().lower()
                 logging.info("Domain focus changed to %s", self.domain_focus)
 
             response = {
