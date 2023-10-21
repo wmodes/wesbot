@@ -84,7 +84,7 @@ class Chatbot:
                 # Extract the topic
                 topic = match.group(1)
                 # Remove the matched portion from the reply and any following whitespace
-                # reply = re.sub(r'^\[\[.*?\]\]', '', reply).lstrip()
+                reply = re.sub(r'^\[\[.*?\]\]', '', reply).lstrip()
                 # Change the domain focus
                 self.domain_focus = topic.strip().lower()
                 logging.info("Domain focus changed to %s", self.domain_focus)
