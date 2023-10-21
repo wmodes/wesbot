@@ -27,7 +27,7 @@ body, #content {
 }
 
 #sidebar {
-  width: 180px;
+  width: 200px;
   /* Customize the sidebar's background color */
   background-color: #202123;
   /* Customize the text color inside the sidebar */
@@ -219,9 +219,10 @@ h1.site-title {
 }
 
 #disclaimer {
-  font-size: 70%;
+  font-size: 60%;
   margin-top: auto; /* This pushes the disclaimer to the bottom */
   color: #D1D5D9;
+  align-items: left;
 }
 
 /* 
