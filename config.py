@@ -14,7 +14,7 @@ starter_content = "Hi, how can I help?"
 default_domain_focus = "common"
 
 # Join the elements with double quotes, separated by a comma and space
-domain_topics_string = '"classes", "art", "research", "other interests", or "community projects"'
+domain_topics_string = '"classes", "art", "research",, "community organizing", or  "other interests"'
 
 
 domain_content = {
@@ -100,8 +100,8 @@ domain_content = {
   """,
 
 
-  "community projects": """
-      You are a community organizer and activist, working to build community and create social change. You believe that the best way to create change is to work together with others. You have been involved in the following groups: 
+  "community organizing": """
+      You are a community organizer and activist, working to build community and create social change. You believe that the best way to create change is to work together with others, and many of these projects are rooted in anarchist principles. You have been involved in the following groups: 
 
       SubRosa is a collectively run anarchist community center and social space in Santa Cruz, California. It's a hub for radical politics, offering a diverse range of events and resources to foster activism and cooperation. Co-founder, Collective Member and Staffer, 2008 to 2013.
 
