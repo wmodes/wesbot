@@ -65,6 +65,87 @@ body, #content {
   background-color: #353640; /* Customize the footer's background color */
 }
 
+#controls.controls1 {
+  display: block;
+}
+
+#controls.controls2 {
+  display: none;
+}
+
+@media screen and (max-width: 780px) {
+  #content {
+    flex-direction: column !important;
+  }
+
+  #sidebar {
+    width: 100% !important;
+    flex-direction: row !important;
+    margin: 0;
+    padding: 0;
+  }
+
+  #sidebar>* {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  #controls.controls1 {
+    display: none;
+  }
+
+  #controls.controls2 {
+    display: block;
+  }
+
+  #new-chat-button {
+    font-size: .7rem !important;
+    line-height: .8rem !important;
+    padding: 0.125rem 0.5rem !important;
+    min-height: 25px !important;
+  }
+
+  #chat {
+    width: 100% !important;
+    min-width: inherit !important;
+  }
+
+  .logo-box {
+    width: 100px !important;  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .logo-box .site-title {
+    font-size: 30px !important;
+  }
+
+  .logo-box #controls {
+    margin-top: auto;
+    padding-bottom: 10px;
+  }
+
+  #footer {
+    width: 100vw !important;
+  }
+
+  #user-input-wrapper {
+    width: 100% !important;
+    gap: 10px;
+  } 
+
+  #submit-button {
+    margin-left: 0 !important;
+    padding: 0 10px 0 0 !important;
+  }
+
+  #disclaimer {
+    display: none;
+  }
+
+}
+
 /*
  * input
  */
@@ -181,8 +262,12 @@ h1.site-title {
   margin-bottom: 10px; /* Add spacing below the site title */
 }
 
+.log-box {
+  width: 150px;
+}
+
 #logo {
-  width: 150px; /* Set the logo's width to 300px */
+  width: 100%; /* Set the logo's width to 300px */
   margin: 0 auto; /* Center the logo horizontally */
 }
 

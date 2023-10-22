@@ -15,7 +15,7 @@ Date: 2023
 import openai
 import logging
 import config
-import secrets
+import api_secrets
 import re
 
 class Chatbot:
@@ -23,7 +23,7 @@ class Chatbot:
     def __init__(self):
 
         # Set your OpenAI API key and organization (if applicable)
-        openai.api_key = secrets.OPENAI_API_KEY
+        openai.api_key = api_secrets.OPENAI_API_KEY
         openai.organization = "org-6Sx3QSqdmkskgXbQf8AsccbW"
         # openai.Model.list()
 

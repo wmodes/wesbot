@@ -24,20 +24,27 @@
     </script>
     <script src="{{ url_for('static', filename='js/chatbot.js') }}" DEFER></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/chatbot.css') }}">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
   <main id="content">
     <nav id="sidebar">
-      <div id="logo">
-        <img src="{{ url_for('static', filename='img/wesbot-logo.png') }}" alt="WesBot Logo">
+      <div class="logo-box">
+        <div id="logo">
+          <img src="{{ url_for('static', filename='img/wesbot-logo.png') }}" alt="WesBot Logo">
+        </div>
+        <h1 class="site-title">WesBot</h1>
+        <div id="controls" class="controls2">
+          <button id="new-chat-button">+ New Chat</button>
+        </div>
       </div>
-      <h1 class="site-title">WesBot</h1>
       <div class="description">
         <p>We've kidnapped your instructor, digitized their brain, and placed them in a sophisticated, multi-layered recurrent neural network.</p>
 
         <p>In this virtual realm, your instructor, Wes, is brought to life as an AI-powered chatbot. Wes is here to answer your questions and guide you through the intricate world of new media, art, and game design.</p>
       </div>
-      <div id="controls">
+      <div id="controls" class="controls1">
         <button id="new-chat-button">+ New Chat</button>
       </div>
       <div id="disclaimer">

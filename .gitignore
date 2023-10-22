@@ -48,6 +48,7 @@ __pycache__/
 /.venv
 /.env
 secrets.*
+api_secrets.*
 scripts
 scripts/*
 graphics
