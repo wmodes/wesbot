@@ -249,7 +249,7 @@ function displayResponse(response) {
 }
 
 // Attach a click event listener to the "New Chat" button
-$("#new-chat-button").on("click", function() {
+$(".new-chat-button").on("click", function() {
   clearChat(); // Clear the existing chat
   storeChat(); // Store an empty chat in storage
   initiateChat(""); // Initiate a new chat

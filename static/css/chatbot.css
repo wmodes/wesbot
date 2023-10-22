@@ -98,7 +98,7 @@ body, #content {
     display: block;
   }
 
-  #new-chat-button {
+  .new-chat-button {
     font-size: .7rem !important;
     line-height: .8rem !important;
     padding: 0.125rem 0.5rem !important;
@@ -287,7 +287,7 @@ h1.site-title {
   color: #D1D5D9;
 }
 
-#new-chat-button {
+.new-chat-button {
   transition: all .15s cubic-bezier(.4,0,.2,1);
   font-size: .875rem;
   line-height: 1.25rem;
@@ -302,7 +302,7 @@ h1.site-title {
   color: #D1D5D9;
 }
 
-#new-chat-button:hover {
+.new-chat-button:hover {
   background-color: #D1D5D9;
   color: #343541;
 }
