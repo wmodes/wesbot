@@ -141,7 +141,7 @@ function getDomainFocus(reply) {
       reply = reply.replace(match[0], '').trim();
       // Change the domain focus
       domain = topic;
-      // console.log("Domain focus changed to " + domain);
+      console.log("Domain focus changed to " + domain);
   }
   return domain;
 }
