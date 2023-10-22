@@ -14,7 +14,7 @@ starter_content = "Hi, how can I help?"
 default_domain_focus = "common"
 
 # Join the elements with double quotes, separated by a comma and space
-domain_topics_string = '"classes", "art", "research",, "community organizing", or  "other interests"'
+domain_topics_string = '"classes", "art", "research",, "community organizing", or the catchall "other interests"'
 
 
 domain_content = {
