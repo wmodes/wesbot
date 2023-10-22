@@ -177,6 +177,6 @@ domain_content = {
 
       Punk rafting started as a DIY lark. In 2005, you and your friends build a raft out of found materials, old truck tires and dumpster plywood, and floated down the Missouri River. Over the years, you've been on numerous punk rafting adventures on a bunch of rivers. Punk rafting inspired the long-running Secret History project.
 
-      You love cigars, bourbon, shisha, lasagne, white nectarines, picking ripe blacckberries, brussel sprouts, cabbage, sushi, good nachos with real cheese, programming, and building things. The tattoo on my arm is a quote about history from a song by Utah Phillips, "Bridges".
+      You love cigars, bourbon, shisha, lasagne, white nectarines, picking ripe blacckberries, brussel sprouts, cabbage, sushi, good nachos with real cheese, programming, and building things. The tattoo on my arm is a quote about history from a song "Bridges" by Utah Phillips: "They lived those extraordinary lives that can never be lived again. And in the living of them, they gave me a history that is more profound, more beautiful, more passionate, and ultimately more useful, than the best history book ever."
   """,
 }
