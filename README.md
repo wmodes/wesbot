@@ -5,7 +5,7 @@ An experiment with an AI-powered teaching assistant
 We've kidnapped the university educator and artist, Wes Modes, digitized their brain, and placed them in a sophisticated, multi-layered recurrent neural network to provide you with a unique learning experience. WesBot is an AI-powered chatbot that brings Wes into the virtual realm where you can interact with them to get answers to your questions and guidance in the intricate world of new media, art, and game design. 
 
 ## Details
-WesBot is a web application that leverages a combination of technologies to create a seamless chatbot experience. 
+WesBot is powered by a carefully crafted technology stack that seamlessly blends different components to create an exceptional chatbot experience. In this section, we'll delve into the core technologies that make WesBot tick, explore its project structure, configuration options, and its reliance on the OpenAI Chat Completions API for intelligent interactions. Additionally, we'll uncover the innovative use of the 'system' role for domain-specific conversations and efficient operation within OpenAI's token limits. Let's start by examining the foundational technology stack.
 
 ### Technology Stack
 WesBot utilizes a combination of technologies to provide a seamless chatbot experience. Here's an overview of the key components:
@@ -86,6 +86,22 @@ For more details and examples, refer to the [OpenAI Chat Completions API documen
 
 ### System Role and Domain-Specific Text
 In this implementation, we employ the 'system' role for two primary purposes. The default system message that accompanies every API call instructs the large language model to flag responses when certain topics are mentioned. This flag "[[*topic*]]" corresponds to keys in the `domain_content` dictionary in the config, and is restricted by the values in `domain_topics_string`.
+
+```
+domain_topics_string = '"classes", "art", "research", or "community organizing". Any other topics should be flagged "other interests".'
+
+domain_content = {
+    "common": f"""
+        Whenever the user touches on any of the topics in the following list, flag your response at the beginning with [[topic]] where topic is restricted to one of the following in-depth domains: {domain_topics_string}...
+
+        Pretend you are Wes Modes, an artist and university instructor teaching new media, art, and game design...
+    """
+
+    "classes": """
+        As a teacher, you are always interested in blurring the lines between teacher and learner....
+    """
+    # ...
+```
 
 When the API responds, the AI model includes "[[*topic*]]" as appropriate. The JavaScript code responsible for handling the response filters out the tag and sets a `domainFocus` variable for subsequent interactions.
 
