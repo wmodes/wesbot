@@ -31,7 +31,7 @@ class Chatbot:
         # self.domain_focus = config.default_domain_focus
 
         # Set the logging level 
-        logging.basicConfig(level=logging.DEBUG)
+        logging.basicConfig(level=logging.ERROR)
 
     def get_response(self, messages, domain_focus=None):
         """
