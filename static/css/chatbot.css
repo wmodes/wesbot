@@ -135,6 +135,10 @@ body, #content {
     gap: 10px;
   } 
 
+  #user-input {
+    font-size: 16px;
+  }
+
   #submit-button {
     margin-left: 0 !important;
     padding: 0 10px 0 0 !important;
