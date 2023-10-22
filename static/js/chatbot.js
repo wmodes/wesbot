@@ -26,6 +26,8 @@ var chat = [];
 let totalChatTokenCount = 0;
 // const systemTokenCount = estimateTokenCount(systemContent);
 const systemCharacterCount = systemContent.replace(/\s/g, '').length;
+// Global variable to store the domain  
+let domainFocus = "";
 
 //
 // USER INPUT
@@ -70,6 +72,7 @@ function sendRequest(userInput) {
   // Create an object with the chat
   var requestData = {
     messages: chat,
+    domain: domainFocus,
   };
 
   // Use $.ajax to make a POST request to the /api/chatbot endpoint
@@ -96,18 +99,15 @@ function sendRequest(userInput) {
 }
 
 function handleResults(response) {
-  if (response['status'] === "error") {
+  response_status = response['status'];
+  if (response_status === "error") {
     // check if the response is an error
     // if so, display the error message
     displayResponse(response['reply']);
     return;
   }
-  // console.log("handleResults Response:", response)
-  // extract the assistant response from the response object
   reply = response['reply'];
-  // console.log("Reply:", reply);
-  // add the reply to the chat
-  chat.push({ role: "assistant", content: reply });
+  tokens = response['tokens'];
 
   // extract the token count from the response object
   tokenCount = response['tokens'];
@@ -115,10 +115,35 @@ function handleResults(response) {
   // record the token count
   totalChatTokenCount = tokenCount;
 
+  // extract the domain from the reply
+  domainFocus = getDomainFocus(reply);
+
+  // add the reply to the chat
+  chat.push({ role: "assistant", content: reply });
+
   // Store the chat
   storeChat(); 
   // Display the results
   displayResponse(reply); 
+}
+
+function getDomainFocus(reply) {
+  // we leave the reply in the chat, but don't display it
+  //
+  domain = "";
+  // Use a regular expression to find [[topic]] anywhere in the reply
+  const regex = /\[\[([^[\]]*)\]\]/g;
+  let match;
+  while ((match = regex.exec(reply)) !== null) {
+      // Extract the topic
+      const topic = match[1].trim().toLowerCase();
+      // Remove the matched portion from the reply
+      reply = reply.replace(match[0], '').trim();
+      // Change the domain focus
+      domain = topic;
+      console.log("Domain focus changed to " + domain);
+  }
+  return domain;
 }
 
 //
@@ -197,6 +222,8 @@ function displayEntireChat() {
       }
     } else if (chat[i].role === "assistant") {
       if (chat[i].hasOwnProperty('content')) {
+        // extract the domain from the reply (if it exists)
+        domainFocus = getDomainFocus(chat[i].content);
         displayResponse(chat[i].content);
       } 
     }
@@ -240,8 +267,13 @@ function clearChat() {
 
 // Render output for safety and appearance
 function renderOutput(text) {
+  // Remove [[topic]] from the text
+  text = text.replace(/\[\[([^\]]*)\]\](\n*)/g, '');
+
+  // Render html inert
   text = text.replace(/</g, '&lt;');
   text = text.replace(/>/g, '&gt;');
+
   // Replace triple backticks with code blocks
   text = text.replace(/```([\s\S]*?)\n([\s\S]*?)```/g, '<div class="code"><div class="code-type">$1</div><div class="content">$2</div></div>');
    
@@ -257,6 +289,7 @@ function renderOutput(text) {
   text = text.replace(/\n/g, '<br>');
   return text;
 }
+
 
 //
 // TOKENIZATION

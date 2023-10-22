@@ -32,13 +32,19 @@ def routes(chatbot):
         # Get the JSON data from the POST request's body
         data = flask.request.get_json()
 
+        print("data as passed to API:", data)
+
         # Extract the 'messages' field from the JSON data
         messages = data.get("messages")
+
+        # Extract the 'domain_focus' field from the JSON data
+        domain = data.get("domain")
+        print("domain_focus as passed TO API:", domain)
 
         # print("messages:", messages)
 
         # Generate a response to the messages
-        response = chatbot.get_response(messages)
+        response = chatbot.get_response(messages, domain)
 
         # Response is an object of the form: 
         #   { reply: 'Hey there! How can I help you today?', 

@@ -27,12 +27,13 @@ class Chatbot:
         openai.organization = "org-6Sx3QSqdmkskgXbQf8AsccbW"
         # openai.Model.list()
 
-        self.domain_focus = config.default_domain_focus
+        # This is done instead in javascript
+        # self.domain_focus = config.default_domain_focus
 
         # Set the logging level 
         logging.basicConfig(level=logging.DEBUG)
 
-    def get_response(self, messages):
+    def get_response(self, messages, domain_focus=None):
         """
         Generate a response to a conversation.
 
@@ -46,18 +47,22 @@ class Chatbot:
         if (not messages):
             messages = []
 
-        # Create the system message a message object with the role 'system' and domain-specific content
-        logging.info("Domain: %s", self.domain_focus)
-        # Each domain-specific content is preceeded by the default domain focus
+        # 
+        # domain specifc system content 
+        # Each system content is preceeded by the default domain focus
         system_content = config.domain_content[config.default_domain_focus]
         # Now add the domain-specific content if it exists and isn't still the default
-        if (self.domain_focus in config.domain_content):
-            if (self.domain_focus != config.default_domain_focus):
-                system_content = system_content + "\n" + config.domain_content[self.domain_focus]
+        print ("domain_focus before domain-specific content: " + str(domain_focus))
+        if domain_focus:
+            if domain_focus != config.default_domain_focus and domain_focus in config.domain_content:
+                system_content = system_content + "\n" + config.domain_content[domain_focus]
+                print ("domain_focus after domain-specific content: " + str(domain_focus))
+            else:
+                print("Domain focus not found in domain content: " + domain_focus)
         else:
-            print("Domain focus not found in domain content: " + self.domain_focus)
+            print("No domain focus provided.")
            
-        logging.debug("system_content: %s", system_content)
+        logging.info("system_content: %s", system_content)
 
         # Prepend the system message to the conversation
         messages.insert(0, {"role": "system", "content": system_content})
@@ -78,16 +83,19 @@ class Chatbot:
             tokens = response['usage']['total_tokens']
 
             # Check for a domain change
+            # we used to do this here and pass it to the javascript
+            # but we realized it was better to keep the domain change in the reply
+            #
             # Use a regular expression to find [[topic]] at the beginning of the reply
-            match = re.match(r'^\[\[(.*?)\]\]', reply)
-            if match:
-                # Extract the topic
-                topic = match.group(1)
-                # Remove the matched portion from the reply and any following whitespace
-                reply = re.sub(r'^\[\[.*?\]\]', '', reply).lstrip()
-                # Change the domain focus
-                self.domain_focus = topic.strip().lower()
-                logging.info("Domain focus changed to %s", self.domain_focus)
+            # match = re.match(r'^\[\[(.*?)\]\]', reply)
+            # if match:
+            #     # Extract the topic
+            #     topic = match.group(1).strip().lower()
+            #     # Remove the matched portion from the reply and any following whitespace
+            #     reply = re.sub(r'^\[\[.*?\]\]', '', reply).lstrip()
+            #     # Change the domain focus
+            #     self.domain_focus = topic
+            #     logging.info("Domain focus changed to %s", self.domain_focus)
 
             response = {
                 'reply': reply,
