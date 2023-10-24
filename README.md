@@ -5,19 +5,19 @@ An experiment with an AI-powered teaching assistant
 We've kidnapped the university educator and artist, Wes Modes, digitized their brain, and placed them in a sophisticated, multi-layered recurrent neural network to provide you with a unique learning experience. WesBot is an AI-powered chatbot that brings Wes into the virtual realm where you can interact with them to get answers to your questions and guidance in the intricate world of new media, art, and game design. 
 
 ## Details
-WesBot is powered by a carefully crafted technology stack that seamlessly blends different components to create an exceptional chatbot experience. In this section, we'll delve into the core technologies that make WesBot tick, explore its project structure, configuration options, and its reliance on the OpenAI Chat Completions API for intelligent interactions. Additionally, we'll uncover the innovative use of the 'system' role for domain-specific conversations and efficient operation within OpenAI's token limits. Let's start by examining the foundational technology stack.
+WesBot is powered by a carefully crafted technology stack that seamlessly blends different components to create an personalized chatbot experience. In this section, we'll delve into the core technologies that make WesBot tick, explore its project structure, configuration options, and its reliance on the OpenAI Chat Completions API for intelligent interactions. Additionally, we'll discuss the use of the 'system' role for domain-specific conversations and efficient operation within OpenAI's token limits. Let's start by examining the foundational technology stack.
 
 ### Technology Stack
 WesBot utilizes a combination of technologies to provide a seamless chatbot experience. Here's an overview of the key components:
 
-- **Flask:** Serving as the foundation of WesBot, Flask is a micro web framework for Python. It manages routing, request handling, and facilitates communication with the chatbot.
+- **Flask:** Serving as the web foundation of WesBot, Flask manages routing, request handling, and facilitates communication with the chatbot.
 
-- **Chatbot Class:** The heart of the AI-powered chatbot, the Chatbot class interacts with the OpenAI API, processes user input, and generates responses.
+- **Chatbot Class:** The heart of the server-side of the app, the Chatbot class interacts with the OpenAI API, processes user input, and generates responses.
 
-- **JavaScript:** This vital component takes charge of the web app's front-end. It not only handles the user interface but also manages user input and communicates with the Flask backend. JavaScript is responsible for real-time interactions with the chatbot, maintaining chat history, and managing tokens efficiently.
+- **JavaScript:** does much of the heavy lifting and takes charge of all front-end responsibilities. It not only handles the user interface but also manages user input and communicates with the Flask backend. JavaScript is responsible for real-time interactions with the chatbot, maintaining chat history, and managing tokens efficiently.
 
 ### Technology Stack Overview
-To provide a clear summary of the technologies involved, here's a concise breakdown:
+Here's a concise breakdown:
 
 - **Languages:** Python and JavaScript/jQuery
 - **Framework:** Flask
@@ -34,8 +34,6 @@ Here's a quick overview of the primary directories and key files in the project:
 - **/factory.py:** Creates and configures the Flask app.
 - **/chatbot.py:** Houses the `Chatbot` class, managing user interactions and responses.
 - **/routes.py:** Defines web app routes and endpoints for handling user interactions.
-
-This structure guides you through the code and its layout efficiently.
 
 ### Configuration
 In the config.py file, you'll find essential variables that fine-tune the chatbot's behavior. These variables are crucial for personalizing and customizing the chatbot's responses. Here are the key configuration variables:
