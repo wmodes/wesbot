@@ -9,6 +9,12 @@ Date: 2023
 
 import flask
 import config
+import logging
+import time
+import json
+
+# Create a logger instance for the 'routes' module
+logger = logging.getLogger('httpd_logger')
 
 def routes(chatbot):
     """Creates a blueprint for the chatbot routes."""
@@ -32,11 +38,30 @@ def routes(chatbot):
         # Get the JSON data from the POST request's body
         data = flask.request.get_json()
 
+        # get client_id from the request
+        client_id = data.get("client_id") # cleared
+
+        # get user info
+        client_ip = flask.request.remote_addr # cleared
+
+        # Get the current timestamp in the desired format
+        timestamp = time.strftime("%d/%b/%Y:%H:%M:%S +0000", time.gmtime())
+
         # Extract the 'messages' field from the JSON data
         messages = data.get("messages")
 
         # Extract the 'domain_focus' field from the JSON data
         domain = data.get("domain")
+
+        # Convert the data structure to a JSON string
+        json_str = json.dumps(data)
+
+        # Get the character count of the JSON string
+        content_length = len(json_str)
+
+        # Log an entry in HTTPD format
+        log_entry = f'{client_ip} - {client_id} - [{timestamp}] "POST /api/chatbot HTTP/1.1 ({domain})" 200 {content_length}'
+        logger.info(log_entry)
 
         # print("messages:", messages)
 

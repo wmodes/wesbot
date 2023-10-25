@@ -53,3 +53,4 @@ scripts
 scripts/*
 graphics
 graphics/*
+log/*

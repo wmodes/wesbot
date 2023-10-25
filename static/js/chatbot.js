@@ -28,127 +28,20 @@ let totalChatTokenCount = 0;
 const systemCharacterCount = systemContent.replace(/\s/g, '').length;
 // Global variable to store the domain  
 let domainFocus = "";
-
-//
-// USER INPUT
-//
-
-// Handle submission when the "Submit" button is clicked
-$("#submit-button").on("click", function(e) {
-  e.preventDefault(); // Prevent the form from submitting
-  handleUserInput();
-});
-
-// Handle submission when the "Enter" key is pressed
-$("#user-input").on("keypress", function(e) {
-  if (e.which === 13 && !e.shiftKey) { // Check if Enter is pressed without Shift
-    e.preventDefault();
-    handleUserInput();
-  }
-});
-
-//
-// HANDLE INPUT AND RESPONSE
-//
-
-function initiateChat(userInput) {
-  sendRequest(userInput);
-}
-
-function handleUserInput() {
-  var userInput = $("#user-input").val();
-  if (userInput) {
-    displayUserInput(userInput)
-    addUserMsgToChat(userInput);
-    sendRequest(userInput);
-    $("#user-input").val(''); // Clear the input field
-  }
-}
-
-function sendRequest(userInput) {
-  // display entire chat to console:
-  // console.log("Full chat:", chat);
-
-  // Create an object with the chat
-  var requestData = {
-    messages: chat,
-    domain: domainFocus,
-  };
-
-  // Use $.ajax to make a POST request to the /api/chatbot endpoint
-  $.ajax({
-    type: "POST",
-    url: "/api/chatbot",
-    contentType: "application/json", // Set the content type to JSON
-    data: JSON.stringify(requestData),
-    success: function(response) {
-      handleResults(response);
-    },
-    error: function(xhr, status, error) {
-      // Log detailed error information to the console
-      console.error("Ajax request failed - " + status + ": " + error);
-      
-      // Provide a generic error message to handleResults
-      handleResults({
-        reply: "I'm sorry, I had an error generating a response. Please try again later",
-        tokens: -1,
-        status: "error",
-      });
-    }
-  });
-}
-
-function handleResults(response) {
-  response_status = response['status'];
-  if (response_status === "error") {
-    // check if the response is an error
-    // if so, display the error message
-    displayResponse(response['reply']);
-    return;
-  }
-  reply = response['reply'];
-  tokens = response['tokens'];
-
-  // extract the token count from the response object
-  tokenCount = response['tokens'];
-  // console.log("Token Count:", tokenCount);
-  // record the token count
-  totalChatTokenCount = tokenCount;
-
-  // extract the domain from the reply
-  domainFocus = getDomainFocus(reply);
-
-  // add the reply to the chat
-  chat.push({ role: "assistant", content: reply });
-
-  // Store the chat
-  storeChat(); 
-  // Display the results
-  displayResponse(reply); 
-}
-
-function getDomainFocus(reply) {
-  // we leave the reply in the chat, but don't display it
-  //
-  domain = "";
-  // Use a regular expression to find [[topic]] anywhere in the reply
-  const regex = /\[\[([^[\]]*)\]\]/g;
-  let match;
-  while ((match = regex.exec(reply)) !== null) {
-      // Extract the topic
-      const topic = match[1].trim().toLowerCase();
-      // Remove the matched portion from the reply
-      reply = reply.replace(match[0], '').trim();
-      // Change the domain focus
-      domain = topic;
-      console.log("Domain focus changed to " + domain);
-  }
-  return domain;
-}
+// global variable to store the client id
+clientId = "";
 
 //
 // LOCAL STORAGE
 //
+
+// Get the client id from local storage (if it exists -- if not, generate one)
+if (localStorage.getItem("clientId")) {
+  clientId = localStorage.getItem("clientId");
+} else {
+  clientId = (Math.random() + 1).toString(36).substring(2, 14);
+  localStorage.setItem("clientId", clientId);
+}
 
 // Check if the browser supports local storage
 if (typeof(Storage) !== "undefined") {
@@ -210,6 +103,127 @@ function getChat() {
 }
 
 //
+// USER INPUT
+//
+
+// Handle submission when the "Submit" button is clicked
+$("#submit-button").on("click", function(e) {
+  e.preventDefault(); // Prevent the form from submitting
+  handleUserInput();
+});
+
+// Handle submission when the "Enter" key is pressed
+$("#user-input").on("keypress", function(e) {
+  if (e.which === 13 && !e.shiftKey) { // Check if Enter is pressed without Shift
+    e.preventDefault();
+    handleUserInput();
+  }
+});
+
+//
+// HANDLE INPUT AND RESPONSE
+//
+
+function initiateChat(userInput) {
+  sendRequest(userInput);
+}
+
+function handleUserInput() {
+  var userInput = $("#user-input").val();
+  if (userInput) {
+    displayUserInput(userInput)
+    addUserMsgToChat(userInput);
+    sendRequest(userInput);
+    $("#user-input").val(''); // Clear the input field
+  }
+}
+
+function sendRequest(userInput) {
+  // display entire chat to console:
+  // console.log("Full chat:", chat);
+
+  // Create an object with the chat
+  var requestData = {
+    messages: chat,
+    domain: domainFocus,
+    client_id: clientId,
+  };
+
+  // Use $.ajax to make a POST request to the /api/chatbot endpoint
+  $.ajax({
+    type: "POST",
+    url: "/api/chatbot",
+    contentType: "application/json", // Set the content type to JSON
+    data: JSON.stringify(requestData),
+    success: function(response) {
+      handleResults(response);
+    },
+    error: function(xhr, status, error) {
+      // Log detailed error information to the console
+      console.error("Ajax request failed - " + status + ": " + error);
+      
+      // Provide a generic error message to handleResults
+      handleResults({
+        reply: "I'm sorry, I had an error generating a response. Please try again later",
+        tokens: -1,
+        status: "error",
+      });
+    }
+  });
+}
+
+function handleResults(response) {
+  response_status = response['status'];
+  if (response_status === "error") {
+    // check if the response is an error
+    // if so, display the error message
+    displayResponse(response['reply']);
+    return;
+  }
+  reply = response['reply'];
+  tokens = response['tokens'];
+
+  // extract the token count from the response object
+  tokenCount = response['tokens'];
+  // console.log("Token Count:", tokenCount);
+  // record the token count
+  totalChatTokenCount = tokenCount;
+
+  // extract the domain from the reply
+  setDomainFocus(reply);
+
+  // add the reply to the chat
+  chat.push({ role: "assistant", content: reply });
+
+  // Store the chat
+  storeChat(); 
+  // Display the results
+  displayResponse(reply); 
+}
+
+function setDomainFocus(reply) {
+  // we leave the reply in the chat, but don't display it
+  //
+  var newDomain = "";
+  // Use a regular expression to find [[topic]] anywhere in the reply
+  const regex = /\[\[([^[\]]*)\]\]/g;
+  let match;
+  while ((match = regex.exec(reply)) !== null) {
+      // Extract the topic
+      const topic = match[1].trim().toLowerCase();
+      // Remove the matched portion from the reply
+      reply = reply.replace(match[0], '').trim();
+      // Change the domain focus
+      newDomain = topic;
+      console.log("Domain focus changed to " + newDomain);
+  }
+  if (newDomain) {
+    // if a new domain is found, update the domain focus
+    domainFocus = newDomain;
+  }
+}
+
+//
 // DISPLAY CHAT
 //
 
@@ -223,7 +237,7 @@ function displayEntireChat() {
     } else if (chat[i].role === "assistant") {
       if (chat[i].hasOwnProperty('content')) {
         // extract the domain from the reply (if it exists)
-        domainFocus = getDomainFocus(chat[i].content);
+        setDomainFocus(chat[i].content);
         displayResponse(chat[i].content);
       } 
     }

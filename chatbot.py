@@ -16,7 +16,9 @@ import openai
 import logging
 import config
 import api_secrets
-import re
+
+# Create a logger instance for the 'chatbot' module
+logger = logging.getLogger('chatbot_logger')
 
 class Chatbot:
 
@@ -29,9 +31,6 @@ class Chatbot:
 
         # This is done instead in javascript
         # self.domain_focus = config.default_domain_focus
-
-        # Set the logging level 
-        logging.basicConfig(level=logging.ERROR)
 
     def get_response(self, messages, domain_focus=None):
         """
@@ -64,7 +63,7 @@ class Chatbot:
             pass
             # print("No domain focus provided.")
            
-        logging.info("system_content: %s", system_content)
+        # logging.info("system_content: %s", system_content)
 
         # Prepend the system message to the conversation
         messages.insert(0, {"role": "system", "content": system_content})

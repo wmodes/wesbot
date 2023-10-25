@@ -7,6 +7,8 @@ Author: Wes Modes
 Date: 2023
 """
 
+log = "log/access.log"
+
 model = "gpt-3.5-turbo"
 
 starter_content = "Hi, how can I help?"

@@ -10,6 +10,20 @@ Date: 2023
 import flask
 from chatbot import Chatbot
 from routes import routes
+import config
+import logging
+
+# Configure the logger for the 'routes' module
+routes_logger = logging.getLogger('httpd_logger')
+# log_format = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+routes_log_handler = logging.FileHandler(config.log)
+# routes_log_handler.setFormatter(logging.Formatter(log_format))
+routes_logger.addHandler(routes_log_handler)
+routes_logger.setLevel(logging.INFO)
+
+# Create a logger for the 'chatbot' module, writing to stdout
+chatbot_logger = logging.getLogger('chatbot_logger')
+chatbot_logger.setLevel(logging.INFO)
 
 def create_app():
     app = flask.Flask(__name__)
