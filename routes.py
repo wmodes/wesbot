@@ -83,4 +83,15 @@ def routes(chatbot):
     def favicon():
         return flask.send_from_directory('static/img', 'favicon.ico')
 
+    # Define a route to return the contents of the HTTPD log
+    @routes_blueprint.route('/log/httpd')
+    def httpd_log():
+        try:
+            with open(config.log, 'r') as log_file:
+                log_content = log_file.read()
+            response = flask.Response(log_content, content_type='text/plain')
+            return response
+        except FileNotFoundError:
+            return "HTTPD log file not found."
+
     return routes_blueprint
