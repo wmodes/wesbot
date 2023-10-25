@@ -12,9 +12,19 @@ import config
 import logging
 import time
 import json
+import secrets as mysecrets
+from flask_httpauth import HTTPBasicAuth
 
 # Create a logger instance for the 'routes' module
 logger = logging.getLogger('httpd_logger')
+
+# Initialize HTTPBasicAuth for handling basic authentication
+auth = HTTPBasicAuth()
+
+@auth.verify_password 
+def verify_password(username, password):
+    if username in mysecrets.AUTH and mysecrets.AUTH[username] == password:
+        return username
 
 def routes(chatbot):
     """Creates a blueprint for the chatbot routes."""
@@ -83,8 +93,9 @@ def routes(chatbot):
     def favicon():
         return flask.send_from_directory('static/img', 'favicon.ico')
 
-    # Define a route to return the contents of the HTTPD log
+    # Define a route to return the contents of the HTTPD log with basic authentication
     @routes_blueprint.route('/log/httpd')
+    @auth.login_required
     def httpd_log():
         try:
             with open(config.log, 'r') as log_file:
