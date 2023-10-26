@@ -49,18 +49,18 @@ class Chatbot:
         # 
         # domain specifc system content 
         # Each system content is preceeded by the default domain focus
-        system_content = config.domain_content[config.default_domain_focus]
+        system_content = config.domain_content[config.domain_common]
         # Now add the domain-specific content if it exists and isn't still the default
         # print ("domain_focus before domain-specific content: " + str(domain_focus))
         if domain_focus:
-            if domain_focus != config.default_domain_focus and domain_focus in config.domain_content:
+            if domain_focus != config.domain_common and domain_focus in config.domain_content:
                 system_content = system_content + "\n" + config.domain_content[domain_focus]
                 # print ("domain_focus after domain-specific content: " + str(domain_focus))
             else:
-                pass
+                system_content = system_content + "\n" + config.domain_content[config.domain_fallback]
                 # print("Domain focus not found in domain content: " + domain_focus)
         else:
-            pass
+            system_content = system_content + "\n" + config.domain_content[config.domain_fallback]
             # print("No domain focus provided.")
            
         # logging.info("system_content: %s", system_content)

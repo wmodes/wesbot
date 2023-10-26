@@ -38,7 +38,7 @@ def routes(chatbot):
         # print(config.system_content)
         # data = {"system_content": config.system_content}
         
-        return flask.render_template("chat.html", system_content=config.domain_content[config.default_domain_focus])
+        return flask.render_template("chat.html", system_content=config.domain_content[config.domain_common])
 
     # Define the route for the chatbot API
     @routes_blueprint.route("/api/chatbot", methods=["POST"])
