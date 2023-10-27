@@ -46,31 +46,28 @@ def routes(chatbot):
         """Handles POST requests to the chatbot API."""
 
         # Get the JSON data from the POST request's body
-        data = flask.request.get_json()
-
-        # get client_id from the request
-        client_id = data.get("client_id") # cleared
-
-        # get user info
-        client_ip = flask.request.remote_addr # cleared
-
-        # Get the current timestamp in the desired format
-        timestamp = time.strftime("%d/%b/%Y:%H:%M:%S +0000", time.gmtime())
-
+        data = flask.request.get_json()        
         # Extract the 'messages' field from the JSON data
         messages = data.get("messages")
-
         # Extract the 'domain_focus' field from the JSON data
         domain = data.get("domain")
 
-        # Convert the data structure to a JSON string
-        json_str = json.dumps(data)
-
-        # Get the character count of the JSON string
-        content_length = len(json_str)
+        # client_ip for logging
+        client_ip = flask.request.remote_addr # cleared
+        # client_id for logging
+        client_id = data.get("client_id") # cleared
+        # timestamp for logging
+        timestamp = time.strftime("%d/%b/%Y:%H:%M:%S +0000", time.gmtime())
+        # (fake) query_string for logging
+        topic = domain.replace(' ', '%20')
+        query_string = f"topic={topic}"
+        # content_length for loggging: Convert to a JSON string and get char count
+        content_length = len(json.dumps(data))
+        # user agaent for logging
+        user_agent = flask.request.headers.get('User-Agent')
 
         # Log an entry in HTTPD format
-        log_entry = f'{client_ip} - {client_id} - [{timestamp}] "POST /api/chatbot HTTP/1.1 ({domain})" 200 {content_length}'
+        log_entry = f'{client_ip} - {client_id} - [{timestamp}] "POST /api/chatbot?{query_string} HTTP/1.1" 200 {content_length} "{user_agent}"'
         logger.info(log_entry)
 
         # print("messages:", messages)
