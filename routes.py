@@ -58,16 +58,19 @@ def routes(chatbot):
         client_id = data.get("client_id") # cleared
         # timestamp for logging
         timestamp = time.strftime("%d/%b/%Y:%H:%M:%S +0000", time.gmtime())
-        # (fake) query_string for logging
-        topic = domain.replace(' ', '%20')
-        query_string = f"topic={topic}"
+        if domain:
+          # (fake) query_string for logging
+          topic = domain.replace(' ', '%20')
+          query_string = f"?topic={topic}"
+        else:
+          query_string = ""
         # content_length for loggging: Convert to a JSON string and get char count
         content_length = len(json.dumps(data))
         # user agaent for logging
         user_agent = flask.request.headers.get('User-Agent')
 
         # Log an entry in HTTPD format
-        log_entry = f'{client_ip} - {client_id} - [{timestamp}] "POST /api/chatbot?{query_string} HTTP/1.1" 200 {content_length} "{user_agent}"'
+        log_entry = f'{client_ip} - {client_id} - [{timestamp}] "POST /api/chatbot{query_string} HTTP/1.1" 200 {content_length} "{user_agent}"'
         logger.info(log_entry)
 
         # print("messages:", messages)
