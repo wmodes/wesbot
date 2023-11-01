@@ -12,7 +12,7 @@ import config
 import logging
 import time
 import json
-import secrets as mysecrets
+import mysecrets
 from flask_httpauth import HTTPBasicAuth
 
 # Create a logger instance for the 'routes' module
@@ -98,7 +98,7 @@ def routes(chatbot):
     @auth.login_required
     def httpd_log():
         try:
-            with open(config.log, 'r') as log_file:
+            with open(config.LOG, 'r') as log_file:
                 log_content = log_file.read()
             response = flask.Response(log_content, content_type='text/plain')
             return response

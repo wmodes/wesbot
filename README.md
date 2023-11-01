@@ -47,15 +47,15 @@ In the config.py file, you'll find essential variables that fine-tune the chatbo
 These settings allow you to tailor the chatbot's responses to specific topics and make it more engaging for users.
 
 ### API Secrets
-The project uses an `api_secrets.py` file to store sensitive information like API keys. However, this file is not included in the repository for security reasons. To obtain an OpenAI API key for your project, follow these steps:
+The project uses an `mysecrets.py` file to store sensitive information like API keys. However, this file is not included in the repository for security reasons. To obtain an OpenAI API key for your project, follow these steps:
 
 1. Visit the [OpenAI website](https://beta.openai.com/signup/).
 2. Sign up for an OpenAI account or log in if you already have one.
 3. Once logged in, navigate to the API section to generate an API key.
-4. Copy the generated API key and paste it into your `api_secrets.py` file as follows:
+4. Copy the generated API key and paste it into your `mysecrets.py` file as follows:
 
 ```
-# api_secrets.py
+# mysecrets.py
 
 OPENAI_API_KEY = "your-api-key-here"
 ```

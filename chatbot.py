@@ -15,7 +15,7 @@ Date: 2023
 import openai
 import logging
 import config
-import secrets as mysecrets
+import mysecrets
 
 # Create a logger instance for the 'chatbot' module
 logger = logging.getLogger('chatbot_logger')
@@ -26,7 +26,7 @@ class Chatbot:
 
         # Set your OpenAI API key and organization (if applicable)
         openai.api_key = mysecrets.OPENAI_API_KEY
-        openai.organization = "org-6Sx3QSqdmkskgXbQf8AsccbW"
+        openai.organization = config.OPENAI_ORG
         # openai.Model.list()
 
         # This is done instead in javascript
@@ -73,7 +73,7 @@ class Chatbot:
         try:
             # Use the OpenAI API to generate a response
             response = openai.ChatCompletion.create(
-                model=config.model,
+                model=config.MODEL,
                 messages=messages,
             )
 
