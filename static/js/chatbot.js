@@ -30,6 +30,20 @@ const systemCharacterCount = systemContent.replace(/\s/g, '').length;
 let domainFocus = "";
 // global variable to store the client id
 clientId = "";
+const starters = [
+  "Hey, how's it going?",
+  "Hey, how can I help?",
+  "You probably have limited time, so what can I do to help?",
+  "Hey, thanks for coming. Whacha need?",
+  "What's on your mind?",
+  "Hey there, what's on your mind?",
+  "Howdy! What can I help you with today?",
+  "Yo, 'sup?",
+  "Well, hello! What's the word?",
+  "Hey, how can I help you today? Let me know if you have any questions or if there's anything specific you'd like to chat about.",
+  "Yo, what's the story?",
+  "I made it. What's up?",
+]
 
 //
 // LOCAL STORAGE
@@ -125,7 +139,17 @@ $("#user-input").on("keypress", function(e) {
 //
 
 function initiateChat(userInput) {
-  sendRequest(userInput);
+  // sigh, we used to have a nice model generaated welcome msg here, 
+  //    now we just have a random canned starter
+  // sendRequest(userInput);
+  // select random starter
+  const starter = starters[Math.floor(Math.random() * starters.length)];
+  // add the reply to the chat
+  chat.push({ role: "assistant", content: starter });
+  // Store the chat
+  storeChat(); 
+  // display the starter
+  displayResponse(starter);
 }
 
 function handleUserInput() {
