@@ -57,11 +57,13 @@ class Chatbot:
                 system_content = system_content + "\n" + config.domain_content[domain_focus]
                 # print ("domain_focus after domain-specific content: " + str(domain_focus))
             else:
-                system_content = system_content + "\n" + config.domain_content[config.domain_fallback]
+                # system_content = system_content + "\n" + config.domain_content[config.domain_fallback]
                 # print("Domain focus not found in domain content: " + domain_focus)
+                pass
         else:
-            system_content = system_content + "\n" + config.domain_content[config.domain_fallback]
+            # system_content = system_content + "\n" + config.domain_content[config.domain_fallback]
             # print("No domain focus provided.")
+            pass
            
         # logging.info("system_content: %s", system_content)
 

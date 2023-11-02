@@ -79,13 +79,21 @@ def monitor_events(ft_id):
     while not escape_monitor:
         ft_events_results = openai.FineTuningJob.list_events(id=ft_id, limit=1)
         ft_message = ft_events_results.data[0].message
-        if ft_message != last_message:
+        if ft_message != last_message:            # Clear the entire line
+            sys.stdout.write("\033[K")
+            sys.stdout.flush()
             display_event_on_same_line(ft_message)
             last_message = ft_message
         # check if "completed" in message
         if "completed" in ft_message:
             escape_monitor = True
         wait_a_bit(event_check_interval, waiting_indicator_interval)
+
+def get_state(ft_id):
+    print("# FINE-TUNING JOB DETAILS")
+    state_results = openai.FineTuningJob.retrieve(args.state)
+    print(str(state_results) + "\n")
+
 
 # If no arguments are provided, display the help message
 if not any(vars(args).values()):
@@ -111,6 +119,7 @@ if args.train:
     print(f"python train.py --events {ft_id} --monitor")
     if (monitor):
         monitor_events(ft_id)
+        get_state(ft_id)
 
 def test_cycle():
     for i in range(1,10):
@@ -123,12 +132,11 @@ def test_cycle():
         time.sleep(1)
 
 if args.list:
-    results = openai.FineTuningJob.list(limit=10)
+    results = openai.FineTuningJob.list(limit=3)
     print("fine-tuning list: " + str(results) + "\n")
 
 if args.state:
-    results = openai.FineTuningJob.retrieve(args.state)
-    print("fine-tuning state: " + str(results) + "\n")
+    get_state(args.state)
 
 if args.cancel:
     results = openai.FineTuningJob.cancel(args.cancel)

@@ -9,6 +9,7 @@ Date: 2023
 
 # Import required modules
 import subprocess
+import os
 
 # Config globals
 
@@ -33,8 +34,8 @@ CHECK_SCRIPT = TRAINING_DIR + 'check-data.py'
 SOURCE_EXT = "py"
 DATA_EXT = "jsonl"
 
-# starting training data files
-STARTING_DATA_LIST = ["common", "teaching", "discord", "email", "email2"]
+# Generate the list of files from the directory listing with the SOURCE_EXT extension
+STARTING_DATA_LIST = [file_name for file_name in os.listdir(SOURCE_DIR) if file_name.endswith(f".{SOURCE_EXT}")]
 # final training data file
 FINAL_DATA = DATA_DIR + '/data.jsonl'
 
@@ -42,14 +43,14 @@ FINAL_DATA = DATA_DIR + '/data.jsonl'
 #   format-data.py email2.py email2.jsonl
 print("\n# CONVERTING DATA FILES TO JSONL")
 for data_file in STARTING_DATA_LIST:
-    source_file = SOURCE_DIR + data_file + f".{SOURCE_EXT}"
-    output_file = DATA_DIR + data_file + f".{DATA_EXT}"
+    source_file = os.path.join(SOURCE_DIR, data_file)
+    output_file = os.path.join(DATA_DIR, data_file.replace(f".{SOURCE_EXT}", f".{DATA_EXT}"))
     subprocess.run(['python', FORMAT_SCRIPT, source_file, output_file])
 
 # Compile all the data files into a single file
 #   cat common.jsonl discord.jsonl email.jsonl email2.jsonl > data.jsonl
 print("\n# COMPILING DATA FILES INTO SINGLE FILE")
-compile_command = [COMPILE_SCRIPT] + [f"{DATA_DIR}/{data_file}.{DATA_EXT}" for data_file in STARTING_DATA_LIST]
+compile_command = [COMPILE_SCRIPT] + [os.path.join(DATA_DIR, data_file.replace(f".{SOURCE_EXT}", f".{DATA_EXT}")) for data_file in STARTING_DATA_LIST]
 subprocess.run(compile_command, stdout=open(FINAL_DATA, 'w'))
 
 # Split the data file into training and test sets

@@ -12,10 +12,10 @@ template = """
     "messages": [
       {
         "role": "system",
-        "content": wes_common
+        "content": sys_combo
       }, {
         "role": "user",
-        "content": "Can you tell me about your classroom?"
+        "content": "Can you tell me about?"
       }, {
         "role": "assistant",
         "content": \"\"\"{{record}}\"\"\"

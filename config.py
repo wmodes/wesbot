@@ -16,7 +16,7 @@ BASE_MODEL = "gpt-3.5-turbo"
 CUSTOM_SUFFIX = ""
 # fine-tuned file_id, from:
 #   training % py train.py --list
-FINE_TUNE_ID = "ft:gpt-3.5-turbo-0613:artist::8FrBdCKn"
+FINE_TUNE_ID = "ft:gpt-3.5-turbo-0613:artist::8GJpqL0z"
 # fine-tuned model
 MODEL = FINE_TUNE_ID
 
