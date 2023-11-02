@@ -55,4 +55,4 @@ scripts/*
 graphics
 graphics/*
 log/*
-analysis/*
+analysis/*.cspell/*
