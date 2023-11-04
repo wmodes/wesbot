@@ -50,6 +50,7 @@ __pycache__/
 secrets.*
 mysecrets.*
 api_secrets.*
+*secret*
 scripts
 scripts/*
 graphics

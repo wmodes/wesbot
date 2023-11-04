@@ -26,8 +26,6 @@ var chat = [];
 let totalChatTokenCount = 0;
 // const systemTokenCount = estimateTokenCount(systemContent);
 const systemCharacterCount = systemContent.replace(/\s/g, '').length;
-// Global variable to store the domain  
-let domainFocus = "";
 // global variable to store the client id
 clientId = "";
 const starters = [
@@ -169,7 +167,6 @@ function sendRequest(userInput) {
   // Create an object with the chat
   var requestData = {
     messages: chat,
-    domain: domainFocus,
     client_id: clientId,
   };
 
@@ -213,9 +210,6 @@ function handleResults(response) {
   // record the token count
   totalChatTokenCount = tokenCount;
 
-  // extract the domain from the reply
-  setDomainFocus(reply);
-
   // add the reply to the chat
   chat.push({ role: "assistant", content: reply });
 
@@ -223,28 +217,6 @@ function handleResults(response) {
   storeChat(); 
   // Display the results
   displayResponse(reply); 
-}
-
-function setDomainFocus(reply) {
-  // we leave the reply in the chat, but don't display it
-  //
-  var newDomain = "";
-  // Use a regular expression to find [[topic]] anywhere in the reply
-  const regex = /\[\[([^[\]]*)\]\]/g;
-  let match;
-  while ((match = regex.exec(reply)) !== null) {
-      // Extract the topic
-      const topic = match[1].trim().toLowerCase();
-      // Remove the matched portion from the reply
-      reply = reply.replace(match[0], '').trim();
-      // Change the domain focus
-      newDomain = topic;
-      console.log("Domain focus changed to " + newDomain);
-  }
-  if (newDomain) {
-    // if a new domain is found, update the domain focus
-    domainFocus = newDomain;
-  }
 }
 
 //
@@ -260,8 +232,6 @@ function displayEntireChat() {
       }
     } else if (chat[i].role === "assistant") {
       if (chat[i].hasOwnProperty('content')) {
-        // extract the domain from the reply (if it exists)
-        setDomainFocus(chat[i].content);
         displayResponse(chat[i].content);
       } 
     }

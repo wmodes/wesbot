@@ -91,7 +91,7 @@ def monitor_events(ft_id):
 
 def get_state(ft_id):
     print("# FINE-TUNING JOB DETAILS")
-    state_results = openai.FineTuningJob.retrieve(args.state)
+    state_results = openai.FineTuningJob.retrieve(ft_id)
     print(str(state_results) + "\n")
 
 
@@ -148,6 +148,7 @@ if args.events:
         print("fine-tuning events: " + str(results) + "\n") 
     else:
         monitor_events(args.events)
+        get_state(args.events)
 
 if args.delete:
     arg_str = f"ft:{config.MODEL}:{config.OPENAI_ORG}"

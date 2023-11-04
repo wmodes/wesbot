@@ -38,7 +38,7 @@ def routes(chatbot):
         # print(config.system_content)
         # data = {"system_content": config.system_content}
         
-        return flask.render_template("chat.html", system_content=config.domain_content[config.domain_common])
+        return flask.render_template("chat.html", system_content=config.SYSTEM_MSGS[config.domain_common])
 
     # Define the route for the chatbot API
     @routes_blueprint.route("/api/chatbot", methods=["POST"])
@@ -49,8 +49,6 @@ def routes(chatbot):
         data = flask.request.get_json()        
         # Extract the 'messages' field from the JSON data
         messages = data.get("messages")
-        # Extract the 'domain_focus' field from the JSON data
-        domain = data.get("domain")
 
         # client_ip for logging
         client_ip = flask.request.remote_addr # cleared
@@ -58,25 +56,19 @@ def routes(chatbot):
         client_id = data.get("client_id") # cleared
         # timestamp for logging
         timestamp = time.strftime("%d/%b/%Y:%H:%M:%S +0000", time.gmtime())
-        if domain:
-          # (fake) query_string for logging
-          topic = domain.replace(' ', '%20')
-          query_string = f"?topic={topic}"
-        else:
-          query_string = ""
         # content_length for loggging: Convert to a JSON string and get char count
         content_length = len(json.dumps(data))
         # user agaent for logging
         user_agent = flask.request.headers.get('User-Agent')
 
         # Log an entry in HTTPD format
-        log_entry = f'{client_ip} - {client_id} - [{timestamp}] "POST /api/chatbot{query_string} HTTP/1.1" 200 {content_length} "{user_agent}"'
+        log_entry = f'{client_ip} - {client_id} - [{timestamp}] "POST /api/chatbot HTTP/1.1" 200 {content_length} "{user_agent}"'
         logger.info(log_entry)
 
         # print("messages:", messages)
 
         # Generate a response to the messages
-        response = chatbot.get_response(messages, domain)
+        response = chatbot.get_response(messages)
 
         # Response is an object of the form: 
         #   { reply: 'Hey there! How can I help you today?', 
