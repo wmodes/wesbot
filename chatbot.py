@@ -61,6 +61,7 @@ class Chatbot:
             response = openai.ChatCompletion.create(
                 model=config.MODEL,
                 messages=messages,
+                temperature=config.TEMPERATURE,
             )
 
             # Extract the generated response

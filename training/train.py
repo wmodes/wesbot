@@ -30,9 +30,9 @@ parser = argparse.ArgumentParser(description="OpenAI Fine-Tuning Script")
 # Add command-line options
 parser.add_argument("--train", type=str, metavar="FILENAME", help="Start fine-tuning with the specified training file")
 parser.add_argument("--list", action="store_true", help="List fine-tuning jobs")
-parser.add_argument("--state", type=str, metavar="FTJOBID", help="Retrieve the state of a fine-tuning job")
-parser.add_argument("--cancel", type=str, metavar="FTJOBID", help="Cancel a fine-tuning job")
-parser.add_argument("--events", type=str, metavar="FTJOBID", help="List events from a fine-tuning job")
+parser.add_argument("--state", type=str, metavar="FTJOBID", nargs='?', const="fetch", help="Retrieve the state of a fine-tuning job")
+parser.add_argument("--cancel", type=str, metavar="FTJOBID", nargs='?', const="fetch", help="Cancel a fine-tuning job")
+parser.add_argument("--events", type=str, metavar="FTJOBID", nargs='?', const="fetch", help="List events from a fine-tuning job")
 parser.add_argument("--delete", type=str, metavar="MODEL", help="Delete a fine-tuned model")
 parser.add_argument("--monitor", action="store_true", help="Keep monitoring results")
 
@@ -94,6 +94,18 @@ def get_state(ft_id):
     state_results = openai.FineTuningJob.retrieve(ft_id)
     print(str(state_results) + "\n")
 
+def get_list(n):
+    results = openai.FineTuningJob.list(limit=n)
+    return(results) 
+
+def fetch_ft_id():
+    ft_list = get_list(5)  # You can change the limit as needed
+    active_jobs = [job for job in ft_list.data if job["status"] == "running"]
+    if active_jobs:
+        # Sort the active jobs by their creation time in descending order
+        sorted_jobs = sorted(active_jobs, key=lambda job: job["created_at"], reverse=True)
+        return sorted_jobs[0]["id"]
+    return None
 
 # If no arguments are provided, display the help message
 if not any(vars(args).values()):
@@ -110,7 +122,7 @@ if args.train:
     )
     print("upload results: " + str(upload_results) + "\n")
     print("# STARTING FINE-TUNING JOB")
-    ft_init_results = openai.FineTuningJob.create(training_file=upload_results.id, model=config.BASE_MODEL)
+    ft_init_results = openai.FineTuningJob.create(training_file=upload_results.id, model=config.BASE_MODEL,hyperparameters=config.HYPERPARAMETERS)
     print("fine-tuning init: " + str(ft_init_results) + "\n")
     ft_id = ft_init_results.id
     print("\nUse the following command to check the status of your fine-tuning job:")
@@ -121,31 +133,37 @@ if args.train:
         monitor_events(ft_id)
         get_state(ft_id)
 
-def test_cycle():
-    for i in range(1,10):
-        ft_message = "Sheep number " + str(i)
-        print('\r' + ft_message + "    ", end="")
-        waiting_indicator()
-        waiting_indicator()
-        waiting_indicator()
-        sys.stdout.flush()
-        time.sleep(1)
-
 if args.list:
-    results = openai.FineTuningJob.list(limit=3)
-    print("fine-tuning list: " + str(results) + "\n")
+    num = 3
+    print("fine-tuning list: " + str(get_list(num)) + "\n")
 
 if args.state:
-    get_state(args.state)
-
+    if args.state == "fetch":
+        args.state = fetch_ft_id()
+        if not args.state:
+            print("No running fine-tuning jobs found.")
+            exit(1)
+    results = get_state(args.state)
+    print("fine-tuning state: " + str(results) + "\n")
+    
 if args.cancel:
+    if args.cancel == "fetch":
+        args.cancel = fetch_ft_id()
+        if not args.cancel:
+            print("No running fine-tuning jobs found.")
+            exit(1)
     results = openai.FineTuningJob.cancel(args.cancel)
-    print("fine-tuning cancel: " + str(results) + "\n") 
+    print("fine-tuning cancel: " + str(results) + "\n")
 
 if args.events:
-    if (not monitor):
+    if args.events == "fetch":
+        args.events = fetch_ft_id()
+        if not args.events:
+            print("No running fine-tuning jobs found.")
+            exit(1)
+    if not monitor:
         results = openai.FineTuningJob.list_events(id=args.events, limit=1)
-        print("fine-tuning events: " + str(results) + "\n") 
+        print("fine-tuning events: " + str(results) + "\n")
     else:
         monitor_events(args.events)
         get_state(args.events)
