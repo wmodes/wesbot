@@ -43,6 +43,35 @@ const starters = [
   "I made it. What's up?",
 ]
 
+// Render Details
+//
+// Marked
+//
+const mdRenderer = new marked.Renderer();
+// Define a function to handle code blocks
+// mdRenderer.code = (code, language) => {
+//   // Return the code block as-is without any modification
+//   return code;
+// };
+marked.use({
+  renderer: mdRenderer,
+});
+// use with: const htmlContent = marked.parse(markdownText, mdOptions);
+//
+// shiki
+//
+syntaxTheme = 'nord';
+// use with:
+//     shiki.getHighlighter({
+//       theme: 'nord',
+//       langs: ['js'],
+//     })
+//     .then(highlighter => {
+//       const code = highlighter.codeToHtml(`console.log('shiki');`, { lang: 'js' })
+//       document.getElementById('output').innerHTML = code
+//     })
+
+
 //
 // LOCAL STORAGE
 //
@@ -228,32 +257,42 @@ function displayEntireChat() {
     if (chat[i].role === "user") {
       // check if user input exists
       if (chat[i].hasOwnProperty('content')) {
-        displayUserInput(chat[i].content);
+        displayUserInput(chat[i].content, false);
       }
     } else if (chat[i].role === "assistant") {
       if (chat[i].hasOwnProperty('content')) {
-        displayResponse(chat[i].content);
+        displayResponse(chat[i].content, false);
       } 
     }
   }
 }
 
-function displayUserInput(userInput) {
-  userInput = renderOutput(userInput);
-
-  $("#chat").append(`<div class="user-input">${userInput}</div>`);
-  // Scroll to the bottom with a smooth animation
-  $("#chat-wrapper").animate({ scrollTop: $("#chat-wrapper")[0].scrollHeight }, 500);
+function hitBottom(slowScroll = true) {
+  if (slowScroll) {
+    // Scroll to the bottom with a smooth animation
+    $("#chat-wrapper").animate({ scrollTop: $("#chat-wrapper")[0].scrollHeight }, 500);
+  } else {
+    // Scroll to the bottom without animation
+    $("#chat-wrapper").scrollTop($("#chat-wrapper")[0].scrollHeight);
+  }
 }
 
-function displayResponse(response) {
+// Function to display user input
+function displayUserInput(userInput, slowScroll = true) {
   // Render output for safety and appearance
-  response = renderOutput(response);
+  userInput = renderBetterOutput(userInput);
+  // Implement the logic to display the user input
+  $("#chat").append(`<div class="user-input">${userInput}</div>`);
+  hitBottom(slowScroll);
+}
+
+function displayResponse(response, slowScroll = true) {
+  // Render output for safety and appearance
+  response = renderBetterOutput(response);
   // Implement the logic to display the chat results
   // Example: Append the chatbot response using string interpolation
   $("#chat").append(`<div class="chat-response">${response}</div>`);
-  // Scroll to the bottom with a smooth animation
-  $("#chat-wrapper").animate({ scrollTop: $("#chat-wrapper")[0].scrollHeight }, 500);
+  hitBottom(slowScroll);
 }
 
 // Attach a click event listener to the "New Chat" button
@@ -283,7 +322,7 @@ function renderOutput(text) {
   text = text.replace(/>/g, '&gt;');
 
   // Replace triple backticks with code blocks
-  text = text.replace(/```([\s\S]*?)\n([\s\S]*?)```/g, '<div class="code"><div class="code-type">$1</div><div class="content">$2</div></div>');
+  text = text.replace(/```([\s\S]*?)\n([\s\S]*?)```/g, '<div class="code-block"><div class="code-type">$1</div><div class="content">$2</div></div>');
    
   // Replace pairs of backticks with <tt> and </tt>
   text = text.replace(/`([\s\S]*?)`/g, '<b><tt>$1</tt></b>');
@@ -297,6 +336,104 @@ function renderOutput(text) {
   text = text.replace(/\n/g, '<br>');
   return text;
 }
+
+// Modify the renderHTMLInert function to escape angle brackets outside of code blocks
+// This will take input text:
+//       ```html
+//       <div>Hello</div>
+//       ```
+//       <div> is a division within the HTML. `<\div>` is a closing tag.
+// And should return:
+//       ```html
+//       <div>Hello</div>
+//       ```
+//       &lt;div&gt; is a division within the HTML. `<\div>` is a closing tag.
+//
+function renderHTMLInert(text) {
+  // Use regular expressions to identify and escape angle brackets outside of code blocks
+  text = text.replace(/```(?:[\s\S]*?)```|<pre><code[^>]*>[\s\S]*?<\/code><\/pre>|`[^`]*`|<(?!\/?code\b)[^<]+>/g, function (match) {
+    if (/```/.test(match) || /`[^`]*`/.test(match)) {
+      // Preserve code blocks and content within backticks
+      return match;
+    } else {
+      // Escape angle brackets outside of code blocks
+      return match.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+  });
+  return text;
+}
+
+
+
+function getPrismCodeType(codeType) {
+  // Check if the codeType exists in the formatTable
+  const formatTable = {
+    "javascript": "js",
+    // "python": "py",
+    "c++": "cpp",
+    "c#": "csharp",
+    "shell:": "shellsession",
+    "typescript": "ts",
+    "markdown": "md",
+    "ruby": "rb",
+    "plain text": "plaintext",
+  }
+  var newCodeType;
+  if (formatTable[codeType]) {
+    newCodeType = formatTable[codeType];
+  } else {
+    // If not found, return the original codeType
+    newCodeType = codeType;
+  }
+  return newCodeType;
+}
+
+// Render output for safety and appearance
+// This will take input text:
+//    ```python
+//    print("hello world")
+//    ```
+function renderBetterOutput(text) {
+
+  // Step 1: Sanitize inputText to make all HTML inert
+  text = renderHTMLInert(text);
+
+  // Step 2: Process the sanitizedText using Marked.js to convert Markdown to HTML
+  text = marked.parse(text);
+
+  // Step 3: Find code blocks, i.e., <pre><code>...</code></pre> and wrap with our custom code
+  // Wrap the text in a jQuery object
+  const $text = $('<div>').html(text);
+  $text.find('pre code').each(function () {
+    const codeType = $(this).attr('class').replace('language-',''); // Extract code type
+    const codeContent = $(this).html(); // Extract code content
+
+    const prismCodeType = getPrismCodeType(codeType);
+
+    // Create a custom code block
+    const customCodeBlock = `
+      <div class="code-block">
+        <div class="code-type">${codeType}</div>
+        <div class="content">
+          <pre><code class="language-${prismCodeType}">${codeContent}</code></pre>
+        </div>
+      </div>`;
+
+    // Convert the customCodeBlock into an element
+    const $customCodeBlock = $(customCodeBlock);
+
+    // Run Prism's highlightElement on the custom code block
+    Prism.highlightElement($customCodeBlock.find('code')[0]);
+
+    // Replace the original code block with the custom code block
+    $(this).closest('pre').replaceWith($customCodeBlock);
+  });
+
+  // Step 4: Return the HTML content for rendering on the webpage
+  return $text.html();
+}
+
+
 
 
 //
@@ -315,6 +452,10 @@ function renderOutput(text) {
 // A helpful rule of thumb is that one token generally corresponds to ~4 characters of text 
 // for common English text. This translates to roughly ¾ of a word (so 100 tokens ~= 75 words).
 function estimateTokenCount(data) {
+
+  if (! data) {
+    return 0;
+  }
   // Flatten the data structure into a single string using JSON.stringify
   const flattenedText = JSON.stringify(data);
 
@@ -332,7 +473,7 @@ function addUserMsgToChat(userInput) {
   chat.push(newMessage);
 
   // estimate new message token count
-  const estMsgTokenCount = estimateTokenCount(newMessage);
+  const estMsgTokenCount =  estimateTokenCount(newMessage);
 
   // temporary variable to store the est token count
   let estTotalTokenCount = totalChatTokenCount + estMsgTokenCount ;

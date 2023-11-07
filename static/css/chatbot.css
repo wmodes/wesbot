@@ -155,9 +155,8 @@ body, #content {
  */
 
 #user-input-wrapper {
-  width: 60%;
+  width: calc(80% - 40px);
   align-items: center;
-  /* width: 95%; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -216,7 +215,7 @@ body, #content {
 }
 
 #chat {
-  width: 50%;
+  width: 80%;
   min-width: 500px;
   height: auto;
   padding: .5rem;
@@ -232,7 +231,7 @@ body, #content {
 }
 
 .user-input, .chat-response {
-  padding: 20px;
+  padding: 10px 20px;
 }
 
 .user-input {
@@ -318,24 +317,34 @@ h1.site-title {
  * Code block
  */
 
-.code {
-  background-color: #000;
-  border: 0;
-  color: #ECECF1
-  padding: 10px;
-  white-space: pre-wrap; /* Preserve spaces and line breaks */
+ code, .code-block {
+  color: #ECECF1;
   font-family: monospace; /* Use a monospaced font for code */
   font-size: 14px; /* Adjust the font size as needed */
+ }
+
+.code-block {
+  background-color: #000;
+  border: 0;
+  /* padding: 10px; */
+  border-radius: 8px;
 }
 
 .code-type {
   background-color: #343541;
   color: #ECECF1;
   padding: 10px;
-  text-transform: uppercase;
+  text-transform: lowercase;
   font-size: 80%;
+  border-radius: 8px 8px 0 0;
 }
 
-.code .content {
+.code-block .content {
   padding: 20px; /* Add some padding */
+}
+
+.code-block pre, .code-block pre code {
+  margin: 0;
+  padding: 0;
+  background-color: transparent
 }

@@ -21,11 +21,15 @@ BASE_MODEL = "gpt-3.5-turbo"
 CUSTOM_SUFFIX = ""
 # fine-tuned file_id, from:
 #   training % py train.py --list
-FINE_TUNE_ID = "ft:gpt-3.5-turbo-0613:artist::8HfubXpT"
+FINE_TUNE_ID = "ft:gpt-3.5-turbo-1106:artist::8IDFD6oW"
 # fine-tuned model
 MODEL = FINE_TUNE_ID
-# temperature
+# AI response parameters
 TEMPERATURE = 0.7
+TOP_P = 1.0
+FREQUENCY_PENALTY = 1.5
+MAXIMUM_LENGTH = 2048
+PRESENCE_PENALTY = 0.0
 
 starter_content = "Hi, how can I help?"
 
@@ -171,9 +175,9 @@ SYSTEM_MSGS = {
 
         Your students are generally beginners, so keep things simple. Abstract single actions into functions. Use descriptive variable names. Use comments to explain what you are doing.
         
-        Always make sure HTML, CSS, and JavaScript are in their own files. Use jQuery rather than pure JavaScript. 
+        Make sure HTML, CSS, and JavaScript are in their own files. Use jQuery rather than pure JavaScript. 
 
-        ALWAYS put a comment block at the top of programs, including the name of the file, purpose, author's name, and the year. 
+        Put a comment block at the top of code, including the filename, purpose, author's name, and the year. 
         
         Use common conventions for naming variables, functions, and classes. Use comments above the command to explain what you are doing. Use triple backticks to format code blocks. Use markdown to format comments and explanations. 
         

@@ -158,7 +158,7 @@ if args.cancel:
 if args.events:
     if args.events == "fetch":
         args.events = fetch_ft_id()
-        if not args.events:
+        if not args.events:  # Typo: Change "argsevents" to "args.events"
             print("No running fine-tuning jobs found.")
             exit(1)
     if not monitor:

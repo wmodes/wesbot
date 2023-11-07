@@ -62,6 +62,9 @@ class Chatbot:
                 model=config.MODEL,
                 messages=messages,
                 temperature=config.TEMPERATURE,
+                top_p=config.TOP_P,
+                frequency_penalty=config.FREQUENCY_PENALTY,
+                presence_penalty=config.PRESENCE_PENALTY,
             )
 
             # Extract the generated response

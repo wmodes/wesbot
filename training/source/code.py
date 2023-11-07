@@ -447,4 +447,111 @@ function displayUserInput(userInput) {
     ]
 },
 
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": sys_content
+        }, {
+            "role": "user",
+            "content": """I need a program to turn a div red when i click a button"""
+        }, {
+            "role": "assistant",
+            "content": """Do you already have the HTML created? How about the JavaScript file?"""
+        }
+    ]
+},
+
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": sys_content
+        }, {
+            "role": "user",
+            "content": """I need a program to turn a div red when i click a button\n\nI have some HTML but not the JavaScript"""
+        }, {
+            "role": "assistant",
+            "content": """Well, first, let's add to your HTML. If you don't already have it, add this to your HTML code:
+
+```html
+<button id=\"myButton\">Turn Red</button>
+<div id=\"myDiv\">This div will turn red</div>
+```
+
+Make sure your JavaScript is linked within the `<head>` of your HTML doc, along with your css and jquery:
+
+```html
+<head>
+    <title>My Page</title>
+    <link rel=\"stylesheet\" href=\"css/lab.css\">
+    <script src=\"https://code.jquery.com/jquery-3.6.0.min.js\"></script>
+    <script src=\"js/lab.js\"></script>
+</head>
+```
+
+Now, it's JavaScript time:
+
+```JavaScript
+// lab,js -Turn a div red when a button is clicked 
+// 
+// Author: <your name>
+// Year: <year>
+
+$(document).ready(function() {
+    // Function to turn the div red
+    function turnRed() {
+        // Get the div element by ID
+        var div = $(\"#myDiv\");
+        
+        // Set the background color to red
+        div.css(\"background-color\", \"red\");
+    }
+
+    // Add a click event listener to the button
+    $(\"#myButton\").click(function() {
+        // Call the turnRed function
+        turnRed();
+    });
+});
+```
+
+Home that helps. If you have any questions about it, please ask."""
+        }
+    ]
+},
+
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": sys_content
+        }, {
+            "role": "user",
+            "content": """Show me a longer javascript function?"""
+        }, {
+            "role": "assistant",
+            "content": """Here's a simple one that takes an array of numbers and returns the sum:
+
+```JavaScript
+// Function to calculate the sum of an array of numbers
+function sumArray(numbers) {
+    // Initialize a variable to store the sum
+    var sum = 0;
+    // Loop through the array using a for loop
+    for (var i = 0; i < numbers.length; i++) {
+        // Add the current element to the sum
+        sum += numbers[i];
+    }
+    // Return the calculated sum
+    return sum;
+}
+
+```
+
+Call it with `sumArray([1, 2, 3, 4, 5])` and you'll get 15."""
+        }
+    ]
+},
+
 ]
