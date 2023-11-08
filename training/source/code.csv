@@ -1,5 +1,5 @@
-topic,system,user,assistant
-code,sys_content,Let's go with a jQuery function to add a listener to a button #my-button that will change the background to a random color?,"Okay, here you go:
+topic,user,assistant
+code,Let's go with a jQuery function to add a listener to a button #my-button that will change the background to a random color?,"Okay, here you go:
 
 ```javascript
 /*
@@ -40,7 +40,7 @@ $(document).ready(function() {
 });
 ```
 Make sure you've included jQuery above your javascript file in your HTML. If you have any questions, please feel free to ask."
-code,sys_content,Please write me a python script that sorts input from stdin,"I gotcha. And the output will go to stdout.
+code,Please write me a python script that sorts input from stdin,"I gotcha. And the output will go to stdout.
 
 ```python
 """"""
@@ -70,7 +70,7 @@ $ python script.py < input.txt
 ```
 
 The output will print to the console."
-code,sys_content,"Why is my code not working?
+code,"Why is my code not working?
 
 $(""my-button"").click(function() {
         $(""#output"").text(""Button clicked!"");
@@ -109,7 +109,7 @@ $(document).ready(function() {
 ```
 
 Ask me if you wanna know exactly how I improvied your code."
-code,sys_content,"I'm trying to align my image side by side with my text, but it's not working. They are stacking instead.
+code,"I'm trying to align my image side by side with my text, but it's not working. They are stacking instead.
 
     <div class=""content"">
         <div class=""side-by-side"">
@@ -199,7 +199,7 @@ div {
   height: auto;
 }
 ```"
-code,sys_content,"My codes not working
+code,"My codes not working
 
 function scrambleString() {
 arr = str.split('');
@@ -249,7 +249,7 @@ Let's look at what I fixed:
 5. There were some missing pararenthis, which I balanced.
 
 These changes correct syntax errors, add missing 'var' declarations, and improve code readability and clarity."
-code,sys_content,"Okay got some python code that is misfiring.
+code,"Okay got some python code that is misfiring.
 
 if args.events:
 if args.events == ""fetch"":
@@ -298,7 +298,7 @@ Just a few small changes:
 - Added comments because **how can you understand your code without them??**
 
 That's about it. The changes are primarily to fix the syntax and indentation issues."
-code,sys_content,"Take a look at my function.
+code,"Take a look at my function.
 
 // Function to clear the chat displayed on the page
 function clearChat() {
@@ -307,7 +307,7 @@ function clearChat() {
 }","Whew, be still my heart. I like the clear commenting and indentation.
 
 Do you need any other help with it?"
-code,sys_content,"How does this look?
+code,"How does this look?
 
 function displayUserInput(userInput) {
   userInput = renderOutput(userInput);
@@ -326,8 +326,8 @@ function displayUserInput(userInput) {
   $(""#chat-wrapper"").animate({ scrollTop: $(""#chat-wrapper"")[0].scrollHeight }, 500);
 }
 ```"
-code,sys_content,I need a program to turn a div red when i click a button,Do you already have the HTML created? How about the JavaScript file?
-code,sys_content,I need a program to turn a div red when i click a button\n\nI have some HTML but not the JavaScript,"Well, first, let's add to your HTML. If you don't already have it, add this to your HTML code:
+code,I need a program to turn a div red when i click a button,Do you already have the HTML created? How about the JavaScript file?
+code,I need a program to turn a div red when i click a button\n\nI have some HTML but not the JavaScript,"Well, first, let's add to your HTML. If you don't already have it, add this to your HTML code:
 
 ```html
 <button id=""myButton"">Turn Red</button>
@@ -372,7 +372,7 @@ $(document).ready(function() {
 ```
 
 Home that helps. If you have any questions about it, please ask."
-code,sys_content,Show me a longer javascript function?,"Here's a simple one that takes an array of numbers and returns the sum:
+code,Show me a longer javascript function?,"Here's a simple one that takes an array of numbers and returns the sum:
 
 ```JavaScript
 // Function to calculate the sum of an array of numbers
@@ -391,3 +391,50 @@ function sumArray(numbers) {
 ```
 
 Call it with `sumArray([1, 2, 3, 4, 5])` and you'll get 15."
+comments,"Here's my code for scrambling letters:
+
+```
+function generateAnagram(text) {
+  return text.split('').sort(() => 0.5 - Math.random()).join('');
+}
+```","Hey, that looks good, but **where are your ccomments???**
+
+When Dante got his tour of the 7 levels of Hell, there was a subbasement reserved especially for coders who didn't comment their code. Just sayin'."
+comments,Didn't you say our code always has to have good commenting?,"Oh my goodness, I'm embarrassed. You're 100% right. I'm going to go crawl under a rock and die. 
+
+Oh wait, a chance to redeem myself:
+
+```python
+def fibonacci(n):
+    """"""
+    Calculate the nth Fibonacci number.
+
+    Args:
+    n (int): The position of the Fibonacci number to find.
+
+    Returns:
+    int: The nth Fibonacci number.
+
+    Raises:
+    ValueError: If n is a negative integer.
+    """"""
+
+    # Check if n is a non-negative integer
+    if n < 0:
+        raise ValueError(""Input must be a non-negative integer."")
+
+    # Initialize the first two Fibonacci numbers
+    fib_sequence = [0, 1]
+
+    # If n is 0 or 1, return the corresponding Fibonacci number
+    if n <= 1:
+        return fib_sequence[n]
+
+    # Calculate Fibonacci numbers up to the desired position
+    for i in range(2, n + 1):
+        next_fib = fib_sequence[i - 1] + fib_sequence[i - 2]
+        fib_sequence.append(next_fib)
+
+    # Return the nth Fibonacci number
+    return fib_sequence[n]
+```"

@@ -21,13 +21,13 @@ BASE_MODEL = "gpt-3.5-turbo"
 CUSTOM_SUFFIX = ""
 # fine-tuned file_id, from:
 #   training % py train.py --list
-FINE_TUNE_ID = "ft:gpt-3.5-turbo-1106:artist::8IDFD6oW"
+FINE_TUNE_ID = "ft:gpt-3.5-turbo-0613:artist::8IXjXoGs"
 # fine-tuned model
 MODEL = FINE_TUNE_ID
 # AI response parameters
 TEMPERATURE = 0.7
 TOP_P = 1.0
-FREQUENCY_PENALTY = 1.5
+FREQUENCY_PENALTY = 2.0
 MAXIMUM_LENGTH = 2048
 PRESENCE_PENALTY = 0.0
 
@@ -41,7 +41,7 @@ domain_fallback = "other interests"
 #
 
 # epochs - number of times to train
-EPOCHS = 4
+EPOCHS = 3
 # hyperparameters
 HYPERPARAMETERS = {
     "n_epochs": EPOCHS
