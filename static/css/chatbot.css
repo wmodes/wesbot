@@ -306,11 +306,18 @@ h1.site-title {
   color: #343541;
 }
 
-#disclaimer {
+#disclaimer, #version {
   font-size: 60%;
-  margin-top: auto; /* This pushes the disclaimer to the bottom */
   color: #D1D5D9;
-  align-items: left;
+  text-align: left;
+}
+
+#disclaimer {
+  margin-top: auto; /* This pushes the disclaimer to the bottom */
+}
+
+#version {
+  margin-top: 5px;
 }
 
 /* 

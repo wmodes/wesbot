@@ -51,8 +51,6 @@ secrets.*
 mysecrets.*
 api_secrets.*
 *secret*
-scripts
-scripts/*
 graphics
 graphics/*
 log/*

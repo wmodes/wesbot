@@ -7,6 +7,14 @@ Author: Wes Modes
 Date: 2023
 """
 
+# Version
+MAJOR_VERSION = 0
+MINOR_VERSION = 2
+PATCH_VERSION = 60
+HTML_TEMPLATE = "/Users/wmodes/dev/wesbot/templates/chat.html"
+VERSION_TAG = '<span class="version">%%version%%</span>'
+VERSION_REGEX = '<span.*?class.*?version.*?>.*?</span>'
+
 LOG = "log/access.log"
 
 # 
