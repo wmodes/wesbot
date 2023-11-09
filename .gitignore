@@ -54,4 +54,5 @@ api_secrets.*
 graphics
 graphics/*
 log/*
+log
 analysis/*.cspell/*
