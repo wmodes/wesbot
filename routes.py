@@ -80,6 +80,11 @@ def routes(chatbot):
         # Pass on the response
         return flask.jsonify(response)
     
+    # Define a route for serving the images in /static/img
+    @routes_blueprint.route('/img/<filename>')
+    def serve_image(filename):
+        return flask.send_from_directory('static/img', filename)
+    
     # Define a route for serving the favicon.ico file
     @routes_blueprint.route('/favicon.ico')
     def favicon():

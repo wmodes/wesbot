@@ -282,7 +282,7 @@ function displayUserInput(userInput, slowScroll = true) {
   // Render output for safety and appearance
   userInput = renderBetterOutput(userInput);
   // Implement the logic to display the user input
-  $("#chat").append(`<div class="user-input">${userInput}</div>`);
+  $("#chat").append(`<div class="user-input"><div class="user-icon"><img src="/img/user-icon.png"></div><div class="text-wrapper">${userInput}</div></div>`);
   hitBottom(slowScroll);
 }
 
@@ -291,7 +291,7 @@ function displayResponse(response, slowScroll = true) {
   response = renderBetterOutput(response);
   // Implement the logic to display the chat results
   // Example: Append the chatbot response using string interpolation
-  $("#chat").append(`<div class="chat-response">${response}</div>`);
+  $("#chat").append(`<div class="chat-response"><div class="wes-icon"><img src="/img/wes-icon.png"></div><div class="text-wrapper">${response}</div></div>`);
   hitBottom(slowScroll);
 }
 
@@ -373,7 +373,7 @@ function getPrismCodeType(codeType) {
     "c++": "cpp",
     "c#": "csharp",
     "shell:": "shellsession",
-    "typescript": "ts",
+      
     "markdown": "md",
     "ruby": "rb",
     "plain text": "plaintext",

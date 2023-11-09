@@ -10,11 +10,11 @@ Date: 2023
 # Version
 MAJOR_VERSION = 0
 MINOR_VERSION = 2
-PATCH_VERSION = 71
+PATCH_VERSION = 72
 HTML_TEMPLATE = "/Users/wmodes/dev/wesbot/templates/chat.html"
 MYSECRETS = "/Users/wmodes/dev/wesbot/mysecrets.py"
-VERSION_TAG = '<span class="version">%%version%%</span>'
-VERSION_REGEX = '<span.*?class.*?version.*?>.*?</span>'
+VERSION_TAG = '<span class="version-num">%%version%%</span>'
+VERSION_REGEX = '<span.*?class.*?version-num.*?>.*?</span>'
 
 LOG = "log/access.log"
 
@@ -104,7 +104,7 @@ SYSTEM_MSGS = {
     "art": f"""
         {SYS_WES}
 
-        You are a Santa Cruz artist focused on social practice, sculpture, performance and new media work. You hold a Masters in Fine Arts from the Digital Art and New Media program at the University of California Santa Cruz. Your art projects include A Secret History of American River People, Black Rock Station, Unavoidable Disaster, Co-related Space, FOMOphobia, Night Ride, and a collection of sculptural works.
+        You are a Santa Cruz artist focused on social practice, sculpture, performance and new media work. You hold a Masters in Fine Arts from the Digital Art and New Media program at the University of California Santa Cruz. Your art projects include A Secret History of American River People, Black Rock Station (an installation at Burning Man exploring untold histories), Unavoidable Disaster (an interactive punk web zine), Co-related Space (an installation with lidar, lasers, and generative sound), FOMOphobia (a sculptural piece exploring network over-connectedness), Night Ride (a radio show collage of music and stories), and a collection of sculptural works.
 
         Your sculpture, photography, and new media works have appeared in group and solo shows since 1996. Your project A Secret History of American River People continues to exhibit nationally since 2014. Your performance and social practice work since the mid-1990s has made headlines internationally and has been chronicled in journals. Your comic work has been published in several noted illustrated histories.
         

@@ -110,6 +110,16 @@ body, #content {
     min-width: inherit !important;
   }
 
+  .wes-icon, .user-icon {
+    padding: 10px 10px 0 0 !important;
+  }
+
+  #chat .text-wrapper {
+    width: 100% !important;
+    min-width: inherit !important;
+    padding: 10px 10px 0 10px !important;
+  }
+
   .logo-box {
     width: 100px !important;  
     display: flex;
@@ -127,7 +137,7 @@ body, #content {
   }
 
   #footer {
-    width: 100vw !important;
+    width: calc(100vw - 10px) !important;
   }
 
   #user-input-wrapper {
@@ -144,8 +154,12 @@ body, #content {
     padding: 0 10px 0 0 !important;
   }
 
-  #disclaimer {
-    display: none;
+  .disclaimer1, .version1 {
+    display: none !important;
+  }
+
+  .disclaimer2, .version2 {
+    display: block !important;
   }
 
 }
@@ -215,23 +229,24 @@ body, #content {
 }
 
 #chat {
-  width: 80%;
-  min-width: 500px;
+  width: 100%;
   height: auto;
-  padding: .5rem;
+  /* padding: .5rem; */
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
   overflow: hidden;
-  /* Center the chat container horizontally within its parent */
-  margin: 0 auto; 
   /* Ensure it's a block-level element */
   display: block; 
   /* Reset text alignment for chat content */
   text-align: left; 
+  margin-bottom: 10px;
 }
 
 .user-input, .chat-response {
-  padding: 10px 20px;
+  /* Center the chat container horizontally within its parent */
+  display: flex;
+  justify-content: center;
+  margin: 0 auto; 
 }
 
 .user-input {
@@ -242,6 +257,20 @@ body, #content {
 .chat-response {
   background-color: #434654;
   color: #D1D5DA;
+}
+
+#chat .text-wrapper {
+  width: 60%;
+  min-width: 500px;
+  padding: 20px 20px 10px 20px;
+}
+
+#chat .text-wrapper p {
+  margin-block-start: 0;
+}
+
+.wes-icon, .user-icon {
+  padding: 20px 10px 0 0;
 }
 
 /*
@@ -306,18 +335,23 @@ h1.site-title {
   color: #343541;
 }
 
-#disclaimer, #version {
+.disclaimer, .version {
   font-size: 60%;
   color: #D1D5D9;
   text-align: left;
 }
 
-#disclaimer {
+.disclaimer {
   margin-top: auto; /* This pushes the disclaimer to the bottom */
 }
 
-#version {
+.version {
   margin-top: 5px;
+}
+
+.disclaimer2, .version2 {
+  display: none;
+  text-align: center;
 }
 
 /* 
