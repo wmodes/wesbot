@@ -295,8 +295,8 @@ function displayResponse(response, slowScroll = true) {
   hitBottom(slowScroll);
 }
 
-// Attach a click event listener to the "New Chat" button
-$(".new-chat-button").on("click", function() {
+// Attach a click or touchstart event listener to the "New Chat" button
+$(".new-chat-button").on("click touchstart", function() {
   clearChat(); // Clear the existing chat
   storeChat(); // Store an empty chat in storage
   initiateChat(""); // Initiate a new chat

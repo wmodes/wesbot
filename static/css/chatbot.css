@@ -169,7 +169,7 @@ body, #content {
  */
 
 #user-input-wrapper {
-  width: calc(80% - 40px);
+  width: calc(60% + 75px);
   align-items: center;
   display: flex;
   flex-direction: row;

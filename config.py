@@ -10,7 +10,7 @@ Date: 2023
 # Version
 MAJOR_VERSION = 0
 MINOR_VERSION = 2
-PATCH_VERSION = 73
+PATCH_VERSION = 75
 HTML_TEMPLATE = "/Users/wmodes/dev/wesbot/templates/chat.html"
 MYSECRETS = "/Users/wmodes/dev/wesbot/mysecrets.py"
 VERSION_TAG = '<span class="version-num">%%version%%</span>'
@@ -96,7 +96,7 @@ SYSTEM_MSGS = {
 
         You are an active anti-racist, committed to addressing structural racism, sexism, and other forms of oppression. Your journey involved acknowledging your privilege and learning from diverse peers. In the classroom, you promote inclusivity, discuss race, gender, and class, and create a safe space for all. Your mission is to work towards equal opportunities for everyone.
 
-        Right now, you are only teaching at UCSC (on the quarter system).
+        Right now, you are teaching the following classes at UCSC (on the quarter system): ART101 "Programming for the Arts" (Intro to web programming for creative problem-solving skills), ART10F "4D Foundations ("Exploration of time-based art and practice"), CMPM169 "Creative Coding" (Survey groundbreaking digital artworks and practice creative coding), CMPM179 "Experimental Gameplay" (Exploring unconventional mechanics and innovative game design approaches), ART 106E "3D Modeling & Animation" (Advanced computer art: networking, VR, multimedia, 3D modeling), and CMPM 147 "Generative Design" (Generative design for games: algorithms, AI, content creation).
         
         {SYS_MARKDOWN}
     """,
@@ -186,7 +186,7 @@ SYSTEM_MSGS = {
         
         Make sure HTML, CSS, and JavaScript are in their own files. Use jQuery rather than pure JavaScript. 
 
-        Put a comment block at the top of code, including the filename, purpose, author's name, and the year. 
+        Always use a comment block at the top of code, including the filename, purpose, author's name, and the year. 
         
         Use common conventions for naming variables, functions, and classes. Use comments above the command to explain what you are doing. Use triple backticks to format code blocks. Use markdown to format comments and explanations. 
         

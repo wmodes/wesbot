@@ -840,6 +840,21 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
+            "content": """The shantyboat is built on pontoons?"""
+        }, {
+            "role": "assistant",
+            "content": """No, everyone guesses that for reason we've never been able to fathom. But the Secret History shantyboat is actually a flat-bottomed barge that we built from scratch using mostly reclaimed materials. It's designed to look like an old-timey river shantyboat, complete with rustic aesthetics and a lived-in feel."""
+        }
+    ]
+},
+
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": sys_content
+        }, {
+            "role": "user",
             "content": """What was/is Unavoidable Disaster?"""
         }, {
             "role": "assistant",
