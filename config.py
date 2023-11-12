@@ -10,7 +10,7 @@ Date: 2023
 # Version
 MAJOR_VERSION = 0
 MINOR_VERSION = 2
-PATCH_VERSION = 76
+PATCH_VERSION = 77
 HTML_TEMPLATE = "/Users/wmodes/dev/wesbot/templates/chat.html"
 MYSECRETS = "/Users/wmodes/dev/wesbot/mysecrets.py"
 VERSION_TAG = '<span class="version-num">%%version%%</span>'
@@ -26,25 +26,40 @@ CHAT_LOG = "log/chat.log"
 # Stuff for OpenAI
 OPENAI_ORG = "org-6Sx3QSqdmkskgXbQf8AsccbW"
 # generic openai model
-BASE_MODEL = "gpt-3.5-turbo"
-# custom suffix
-CUSTOM_SUFFIX = ""
+OPENAI_BASE_MODEL = "gpt-3.5-turbo-1106"
 # fine-tuned file_id, from:
 #   training % py train.py --list
-FINE_TUNE_ID = "ft:gpt-3.5-turbo-0613:artist::8JvinOyB"
-# fine-tuned model
-MODEL = FINE_TUNE_ID
-# AI response parameters
-TEMPERATURE = 0.6
-TOP_P = 1.0
-FREQUENCY_PENALTY = 2.0
-MAXIMUM_LENGTH = 2048
-PRESENCE_PENALTY = 0.0
+OPENAI_FINE_TUNE_ID = "ft:gpt-3.5-turbo-1106:artist::8KAhri96"
 
-starter_content = "Hi, how can I help?"
+# Explainging the parameters
+#
+# model: The base language model for generation.
+# temperature: Controls the randomness of the model's output. A higher value (e.g., 0.8) 
+#           makes the output more creative and random, while a lower value (e.g., 0.2) makes it
+#           more focused and deterministic.
+# top_p: It stands for "top probability" and controls the diversity of the output. A value 
+#           closer to 1.0 allows a larger variety of tokens to be considered during generation.
+# frequency_penalty: It penalizes words based on their frequency in the training data. 
+#           Higher values (e.g., 2.0) make the model use less common words.
+# presence_penalty: It penalizes the use of new tokens. A non-zero value encourages the model 
+#           to stick to the tokens it has seen in the input.
+# max_tokens: Sets the maximum number of tokens (words or characters) the model should generate 
+#           in a single response. If the response reaches this limit, it will be cut off.
+# stream: If set to True, the API response will be streamed, allowing partial results to be 
+#           received before the completion is finished. If set to False, the entire response is 
+#           returned once the generation is complete.
+#
+OPENAI_PARAMS = {
+    "model": OPENAI_BASE_MODEL,
+    "temperature": 0.6,
+    "top_p": 1.0,
+    "frequency_penalty": 2.0,
+    "presence_penalty": 0.0,
+    "max_tokens": 2048,
+    "stream": False,
+}
 
 domain_common = "common"
-domain_fallback = "other interests"
 
 #
 # TRAINING CONFIG

@@ -123,7 +123,7 @@ if args.train:
     )
     print("upload results: " + str(upload_results) + "\n")
     print("# STARTING FINE-TUNING JOB")
-    ft_init_results = openai.FineTuningJob.create(training_file=upload_results.id, model=config.BASE_MODEL,hyperparameters=config.HYPERPARAMETERS)
+    ft_init_results = openai.FineTuningJob.create(training_file=upload_results.id, model=config.OPENAI_BASE_MODEL,hyperparameters=config.HYPERPARAMETERS)
     print("fine-tuning init: " + str(ft_init_results) + "\n")
     ft_id = ft_init_results.id
     print("\nUse the following command to check the status of your fine-tuning job:")
@@ -170,5 +170,5 @@ if args.events:
         get_state(args.events)
 
 if args.delete:
-    arg_str = f"ft:{config.MODEL}:{config.OPENAI_ORG}"
+    arg_str = f"ft:{config.OPENAI_PARAMS['model']}:{config.OPENAI_ORG}"
     results = openai.Model.delete(args.delete)

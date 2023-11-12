@@ -59,12 +59,13 @@ class Chatbot:
         try:
             # Use the OpenAI API to generate a response
             response = openai.ChatCompletion.create(
-                model=config.MODEL,
+                model=config.OPENAI_PARAMS['model'],
                 messages=messages,
-                temperature=config.TEMPERATURE,
-                top_p=config.TOP_P,
-                frequency_penalty=config.FREQUENCY_PENALTY,
-                presence_penalty=config.PRESENCE_PENALTY,
+                temperature=config.OPENAI_PARAMS['temperature'],
+                top_p=config.OPENAI_PARAMS['top_p'],
+                frequency_penalty=config.OPENAI_PARAMS['frequency_penalty'],
+                presence_penalty=config.OPENAI_PARAMS['presence_penalty'],
+                stream=config.OPENAI_PARAMS['stream']
             )
 
             # Extract the generated response
