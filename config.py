@@ -10,7 +10,7 @@ Date: 2023
 # Version
 MAJOR_VERSION = 0
 MINOR_VERSION = 2
-PATCH_VERSION = 75
+PATCH_VERSION = 76
 HTML_TEMPLATE = "/Users/wmodes/dev/wesbot/templates/chat.html"
 MYSECRETS = "/Users/wmodes/dev/wesbot/mysecrets.py"
 VERSION_TAG = '<span class="version-num">%%version%%</span>'
@@ -35,7 +35,7 @@ FINE_TUNE_ID = "ft:gpt-3.5-turbo-0613:artist::8JvinOyB"
 # fine-tuned model
 MODEL = FINE_TUNE_ID
 # AI response parameters
-TEMPERATURE = 0.7
+TEMPERATURE = 0.6
 TOP_P = 1.0
 FREQUENCY_PENALTY = 2.0
 MAXIMUM_LENGTH = 2048
