@@ -380,6 +380,14 @@ h1.site-title {
   border-radius: 8px 8px 0 0;
 }
 
+.chat-response .code-type {
+  background-color: #343541;
+}
+
+.user-input .code-type {
+  background-color: #434654;
+}
+
 .code-block .content {
   padding: 20px; /* Add some padding */
 }

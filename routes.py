@@ -21,6 +21,21 @@ logger = logging.getLogger('httpd_logger')
 # Initialize HTTPBasicAuth for handling basic authentication
 auth = HTTPBasicAuth()
 
+def log_to_chat(date, client_id, log_object):
+    """
+    Helper function to log data to CHAT_LOG.
+
+    Args:
+      date: The timestamp for the log entry.
+      client_id: The client_id for the log entry.
+      log_object: The messages object to be logged.
+    """
+    # Convert the log_object to a JSON-formatted string
+    log_object_str = json.dumps(log_object)
+    # Log the data to CHAT_LOG
+    with open(config.CHAT_LOG, 'a') as log_file:
+        log_file.write(f"{date} - {client_id} - {log_object_str}\n")
+
 @auth.verify_password 
 def verify_password(username, password):
     if username in mysecrets.AUTH and mysecrets.AUTH[username] == password:
@@ -65,10 +80,30 @@ def routes(chatbot):
         log_entry = f'{client_ip} - {client_id} - [{timestamp}] "POST /api/chatbot HTTP/1.1" 200 {content_length} "{user_agent}"'
         logger.info(log_entry)
 
+        # If the chat has only three entries (the system message, the user message, and the assistant message), then the user has just started the chat. In this case, we log the assistant message to CHAT_LOG.
+        if len(messages) == 2:
+            # Log the start of the chat
+            system_message = {"role": "system", "content": "New conversation"}
+            log_to_chat(timestamp, client_id, system_message)
+            # Get the assistant message which is the second message
+            assistant_message = messages[0]
+            # Log the assistant message to CHAT_LOG
+            log_to_chat(timestamp, client_id, assistant_message)
+
+        # Get last message from the conversation
+        user_message = messages[-1]
+        # Log the user request data to CHAT_LOG
+        log_to_chat(timestamp, client_id, user_message)
+
         # print("messages:", messages)
 
         # Generate a response to the messages
         response = chatbot.get_response(messages)
+
+        # Create a response chat object
+        assistant_message = {"role": "assistant", "content": response["reply"]}
+        # Log the response to CHAT_LOG
+        log_to_chat(timestamp, client_id, assistant_message)
 
         # Response is an object of the form: 
         #   { reply: 'Hey there! How can I help you today?', 
@@ -95,11 +130,23 @@ def routes(chatbot):
     @auth.login_required
     def httpd_log():
         try:
-            with open(config.LOG, 'r') as log_file:
+            with open(config.ACCESS_LOG, 'r') as log_file:
                 log_content = log_file.read()
             response = flask.Response(log_content, content_type='text/plain')
             return response
         except FileNotFoundError:
             return "HTTPD log file not found."
+        
+    # Define a route to return the contents of the chat log with basic authentication
+    @routes_blueprint.route('/log/chat')
+    @auth.login_required
+    def chat_log():
+        try:
+            with open(config.CHAT_LOG, 'r') as log_file:
+                log_content = log_file.read()
+            response = flask.Response(log_content, content_type='text/plain')
+            return response
+        except FileNotFoundError:
+            return "CHAT log file not found."
 
     return routes_blueprint

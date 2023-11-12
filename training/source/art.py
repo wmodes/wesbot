@@ -660,7 +660,7 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """Does Benzy fo on the river?"""
+            "content": """Does Benzy go on the river?"""
         }, {
             "role": "assistant",
             "content": """Oh yeah. She's a river boss. Skippers with the best of them. Great shipmate, great company, makes extremely strong drinks. """

@@ -56,21 +56,10 @@ const mdRenderer = new marked.Renderer();
 marked.use({
   renderer: mdRenderer,
 });
+marked.setOptions({
+  breaks: true,
+});
 // use with: const htmlContent = marked.parse(markdownText, mdOptions);
-//
-// shiki
-//
-syntaxTheme = 'nord';
-// use with:
-//     shiki.getHighlighter({
-//       theme: 'nord',
-//       langs: ['js'],
-//     })
-//     .then(highlighter => {
-//       const code = highlighter.codeToHtml(`console.log('shiki');`, { lang: 'js' })
-//       document.getElementById('output').innerHTML = code
-//     })
-
 
 //
 // LOCAL STORAGE
@@ -397,6 +386,9 @@ function renderBetterOutput(text) {
 
   // Step 1: Sanitize inputText to make all HTML inert
   text = renderHTMLInert(text);
+
+  // Step 1.1: Remove spaces from the beginning of each line
+  text = text.replace(/(^|\n) +/g, '$1');
 
   // Step 2: Process the sanitizedText using Marked.js to convert Markdown to HTML
   text = marked.parse(text);

@@ -71,8 +71,9 @@ def display_event_on_same_line(msg):
     sys.stdout.flush()
     print('\r' + msg + "    ", end="")
 
-# continuously monitor events
+# continously monitor events
 def monitor_events(ft_id):
+    print("# MONITORING TRAINING PROGRESS")
     last_message = ""
     escape_monitor = False
     waiting_indicator("reset")
