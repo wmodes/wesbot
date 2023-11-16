@@ -135,7 +135,7 @@ if args.train:
         get_state(ft_id)
 
 if args.list:
-    num = 3
+    num = 20
     print("fine-tuning list: " + str(get_list(num)) + "\n")
 
 if args.state:

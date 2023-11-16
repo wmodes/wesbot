@@ -39,8 +39,14 @@ version_regex = config.VERSION_REGEX
 # Increment PATCH_VERSION
 patch_version += 1
 
+# Extracting the final portion of the model number
+model_suffix = config.OPENAI_FINE_TUNE_ID.split(":")[-1]
+
+# Creating the fingerprint by combining the model suffix and temperature
+fingerprint = f"{model_suffix}-{config.OPENAI_PARAMS['temperature']}"
+
 # Create a version_num variable
-version = f"{major_version}.{minor_version}.{patch_version}"
+version = f"{major_version}.{minor_version}.{patch_version} ({fingerprint}))"
 
 print(f"## Updating Release Version (v{version})")
 

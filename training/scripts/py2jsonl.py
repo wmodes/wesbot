@@ -26,6 +26,9 @@ def process_input(input_file):
         sys.exit(1)
 
 def extract_data_from_python(input_content):
+    """
+    Extract the data structure from the Python file.
+    """
     try:
         # Create a dictionary with a placeholder for DATA
         data_dict = {"DATA": None}
@@ -42,11 +45,23 @@ def extract_data_from_python(input_content):
         sys.exit(1)
 
 def format_jsonl_content(data):
+    """
+    Format the data structure from the Python file as JSONL.
+    """
     formatted_jsonl = ""
+    # go through each record in the data
     for item in data:
+        # go through each message in the record
         for message in item['messages']:
-            if '```' not in message['content']:
-                message['content'] = message['content'].lstrip('\n')
+            if "function_call" in message:
+                # Remove extra spaces and escapes
+                function_call = message['function_call']
+                message['function_call'] = function_call
+
+            if not message['content']:
+                message['content'] = ""
+            elif '```' not in message['content']:
+                message['content'] = message['content'].strip('\n')
                 message["content"] = "\n".join(line.strip() for line in message["content"].split("\n"))
 
         formatted_jsonl += json.dumps(item, ensure_ascii=False) + '\n'

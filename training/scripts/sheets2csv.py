@@ -15,7 +15,7 @@ from googleapiclient.discovery import build
 import csv
 
 # Define folders
-BASE_DIR = config.BASE_DIR
+BASE_DIR = config.BASE_DIR  
 SOURCE_FOLDER = config.SOURCE_DIR
 
 def get_credentials():

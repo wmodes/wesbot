@@ -10,12 +10,16 @@ Date: 2023
 import sys
 import csv
 import os
+import re
 sys.path.append('..')
 import config
 
 # Define folders
 BASE_DIR = config.BASE_DIR
 SOURCE_DIR = config.SOURCE_DIR  # Use SOURCE_DIR from config
+
+# Define exclusions
+FILE_EXCLUDE_REGEX = re.compile(r'^f_', re.IGNORECASE)
 
 file_template = """
 import sys
@@ -30,7 +34,7 @@ DATA = [
 ]
 """
 
-record_template = """
+content_template = """
 {{
     "messages": [
         {{
@@ -42,6 +46,27 @@ record_template = """
         }}, {{
             "role": "assistant",
             "content": \"\"\"{assistant}\"\"\"
+        }}
+    ]
+}},
+"""
+
+function_template = """
+{{
+    "messages": [
+        {{
+            "role": "system",
+            "content": sys_content
+        }}, {{
+            "role": "user",
+            "content": \"\"\"{user}\"\"\"
+        }}, {{
+            "role": "assistant",
+            "content": "null",
+            "function_call": {{  
+                "name": "{function}",
+                "arguments": "{arguments}"
+            }}
         }}
     ]
 }},
@@ -62,12 +87,22 @@ def process_csv_file(csv_file_path):
             user_content = row['user'].replace('"', r'\"').replace(r'\\"', r'\"')
             assistant_content = row['assistant'].replace('"', r'\"').replace(r'\\"', r'\"')
             
-            # Check if both user and assistant content are not empty
             if user_content and assistant_content:
-                records.append(record_template.format(
-                    user=user_content,
-                    assistant=assistant_content
-                ))
+                # Check if the assistant record starts with "function_call: "
+                # Check if "function" is one of the fields in the CSV file
+                if "function" in row and row['function']:
+                    function = row['function']
+                    arguments = row['arguments'].replace('"', r'\"').replace(r'\\"', r'\"')
+                    records.append(function_template.format(
+                        user=user_content,
+                        function=function,
+                        arguments=arguments
+                    ))
+                else:
+                    records.append(content_template.format(
+                        user=user_content,
+                        assistant=assistant_content
+                    ))
 
         # Create the data content with {filebase} replaced
         data_content = file_template.format(filebase=filebase, records="".join(records))
@@ -82,7 +117,8 @@ def process_csv_file(csv_file_path):
 # Process all CSV files in the SOURCE_DIR
 for root, dirs, files in os.walk(SOURCE_DIR):
     for filename in files:
-        if filename.endswith(".csv"):
+        # if it's a CSV file and not in exclusions
+        if filename.endswith(".csv") and not FILE_EXCLUDE_REGEX.match(filename):
             csv_file_path = os.path.join(root, filename)
             # Print the filename being processed
             print(f"Processing {filename}...")

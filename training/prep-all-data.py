@@ -26,6 +26,8 @@ SOURCE_DIR = f"{TRAINING_DIR}/source"
 DATA_DIR = f"{TRAINING_DIR}/data"
 # Path to final data file
 FINAL_DATA = f"{DATA_DIR}/data.jsonl"
+# Path to lookup dir
+LOOKUP_DIR = f"{ROOT_DIR}/lookup"
 
 # Script directories
 #
@@ -94,3 +96,11 @@ subprocess.run(['python', SPLIT_DATA_SCRIPT, FINAL_DATA, "10"])
 print("\n# CHECKING DATA")
 check_command = ['python', CHECK_SCRIPT, FINAL_DATA]
 subprocess.run(check_command)
+
+# Run make_lookup.py script and move the generated files to the data directory
+#   py scripts/make_lookup.py
+#   mv data/lookup*.py ../data/
+print("\n# GENERATING LOOKUP FILES")
+subprocess.run(['python', f"{SCRIPT_DIR}/make_lookup.py"])
+subprocess.run(['mv', f"{DATA_DIR}/lookup_contents.py", LOOKUP_DIR])
+subprocess.run(['mv', f"{DATA_DIR}/lookup_index.py", LOOKUP_DIR])
