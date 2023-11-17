@@ -55,11 +55,9 @@ def format_jsonl_content(data):
         for message in item['messages']:
             if "function_call" in message:
                 # Remove extra spaces and escapes
-                function_call = message['function_call']
-                message['function_call'] = function_call
-
-            if not message['content']:
-                message['content'] = ""
+                # function_call = message['function_call']
+                # message['function_call'] = function_call
+                continue
             elif '```' not in message['content']:
                 message['content'] = message['content'].strip('\n')
                 message["content"] = "\n".join(line.strip() for line in message["content"].split("\n"))

@@ -40,9 +40,10 @@ class Lookup:
         Returns:
           The result of the function call.
         """
-        print("lookup() what did we get? ", function, args)
-        # if the function is lookup_entity
-        if function == "lookup_entity":
+        # print("lookup() what did we get? ", function, args)
+        # if the function is lookup_person
+        # if function == "lookup_person":
+        if function:
             # convert args to a dictionary
             args_dict = json.loads(args)
             name = args_dict.get('name').lower()
@@ -53,7 +54,7 @@ class Lookup:
                 # get the entity's data from self.data
                 data = self.data.get(entity)
                 # return the data
-                return f"{config.LOOKUP_WARNING}\n\n{data}"
+                return f"{config.LOOKUP_CAVEAT[function]}\n\n{data}"
         return config.LOOKUP_NOTFOUND
 
 

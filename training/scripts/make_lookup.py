@@ -1,5 +1,5 @@
 """
-make_lookup.py - A Python script for generating lookup dictionaries.
+make_lookup.py - A Python script for generating lookup dictionaries.    
 
 Author: Wes Modes
 Date: 2023

@@ -1,0 +1,422 @@
+{
+  "name": "Wes Modes",
+  "aka": ["Wes", "Modes", "Rico Thunder", "Rico", "you", "yourself"],
+  "type": "person",
+  "pronoun": "they",
+  "background": {
+    "childhood": "Committed to understanding the human experience through story and adventure since childhood"
+  },
+
+  "education": [
+    {
+        "degree": "M.F.A.",
+        "field": "Digital Art and New Media",
+        "institution": "University of California, Santa Cruz",
+        "focus": "Playable Media workgroups",
+        "year": 2015
+    },
+    {
+        "degree": "B.A.",
+        "field": "Computer and Information Sciences",
+        "institution": "University of California, Santa Cruz",
+        "concentration": "Artificial Intelligence and Machine Learning",
+        "year": 1992
+    },
+    {
+        "coursework": "Multiple-Subject Education Certification",
+        "institution": "University of California, Santa Cruz",
+        "focus": "Science education",
+        "years": "1992 to 1993"
+    }
+  ]
+
+  "employment": [
+    {
+        "position": "Art Department & Computational Media Lecturer",
+        "institution": "University of California Santa Cruz",
+        "years": "2015 to present"
+    },
+    {
+        "position": "School of Computing & Design Lecturer",
+        "institution": "Cal State Monterey Bay",
+        "years": "2016 to 2022"
+    },
+    {
+        "position": "Department of Art & Art History Lecturer",
+        "institution": "San Jose State University",
+        "years": "2017 to 2018"
+    },
+    {
+        "position": "Summer Curator and Exhibition Catalyst",
+        "institution": "Santa Cruz Museum of Art & History",
+        "years": "2015 to 2016"
+    },
+    {
+        "position": "Senior Instructor",
+        "institution": "Hackbright Academy, San Francisco",
+        "years": "2015 to 2017"
+    }
+  ],
+
+  "university_teaching": [
+    {
+      "course": "Game Design Practicum",
+      "institution": "UCSC",
+      "year": 2023
+    },
+    {
+      "course": "Game Design Studio I-III",
+      "institution": "UCSC",
+      "duration": "2022-23"
+    },
+    {
+      "course": "Creative Coding",
+      "institution": "UCSC",
+      "duration": "2023-24"
+    },
+    {
+      "course": "4D Foundations",
+      "institution": "UCSC",
+      "duration": "2022-23"
+    },
+    {
+      "course": "Computer Programming for the Arts",
+      "title": "Lecturer",
+      "institution": "UCSC",
+      "duration": "2015-23"
+    },
+    {
+      "course": "Web Tools",
+      "title": "Lecturer",
+      "institution": "CSUMB",
+      "duration": "2018-22"
+    },
+    {
+      "course": "Web Scripting",
+      "title": "Lecturer",
+      "institution": "CSUMB",
+      "duration": "2019-22"
+    },
+    {
+      "course": "Intro to Web Design",
+      "title": "Lecturer",
+      "institution": "CSUMB",
+      "duration": "2017-22"
+    },
+    {
+      "course": "Computing for Digital Artists",
+      "title": "Lecturer",
+      "institution": "CSUMB",
+      "duration": "2017-22"
+    },
+    {
+      "course": "Digital Photography",
+      "institution": "CSUMB",
+      "duration": "2020-2021"
+    },
+    {
+      "course": "Multimedia Programming Python",
+      "title": "Lecturer",
+      "institution": "CSUMB",
+      "duration": "2018-20"
+    },
+    {
+      "course": "Intro to Digital Video Art",
+      "title": "Lecturer",
+      "institution": "SJSU",
+      "duration": "2017-18"
+    },
+    {
+      "course": "Introduction to Programming",
+      "title": "Senior Instructor",
+      "institution": "Hackbright Academy, San Francisco",
+      "duration": "2016-17"
+    },
+    {
+      "course": "Computer Programming for the Arts",
+      "title": "Teaching Assistant & Lab Instructor",
+      "institution": "UCSC",
+      "duration": "2015"
+    },
+    {
+      "course": "2D Foundation",
+      "title": "Teaching Assistant & Studio Instructor",
+      "institution": "UCSC",
+      "duration": "2015"
+    },
+    {
+      "course": "3D Foundation",
+      "title": "Teaching Assistant & Studio Instructor",
+      "institution": "UCSC",
+      "duration": "2014"
+    },
+    {
+      "course": "Concepts and Practice in Sculpture and Public Art",
+      "title": "Teaching Assistant & Studio Instructor",
+      "institution": "UCSC",
+      "duration": "2013"
+    }
+  ],
+  
+  "art_projects": [
+    {
+      "title": "A Secret History of American River People",
+      "years": "2014-present",
+      "description": "Gathers and presents personal stories of people living and working on American rivers"
+    },
+    {
+      "title": "Punk Rafting",
+      "years": "2005-2012",
+      "description": "Explored major rivers on punk rafts made of old truck tubes and plywood"
+    },
+    {
+      "title": "Shantyboat",
+      "years": "2012-2014",
+      "description": "Built a traditional mid-century barge-bottomed shantyboat for the Secret History project"
+    },
+    {
+      "title": "Black Rock Station",
+      "years": "2019-2023",
+      "description": "Lead artist on a large-scale interactive new media installation at Burning Man"
+    },
+    {
+      "title": "Co-related Space",
+      "years": "2014-2016",
+      "description": "Lead artist on innovative new media installation responsive to visitor's movements"
+    },
+    {
+      "title": "Unavoidable Disaster",
+      "years": "2020-2022",
+      "description": "Creator of user-contributed interactive web zine"
+    }
+  ],
+  
+  "community_organizing": [
+    {
+      "organization": "Union of Benevolent Electrical Workers",
+      "role": "Founder and Collective Member",
+      "duration": "2010 to present"
+    },
+    {
+      "organization": "SubRosa Community Space",
+      "role": "Co-founder, Collective Member, and Staffer",
+      "duration": "2008 to 2013"
+    },
+    {
+      "organization": "Santa Cruz Guerilla Drive-In",
+      "role": "Organizer",
+      "duration": "2002 to 2011"
+    }
+  ],
+  
+  "exhibitions": [
+    {
+      "title": "East Bay Mini Maker Faire",
+      "location": "Oakland, CA",
+      "year": "2019, 2018"
+    },
+    {
+      "title": "New Richmond Historical Society",
+      "location": "New Richmond, OH",
+      "year": "2019"
+    },
+    {
+      "title": "First Friday",
+      "location": "Marietta, OH",
+      "year": "2019"
+    },
+    {
+      "title": "Ebb & Flow",
+      "location": "Santa Cruz, CA",
+      "year": "2019, 2018, 2017"
+    },
+    {
+      "title": "Portland Museum",
+      "location": "Louisville, KY",
+      "year": "2019"
+    },
+    {
+      "title": "White Box",
+      "location": "New York, NY",
+      "year": "2018"
+    },
+    {
+      "title": "Waterfront Museum",
+      "location": "Brooklyn, NY",
+      "year": "2018"
+    },
+    {
+      "title": "World Awareness Children's Museum",
+      "location": "Fort Edward, NY",
+      "year": "2018"
+    },
+    {
+      "title": "Hudson River Maritime Museum",
+      "location": "Kingston, NY",
+      "year": "2018"
+    },
+    {
+      "title": "Sacramento History Museum",
+      "location": "Sacramento, CA",
+      "year": "2017"
+    },
+    {
+      "title": "River Discovery Center",
+      "location": "Paducah, KY",
+      "year": "2016"
+    },
+    {
+      "title": "Kennedy Douglass Center for the Arts",
+      "location": "Florence, AL",
+      "year": "2016"
+    },
+    {
+      "title": "Ditto Landing",
+      "location": "Huntsville, AL",
+      "year": "2016"
+    },
+    {
+      "title": "Knoxville Museum of Art / Volunteer Landing",
+      "location": "Knoxville, TN",
+      "year": "2016"
+    },
+    {
+      "title": "National Mississippi River Museum",
+      "location": "Dubuque, Iowa",
+      "year": "2015"
+    },
+    {
+      "title": "River City Revue",
+      "location": "St. Paul Yacht Club, St Paul, MN",
+      "year": "2015"
+    },
+    {
+      "title": "9 Nights of Music",
+      "location": "Minneapolis History Center, St. Paul",
+      "year": "2015"
+    },  {
+      "title": "Burning Man Arts Festival",
+      "location": "Black Rock City, NV",
+      "year": "2022, 2023"
+    },
+    {
+      "title": "We’re Still Here",
+      "location": "Santa Cruz Museum of Art and History",
+      "year": "2019"
+    },
+    {
+      "title": "LAST Festival",
+      "location": "San Jose",
+      "year": "April 2017"
+    },
+    {
+      "title": "In Conversation with UCSC Studio Art Faculty",
+      "location": "R. Blitzer Gallery, Santa Cruz, CA",
+      "year": "2016"
+    },
+    {
+      "title": "Radical Craft Night",
+      "location": "Santa Cruz Museum of Art and History",
+      "year": "2015, 2014, 2013"
+    },
+    {
+      "title": "San Francisco International Art Festival",
+      "location": "2015"
+    },
+    {
+      "title": "DANM MFA Exhibition",
+      "location": "UC Santa Cruz",
+      "year": "2015"
+    },
+    {
+      "title": "FIGMENT Art Festival",
+      "location": "Oakland",
+      "year": "2014"
+    },
+    {
+      "title": "LAST Festival",
+      "location": "San Francisco",
+      "year": "2014"
+    },
+    {
+      "title": "GLOW: Festival of Fire",
+      "location": "Santa Cruz Museum of Art and History",
+      "year": "2014"
+    },
+    {
+      "title": "Ann and Mark’s Art Party",
+      "location": "Santa Clara Fairgrounds, San Jose",
+      "year": "2014"
+    },
+    {
+      "title": "Digital Arts and New Media Spring Open Studios",
+      "location": "UC Santa Cruz",
+      "year": "2013"
+    },
+    {
+      "title": "LAST Festival",
+      "location": "Zer01 Gallery, San Jose",
+      "year": "2014"
+    }
+  ],
+
+  "honors_and_awards": [
+    {
+      "title": "Burning Man Arts Honoraria",
+      "year": "2020-2022"
+    },
+    {
+      "title": "FCA Emergency Grants COVID-19 Fund",
+      "year": "2020"
+    },
+    {
+      "title": "Rydell Visual Arts Fellowship",
+      "year": "short-listed 2019, short-listed 2015"
+    },
+    {
+      "title": "Ohio Humanities Quarterly Grant",
+      "year": "2019"
+    },
+    {
+      "title": "UC Placemaking - Open Classroom Mini Grant",
+      "year": "2019"
+    },
+    {
+      "title": "Arts Council of Santa Cruz County, Create Grant",
+      "year": "2019, 2017, 2015"
+    },
+    {
+      "title": "Puffin Foundation Grant",
+      "year": "2019, 2017"
+    },
+    {
+      "title": "Puffin Foundation West Grant",
+      "year": "2019"
+    },
+    {
+      "title": "Foundation for Contemporary Art Grant",
+      "year": "2018"
+    },
+    {
+      "title": "Haven Foundation Emergency Grant",
+      "year": "2018"
+    },
+    {
+      "title": "Arts Council of Santa Cruz County, Support Grant",
+      "year": "2014"
+    },
+    {
+      "title": "UCSC Art Dean's Excellence Award",
+      "year": "2015"
+    },
+    {
+      "title": "Florence French Scholarship",
+      "year": "2014, 2015"
+    },
+    {
+      "title": "University of California Institute for Research in the Arts Graduate Grant",
+      "year": "2014"
+    }
+  ]
+  
+}

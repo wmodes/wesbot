@@ -10,7 +10,7 @@ Date: 2023
 # Version
 MAJOR_VERSION = 0
 MINOR_VERSION = 2
-PATCH_VERSION = 79
+PATCH_VERSION = 85
 HTML_TEMPLATE = "/Users/wmodes/dev/wesbot/templates/chat.html"
 MYSECRETS = "/Users/wmodes/dev/wesbot/mysecrets.py"
 VERSION_TAG = '<span class="version-num">%%version%%</span>'
@@ -24,7 +24,7 @@ CHAT_LOG = "log/chat.log"
 #
 
 # User-serviceable parts
-USE_FUNCTIONS = True
+USE_FUNCTIONS = False
 
 # Stuff for OpenAI
 OPENAI_ORG = "org-6Sx3QSqdmkskgXbQf8AsccbW"
@@ -32,8 +32,9 @@ OPENAI_ORG = "org-6Sx3QSqdmkskgXbQf8AsccbW"
 OPENAI_BASE_MODEL = "gpt-3.5-turbo"
 # fine-tuned file_id, from:
 #   training % py train.py --list
-OPENAI_FINE_TUNE_ID = "ft:gpt-3.5-turbo-0613:artist::8HKn0v8B" # stable funny model from Nov 4, 2023
-# OPENAI_FINE_TUNE_ID = "ft:gpt-3.5-turbo-0613:artist::8LOhPEYq" # latest
+# OPENAI_FINE_TUNE_ID = "ft:gpt-3.5-turbo-1106:artist::8KAhri96" # stable funny model from Nov 4, 2023
+OPENAI_FINE_TUNE_ID = "ft:gpt-3.5-turbo-0613:artist::8LhakJy8" # latest
+# OPENAI_FINE_TUNE_ID = "ft:gpt-3.5-turbo-0613:artist::8GUlzcYC" # experimenting
 
 # Explainging the parameters
 #
@@ -54,12 +55,12 @@ OPENAI_FINE_TUNE_ID = "ft:gpt-3.5-turbo-0613:artist::8HKn0v8B" # stable funny mo
 #           returned once the generation is complete.
 #
 OPENAI_PARAMS = {
-    "model": OPENAI_BASE_MODEL,
-    "temperature": 1.1,
+    "model": OPENAI_FINE_TUNE_ID,
+    "temperature": 0.7,
     "top_p": 1.0,
     "frequency_penalty": 2.0,
     "presence_penalty": 0.0,
-    "max_tokens": 2048,
+    # "max_tokens": 2048,
     "stream": False,
 }
 
@@ -93,20 +94,29 @@ GOOGLE_SHEET_ID = "16vyzE7C16EzRJJsV0iqFR0K-BHoR0hr9ZHib9rAK3n8"
 # Lookup Config
 #
 
+LOOKUP_RECURSE_WARNING = "Lookup limit reached for this turn. Use the info you have."
+LOOKUP_RECURSE_LIMIT = 3
 LOOKUP_NOTFOUND = "No additional info found. You will have to invent something relevant."
-LOOKUP_WARNING = "This is info on background. Use only what is relevant for the prompt."
+LOOKUP_CAVEAT = {
+    "lookup_person": "This is info about a person on background. Use only what is relevant for the prompt.",
+    "lookup_project": "This is info about an art or community project on background. Use only what is relevant for the prompt.",
+    "lookup_class": "This is info about a course on background. Use only what is relevant for the prompt.",
+}
 
 
 # Join the elements with double quotes, separated by a comma and space
 domain_topics = '"classes", "art", "research", "community organizing", or the catch-all, "other interests".'
 
-SYS_WES = "You are Wes Modes, an artist and university lecturer  teaching new media, art, and game design. Be helpful, but not too helpful, and never obsequious. You are curious, informal, non-pedantic, compassionate, funny, ironic, and playful, but also no-nonsense and sometimes curse like a sailor. Keep replies succinct, ask curious questions, and be unafraid to admit your mistakes or say when you don't know something. You refer to yourself and encourage students to call you Wes."
+SYS_WES = "You are Wes Modes, an artist and university lecturer teaching new media, art, and game design. Be helpful, but not too helpful, and never obsequious. You are curious, informal, non-pedantic, compassionate, funny, ironic, and playful, but also no-nonsense and sometimes curse like a sailor. Keep replies succinct, ask curious questions, and be unafraid to admit your mistakes or say when you don't know something. You refer to yourself and encourage students to call you Wes."
 
 SYS_MARKDOWN = "Use markdown format: For the following kinds of text, use markdown so the rendering engine can make it easier to read: numbered or bulleted lists, bold, italics, and links. For any kind of code, use triple backticks to make it easier to read."
 
-SYS_FUNCTIONS = "If the name of a person, place, or thing comes up that you don't already know, look it up with the 'lookup_entity' function only once. When you get info from a lookup function, use your own words to answer the prompt. If no information is returned from a function call, invent something relevant. Don't mention looking up information or a database. Be cool, man."
+SYS_FUNCTIONS = "If the name of a person, place, or thing comes up in a prompt that you don't already know, look it up with the 'lookup_entity' function only once. When you get info from a lookup function, use your own words to answer the prompt. If no information is returned from a function call, invent something relevant. Don't mention looking up information or a database. Be cool, man."
 
-SYS_CLERICAL = f"""{SYS_MARKDOWN}\n\n{SYS_FUNCTIONS}"""
+if USE_FUNCTIONS:
+    SYS_CLERICAL = f"""{SYS_MARKDOWN}\n\n{SYS_FUNCTIONS}"""
+else:
+    SYS_CLERICAL = f"""{SYS_MARKDOWN}"""
 
 SYSTEM_MSGS = {
 
@@ -234,15 +244,43 @@ SYSTEM_MSGS = {
 
 OPENAI_FUNCTIONS = [
     {
-        "name": "lookup_entity",
-        "description": "Retrieves information about someone or something that has not yet come up in the conversation.",
+        "name": "lookup_person",
+        "description": "Get information about a person mentioned in the prompt for the first time.",
         "parameters": {
             "type": "object",
             "properties": {
-            "name": {
-                "type": "string",
-                "description": "The name of a new proper noun to look up."
-            }
+                "name": {
+                    "type": "string",
+                    "description": "The name of the person to look up, e.g. Benzy, mom."
+                }
+            },
+            "required": ["name"]
+        }
+    },
+    {
+        "name": "lookup_class",
+        "description": "Get information about a course name mentioned in the prompt for the first time.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The name of the course to look up, e.g. ART 101."
+                }
+            },
+            "required": ["name"]
+        }
+    },
+    {
+        "name": "lookup_project",
+        "description": "Get information about a project name mentioned in the prompt for the first time.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The name of the project to look up, e.g. Unavoidable Disaster, river project."
+                }
             },
             "required": ["name"]
         }

@@ -62,7 +62,6 @@ function_template = """
             "content": \"\"\"{user}\"\"\"
         }}, {{
             "role": "assistant",
-            "content": "null",
             "function_call": {{  
                 "name": "{function}",
                 "arguments": "{arguments}"

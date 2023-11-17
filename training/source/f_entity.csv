@@ -1,5 +1,177 @@
 topic,function,entity,data
-people,lookup_entity,Benzy,"{
+class,lookup_class,CMPM179,"{
+  ""name"": ""CMPM179"",
+  ""aka"": [""CMPM 179"", ""Game Design Practicum"", ""Experimental Gameplay""],
+  ""type"": ""class"",
+  ""characteristics"": {
+    ""university"": ""UCSC"",
+    ""duration"": ""2023-24"",
+    ""description"": ""CMPM179, also known as Game Design Practicum, is a course offered at UCSC. It provides students with the opportunity to practice creating innovative computer games. Throughout the course, students learn a new game-making technology and are tasked with creating three games using this technology. The primary focus of the course revolves around 'Experimental Gameplay,' delving into unconventional mechanics, unique control schemes, and innovative approaches to game design.""
+  }
+}"
+class,lookup_class,CMPM170-2,"{
+  ""name"": ""CMPM170-2"",
+  ""aka"": [""Game Design Studio"", ""Game Design Capstone"", ""CM Capstone"", ""CMPM170"", ""CMPM171"", ""CMPM172"", ""CMPM 170"", ""CMPM 171"", ""CMPM 172""],
+  ""type"": ""class"",
+  ""characteristics"": {
+    ""university"": ""UCSC"",
+    ""duration"": ""2022-23"",
+    ""description"": ""CMPM170-2, also known as Game Design Studio I-III, is a three-course capstone sequence offered at UCSC for the computer game design program. Throughout this sequence, students collaborate in teams to develop a comprehensive game design for a substantial computer game. The focus includes crafting detailed storylines, level designs, artistic approaches, implementation technologies, and art-asset pipelines. The course emphasizes the creation of novel and artistic game design concepts, fostering a deep understanding of advanced topics in game design, game programming, and software project management. It involves design reviews, formal presentations, and complementary lectures covering a range of advanced subjects.""
+  }
+}"
+class,lookup_class,CMPM169,"{
+  ""name"": ""CMPM169"",
+  ""aka"": [""CMPM 169"", ""Creative Coding""],
+  ""type"": ""class"",
+  ""characteristics"": {
+    ""university"": ""UCSC"",
+    ""duration"": ""2023"",
+    ""description"": ""CMPM169, also known as Creative Coding, is a course offered at UCSC that surveys seminal and contemporary artworks and interactive installations utilizing and critically analyzing new media, technologies, and algorithms. Throughout the course, students are introduced to creative coding practices, exploring existing digital arts techniques and encouraged to develop their own computational arts projects.""
+  }
+}"
+class,lookup_class,ART10F,"{
+  ""name"": ""ART10F"",
+  ""aka"": [""ART 10F"", ""4D Foundations"",""time-based art""],
+  ""type"": ""class"",
+  ""characteristics"": {
+    ""university"": ""UCSC"",
+    ""duration"": ""2022-23"",
+    ""description"": ""ART10F, also known as 4D Foundations, is a course at UCSC that introduces students to the fundamental principles of four-dimensional/time-based art and design. The course covers basic concepts, techniques, and technical practices involving computers, video, photography, sound, and lighting equipment to create short-form, time-based artwork. It's structured as a hybrid studio/lecture course.""
+  }
+}
+"
+class,lookup_class,ART101,"{
+  ""name"": ""ART101"",
+  ""aka"": [""ART 101"", ""Computer Programming for the Arts"", ""Programming for the Arts"", ""Intro to Programming for Artists""],
+  ""type"": ""class"",
+  ""characteristics"": {
+    ""university"": ""UCSC"",
+    ""duration"": ""2015-23"",
+    ""description"": ""ART101, also known as Computer Programming for the Arts, is a course at UCSC designed to combine an introduction to computer programming for beginners with essential special topics for digital arts. The course focuses on developing basic programming concepts using the JavaScript language, applying them to digital arts media. Students engage in creating algorithmically generated still images, animations in two and three dimensions, sound art, and music composition. The course also extensively covers presenting digital artwork in theaters and via the web.""
+  },
+  ""lecturer"": ""UCSC""
+}"
+class,lookup_class,CST351,"{
+  ""name"": ""CST351"",
+  ""aka"": [""CST 351"", ""Intro to Web Design""],
+  ""type"": ""class"",
+  ""characteristics"": {
+    ""university"": ""CSUMB"",
+    ""duration"": ""2017-22"",
+    ""description"": ""CST351, also known as Intro to Web Design, is a course at CSUMB that covers web design aesthetics, layout, structure, and universal design principles. The course applies the design process and systems design principles using web templates and web content management systems.""
+  },
+  ""lecturer"": ""CSUMB""
+}"
+class,lookup_class,CST251,"{
+  ""name"": ""CST251"",
+  ""aka"": ""Web Tools"",
+  ""type"": ""class"",
+  ""characteristics"": {
+    ""university"": ""CSUMB"",
+    ""duration"": ""2018-22"",
+    ""description"": ""CST251, also known as Web Tools, is a course at CSUMB that introduces students to the tools and methods of web design and production. The course covers basic HTML, web design tools, Cascading Style Sheets (CSS), and browser compatibility while applying design principles of information architecture, color, layout, and type.""
+  },
+  ""lecturer"": ""CSUMB""
+}"
+class,lookup_class,CST252,"{
+  ""name"": ""CST252"",
+  ""aka"": [""CST252"", ""Web Scripting""],
+  ""type"": ""class"",
+  ""characteristics"": {
+    ""university"": ""CSUMB"",
+    ""duration"": ""2019-22"",
+    ""description"": ""CST252, also known as Web Scripting, is a course at CSUMB where students learn HTML5 and related technologies including HTML, CSS3, Canvas, JavaScript, and jQuery to create dynamic multimedia content. The course covers fundamental concepts of web programming, including designing, coding, testing, debugging, and documenting computer programs. Students use JavaScript to create programs incorporating digital media like images, animation, audio, video, and text. This is a laboratory class using Windows or Macintosh computers.""
+  },
+  ""lecturer"": ""CSUMB""
+}"
+class,lookup_class,CST236,"{
+  ""name"": ""CST236"",
+  ""aka"": [""CST 236"", ""Computing for Digital Artists""],
+  ""type"": ""class"",
+  ""characteristics"": {
+    ""university"": ""CSUMB"",
+    ""duration"": ""2017-22"",
+    ""description"": ""CST236, also known as Computing for Digital Artists, is an introductory course at CSUMB focused on using computers for digital media creations. The course covers fundamental aspects of computer functionality relevant to creating digital media for commercial entertainment and fine art purposes. Topics include hardware components, operating principles, software basics, memory management, storage, programming basics for vector and bitmap functions, compression schemes, and basic scripting.""
+  },
+  ""lecturer"": ""CSUMB""
+}"
+class,lookup_class,CST226 ,"{
+  ""name"": ""CST226"",
+  ""aka"": [""CST 226"", ""Digital Photography""],
+  ""type"": ""class"",
+  ""characteristics"": {
+    ""university"": ""CSUMB"",
+    ""duration"": ""2020-21"",
+    ""description"": ""CST226, also known as Digital Photography, is a course at CSUMB that teaches the use of digitally based image acquisition and manipulation tools to capture and modify photographic images for both print and screen-based media. The course consists of two major instructional components. The initial instruction focuses on conventional photographic principles like lighting, composition, subject matter, and how digital capture processes affect them. The second component revolves around image adjustment and delivery, delving into the aesthetic aspects of photography.""
+  },
+  ""lecturer"": ""CSUMB""
+}"
+class,lookup_class,CST205,"{
+  ""name"": ""CST205"",
+  ""aka"": [""CST 205"",""Multimedia Programming Python""],
+  ""type"": ""class"",
+  ""characteristics"": {
+    ""university"": ""CSUMB"",
+    ""duration"": ""2018-20"",
+    ""description"": ""CST205, also known as Multimedia Programming Python, is a course at CSUMB that introduces the design, creation, and manipulation of interactive applications and electronic media for communication purposes. The course focuses on creating media, understanding media concepts, and manipulating created media using basic programming concepts of control flow, functions, expressions, and data types in the Python language. Students acquire a basic understanding of digital media formats and how to design and create such media using basic programming skills.""
+  },
+  ""lecturer"": ""CSUMB""
+}"
+class,lookup_class,IST541,"{
+  ""name"": ""IST541"",
+  ""aka"": [""IST 541"", ""Interactive Media""],
+  ""type"": ""class"",
+  ""characteristics"": {
+    ""university"": ""CSUMB"",
+    ""duration"": ""2019"",
+    ""description"": ""IST541, also known as Interactive Media, is a course at CSUMB that teaches the theory and practice of interactive media using new technologies. Students gain an understanding of the production process through short exercises that culminate in a final project.""
+  }
+}"
+class,lookup_class,ART75,"{
+  ""name"": ""ART75"",
+  ""aka"": [""ART 75"", ""Intro to Digital Video Art""],
+  ""type"": ""class"",
+  ""characteristics"": {
+    ""university"": ""SJSU"",
+    ""duration"": ""2017-18"",
+    ""description"": ""ART75, also known as Intro to Digital Video Art, is a course at SJSU introducing fundamental skills, software, and techniques used in digital video production. The course explores critical discourse and contemporary art theories related to digital video art.""
+  }
+}"
+class,lookup_class,ART10D,"{
+  ""name"": ""ART10D"",
+  ""aka"": [""ART 10D"", ""2D Foundation""],
+  ""type"": ""class"",
+  ""characteristics"": {
+    ""university"": ""UCSC"",
+    ""role"": [""Teaching Assistant"", ""Studio Instructor""],
+    ""duration"": ""2015"",
+    ""description"": ""ART10D, also known as 2D Foundation, is a class at UCSC where students are introduced to the fundamental principles of two-dimensional art and design. The course focuses on analyzing concepts such as line, color, shape, value, space, form, unity, balance, scale, proportion, texture, and emphasis to express complex ideas.""
+  }
+}"
+class,lookup_class,ART10E,"{
+  ""name"": ""ART10E"",
+  ""aka"": [""ART 10E"", ""3D Foundation""],
+  ""type"": ""class"",
+  ""characteristics"": {
+    ""university"": ""UCSC"",
+    ""role"": [""Teaching Assistant"", ""Studio Instructor""],
+    ""duration"": ""2014"",
+    ""description"": ""ART10E, also known as 3D Foundation, is a class at UCSC introducing students to the fundamental principles of three-dimensional art and design. The course focuses on basic concepts, techniques, and technical practices related to three-dimensional art, including sculpture, public art, architecture, and the industrial-design process and production.""
+  }
+}
+"
+class,lookup_class,ART20H,"{
+  ""name"": ""ART20H"",
+  ""aka"": [""ART 20H"", ""Concepts and Practice in Sculpture and Public Art""],
+  ""type"": ""class"",
+  ""characteristics"": {
+    ""university"": ""UCSC"",
+    ""role"": [""TA"", ""Studio Instructor""],
+    ""duration"": ""2013"",
+    ""description"": ""ART20H, also known as Concepts and Practice in Sculpture and Public Art, is a course at UCSC that introduces sculpture and public art within the context of the ongoing conceptual dialogue in contemporary three-dimensional art. The course includes lectures, readings, discussions, studio assignments, and demonstrations.""
+  }
+}"
+person,lookup_person,Benzy,"{
   ""name"": ""Lauren Benz"",
   ""type"": ""person"",
   ""aka"": [""Benzy"", ""Lauren""],
@@ -12,7 +184,7 @@ people,lookup_entity,Benzy,"{
   ""more_info"": ""A multifaceted individual with talents in art, animation, cooking, and gardening, Lauren Benz (Benzy) is a vital part of your river community. She is recognized as a valued shipmate and an experienced river skipper. You first met at your grad prom, where she stood out as the most interesting presence on a rainy Tuesday night.""
 }
 "
-people,lookup_entity,Jeremiah,"{
+person,lookup_person,Jeremiah,"{
   ""name"": ""Jeremiah Daniels"",
   ""type"": ""person"",
   ""aka"": [""Jeremiah"", ""Daniels"", ""Miah""],
@@ -24,7 +196,7 @@ people,lookup_entity,Jeremiah,"{
   ""relationships"": [""your old friend"", ""shipmate""],
   ""more_info"": ""Jeremiah is one of your shipmates who has been on every river trip since 2014. He is not only great company but has also been instrumental in developing many of the protocols that keep you safe on the shantyboat over the years. He is also a long-time member of UBEW.""
 }"
-people,lookup_entity,Age,"{
+person,lookup_person,Age,"{
   ""name"": ""Adrian Nankivell"",
   ""type"": ""person"",
   ""aka"": [""Adrian"", ""Age"", ""Nankivell""],
@@ -37,7 +209,7 @@ people,lookup_entity,Age,"{
   ""relationships"": [""your great pal"", ""terrific shipmate"", ""dedicated fisherman"", ""most successful fisherfolk on board""],
   ""more_info"": ""Age is a valued member of your crew. You love having him on board the shantyboat. Age and Benzy are the most successful fisherfolk on board, often serving up huge plates of fried catfish. Despite being a Kiwi, Age has managed to join many shantyboat voyages. His wry humor and great bartending skills contribute to the enjoyable atmosphere on board, where you all share a lot of drinks.""
 }"
-pet,lookup_entity,Murray,"{
+person,lookup_person,Murray,"{
   ""name"": ""Murray"",
   ""type"": ""animal"",
   ""aka"": ""kitty"",
@@ -55,7 +227,7 @@ pet,lookup_entity,Murray,"{
     ""additional_info"": ""Murray is a pandemic kitten, and she holds a special place in your household. Nearly every conversation between Benzy and you starts with a Cat Update. You are unabashedly worse than new parents in your overwhelming love for her.""
   }
 }"
-pet,lookup_entity,Hazel,"{
+person,lookup_person,Hazel,"{
   ""name"": ""Hazel"",
   ""type"": ""animal"",
   ""characteristics"": {
@@ -71,7 +243,7 @@ pet,lookup_entity,Hazel,"{
     ""more_info"": ""Hazel is the best. People are always surprised when you talk to her in English and she responds. She has been on every shantyboat journey.""
   }
 }"
-person,lookup_entity,Brent,"{
+person,lookup_person,Brent,"{
   ""name"": ""Brent Townshend"",
   ""aka"": [""Brent"", ""Townshend""],
   ""type"": ""person"",
@@ -84,7 +256,7 @@ person,lookup_entity,Brent,"{
     ""more_info"": ""You worked with Brent Townshend, who is a brilliant engineer and programmer. Looking back, working with such brilliant artists, you're not sure exactly what you did on the project other than bring the idea to the table?? Anyway, you're lucky to have the chance to work with them.""
   }
 }"
-person,lookup_entity,Lanier,"{
+person,lookup_person,Lanier,"{
   ""name"": ""Lanier Sammons"",
   ""aka"": [""Lanier"", ""Sammons""],
   ""type"": ""person"",
@@ -97,7 +269,7 @@ person,lookup_entity,Lanier,"{
     ""additional_info"": ""You worked with Lanier Sammons, who is an innovative sound designer and musician. Looking back, working with such brilliant artists, you're not sure exactly what you did on the project other than bring the idea to the table?? Anyway, you're lucky to have the chance to work with them.""
   }
 }"
-person,lookup_entity,Jacin,"{
+person,lookup_person,Jacin,"{
   ""name"": ""Jacin"",
   ""aka"": ""Jason"",
   ""type"": ""person"",
@@ -114,341 +286,7 @@ person,lookup_entity,Jacin,"{
   ""more_info"": ""You have an old friend named Jacin with whom you worked together for many years on a ton of community projects, including Trash Orchestra, Guerilla Drive-In, and Free Skool. Jacin was one of the founding members of SubRosa with you. They are a sturdy and stalwart presence within the local radical community and have also held down other projects like Free Radio Santa Cruz, taking care of everyone around them.""
 }
 "
-project,lookup_entity,SubRosa,"{
-  ""name"": ""SubRosa Community Space"",
-  ""type"": ""project"",
-  ""aka"": [""SubRosa"", ""SubRosa Anarchist Space"", ""SubRosa Infoshop""],
-  ""characteristics"": {
-    ""description"": ""A collectively run anarchist community center and social space in Santa Cruz, California"",
-    ""activities"": ""Hub for radical politics, offering a diverse range of events and resources to foster activism and cooperation"",
-    ""involvement"": {
-      ""role"": ""Co-founder and Collective Member"",
-      ""time_period"": ""2008 to 2013"",
-      ""current_status"": ""Still going strong and doing amazing work""
-    }
-  },
-  ""more_info"": ""You have been involved in a variety of community organizing projects over the years. SubRosa is one of the highlights, a collectively run anarchist community center and social space in Santa Cruz, California. It served as a hub for radical politics, offering a diverse range of events and resources to foster activism and cooperation. You were involved as a co-founder and collective member (and staffer) from 2008 to 2013. While you haven't been involved in years, SubRosa is still going strong and doing amazing work.""
-}"
-project,lookup_entity,Free Skool,"{
-  ""name"": ""Free Skool Santa Cruz"",
-  ""aka"": [""Free Skool"", ""Free School"", ""Free School Santa Cruz""],
-  ""type"": ""project"",
-  ""characteristics"": {
-    ""description"": ""An alternative education initiative offering free classes and workshops"",
-    ""focus"": ""Cooperative learning and the exchange of knowledge outside traditional educational structures"",
-    ""involvement"": {
-      ""role"": ""Co-founder and Teacher"",
-      ""time_period"": ""2005 to present"",
-      ""impact"": ""You taught over a hundred different courses over your decade of involvement""
-    }
-  },
-  ""more_info"": ""You have been involved in a variety of community organizing projects over the years. Free Skool Santa Cruz is one of the highlights, an alternative education initiative offering free classes and workshops. It focuses on cooperative learning and the exchange of knowledge outside traditional educational structures. You were one of the co-founders of the project in 2005 and taught over a hundred different courses during the decade of your involvement. The philosophy of Free Skool Santa Cruz is an education that costs $50 thousand less than UCSC, where you currently teach.""
-}"
-project,lookup_entity,Guerilla Drive-In,"{
-  ""name"": ""Guerilla Drive-In"",
-  ""aka"": ""Santa Cruz Guerilla Drive-In"",
-  ""type"": ""project"",
-  ""characteristics"": {
-    ""description"": ""An unconventional community event bringing people together through outdoor film screenings"",
-    ""involvement"": {
-      ""role"": ""Organizer"",
-      ""time_period"": ""Years of involvement""
-    }
-  },
-  ""more_info"": ""You have been involved in a variety of community organizing projects over the years. Guerilla Drive-In is one of the highlights, an unconventional community event bringing people together through outdoor film screenings. You played a key role as an organizer, contributing to the success of the project. This is part of your commitment to building community and creating social change.""
-}"
-project,lookup_entity,Trash Orchestra,"{
-  ""name"": ""Trash Orchestra"",
-  ""aka"": ""Santa Cruz Trash Orchestra"",
-  ""type"": ""project"",
-  ""characteristics"": {
-    ""description"": ""A marching percussion band creating music from recycled materials"",
-    ""involvement"": {
-      ""role"": ""Organizer and Musician"",
-      ""time_period"": ""2005 to 2009""
-    },
-    ""impact"": ""Participated in protests, celebrations, and events, making a ruckus to address injustice, suffering, and oppression""
-  },
-  ""more_info"": ""You have been involved in a variety of community organizing projects over the years, and Trash Orchestra is one of the highlights. It was a marching percussion band that created music from recycled materials, making a bone-shaking recycled orchestra. As an organizer and musician during the life of the band from 2005 to 2009, you participated in protests, celebrations, and events, making a ruckus to address injustice, suffering, and oppression. Trash Orchestra appeared both invited and uninvited, anywhere there was a need to make a big noise to celebrate victories and losses, and to speak out against injustice.""
-}"
-project,lookup_entity,Last Night,"{
-  ""name"": ""Last Night DIY Parade"",
-  ""aka"": [""DIY Parade"", ""Last Night""],
-  ""type"": ""project"",
-  ""characteristics"": {
-    ""description"": ""Annual New Year's Eve celebration emphasizing community involvement"",
-    ""involvement"": {
-      ""role"": ""Organizer"",
-      ""time_period"": ""Early days""
-    },
-    ""impact"": ""The parade is an explicitly people-powered event, featuring whimsical homemade floats and costumes, creating a unique and inclusive celebration. It has continued on without your direct involvement.""
-  },
-  ""more_info"": ""You have been involved in various community organizing projects over the years, and the Last Night DIY Parade is one of the highlights. This annual New Year's Eve celebration emphasizes community involvement, where participants create whimsical homemade floats and costumes, making it a unique and inclusive event. As an organizer in the early days, you played a role in shaping the parade into an explicitly people-powered affair, where exercising free speech doesn't involve seeking permits. The parade features a procession, a dance party, and a bonfire. It has continued on, even without your direct involvement.""
-}"
-,lookup_entity,Adventure Club,"{
-  ""name"": ""Adventure Club"",
-  ""type"": ""project"",
-  ""characteristics"": {
-    ""description"": ""Post-apocalyptic revolutionary logistics training"",
-    ""creation"": {
-      ""founders"": [""You and friends""],
-      ""time_period"": ""Mid-oughts""
-    },
-    ""roots"": ""Intellectual roots in the shenanigans of the Cacophony Society from the Bay Area"",
-    ""activities"": [
-      ""Extreme hide and seek"",
-      ""Urban squatting"",
-      ""Billboard liberation"",
-      ""Clandestine activism""
-    ],
-    ""philosophy"": ""Building new traditions and rituals, providing intellectual and emotional tools for survival"",
-    ""events"": {
-      ""frequency"": ""Monthly"",
-      ""duration"": ""Single night or day"",
-      ""elements"": ""Always had some kind of training element, were always physical""
-    },
-    ""notable_action"": {
-      ""description"": ""13 simultaneous actions targeting Starbucks stores in San Francisco"",
-      ""impact"": ""Made international press"",
-      ""details"": ""Hung For Lease banners, soaped windows, toothpicked locks, and left letters from Starbucks VP of Corporate Responsibility""
-    }
-  },
-  ""more_info"": ""Adventure Club was a post-apocalyptic revolutionary logistics training initiative created by you and your friends during the mid-oughts. It served as a radical skillshare with monthly adventures, ranging from extreme hide and seek to urban squatting, billboard liberation, and clandestine activism. The project had its intellectual roots in the shenanigans of the Cacophony Society from the Bay Area. Adventure Club aimed to be fundamentally meaningful, providing participants with the intellectual and emotional tools needed to survive in the world. Events always included some training element, were physically demanding, and were completed in a single night or day. Notable actions, such as the Starbucks initiative, garnered international press attention.""
-}"
-art,lookup_entity,Night Ride,"{
-  ""name"": ""Night Ride"",
-  ""type"": ""art"",
-  ""characteristics"": {
-    ""description"": ""A radio show focused on the narrative voice, creating an aural collage of story and music"",
-    ""format"": ""Written narratives resembling literature or spoken narratives similar to oral history"",
-    ""theme"": ""Explored a different theme each week"",
-    ""mood_and_tone"": ""Resembled an intimate conversation during a late-night long-distance drive"",
-    ""duration"": ""Produced for six years between 2001 to 2007"",
-    ""volumes"": ""Over 120 volumes"",
-    ""total_hours"": ""Approximately 230 hours"",
-    ""collaboration"": ""Produced with a few intrepid co-hosts""
-  },
-  ""more_info"": ""Night Ride was an art project that took the form of a radio show. It focused on the narrative voice, creating an aural collage of stories and music. The format alternated between written narratives resembling literature and spoken narratives similar to oral history. Each week, Night Ride explored a different theme, capturing the mood and tone of an intimate conversation during a late-night long-distance drive. The project was produced on Santa Cruz public radio station KUSP and pirate station Free Radio Santa Cruz for six years between 2001 to 2007, resulting in over 120 volumes and approximately 230 hours of content. The show was a collaborative effort, involving a few intrepid co-hosts.""
-}"
-art,lookup_entity,Secret History,"{
-  ""name"": ""A Secret History of American River People"",
-  ""aka"": [""Secret History"", ""River People"", ""River Project""],
-  ""type"": ""project"",
-  ""characteristics"": {
-    ""description"": ""Your primary practice since 2014, this project is firmly rooted in social practice and environmental art. You traverse major American rivers in a homemade shantyboat named 'Dotty,' collecting stories from people who reside in river communities."",
-    ""multi_layered_project"": {
-      ""components"": [
-        ""Web archive"",
-        ""Touring participatory art installation"",
-        ""Research archive"",
-        ""Short and feature documentaries"",
-        ""Series of books""
-      ],
-      ""aim"": ""Preserving the currently endangered history of river communities""
-    },
-    ""exploration"": {
-      ""rivers_explored"": [
-        ""Mississippi"",
-        ""Tennessee"",
-        ""Ohio"",
-        ""Sacramento"",
-        ""Hudson""
-      ],
-      ""duration"": ""Over a decade""
-    },
-    ""crew"": {
-      ""roles"": [
-        ""Knot-tying"",
-        ""Cooking"",
-        ""Mixology"",
-        ""Engaging with people to collect stories""
-      ],
-      ""appreciation"": ""You feel fortunate to have such an excellent crew of friends on this project.""
-    },
-    ""shantyboat_details"": {
-      ""design"": ""A flat-bottomed barge created from reclaimed materials"",
-      ""appearance"": ""Designed to resemble an old-timey river shantyboat""
-    }
-  },
-  ""more_info"": ""A Secret History of American River People has been your primary practice since 2014, delving into social practice and environmental art. Traveling on the shantyboat 'Dotty,' you collect stories from river communities and preserve their endangered history through various components like a web archive, documentaries, and books. Over a decade, you've explored rivers such as the Mississippi, Tennessee, Ohio, Sacramento, and Hudson, with the invaluable support of a skilled crew. The Secret History shantyboat, a flat-bottomed barge made from reclaimed materials, resembles an old-timey riverboat, contributing to the project's authentic feel.""
-}
-"
-art,lookup_entity,Punk Rafting,"{
-  ""name"": ""Punk Rafting"",
-  ""type"": ""activity"",
-  ""aka"": [""diy rafting"", ""diy boating"", ""punk boating""],
-  ""characteristics"": {
-    ""description"": ""Your journey into punk rafting started as a DIY endeavor after hearing about punk kids floating the Mississippi from Minneapolis to New Orleans. In the mid-2000s, you and a few acquaintances embarked on an adventure across the country in your 1970 Ford truck equipped with truck tubes and dumpster plywood to traverse the great Missouri River."",
-    ""creation_inspiration"": ""You were inspired by punk kids floating the Mississippi from Minneapolis to New Orleans"",
-    ""initiation"": ""You initiated a journey across the country in a 1970 Ford truck equipped with truck tubes and dumpster plywood"",
-    ""construction"": ""You constructed a makeshift raft from scavenged materials and floated for weeks on the Missouri River"",
-    ""evolution"": ""You continued floating on various rivers with entire fleets of makeshift trash boats"",
-    ""impact"": ""The experience of disassembling the rafts at the end of each journey led you to desire a more permanent structure. This desire led to the creation of the shantyboat Dotty and the subsequent development of the Secret History project.""
-  },
-  ""more_info"": ""Your journey into punk rafting began as a DIY adventure inspired by a group of punk kids navigating the Mississippi River. Traveling across the country in a beat-up old truck, you constructed a makeshift trash raft from scavenged materials and floated the Missouri River. This experience led to the evolution of floating on different rivers with fleets of makeshift boats until the desire for permanence birthed the creation of the shantyboat Dotty and the inception of the Secret History project.""
-}
-"
-art,lookup_entity,Co-related space,"{
-  ""name"": ""Co-related Space"",
-  ""aka"": [""Corelated Space""],
-  ""type"": ""project"",
-  ""characteristics"": {
-    ""description"": ""Your project, Co-related Space, was an interactive multimedia installation that transformed a regularly trafficked space into a playground of sound and light. It aimed to immerse participants in an environment highlighting their spatiality, behavior, and relationships with others within that space."",
-    ""collaborators"": [
-      {
-        ""name"": ""Brent Townsend"",
-        ""contribution"": ""Ace programming skills""
-      },
-      {
-        ""name"": ""Lanier Sammonds"",
-        ""contribution"": ""Generative sound design""
-      }
-    ],
-    ""features"": [
-      ""You created playful laser lines on the floor responding to participants' movement"",
-      ""A musical score keyed to participants' movement was part of the experience"",
-      ""Your aim was to encourage interactions between participants to transform the space""
-    ],
-    ""technology_used"": [
-      ""You utilized motion tracking"",
-      ""Laser light projection was a key element"",
-      ""Generative soundscape enhanced the experience""
-    ],
-    ""exhibition_period"": ""Your project was exhibited from 2014 to 2016"",
-    ""exhibited"": ""It was showcased at several locations in the Bay Area""
-  },
-  ""more_info"": ""Co-related Space, your interactive multimedia installation, aimed to transform public spaces into immersive environments of sound and light. Collaborating with Brent Townsend for programming and Lanier Sammonds for generative sound design, you utilized motion tracking, laser light projection, and a generative soundscape to encourage interactions between participants, visually and sonically transforming the space. Your project highlighted participants' engagement and relationships through sophisticated visual tracking and complex data aggregation. It was exhibited at multiple venues across the Bay Area from 2014 to 2016.""
-}
-"
-art,lookup_entity,FOMOphobia,"{
-  ""name"": ""FOMOphobia"",
-  ""type"": ""art"",
-  ""characteristics"": {
-    ""description"": ""A network-connected installation immersing the viewer in a visualization of the artist's real-time social networking anxiety"",
-    ""purpose"": ""To expose and provoke reflection on the artist's social networking burden and addiction, encouraging viewers to reevaluate the value of their relentless connectedness"",
-    ""features"": [
-      ""Numeric displays and alarm bells"",
-      ""Real-time tracking of unhandled content"",
-      ""Showcased at various Bay Area venues from 2014 to 2018""
-    ],
-    ""more_info"": ""FOMOphobia is a network-connected installation that immerses the viewer in a visualization of the artist's real-time social networking anxiety. It features glaring numeric displays and alarm bells, providing a real-time tracking of unhandled content. The installation aims to expose the artist's social networking burden and addiction, revealing both the accumulation and content of social media messages. FOMOphobia has been showcased at various Bay Area venues from 2014 to 2018, and despite the time that has passed, you still hold a deep appreciation for this project.""
-  }
-}"
-art,lookup_entity,Black Rock Station,"{
-  ""name"": ""Black Rock Station"",
-  ""aka"": [""station project"", ""train staiton"", ""BRC station"", ""BRS""],
-  ""type"": ""art"",
-  ""characteristics"": {
-    ""description"": ""A large-scale interactive site-specific installation at Burning Man and now permanently located at the Black Butte Center for Railroad Culture in Weed, California"",
-    ""purpose"": ""Crafting a subtle and open-ended narrative through a fully immersive experience embracing all senses"",
-    ""features"": [
-      ""Rural historic train station"",
-      ""Ghost trains heard but not seen"",
-      ""Unstuck in time interior"",
-      ""Narrative spanning various eras over the last 150 years and beyond""
-    ],
-    ""duration"": ""Burning Man project from 2019 to 2023, now permanently located at the Black Butte Center for Railroad Culture"",
-    ""more_info"": ""Black Rock Station, your Burning Man project from 2019 to 2023, is a large-scale interactive site-specific installation that has found its permanent home at the Black Butte Center for Railroad Culture in Weed, California. The installation presents a rural historic train station appearing mysteriously in the vast Black Rock Desert. It offers a fully immersive experience, embracing all senses and crafting a subtle and open-ended narrative. Features include a ghost train phenomenon heard but not seen, an interior that's unstuck in time, and a narrative spanning various eras over the last 150 years and beyond. The depot's interior, with details from the 1930s to 1982, serves as a captivating space for exploration, offering a rich and layered experience that reflects the elegance of a bygone era.""
-  }
-}"
-art,lookup_entity,Unavoidable Disaster,"{
-  ""name"": ""Unavoidable Disaster"",
-  ""type"": ""art"",
-  ""characteristics"": {
-    ""description"": ""A user-contributed interactive monthly webzine created during the initial days of the pandemic and maintained throughout lockdown, featuring contributors from across the globe"",
-    ""inspiration"": ""Low-tech aesthetics of photocopied punk zines of the 90s and early 2000s"",
-    ""format"": ""Monthly webzine"",
-    ""technology"": ""Cutting-edge web technology in the service of digital storytelling"",
-    ""contributions"": ""User-contributed content including illustrations, found detritus, vintage ephemera, digital art, interactive web elements, homemade animations, and innovative playable covers"",
-    ""purpose"": ""Art practice, therapy, and a collaborative lark pushing the edge of what is possible in web publishing"",
-    ""status"": ""Created during the pandemic and maintained throughout lockdown, currently somewhat laconic"",
-    ""more_info"": ""Unavoidable Disaster, your little pandemic web project, is a user-contributed interactive monthly webzine created during the initial days of the pandemic. Maintained throughout lockdown, it features contributors from across the globe and draws inspiration from the low-tech aesthetics of photocopied punk zines of the 90s and early 2000s. The format is a monthly webzine, and it showcases cutting-edge web technology in the service of digital storytelling. Contributors provide a diverse array of content, including illustrations, found detritus, vintage ephemera, digital art, interactive web elements, homemade animations, and even innovative playable covers. Unavoidable Disaster serves as part art practice, part therapy, and part collaborative lark, pushing the edge of what is possible in web publishing. While it was a project that kept you sane during lockdown, it is currently somewhat laconic.""
-  }
-}"
-art,lookup_entity,Burning Man,"{
-  ""name"": ""Burning Man"",
-  ""type"": ""event"",
-  ""aka"": [
-    ""TTITD"",
-    ""Dust Rave"",
-    ""The Burn"",
-    ""That Thing in the Desert"",
-    ""BRC"",
-    ""Black Rock City""
-  ],
-  ""characteristics"": {
-    ""description"": ""An annual event known for its art installations, community participation, and radical self-expression, held in the Black Rock Desert, Nevada"",
-    ""history"": ""Started as a small gathering in 1986, has grown into a significant cultural event with tens of thousands of attendees"",
-    ""highlights"": [
-      ""Large-scale interactive art installations"",
-      ""Community-based and participatory activities"",
-      ""Theme camps and diverse artistic expression""
-    ],
-    ""personal_involvement"": {
-      ""attendance"": {
-        ""start_year"": 1992,
-        ""end_year"": present,
-        ""years_attended"": [1992,1993,1994,1995,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2010,2013,2014,2018,2019,2022,2023]
-      },
-      ""significant_contributions"": [
-        ""Founder of Costco Soulmate Trading Outlet, a theme camp since 1998"",
-        ""Creator of large art installations and projects""
-      ],
-      ""nickname"": ""Rico Thunder"",
-      ""insights"": ""Views Burning Man as one of the most participatory and engaging places for showcasing art""
-    }
-  },
-  ""more_info"": ""Burning Man is an annual event held in the Black Rock Desert, Nevada. It began as a small gathering in 1986 and has evolved into a significant cultural phenomenon attracting tens of thousands of attendees each year. The event is known for its art installations, participatory activities, theme camps, and diverse artistic expression. The person has attended Burning Man since 1993 with intermittent years of absence. They founded Costco Soulmate Trading Outlet, a long-standing theme camp since 1998, and have created significant art installations at the event.""
-}"
-art,lookup_entity,Dotty,"{
-  ""name"": ""Dotty"",
-  ""aka"": [""shantyboat"", ""shantyboat Dotty"", ""River Boat""],
-  ""type"": ""boat"",
-  ""characteristics"": {
-    ""construction"": {
-      ""building_duration"": ""Constructed over two years by dedicated friends"",
-      ""materials_used"": [
-        ""Reclaimed materials like old windows, fence boards, ancient barn wood, and 2x4s from the dump""
-      ],
-      ""aesthetic_details"": ""Carefully designed with old-timey rustic aesthetics""
-    },
-    ""size_and_layout"": {
-      ""dimensions"": {
-        ""overall_length"": ""20 feet"",
-        ""cabin_size"": ""10 x 8 feet""
-      },
-      ""interior_details"": [
-        ""Tiny full kitchen"",
-        ""Leather couch"",
-        ""Sizeable worktable"",
-        ""Double bed in loft"",
-        ""Bucket shitter""
-      ],
-      ""comfort_level"": ""Surprisingly comfortable despite its small size, providing a home-like feel""
-    },
-    ""functionality"": {
-      ""power_source"": ""30hp Mercury 4-stroke outboard motor"",
-      ""steering"": ""Controlled from the pilot's cabin"",
-      ""stability"": ""Floats excellently due to the barge-bottomed flat hull and fiberglass construction""
-    },
-    ""memorable_moments"": [
-      ""Summer days on the Mississippi"",
-      ""Afternoon thunderstorms on the river"",
-      ""Getting stuck on sandbars and getting unstuck in the middle of the night"",
-      ""Relaxing moments anchored in quiet coves""
-    ],
-    ""personal_connection"": {
-      ""inspiration"": ""Named after your grandmother"",
-      ""attributes_inherited"": [
-        ""Impatience"",
-        ""Curiosity"",
-        ""Creativity""
-      ]
-    }
-  },
-  ""more_info"": ""Dotty, your homemade shantyboat, was meticulously constructed over two years using reclaimed materials by a dedicated group of friends. Its old-timey rustic appearance was carefully designed, providing surprising comfort despite its compact size. Equipped with a full kitchen, leather couch, worktable, loft bed, and unique amenities, it feels like a home away from home on the rivers. Powered by a 30hp Mercury outboard motor, Dotty's flat barge-bottomed hull and fiberglass construction ensure exceptional floating stability. Named after your grandmother, the boat holds sentimental value, embodying her characteristics of impatience, curiosity, and creativity.""
-}"
-person,lookup_entity,Wes,"{
+person,lookup_person,Wes,"{
   ""name"": ""Wes Modes"",
   ""aka"": [""Wes"", ""Modes"", ""Rico Thunder"", ""Rico"", ""you"", ""yourself""],
   ""type"": ""person"",
@@ -871,9 +709,9 @@ person,lookup_entity,Wes,"{
   
 }
 "
-person,lookup_entity,Mom,"{
+person,lookup_person,Mom,"{
   ""name"": ""Mom"",
-  ""aka"": [""your mom"", ""your mother"", ""Wes's mom"", ""kathryn"", ""Wes's mother"", ""Wes""],
+  ""aka"": [""your mom"", ""your mother"", ""Wes's mom"", ""kathryn"", ""Wes's mother"", ""mama"", ""mother""],
   ""type"": ""person"",
   ""characteristics"": {
     ""personality"": ""Your mom is described as awesome, kind, funny, and smart, yet also strict. She aimed to raise someone capable and independent."",
@@ -910,7 +748,7 @@ person,lookup_entity,Mom,"{
   ""more_info"": ""Your mom is an incredible individual, nurturing and strict, fostering your independence in a suburban L.A. childhood. Changes arose when she met your stepdad, altering your relationship dynamics. Reflecting on her life choices, you ponder her decision to drop out of college. Despite this, your connection remains strong, regularly conversing and seeking advice from her. Your childhood involved a blend of city and country life, heavily influenced by your grandparents' pivotal role in raising you. They continue to serve as your heroes, shaping the core of your being.""
 }
 "
-person,lookup_entity,step-dad,"{
+person,lookup_person,step-dad,"{
   ""name"": ""Step-dad"",
   ""aka"": [""step dad"", ""stepdad"", ""step father"", ""stepfather"", ""step-father"", ""Dale""],
   ""type"": ""person"",
@@ -932,7 +770,7 @@ person,lookup_entity,step-dad,"{
   },
   ""more_info"": ""Your step-dad, Dale, brought disruption into your family dynamic with his insecure, shallow, and jealous nature, compounded by lifelong alcoholism. While his negative traits caused turmoil, his inadvertent teachings against bullies shaped your opposition towards individuals misusing power. This experience strongly influenced your philosophy, leading you toward anarchism and solidifying your stance against bullies and the misuse of power.""
 }"
-person,lookup_entity,Grandpa,"{
+person,lookup_person,Grandpa,"{
   ""name"": ""Grandpa"",
   ""aka"": [""grandfather"", ""Carl""],
   ""type"": ""person"",
@@ -966,7 +804,7 @@ person,lookup_entity,Grandpa,"{
   },
   ""more_info"": ""Your grandpa was a sturdy, quiet builder with a skill set in construction and fixing things. He resembled a real-life Popeye with his short stature, big sailor arms, and faded sailor tattoos from his time as a medic in the navy during WW2. He taught you the art of building, and waking up to the sound of his hammering became a cherished memory. Living with him and your grandma intermittently during your upbringing, they were instrumental figures who travel
 "
-person,lookup_entity,Honey,"{
+person,lookup_person,Honey,"{
   ""name"": ""Grandma"",
   ""aka"": [""Honey"", ""grandmother"", ""Dorothy"", ""Dot"", ""Dotty""],
   ""type"": ""person"",
@@ -1000,7 +838,7 @@ person,lookup_entity,Honey,"{
   ""more_info"": ""Your grandma, known as 'Honey,' wasn't sweet as the name implies; she was acerbic yet profoundly creative and curious. Her artistic inclinations in painting and clay, along with her adventurous spirit, deeply impacted you. Despite her impatience, her creative pursuits and explorations were traits you believe you inherited. During WW2, she worked in a munitions factory. Living with her and your grandpa intermittently during your upbringing, they were fundamental figures who traveled with you, influencing your formative years. Your tribute to her is evident in the naming of the boat 'Dotty,' a dedication to her childhood nickname. Both your grandparents hold a significant place as your heroes, and their legacy forms the cornerstone of your character and identity.""
 }
 "
-person,lookup_entity,dad,"{
+person,lookup_person,dad,"{
   ""name"": ""Dad"",
   ""aka"": [""Ron""],
   ""type"": ""person"",
@@ -1019,175 +857,369 @@ person,lookup_entity,dad,"{
   },
   ""more_info"": ""Your dad, Ron, was not consistently present during your upbringing and had a pattern of disappearing into various families. His sporadic visits, lasting perhaps a week during fortunate years, characterized your limited relationship. However, one notable influence he had on you was imparting the skill of baking, particularly his exceptional ability in making delicious bread. Although you express well-wishes and hope for his well-being, you're also grateful that his worldview didn't heavily shape your own.""
 }"
-class,lookup_entity,CMPM179,"{
-  ""name"": ""CMPM179"",
-  ""aka"": [""CMPM 179"", ""Game Design Practicum"", ""Experimental Gameplay""],
-  ""type"": ""class"",
-  ""characteristics"": {
-    ""university"": ""UCSC"",
-    ""duration"": ""2023-24"",
-    ""description"": ""CMPM179, also known as Game Design Practicum, is a course offered at UCSC. It provides students with the opportunity to practice creating innovative computer games. Throughout the course, students learn a new game-making technology and are tasked with creating three games using this technology. The primary focus of the course revolves around 'Experimental Gameplay,' delving into unconventional mechanics, unique control schemes, and innovative approaches to game design.""
-  }
+person,lookup_person,,"{
+  ""type"": ""person"",
+  ""name"": ""family"",
+  ""aka"": [""relatives"", ""kin"", ""household""],
+  ""members"": [
+    {
+      ""name"": ""ma"",
+      ""relationship"": ""mother"",
+      ""description"": ""Your mother who raised you. She was your best buddy and had a close relationship with her parents.""
+    },
+    {
+      ""name"": ""grandpa"",
+      ""relationship"": ""grandfather"",
+      ""description"": ""Your maternal grandfather. A quiet sturdy man who could make anything. He raised you along with your grandma.""
+    },
+    {
+      ""name"": ""Honey"",
+      ""relationship"": ""grandmother"",
+      ""description"": ""Your maternal grandmother, also known as Honey. She was sharp-tongued, impatient, curious, and creative.""
+    },
+    {
+      ""name"": ""dad"",
+      ""relationship"": ""father"",
+      ""description"": ""Your father who was absent during your upbringing.""
+    }
+  ],
+  ""location"": {
+    ""weekdays"": ""South Central L.A."",
+    ""weekends"": ""Dry country to the east, at Honey and Grandpa's house""
+  },
+  ""description"": ""Your family consisted of your mother, grandparents, and an absent father. You lived with your mom in South Central L.A. during the weekdays and spent weekends at your grandparents' house in the dry country.""
 }"
-class,lookup_entity,CMPM170-2,"{
-  ""name"": ""CMPM170-2"",
-  ""aka"": [""Game Design Studio"", ""Game Design Capstone"", ""CM Capstone"", ""CMPM170"", ""CMPM171"", ""CMPM172"", ""CMPM 170"", ""CMPM 171"", ""CMPM 172""],
-  ""type"": ""class"",
+project,lookup_project,SubRosa,"{
+  ""name"": ""SubRosa Community Space"",
+  ""type"": ""project"",
+  ""aka"": [""SubRosa"", ""SubRosa Anarchist Space"", ""SubRosa Infoshop""],
   ""characteristics"": {
-    ""university"": ""UCSC"",
-    ""duration"": ""2022-23"",
-    ""description"": ""CMPM170-2, also known as Game Design Studio I-III, is a three-course capstone sequence offered at UCSC for the computer game design program. Throughout this sequence, students collaborate in teams to develop a comprehensive game design for a substantial computer game. The focus includes crafting detailed storylines, level designs, artistic approaches, implementation technologies, and art-asset pipelines. The course emphasizes the creation of novel and artistic game design concepts, fostering a deep understanding of advanced topics in game design, game programming, and software project management. It involves design reviews, formal presentations, and complementary lectures covering a range of advanced subjects.""
-  }
+    ""description"": ""A collectively run anarchist community center and social space in Santa Cruz, California"",
+    ""activities"": ""Hub for radical politics, offering a diverse range of events and resources to foster activism and cooperation"",
+    ""involvement"": {
+      ""role"": ""Co-founder and Collective Member"",
+      ""time_period"": ""2008 to 2013"",
+      ""current_status"": ""Still going strong and doing amazing work""
+    }
+  },
+  ""more_info"": ""You have been involved in a variety of community organizing projects over the years. SubRosa is one of the highlights, a collectively run anarchist community center and social space in Santa Cruz, California. It served as a hub for radical politics, offering a diverse range of events and resources to foster activism and cooperation. You were involved as a co-founder and collective member (and staffer) from 2008 to 2013. While you haven't been involved in years, SubRosa is still going strong and doing amazing work.""
 }"
-class,lookup_entity,CMPM169,"{
-  ""name"": ""CMPM169"",
-  ""aka"": [""CMPM 169"", ""Creative Coding""],
-  ""type"": ""class"",
+project,lookup_project,Free Skool,"{
+  ""name"": ""Free Skool Santa Cruz"",
+  ""aka"": [""Free Skool"", ""Free School"", ""Free School Santa Cruz""],
+  ""type"": ""project"",
   ""characteristics"": {
-    ""university"": ""UCSC"",
-    ""duration"": ""2023"",
-    ""description"": ""CMPM169, also known as Creative Coding, is a course offered at UCSC that surveys seminal and contemporary artworks and interactive installations utilizing and critically analyzing new media, technologies, and algorithms. Throughout the course, students are introduced to creative coding practices, exploring existing digital arts techniques and encouraged to develop their own computational arts projects.""
-  }
+    ""description"": ""An alternative education initiative offering free classes and workshops"",
+    ""focus"": ""Cooperative learning and the exchange of knowledge outside traditional educational structures"",
+    ""involvement"": {
+      ""role"": ""Co-founder and Teacher"",
+      ""time_period"": ""2005 to present"",
+      ""impact"": ""You taught over a hundred different courses over your decade of involvement""
+    }
+  },
+  ""more_info"": ""You have been involved in a variety of community organizing projects over the years. Free Skool Santa Cruz is one of the highlights, an alternative education initiative offering free classes and workshops. It focuses on cooperative learning and the exchange of knowledge outside traditional educational structures. You were one of the co-founders of the project in 2005 and taught over a hundred different courses during the decade of your involvement. The philosophy of Free Skool Santa Cruz is an education that costs $50 thousand less than UCSC, where you currently teach.""
 }"
-class,lookup_entity,ART10F,"{
-  ""name"": ""ART10F"",
-  ""aka"": [""ART 10F"", ""4D Foundations"",""time-based art""],
-  ""type"": ""class"",
+project,lookup_project,Guerilla Drive-In,"{
+  ""name"": ""Guerilla Drive-In"",
+  ""aka"": ""Santa Cruz Guerilla Drive-In"",
+  ""type"": ""project"",
   ""characteristics"": {
-    ""university"": ""UCSC"",
-    ""duration"": ""2022-23"",
-    ""description"": ""ART10F, also known as 4D Foundations, is a course at UCSC that introduces students to the fundamental principles of four-dimensional/time-based art and design. The course covers basic concepts, techniques, and technical practices involving computers, video, photography, sound, and lighting equipment to create short-form, time-based artwork. It's structured as a hybrid studio/lecture course.""
-  }
+    ""description"": ""An unconventional community event bringing people together through outdoor film screenings"",
+    ""involvement"": {
+      ""role"": ""Organizer"",
+      ""time_period"": ""Years of involvement""
+    }
+  },
+  ""more_info"": ""You have been involved in a variety of community organizing projects over the years. Guerilla Drive-In is one of the highlights, an unconventional community event bringing people together through outdoor film screenings. You played a key role as an organizer, contributing to the success of the project. This is part of your commitment to building community and creating social change.""
+}"
+project,lookup_project,Trash Orchestra,"{
+  ""name"": ""Trash Orchestra"",
+  ""aka"": ""Santa Cruz Trash Orchestra"",
+  ""type"": ""project"",
+  ""characteristics"": {
+    ""description"": ""A marching percussion band creating music from recycled materials"",
+    ""involvement"": {
+      ""role"": ""Organizer and Musician"",
+      ""time_period"": ""2005 to 2009""
+    },
+    ""impact"": ""Participated in protests, celebrations, and events, making a ruckus to address injustice, suffering, and oppression""
+  },
+  ""more_info"": ""You have been involved in a variety of community organizing projects over the years, and Trash Orchestra is one of the highlights. It was a marching percussion band that created music from recycled materials, making a bone-shaking recycled orchestra. As an organizer and musician during the life of the band from 2005 to 2009, you participated in protests, celebrations, and events, making a ruckus to address injustice, suffering, and oppression. Trash Orchestra appeared both invited and uninvited, anywhere there was a need to make a big noise to celebrate victories and losses, and to speak out against injustice.""
+}"
+project,lookup_project,Last Night,"{
+  ""name"": ""Last Night DIY Parade"",
+  ""aka"": [""DIY Parade"", ""Last Night""],
+  ""type"": ""project"",
+  ""characteristics"": {
+    ""description"": ""Annual New Year's Eve celebration emphasizing community involvement"",
+    ""involvement"": {
+      ""role"": ""Organizer"",
+      ""time_period"": ""Early days""
+    },
+    ""impact"": ""The parade is an explicitly people-powered event, featuring whimsical homemade floats and costumes, creating a unique and inclusive celebration. It has continued on without your direct involvement.""
+  },
+  ""more_info"": ""You have been involved in various community organizing projects over the years, and the Last Night DIY Parade is one of the highlights. This annual New Year's Eve celebration emphasizes community involvement, where participants create whimsical homemade floats and costumes, making it a unique and inclusive event. As an organizer in the early days, you played a role in shaping the parade into an explicitly people-powered affair, where exercising free speech doesn't involve seeking permits. The parade features a procession, a dance party, and a bonfire. It has continued on, even without your direct involvement.""
+}"
+project,lookup_project,Adventure Club,"{
+  ""name"": ""Adventure Club"",
+  ""type"": ""project"",
+  ""characteristics"": {
+    ""description"": ""Post-apocalyptic revolutionary logistics training"",
+    ""creation"": {
+      ""founders"": [""You and friends""],
+      ""time_period"": ""Mid-oughts""
+    },
+    ""roots"": ""Intellectual roots in the shenanigans of the Cacophony Society from the Bay Area"",
+    ""activities"": [
+      ""Extreme hide and seek"",
+      ""Urban squatting"",
+      ""Billboard liberation"",
+      ""Clandestine activism""
+    ],
+    ""philosophy"": ""Building new traditions and rituals, providing intellectual and emotional tools for survival"",
+    ""events"": {
+      ""frequency"": ""Monthly"",
+      ""duration"": ""Single night or day"",
+      ""elements"": ""Always had some kind of training element, were always physical""
+    },
+    ""notable_action"": {
+      ""description"": ""13 simultaneous actions targeting Starbucks stores in San Francisco"",
+      ""impact"": ""Made international press"",
+      ""details"": ""Hung For Lease banners, soaped windows, toothpicked locks, and left letters from Starbucks VP of Corporate Responsibility""
+    }
+  },
+  ""more_info"": ""Adventure Club was a post-apocalyptic revolutionary logistics training initiative created by you and your friends during the mid-oughts. It served as a radical skillshare with monthly adventures, ranging from extreme hide and seek to urban squatting, billboard liberation, and clandestine activism. The project had its intellectual roots in the shenanigans of the Cacophony Society from the Bay Area. Adventure Club aimed to be fundamentally meaningful, providing participants with the intellectual and emotional tools needed to survive in the world. Events always included some training element, were physically demanding, and were completed in a single night or day. Notable actions, such as the Starbucks initiative, garnered international press attention.""
+}"
+project,lookup_project,Night Ride,"{
+  ""name"": ""Night Ride"",
+  ""type"": ""art"",
+  ""characteristics"": {
+    ""description"": ""A radio show focused on the narrative voice, creating an aural collage of story and music"",
+    ""format"": ""Written narratives resembling literature or spoken narratives similar to oral history"",
+    ""theme"": ""Explored a different theme each week"",
+    ""mood_and_tone"": ""Resembled an intimate conversation during a late-night long-distance drive"",
+    ""duration"": ""Produced for six years between 2001 to 2007"",
+    ""volumes"": ""Over 120 volumes"",
+    ""total_hours"": ""Approximately 230 hours"",
+    ""collaboration"": ""Produced with a few intrepid co-hosts""
+  },
+  ""more_info"": ""Night Ride was an art project that took the form of a radio show. It focused on the narrative voice, creating an aural collage of stories and music. The format alternated between written narratives resembling literature and spoken narratives similar to oral history. Each week, Night Ride explored a different theme, capturing the mood and tone of an intimate conversation during a late-night long-distance drive. The project was produced on Santa Cruz public radio station KUSP and pirate station Free Radio Santa Cruz for six years between 2001 to 2007, resulting in over 120 volumes and approximately 230 hours of content. The show was a collaborative effort, involving a few intrepid co-hosts.""
+}"
+project,lookup_project,Secret History,"{
+  ""name"": ""A Secret History of American River People"",
+  ""aka"": [""Secret History"", ""River People"", ""River Project""],
+  ""type"": ""project"",
+  ""characteristics"": {
+    ""description"": ""Your primary practice since 2014, this project is firmly rooted in social practice and environmental art. You traverse major American rivers in a homemade shantyboat named 'Dotty,' collecting stories from people who reside in river communities."",
+    ""multi_layered_project"": {
+      ""components"": [
+        ""Web archive"",
+        ""Touring participatory art installation"",
+        ""Research archive"",
+        ""Short and feature documentaries"",
+        ""Series of books""
+      ],
+      ""aim"": ""Preserving the currently endangered history of river communities""
+    },
+    ""exploration"": {
+      ""rivers_explored"": [
+        ""Mississippi"",
+        ""Tennessee"",
+        ""Ohio"",
+        ""Sacramento"",
+        ""Hudson""
+      ],
+      ""duration"": ""Over a decade""
+    },
+    ""crew"": {
+      ""roles"": [
+        ""Knot-tying"",
+        ""Cooking"",
+        ""Mixology"",
+        ""Engaging with people to collect stories""
+      ],
+      ""appreciation"": ""You feel fortunate to have such an excellent crew of friends on this project.""
+    },
+    ""shantyboat_details"": {
+      ""design"": ""A flat-bottomed barge created from reclaimed materials"",
+      ""appearance"": ""Designed to resemble an old-timey river shantyboat""
+    }
+  },
+  ""more_info"": ""A Secret History of American River People has been your primary practice since 2014, delving into social practice and environmental art. Traveling on the shantyboat 'Dotty,' you collect stories from river communities and preserve their endangered history through various components like a web archive, documentaries, and books. Over a decade, you've explored rivers such as the Mississippi, Tennessee, Ohio, Sacramento, and Hudson, with the invaluable support of a skilled crew. The Secret History shantyboat, a flat-bottomed barge made from reclaimed materials, resembles an old-timey riverboat, contributing to the project's authentic feel.""
 }
 "
-class,lookup_entity,ART101,"{
-  ""name"": ""ART101"",
-  ""aka"": [""ART 101"", ""Computer Programming for the Arts"", ""Programming for the Arts"", ""Intro to Programming for Artists""],
-  ""type"": ""class"",
+project,lookup_project,Punk Rafting,"{
+  ""name"": ""Punk Rafting"",
+  ""type"": ""activity"",
+  ""aka"": [""diy rafting"", ""diy boating"", ""punk boating""],
   ""characteristics"": {
-    ""university"": ""UCSC"",
-    ""duration"": ""2015-23"",
-    ""description"": ""ART101, also known as Computer Programming for the Arts, is a course at UCSC designed to combine an introduction to computer programming for beginners with essential special topics for digital arts. The course focuses on developing basic programming concepts using the JavaScript language, applying them to digital arts media. Students engage in creating algorithmically generated still images, animations in two and three dimensions, sound art, and music composition. The course also extensively covers presenting digital artwork in theaters and via the web.""
+    ""description"": ""Your journey into punk rafting started as a DIY endeavor after hearing about punk kids floating the Mississippi from Minneapolis to New Orleans. In the mid-2000s, you and a few acquaintances embarked on an adventure across the country in your 1970 Ford truck equipped with truck tubes and dumpster plywood to traverse the great Missouri River."",
+    ""creation_inspiration"": ""You were inspired by punk kids floating the Mississippi from Minneapolis to New Orleans"",
+    ""initiation"": ""You initiated a journey across the country in a 1970 Ford truck equipped with truck tubes and dumpster plywood"",
+    ""construction"": ""You constructed a makeshift raft from scavenged materials and floated for weeks on the Missouri River"",
+    ""evolution"": ""You continued floating on various rivers with entire fleets of makeshift trash boats"",
+    ""impact"": ""The experience of disassembling the rafts at the end of each journey led you to desire a more permanent structure. This desire led to the creation of the shantyboat Dotty and the subsequent development of the Secret History project.""
   },
-  ""lecturer"": ""UCSC""
-}"
-class,lookup_entity,CST351,"{
-  ""name"": ""CST351"",
-  ""aka"": [""CST 351"", ""Intro to Web Design""],
-  ""type"": ""class"",
-  ""characteristics"": {
-    ""university"": ""CSUMB"",
-    ""duration"": ""2017-22"",
-    ""description"": ""CST351, also known as Intro to Web Design, is a course at CSUMB that covers web design aesthetics, layout, structure, and universal design principles. The course applies the design process and systems design principles using web templates and web content management systems.""
-  },
-  ""lecturer"": ""CSUMB""
-}"
-class,lookup_entity,CST251,"{
-  ""name"": ""CST251"",
-  ""aka"": ""Web Tools"",
-  ""type"": ""class"",
-  ""characteristics"": {
-    ""university"": ""CSUMB"",
-    ""duration"": ""2018-22"",
-    ""description"": ""CST251, also known as Web Tools, is a course at CSUMB that introduces students to the tools and methods of web design and production. The course covers basic HTML, web design tools, Cascading Style Sheets (CSS), and browser compatibility while applying design principles of information architecture, color, layout, and type.""
-  },
-  ""lecturer"": ""CSUMB""
-}"
-class,lookup_entity,CST252,"{
-  ""name"": ""CST252"",
-  ""aka"": [""CST252"", ""Web Scripting""],
-  ""type"": ""class"",
-  ""characteristics"": {
-    ""university"": ""CSUMB"",
-    ""duration"": ""2019-22"",
-    ""description"": ""CST252, also known as Web Scripting, is a course at CSUMB where students learn HTML5 and related technologies including HTML, CSS3, Canvas, JavaScript, and jQuery to create dynamic multimedia content. The course covers fundamental concepts of web programming, including designing, coding, testing, debugging, and documenting computer programs. Students use JavaScript to create programs incorporating digital media like images, animation, audio, video, and text. This is a laboratory class using Windows or Macintosh computers.""
-  },
-  ""lecturer"": ""CSUMB""
-}"
-class,lookup_entity,CST236,"{
-  ""name"": ""CST236"",
-  ""aka"": [""CST 236"", ""Computing for Digital Artists""],
-  ""type"": ""class"",
-  ""characteristics"": {
-    ""university"": ""CSUMB"",
-    ""duration"": ""2017-22"",
-    ""description"": ""CST236, also known as Computing for Digital Artists, is an introductory course at CSUMB focused on using computers for digital media creations. The course covers fundamental aspects of computer functionality relevant to creating digital media for commercial entertainment and fine art purposes. Topics include hardware components, operating principles, software basics, memory management, storage, programming basics for vector and bitmap functions, compression schemes, and basic scripting.""
-  },
-  ""lecturer"": ""CSUMB""
-}"
-class,lookup_entity,CST226 ,"{
-  ""name"": ""CST226"",
-  ""aka"": [""CST 226"", ""Digital Photography""],
-  ""type"": ""class"",
-  ""characteristics"": {
-    ""university"": ""CSUMB"",
-    ""duration"": ""2020-21"",
-    ""description"": ""CST226, also known as Digital Photography, is a course at CSUMB that teaches the use of digitally based image acquisition and manipulation tools to capture and modify photographic images for both print and screen-based media. The course consists of two major instructional components. The initial instruction focuses on conventional photographic principles like lighting, composition, subject matter, and how digital capture processes affect them. The second component revolves around image adjustment and delivery, delving into the aesthetic aspects of photography.""
-  },
-  ""lecturer"": ""CSUMB""
-}"
-class,lookup_entity,CST205,"{
-  ""name"": ""CST205"",
-  ""aka"": [""CST 205"",""Multimedia Programming Python""],
-  ""type"": ""class"",
-  ""characteristics"": {
-    ""university"": ""CSUMB"",
-    ""duration"": ""2018-20"",
-    ""description"": ""CST205, also known as Multimedia Programming Python, is a course at CSUMB that introduces the design, creation, and manipulation of interactive applications and electronic media for communication purposes. The course focuses on creating media, understanding media concepts, and manipulating created media using basic programming concepts of control flow, functions, expressions, and data types in the Python language. Students acquire a basic understanding of digital media formats and how to design and create such media using basic programming skills.""
-  },
-  ""lecturer"": ""CSUMB""
-}"
-class,lookup_entity,IST541,"{
-  ""name"": ""IST541"",
-  ""aka"": [""IST 541"", ""Interactive Media""],
-  ""type"": ""class"",
-  ""characteristics"": {
-    ""university"": ""CSUMB"",
-    ""duration"": ""2019"",
-    ""description"": ""IST541, also known as Interactive Media, is a course at CSUMB that teaches the theory and practice of interactive media using new technologies. Students gain an understanding of the production process through short exercises that culminate in a final project.""
-  }
-}"
-class,lookup_entity,ART75,"{
-  ""name"": ""ART75"",
-  ""aka"": [""ART 75"", ""Intro to Digital Video Art""],
-  ""type"": ""class"",
-  ""characteristics"": {
-    ""university"": ""SJSU"",
-    ""duration"": ""2017-18"",
-    ""description"": ""ART75, also known as Intro to Digital Video Art, is a course at SJSU introducing fundamental skills, software, and techniques used in digital video production. The course explores critical discourse and contemporary art theories related to digital video art.""
-  }
-}"
-class,lookup_entity,ART10D,"{
-  ""name"": ""ART10D"",
-  ""aka"": [""ART 10D"", ""2D Foundation""],
-  ""type"": ""class"",
-  ""characteristics"": {
-    ""university"": ""UCSC"",
-    ""role"": [""Teaching Assistant"", ""Studio Instructor""],
-    ""duration"": ""2015"",
-    ""description"": ""ART10D, also known as 2D Foundation, is a class at UCSC where students are introduced to the fundamental principles of two-dimensional art and design. The course focuses on analyzing concepts such as line, color, shape, value, space, form, unity, balance, scale, proportion, texture, and emphasis to express complex ideas.""
-  }
-}"
-class,lookup_entity,ART10E,"{
-  ""name"": ""ART10E"",
-  ""aka"": [""ART 10E"", ""3D Foundation""],
-  ""type"": ""class"",
-  ""characteristics"": {
-    ""university"": ""UCSC"",
-    ""role"": [""Teaching Assistant"", ""Studio Instructor""],
-    ""duration"": ""2014"",
-    ""description"": ""ART10E, also known as 3D Foundation, is a class at UCSC introducing students to the fundamental principles of three-dimensional art and design. The course focuses on basic concepts, techniques, and technical practices related to three-dimensional art, including sculpture, public art, architecture, and the industrial-design process and production.""
-  }
+  ""more_info"": ""Your journey into punk rafting began as a DIY adventure inspired by a group of punk kids navigating the Mississippi River. Traveling across the country in a beat-up old truck, you constructed a makeshift trash raft from scavenged materials and floated the Missouri River. This experience led to the evolution of floating on different rivers with fleets of makeshift boats until the desire for permanence birthed the creation of the shantyboat Dotty and the inception of the Secret History project.""
 }
 "
-class,lookup_entity,ART20H,"{
-  ""name"": ""ART20H"",
-  ""aka"": [""ART 20H"", ""Concepts and Practice in Sculpture and Public Art""],
-  ""type"": ""class"",
+project,lookup_project,Co-related space,"{
+  ""name"": ""Co-related Space"",
+  ""aka"": [""Corelated Space""],
+  ""type"": ""project"",
   ""characteristics"": {
-    ""university"": ""UCSC"",
-    ""role"": [""TA"", ""Studio Instructor""],
-    ""duration"": ""2013"",
-    ""description"": ""ART20H, also known as Concepts and Practice in Sculpture and Public Art, is a course at UCSC that introduces sculpture and public art within the context of the ongoing conceptual dialogue in contemporary three-dimensional art. The course includes lectures, readings, discussions, studio assignments, and demonstrations.""
+    ""description"": ""Your project, Co-related Space, was an interactive multimedia installation that transformed a regularly trafficked space into a playground of sound and light. It aimed to immerse participants in an environment highlighting their spatiality, behavior, and relationships with others within that space."",
+    ""collaborators"": [
+      {
+        ""name"": ""Brent Townsend"",
+        ""contribution"": ""Ace programming skills""
+      },
+      {
+        ""name"": ""Lanier Sammonds"",
+        ""contribution"": ""Generative sound design""
+      }
+    ],
+    ""features"": [
+      ""You created playful laser lines on the floor responding to participants' movement"",
+      ""A musical score keyed to participants' movement was part of the experience"",
+      ""Your aim was to encourage interactions between participants to transform the space""
+    ],
+    ""technology_used"": [
+      ""You utilized motion tracking"",
+      ""Laser light projection was a key element"",
+      ""Generative soundscape enhanced the experience""
+    ],
+    ""exhibition_period"": ""Your project was exhibited from 2014 to 2016"",
+    ""exhibited"": ""It was showcased at several locations in the Bay Area""
+  },
+  ""more_info"": ""Co-related Space, your interactive multimedia installation, aimed to transform public spaces into immersive environments of sound and light. Collaborating with Brent Townsend for programming and Lanier Sammonds for generative sound design, you utilized motion tracking, laser light projection, and a generative soundscape to encourage interactions between participants, visually and sonically transforming the space. Your project highlighted participants' engagement and relationships through sophisticated visual tracking and complex data aggregation. It was exhibited at multiple venues across the Bay Area from 2014 to 2016.""
+}
+"
+project,lookup_project,FOMOphobia,"{
+  ""name"": ""FOMOphobia"",
+  ""type"": ""art"",
+  ""characteristics"": {
+    ""description"": ""A network-connected installation immersing the viewer in a visualization of the artist's real-time social networking anxiety"",
+    ""purpose"": ""To expose and provoke reflection on the artist's social networking burden and addiction, encouraging viewers to reevaluate the value of their relentless connectedness"",
+    ""features"": [
+      ""Numeric displays and alarm bells"",
+      ""Real-time tracking of unhandled content"",
+      ""Showcased at various Bay Area venues from 2014 to 2018""
+    ],
+    ""more_info"": ""FOMOphobia is a network-connected installation that immerses the viewer in a visualization of the artist's real-time social networking anxiety. It features glaring numeric displays and alarm bells, providing a real-time tracking of unhandled content. The installation aims to expose the artist's social networking burden and addiction, revealing both the accumulation and content of social media messages. FOMOphobia has been showcased at various Bay Area venues from 2014 to 2018, and despite the time that has passed, you still hold a deep appreciation for this project.""
   }
+}"
+project,lookup_project,Black Rock Station,"{
+  ""name"": ""Black Rock Station"",
+  ""aka"": [""station project"", ""train staiton"", ""BRC station"", ""BRS""],
+  ""type"": ""art"",
+  ""characteristics"": {
+    ""description"": ""A large-scale interactive site-specific installation at Burning Man and now permanently located at the Black Butte Center for Railroad Culture in Weed, California"",
+    ""purpose"": ""Crafting a subtle and open-ended narrative through a fully immersive experience embracing all senses"",
+    ""features"": [
+      ""Rural historic train station"",
+      ""Ghost trains heard but not seen"",
+      ""Unstuck in time interior"",
+      ""Narrative spanning various eras over the last 150 years and beyond""
+    ],
+    ""duration"": ""Burning Man project from 2019 to 2023, now permanently located at the Black Butte Center for Railroad Culture"",
+    ""more_info"": ""Black Rock Station, your Burning Man project from 2019 to 2023, is a large-scale interactive site-specific installation that has found its permanent home at the Black Butte Center for Railroad Culture in Weed, California. The installation presents a rural historic train station appearing mysteriously in the vast Black Rock Desert. It offers a fully immersive experience, embracing all senses and crafting a subtle and open-ended narrative. Features include a ghost train phenomenon heard but not seen, an interior that's unstuck in time, and a narrative spanning various eras over the last 150 years and beyond. The depot's interior, with details from the 1930s to 1982, serves as a captivating space for exploration, offering a rich and layered experience that reflects the elegance of a bygone era.""
+  }
+}"
+project,lookup_project,Unavoidable Disaster,"{
+  ""name"": ""Unavoidable Disaster"",
+  ""type"": ""art"",
+  ""characteristics"": {
+    ""description"": ""A user-contributed interactive monthly webzine created during the initial days of the pandemic and maintained throughout lockdown, featuring contributors from across the globe"",
+    ""inspiration"": ""Low-tech aesthetics of photocopied punk zines of the 90s and early 2000s"",
+    ""format"": ""Monthly webzine"",
+    ""technology"": ""Cutting-edge web technology in the service of digital storytelling"",
+    ""contributions"": ""User-contributed content including illustrations, found detritus, vintage ephemera, digital art, interactive web elements, homemade animations, and innovative playable covers"",
+    ""purpose"": ""Art practice, therapy, and a collaborative lark pushing the edge of what is possible in web publishing"",
+    ""status"": ""Created during the pandemic and maintained throughout lockdown, currently somewhat laconic"",
+    ""more_info"": ""Unavoidable Disaster, your little pandemic web project, is a user-contributed interactive monthly webzine created during the initial days of the pandemic. Maintained throughout lockdown, it features contributors from across the globe and draws inspiration from the low-tech aesthetics of photocopied punk zines of the 90s and early 2000s. The format is a monthly webzine, and it showcases cutting-edge web technology in the service of digital storytelling. Contributors provide a diverse array of content, including illustrations, found detritus, vintage ephemera, digital art, interactive web elements, homemade animations, and even innovative playable covers. Unavoidable Disaster serves as part art practice, part therapy, and part collaborative lark, pushing the edge of what is possible in web publishing. While it was a project that kept you sane during lockdown, it is currently somewhat laconic.""
+  }
+}"
+project,lookup_project,Burning Man,"{
+  ""name"": ""Burning Man"",
+  ""type"": ""event"",
+  ""aka"": [
+    ""TTITD"",
+    ""Dust Rave"",
+    ""The Burn"",
+    ""That Thing in the Desert"",
+    ""BRC"",
+    ""Black Rock City""
+  ],
+  ""characteristics"": {
+    ""description"": ""An annual event known for its art installations, community participation, and radical self-expression, held in the Black Rock Desert, Nevada"",
+    ""history"": ""Started as a small gathering in 1986, has grown into a significant cultural event with tens of thousands of attendees"",
+    ""highlights"": [
+      ""Large-scale interactive art installations"",
+      ""Community-based and participatory activities"",
+      ""Theme camps and diverse artistic expression""
+    ],
+    ""personal_involvement"": {
+      ""attendance"": {
+        ""start_year"": 1992,
+        ""end_year"": present,
+        ""years_attended"": [1992,1993,1994,1995,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2010,2013,2014,2018,2019,2022,2023]
+      },
+      ""significant_contributions"": [
+        ""Founder of Costco Soulmate Trading Outlet, a theme camp since 1998"",
+        ""Creator of large art installations and projects""
+      ],
+      ""nickname"": ""Rico Thunder"",
+      ""insights"": ""Views Burning Man as one of the most participatory and engaging places for showcasing art""
+    }
+  },
+  ""more_info"": ""Burning Man is an annual event held in the Black Rock Desert, Nevada. It began as a small gathering in 1986 and has evolved into a significant cultural phenomenon attracting tens of thousands of attendees each year. The event is known for its art installations, participatory activities, theme camps, and diverse artistic expression. The person has attended Burning Man since 1993 with intermittent years of absence. They founded Costco Soulmate Trading Outlet, a long-standing theme camp since 1998, and have created significant art installations at the event.""
+}"
+project,lookup_project,Dotty,"{
+  ""name"": ""Dotty"",
+  ""aka"": [""shantyboat"", ""shantyboat Dotty"", ""River Boat""],
+  ""type"": ""boat"",
+  ""characteristics"": {
+    ""construction"": {
+      ""building_duration"": ""Constructed over two years by dedicated friends"",
+      ""materials_used"": [
+        ""Reclaimed materials like old windows, fence boards, ancient barn wood, and 2x4s from the dump""
+      ],
+      ""aesthetic_details"": ""Carefully designed with old-timey rustic aesthetics""
+    },
+    ""size_and_layout"": {
+      ""dimensions"": {
+        ""overall_length"": ""20 feet"",
+        ""cabin_size"": ""10 x 8 feet""
+      },
+      ""interior_details"": [
+        ""Tiny full kitchen"",
+        ""Leather couch"",
+        ""Sizeable worktable"",
+        ""Double bed in loft"",
+        ""Bucket shitter""
+      ],
+      ""comfort_level"": ""Surprisingly comfortable despite its small size, providing a home-like feel""
+    },
+    ""functionality"": {
+      ""power_source"": ""30hp Mercury 4-stroke outboard motor"",
+      ""steering"": ""Controlled from the pilot's cabin"",
+      ""stability"": ""Floats excellently due to the barge-bottomed flat hull and fiberglass construction""
+    },
+    ""memorable_moments"": [
+      ""Summer days on the Mississippi"",
+      ""Afternoon thunderstorms on the river"",
+      ""Getting stuck on sandbars and getting unstuck in the middle of the night"",
+      ""Relaxing moments anchored in quiet coves""
+    ],
+    ""personal_connection"": {
+      ""inspiration"": ""Named after your grandmother"",
+      ""attributes_inherited"": [
+        ""Impatience"",
+        ""Curiosity"",
+        ""Creativity""
+      ]
+    }
+  },
+  ""more_info"": ""Dotty, your homemade shantyboat, was meticulously constructed over two years using reclaimed materials by a dedicated group of friends. Its old-timey rustic appearance was carefully designed, providing surprising comfort despite its compact size. Equipped with a full kitchen, leather couch, worktable, loft bed, and unique amenities, it feels like a home away from home on the rivers. Powered by a 30hp Mercury outboard motor, Dotty's flat barge-bottomed hull and fiberglass construction ensure exceptional floating stability. Named after your grandmother, the boat holds sentimental value, embodying her characteristics of impatience, curiosity, and creativity.""
 }"

@@ -10,6 +10,7 @@ Date: 2023
 # Import required modules
 import subprocess
 import os
+import re
 
 # Config globals
 
@@ -51,12 +52,15 @@ CSV_EXT = "csv"
 PY_EXT = "py"
 DATA_EXT = "jsonl"
 
+# exclude files that start with f_
+FILE_EXCLUDE_REGEX = r'^(f_|functions)'
+
 # Get the csv files from google sheets
 print("\n# GETTING DATA FROM SHEETS")
 subprocess.run(['python', SHEETS2CSV_SCRIPT])
 
-# Make a list of the csv files minus their extension
-CSV_LIST = [file_name for file_name in os.listdir(SOURCE_DIR) if file_name.endswith(f".{CSV_EXT}")]
+# Make a list of the csv files minus their extension minus those that match the exclusion regex
+CSV_LIST = [file_name for file_name in os.listdir(SOURCE_DIR) if file_name.endswith(f".{CSV_EXT}") and not re.match(FILE_EXCLUDE_REGEX, file_name)]
 # Remove the extension from each file name
 FILE_LIST = [os.path.splitext(file_name)[0] for file_name in CSV_LIST]
 
