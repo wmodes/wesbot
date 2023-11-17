@@ -17,6 +17,7 @@ import logging
 import config
 import mysecrets
 import lookup
+from helpers import super_strip
 
 # Create a logger instance for the 'chatbot' module
 logger = logging.getLogger('chatbot_logger')
@@ -79,11 +80,11 @@ class Chatbot:
         # Prepend the system message to the conversation if it's not already there
         if messages[0]['role'] != 'system':
             # Each system content is preceeded by the default domain focus
-            system_content = config.SYSTEM_MSGS[config.domain_common]
+            system_content = super_strip(config.SYSTEM_MSGS[config.domain_common])
             messages.insert(0, {"role": "system", "content": system_content})
 
-        # print("\nWhat were we passed (messages)?")
-        # self.custom_pretty_print(messages)
+        print("\nWhat were we passed (messages)?")
+        self.custom_pretty_print(messages)
 
         # construct the chat params
         chatParams = config.OPENAI_PARAMS
@@ -95,15 +96,15 @@ class Chatbot:
         if config.USE_FUNCTIONS:
             chatParams['functions'] = config.OPENAI_FUNCTIONS
 
-        # print("\nWhat are we passing (chatParams)?")
-        # self.custom_pretty_print(chatParams)
+        print("\nWhat are we passing (chatParams)?")
+        self.custom_pretty_print(chatParams)
 
         try:
             # Use the OpenAI API to generate a response
             response = openai.ChatCompletion.create(**chatParams)
         
-            # print("\nWhat did we get (response)?")
-            # self.custom_pretty_print(response)
+            print("\nWhat did we get (response)?")
+            self.custom_pretty_print(response)
 
             # ASSISTANT RESPONSE
             #

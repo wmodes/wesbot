@@ -46,7 +46,7 @@ model_suffix = config.OPENAI_FINE_TUNE_ID.split(":")[-1]
 fingerprint = f"{model_suffix}-{config.OPENAI_PARAMS['temperature']}"
 
 # Create a version_num variable
-version = f"{major_version}.{minor_version}.{patch_version} ({fingerprint}))"
+version = f"{major_version}.{minor_version}.{patch_version} ({fingerprint})"
 
 print(f"## Updating Release Version (v{version})")
 

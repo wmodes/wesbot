@@ -388,7 +388,7 @@ function renderBetterOutput(text) {
   text = renderHTMLInert(text);
 
   // Step 1.1: Remove spaces from the beginning of each line
-  text = text.replace(/(^|\n) +/g, '$1');
+  // text = text.replace(/(^|\n) +/g, '$1');
 
   // Step 2: Process the sanitizedText using Marked.js to convert Markdown to HTML
   text = marked.parse(text);

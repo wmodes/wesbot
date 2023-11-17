@@ -10,6 +10,7 @@ import os
 import sys
 sys.path.append('..')
 import config
+from helpers import super_strip
 
 # Define folders
 BASE_DIR = config.BASE_DIR
@@ -55,12 +56,12 @@ def format_jsonl_content(data):
         for message in item['messages']:
             if "function_call" in message:
                 # Remove extra spaces and escapes
-                # function_call = message['function_call']
-                # message['function_call'] = function_call
-                continue
-            elif '```' not in message['content']:
-                message['content'] = message['content'].strip('\n')
-                message["content"] = "\n".join(line.strip() for line in message["content"].split("\n"))
+                function_call = message['function_call']
+                message['function_call'] = function_call
+            else:
+                # print(f"before: {message['content']}")
+                message['content'] = super_strip(message['content'])
+                # print(f"after: {message['content']}")
 
         formatted_jsonl += json.dumps(item, ensure_ascii=False) + '\n'
 

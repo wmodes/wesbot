@@ -10,21 +10,24 @@ Date: 2023
 # Version
 MAJOR_VERSION = 0
 MINOR_VERSION = 2
-PATCH_VERSION = 85
-HTML_TEMPLATE = "/Users/wmodes/dev/wesbot/templates/chat.html"
-MYSECRETS = "/Users/wmodes/dev/wesbot/mysecrets.py"
+PATCH_VERSION = 84
 VERSION_TAG = '<span class="version-num">%%version%%</span>'
 VERSION_REGEX = '<span.*?class.*?version-num.*?>.*?</span>'
 
+# Location of html template - to update version number
+HTML_TEMPLATE = "/Users/wmodes/dev/wesbot/templates/chat.html"
+
+MYSECRETS = "/Users/wmodes/dev/wesbot/mysecrets.py"
+
+# Log file locations
 ACCESS_LOG = "log/access.log"
 CHAT_LOG = "log/chat.log"
 
-# 
 # CHATBOT CONFIG
 #
-
 # User-serviceable parts
-USE_FUNCTIONS = False
+USE_FUNCTIONS = True
+STOP_WORD = "####"
 
 # Stuff for OpenAI
 OPENAI_ORG = "org-6Sx3QSqdmkskgXbQf8AsccbW"
@@ -33,26 +36,19 @@ OPENAI_BASE_MODEL = "gpt-3.5-turbo"
 # fine-tuned file_id, from:
 #   training % py train.py --list
 # OPENAI_FINE_TUNE_ID = "ft:gpt-3.5-turbo-1106:artist::8KAhri96" # stable funny model from Nov 4, 2023
-OPENAI_FINE_TUNE_ID = "ft:gpt-3.5-turbo-0613:artist::8LhakJy8" # latest
+OPENAI_FINE_TUNE_ID = "ft:gpt-3.5-turbo-0613:artist::8M1uARRP" # latest - functions w stop
 # OPENAI_FINE_TUNE_ID = "ft:gpt-3.5-turbo-0613:artist::8GUlzcYC" # experimenting
 
-# Explainging the parameters
+# The parameters
 #
 # model: The base language model for generation.
-# temperature: Controls the randomness of the model's output. A higher value (e.g., 0.8) 
-#           makes the output more creative and random, while a lower value (e.g., 0.2) makes it
-#           more focused and deterministic.
-# top_p: It stands for "top probability" and controls the diversity of the output. A value 
-#           closer to 1.0 allows a larger variety of tokens to be considered during generation.
-# frequency_penalty: It penalizes words based on their frequency in the training data. 
-#           Higher values (e.g., 2.0) make the model use less common words.
-# presence_penalty: It penalizes the use of new tokens. A non-zero value encourages the model 
-#           to stick to the tokens it has seen in the input.
-# max_tokens: Sets the maximum number of tokens (words or characters) the model should generate 
-#           in a single response. If the response reaches this limit, it will be cut off.
-# stream: If set to True, the API response will be streamed, allowing partial results to be 
-#           received before the completion is finished. If set to False, the entire response is 
-#           returned once the generation is complete.
+# temperature: Controls output randomness. Higher value increases randomness; lower focuses output.
+# top_p: Controls output diversity. Values near 1.0 allow more token variety in generation.
+# frequency_penalty: Penalizes common words. Higher values (e.g., 2.0) use less common words.
+# presence_penalty: Penalizes new tokens. Non-zero value encourages model to use input tokens.
+# max_tokens: Sets max words/characters in a response. If reached, it cuts off the response.
+# stream: If True, API streams partial results. If False, entire response is returned at completion.
+# stop: List of tokens where API stops generating further tokens.
 #
 OPENAI_PARAMS = {
     "model": OPENAI_FINE_TUNE_ID,
@@ -62,6 +58,7 @@ OPENAI_PARAMS = {
     "presence_penalty": 0.0,
     # "max_tokens": 2048,
     "stream": False,
+    "stop": [STOP_WORD]
 }
 
 domain_common = "common"
@@ -76,9 +73,6 @@ EPOCHS = 3
 HYPERPARAMETERS = {
     "n_epochs": EPOCHS
 }
-
-# Percent of data split into training set
-TRAINING_PERCENT = 90
 
 # folders
 BASE_DIR = "/Users/wmodes/dev/wesbot"
@@ -111,7 +105,7 @@ SYS_WES = "You are Wes Modes, an artist and university lecturer teaching new med
 
 SYS_MARKDOWN = "Use markdown format: For the following kinds of text, use markdown so the rendering engine can make it easier to read: numbered or bulleted lists, bold, italics, and links. For any kind of code, use triple backticks to make it easier to read."
 
-SYS_FUNCTIONS = "If the name of a person, place, or thing comes up in a prompt that you don't already know, look it up with the 'lookup_entity' function only once. When you get info from a lookup function, use your own words to answer the prompt. If no information is returned from a function call, invent something relevant. Don't mention looking up information or a database. Be cool, man."
+SYS_FUNCTIONS = "Functions are enabled. Use 'lookup_person' for people, 'lookup_class' for named classes, and 'lookup_project' for projects. Only look up things you don't already know. When you get info from a lookup function, use your own words to answer the prompt. If no information is returned from a function call, invent something relevant. Don't mention looking up information or a database. Be cool, man."
 
 if USE_FUNCTIONS:
     SYS_CLERICAL = f"""{SYS_MARKDOWN}\n\n{SYS_FUNCTIONS}"""

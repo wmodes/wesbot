@@ -53,7 +53,7 @@ PY_EXT = "py"
 DATA_EXT = "jsonl"
 
 # exclude files that start with f_
-FILE_EXCLUDE_REGEX = r'^(f_|functions)'
+FILE_EXCLUDE_REGEX = r'^(f_)'
 
 # Get the csv files from google sheets
 print("\n# GETTING DATA FROM SHEETS")

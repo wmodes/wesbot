@@ -40,8 +40,10 @@ class Lookup:
         Returns:
           The result of the function call.
         """
-        # print("lookup() what did we get? ", function, args)
+        print("lookup() what did we get? ", function, args)
         # if the function is lookup_person
+        # fix the model's tendency to put a period rather than an underscore
+        function = function.replace(".", "_")
         # if function == "lookup_person":
         if function:
             # convert args to a dictionary

@@ -14,6 +14,7 @@ import time
 import json
 import mysecrets
 from flask_httpauth import HTTPBasicAuth
+from helpers import super_strip
 
 # Create a logger instance for the 'routes' module
 logger = logging.getLogger('httpd_logger')
@@ -53,7 +54,7 @@ def routes(chatbot):
         # print(config.system_content)
         # data = {"system_content": config.system_content}
         
-        return flask.render_template("chat.html", system_content=config.SYSTEM_MSGS[config.domain_common])
+        return flask.render_template("chat.html", system_content=super_strip(config.SYSTEM_MSGS[config.domain_common]))
 
     # Define the route for the chatbot API
     @routes_blueprint.route("/api/chatbot", methods=["POST"])
@@ -110,7 +111,7 @@ def routes(chatbot):
         #     tokens: 1978,
         #     status: 'success' }
 
-        # print("response:", response)
+        print("routes.py: raw response:", response)
 
         # Pass on the response
         return flask.jsonify(response)

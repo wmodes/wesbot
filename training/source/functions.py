@@ -1,10 +1,11 @@
 
 import sys
 sys.path.append('../')
-sys.path.append('../../')
+# sys.path.append('../../')
 from config import SYSTEM_MSGS
+from helpers import super_strip
 
-sys_content = SYSTEM_MSGS['functions']
+sys_content = super_strip(SYSTEM_MSGS['functions'])
 
 DATA = [
 
@@ -15,9 +16,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """Can you tell me about art101"""
+            "content": super_strip("""Can you tell me about art101""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_class",
                 "arguments": "{\"name\": \"ART101\"}"
@@ -33,9 +35,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """Whats art101 like?"""
+            "content": super_strip("""Whats art101 like?""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_class",
                 "arguments": "{\"name\": \"ART101\"}"
@@ -51,9 +54,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """I was thinking of taking cmpm 169 in winter"""
+            "content": super_strip("""I was thinking of taking cmpm 169 in winter""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_class",
                 "arguments": "{\"name\": \"CMPM169\"}"
@@ -69,9 +73,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """What is CMPM169"""
+            "content": super_strip("""What is CMPM169""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_class",
                 "arguments": "{\"name\": \"CMPM169\"}"
@@ -87,9 +92,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """Do you teach art 101?"""
+            "content": super_strip("""Do you teach art 101?""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_class",
                 "arguments": "{\"name\": \"ART101\"}"
@@ -105,9 +111,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """Do you have group projects in CMPM169?"""
+            "content": super_strip("""Do you have group projects in CMPM169?""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_class",
                 "arguments": "{\"name\": \"CMPM169\"}"
@@ -123,9 +130,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """What language do you focus on in programming for the arts?"""
+            "content": super_strip("""What language do you focus on in programming for the arts?""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_class",
                 "arguments": "{\"name\": \"Programming for the Arts\"}"
@@ -141,9 +149,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """Who is Benzy?"""
+            "content": super_strip("""Who is Benzy?""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_person",
                 "arguments": "{\"name\": \"Benzy\"}"
@@ -159,9 +168,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """Was Benzy on the boat with you?"""
+            "content": super_strip("""Was Benzy on the boat with you?""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_person",
                 "arguments": "{\"name\": \"Benzy\"}"
@@ -177,9 +187,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """Did you see Benzy and Jeremiah?"""
+            "content": super_strip("""Did you see Benzy and Jeremiah?""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_person",
                 "arguments": "{\"name\": \"Benzy\"}"
@@ -195,9 +206,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """Did you see Benzy and Jeremiah?"""
+            "content": super_strip("""Did you see Benzy and Jeremiah?""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_person",
                 "arguments": "{\"name\": \"Jeremiah\"}"
@@ -213,9 +225,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """Can you elaborate on the project with Rico Thunder?"""
+            "content": super_strip("""Can you elaborate on the project with Rico Thunder?""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_person",
                 "arguments": "{\"name\": \"Rico Thunder\"}"
@@ -231,9 +244,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """Describe the artistic collaboration with Lanier Sammons."""
+            "content": super_strip("""Describe the artistic collaboration with Lanier Sammons.""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_person",
                 "arguments": "{\"name\": \"Lanier Sammons\"}"
@@ -249,9 +263,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """How's your relationship with your dad"""
+            "content": super_strip("""How's your relationship with your dad""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_person",
                 "arguments": "{\"name\": \"dad\"}"
@@ -267,9 +282,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """What years did you go to Burning Man?"""
+            "content": super_strip("""What years did you go to Burning Man?""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_project",
                 "arguments": "{\"name\": \"Burning Man\"}"
@@ -285,9 +301,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """How was your Dust Rave?"""
+            "content": super_strip("""How was your Dust Rave?""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_project",
                 "arguments": "{\"name\": \"Dust Rave\"}"
@@ -303,9 +320,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """What was your experience with That Thing in the Desert?"""
+            "content": super_strip("""What was your experience with That Thing in the Desert?""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_project",
                 "arguments": "{\"name\": \"That Thing in the Desert\"}"
@@ -321,9 +339,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """Can you recount a memorable moment from That Thing in the Desert?"""
+            "content": super_strip("""Can you recount a memorable moment from That Thing in the Desert?""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_project",
                 "arguments": "{\"name\": \"That Thing in the Desert\"}"
@@ -339,9 +358,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """Explain your involvement at the Dust Rave."""
+            "content": super_strip("""Explain your involvement at the Dust Rave.""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_project",
                 "arguments": "{\"name\": \"Dust Rave\"}"
@@ -357,9 +377,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """Any interesting anecdotes from Burning Man?"""
+            "content": super_strip("""Any interesting anecdotes from Burning Man?""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_project",
                 "arguments": "{\"name\": \"Burning Man\"}"
@@ -375,9 +396,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """How did the Black Rock City inspire your art?"""
+            "content": super_strip("""How did the Black Rock City inspire your art?""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_project",
                 "arguments": "{\"name\": \"Black Rock City\"}"
@@ -393,9 +415,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """What was the nature of your work at The Burn?"""
+            "content": super_strip("""What was the nature of your work at The Burn?""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_project",
                 "arguments": "{\"name\": \"The Burn\"}"
@@ -411,9 +434,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """Any specific stories you recall from The Burn?"""
+            "content": super_strip("""Any specific stories you recall from The Burn?""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_project",
                 "arguments": "{\"name\": \"The Burn\"}"
@@ -429,9 +453,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """Discuss the collective art installation at Black Rock City."""
+            "content": super_strip("""Discuss the collective art installation at Black Rock City.""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_project",
                 "arguments": "{\"name\": \"Black Rock City\"}"
@@ -447,9 +472,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """Can you describe your involvement with Black Rock City?"""
+            "content": super_strip("""Can you describe your involvement with Black Rock City?""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_project",
                 "arguments": "{\"name\": \"Black Rock City\"}"
@@ -465,9 +491,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """How did TTITD influence your art?"""
+            "content": super_strip("""How did TTITD influence your art?""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_project",
                 "arguments": "{\"name\": \"TTITD\"}"
@@ -483,9 +510,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """What is the significance of the Dust Rave to your art?"""
+            "content": super_strip("""What is the significance of the Dust Rave to your art?""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_project",
                 "arguments": "{\"name\": \"Dust Rave\"}"
@@ -501,9 +529,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """Tell me about Co-related Space"""
+            "content": super_strip("""Tell me about Co-related Space""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_project",
                 "arguments": "{\"name\": \"Co-related Space\"}"
@@ -519,9 +548,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """Who did you work with on Co-related Space?"""
+            "content": super_strip("""Who did you work with on Co-related Space?""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_project",
                 "arguments": "{\"name\": \"Co-related Space\"}"
@@ -537,9 +567,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """What's up with Secret History?"""
+            "content": super_strip("""What's up with Secret History?""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_project",
                 "arguments": "{\"name\": \"Secret History\"}"
@@ -555,9 +586,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """Did you work with Brent Townshend?"""
+            "content": super_strip("""Did you work with Brent Townshend?""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_project",
                 "arguments": "{\"name\": \"Brent Townshend\"}"
@@ -573,9 +605,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """What years did you go to Burning Man"""
+            "content": super_strip("""What years did you go to Burning Man""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_project",
                 "arguments": "{\"name\": \"Burning Man\"}"
@@ -591,9 +624,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """What is Unavoidable Disaster?"""
+            "content": super_strip("""What is Unavoidable Disaster?""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_project",
                 "arguments": "{\"name\": \"Unavoidable Disaster\"}"
@@ -609,9 +643,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """Tell me something about the Black Rock Station at Burning Man."""
+            "content": super_strip("""Tell me something about the Black Rock Station at Burning Man.""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_project",
                 "arguments": "{\"name\": \"Black Rock Station\"}"
@@ -627,9 +662,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """Who collaborated with you on the River Project?"""
+            "content": super_strip("""Who collaborated with you on the River Project?""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_project",
                 "arguments": "{\"name\": \"River Project\"}"
@@ -645,9 +681,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """Who were the key members of the station project?"""
+            "content": super_strip("""Who were the key members of the station project?""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_project",
                 "arguments": "{\"name\": \"station project\"}"
@@ -663,9 +700,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """What made the Black Rock Station installation unique?"""
+            "content": super_strip("""What made the Black Rock Station installation unique?""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_project",
                 "arguments": "{\"name\": \"Black Rock Station\"}"
@@ -681,9 +719,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """What kind of narratives were explored at Black Rock Station?"""
+            "content": super_strip("""What kind of narratives were explored at Black Rock Station?""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_project",
                 "arguments": "{\"name\": \"Black Rock Station\"}"
@@ -699,9 +738,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """What themes did you explore with FOMOphobia?"""
+            "content": super_strip("""What themes did you explore with FOMOphobia?""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_project",
                 "arguments": "{\"name\": \"FOMOphobia\"}"
@@ -717,9 +757,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """Who were the main collaborators for Black Rock Station?"""
+            "content": super_strip("""Who were the main collaborators for Black Rock Station?""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_project",
                 "arguments": "{\"name\": \"Black Rock Station\"}"
@@ -735,9 +776,10 @@ DATA = [
             "content": sys_content
         }, {
             "role": "user",
-            "content": """Share your thoughts on \"Unavoidable Disasster\""""
+            "content": super_strip("""Share your thoughts on \"Unavoidable Disasster\"""")
         }, {
             "role": "assistant",
+            "content": None,
             "function_call": {  
                 "name": "lookup_project",
                 "arguments": "{\"name\": \"Unavoidable Disaster\"}"

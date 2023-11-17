@@ -24,10 +24,11 @@ FILE_EXCLUDE_REGEX = re.compile(r'^f_', re.IGNORECASE)
 file_template = """
 import sys
 sys.path.append('../')
-sys.path.append('../../')
+# sys.path.append('../../')
 from config import SYSTEM_MSGS
+from helpers import super_strip
 
-sys_content = SYSTEM_MSGS['{filebase}']
+sys_content = super_strip(SYSTEM_MSGS['{filebase}'])
 
 DATA = [
 {records}
@@ -42,10 +43,10 @@ content_template = """
             "content": sys_content
         }}, {{
             "role": "user",
-            "content": \"\"\"{user}\"\"\"
+            "content": super_strip(\"\"\"{user}\"\"\")
         }}, {{
             "role": "assistant",
-            "content": \"\"\"{assistant}\"\"\"
+            "content": super_strip(\"\"\"{assistant}{stop_word}\"\"\")
         }}
     ]
 }},
@@ -59,9 +60,10 @@ function_template = """
             "content": sys_content
         }}, {{
             "role": "user",
-            "content": \"\"\"{user}\"\"\"
+            "content": super_strip(\"\"\"{user}\"\"\")
         }}, {{
             "role": "assistant",
+            "content": None,
             "function_call": {{  
                 "name": "{function}",
                 "arguments": "{arguments}"
@@ -100,11 +102,15 @@ def process_csv_file(csv_file_path):
                 else:
                     records.append(content_template.format(
                         user=user_content,
-                        assistant=assistant_content
+                        assistant=assistant_content,
+                        stop_word=config.STOP_WORD
                     ))
 
         # Create the data content with {filebase} replaced
-        data_content = file_template.format(filebase=filebase, records="".join(records))
+        data_content = file_template.format(
+            filebase=filebase, 
+            records="".join(records)
+        )
 
         # Create the Python file path based on the CSV file path
         python_file_path = os.path.splitext(csv_file_path)[0] + ".py"
