@@ -101,15 +101,19 @@ def routes(chatbot):
         # Generate a response to the messages
         response = chatbot.get_response(messages)
 
-        # Create a response chat object
-        assistant_message = {"role": "assistant", "content": response["reply"]}
-        # Log the response to CHAT_LOG
-        log_to_chat(timestamp, client_id, assistant_message)
-
         # Response is an object of the form: 
-        #   { reply: 'Hey there! How can I help you today?', 
-        #     tokens: 1978,
-        #     status: 'success' }
+        #     { 'message': {
+        #             "role": "assistant",
+        #             "content": "Hey there! Not much, just hangin'.'"
+        #         },
+        #         'tokens': 1978,
+        #         'status': 'success' }
+
+        # Get message chat object
+        message = response["message"]
+        # Log the response to CHAT_LOG
+        log_to_chat(timestamp, client_id, message)
+
 
         # print("routes.py: raw response:", response)
 

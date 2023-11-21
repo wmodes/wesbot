@@ -127,13 +127,14 @@ class Chatbot:
             if 'function_call' not in response['choices'][0]['message']:
                 # print(f"We have a normal response!")
                 # Extract the generated response
-                reply = response['choices'][0]['message']['content']
+                # reply = response['choices'][0]['message']['content']
+                message = response['choices'][0]['message']
 
                 # Extract number of tokens
                 tokens = response['usage']['total_tokens']
 
                 response = {
-                    'reply': reply,
+                    'message': message,
                     'tokens': tokens,
                     'status': 'success',
                     }

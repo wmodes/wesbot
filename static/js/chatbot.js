@@ -211,6 +211,15 @@ function sendRequest(userInput) {
   });
 }
 
+// Function to handle the response from the chatbot
+// Response is an object of the form: 
+//     { 'message': {
+//           "role": "assistant",
+//           "content": "Hey there! Not much, just hangin'.'"
+//       },
+//       'tokens': 1978,
+//       'status': 'success' }
+//
 function handleResults(response) {
   response_status = response['status'];
   if (response_status === "error") {
@@ -219,7 +228,7 @@ function handleResults(response) {
     displayResponse(response['reply']);
     return;
   }
-  reply = response['reply'];
+  message = response['message'];
   tokens = response['tokens'];
 
   // extract the token count from the response object
@@ -229,12 +238,12 @@ function handleResults(response) {
   totalChatTokenCount = tokenCount;
 
   // add the reply to the chat
-  chat.push({ role: "assistant", content: reply });
+  chat.push(message);
 
   // Store the chat
   storeChat(); 
   // Display the results
-  displayResponse(reply); 
+  displayResponse(message.content); 
 }
 
 //
@@ -387,9 +396,6 @@ function renderBetterOutput(text) {
   // Step 1: Sanitize inputText to make all HTML inert
   text = renderHTMLInert(text);
 
-  // Step 1.1: Remove spaces from the beginning of each line
-  // text = text.replace(/(^|\n) +/g, '$1');
-
   // Step 2: Process the sanitizedText using Marked.js to convert Markdown to HTML
   text = marked.parse(text);
 
@@ -397,7 +403,13 @@ function renderBetterOutput(text) {
   // Wrap the text in a jQuery object
   const $text = $('<div>').html(text);
   $text.find('pre code').each(function () {
-    const codeType = $(this).attr('class').replace('language-',''); // Extract code type
+    const codeClass = $(this).attr('class');
+    var codeType;
+    if (codeClass && codeClass.startsWith('language-')) {
+      codeType = $(this).attr('class').replace('language-',''); // Extract code type
+    } else {  
+      codeType = "plaintext";
+    }
     const codeContent = $(this).html(); // Extract code content
 
     const prismCodeType = getPrismCodeType(codeType);
@@ -424,8 +436,6 @@ function renderBetterOutput(text) {
   // Step 4: Return the HTML content for rendering on the webpage
   return $text.html();
 }
-
-
 
 
 //
