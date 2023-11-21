@@ -143,5 +143,11 @@ lookup_index = {
     "unavoidable disaster": "unavoidable disaster",
     "shantyboat": "dotty",
     "shantyboat dotty": "dotty",
-    "river boat": "dotty"
+    "river boat": "dotty",
+    "costco soulmate trading outlet": "costco soulmate trading outlet",
+    "costco": "costco soulmate trading outlet",
+    "soulmate trading outlet": "costco soulmate trading outlet",
+    "costco soulmates": "costco soulmate trading outlet",
+    "camp costco": "costco soulmate trading outlet",
+    "costco at burning man": "costco soulmate trading outlet"
 }

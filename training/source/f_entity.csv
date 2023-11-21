@@ -1223,3 +1223,43 @@ project,lookup_project,Dotty,"{
   },
   ""more_info"": ""Dotty, your homemade shantyboat, was meticulously constructed over two years using reclaimed materials by a dedicated group of friends. Its old-timey rustic appearance was carefully designed, providing surprising comfort despite its compact size. Equipped with a full kitchen, leather couch, worktable, loft bed, and unique amenities, it feels like a home away from home on the rivers. Powered by a 30hp Mercury outboard motor, Dotty's flat barge-bottomed hull and fiberglass construction ensure exceptional floating stability. Named after your grandmother, the boat holds sentimental value, embodying her characteristics of impatience, curiosity, and creativity.""
 }"
+project,lookup_project,Costco Soulmate Trading Outlet,"{
+  ""type"": ""project"",
+  ""name"": ""Costco Soulmate Trading Outlet"",
+  ""aka"": [""Costco"", ""Soulmate Trading Outlet"", ""Costco Soulmates"", ""Camp Costco"", ""Costco at Burning Man""],
+  ""founder"": {
+    ""name"": ""Rico Thunder"",
+    ""alias"": ""Rico Thunder""
+  },
+  ""co_founder"": {
+    ""name"": ""Sean Lazar"",
+    ""alias"": ""Lazarhed""
+  },
+  ""established"": 1998,
+  ""description"": ""Burning Man’s leading provider of low-cost, high-quality soulmates. Offers a variety of soulmates at substantially lower prices than conventional wholesale sources."",
+  ""highlights"": [
+    ""Longest continually running theme camp at Burning Man"",
+    ""Provides quality name brand and private-label soulmates"",
+    ""Membership-based store offering soulmate trading services""
+  ],
+  ""membership"": {
+    ""requirements"": [
+      ""Bring a friend to trade for membership application"",
+      ""No membership fees but accepts alternative forms of 'payment'"",
+      ""Completion of a personalized questionnaire"",
+      ""Membership interview for soulmate eligibility assessment""
+    ],
+    ""membership_card"": {
+      ""issuance"": ""After a membership interview"",
+      ""benefits"": ""Allows soulmate pickup after an hour or more""
+    }
+  },
+  ""soulmate_pickup"": {
+    ""procedure"": ""Members are given information about their new soulmate and required to track them down in Black Rock City"",
+    ""promotion"": ""Offers two soulmates for the cost of one; reciprocity in soulmate tracking""
+  },
+  ""unique_offer"": ""TWO soulmates for the cost of one; encourages reciprocal tracking between soulmates"",
+  ""business_strategy"": ""Reduces costs by eliminating charges for stocking and delivery"",
+  ""approach"": ""Tell customers where to find their soulmate and they track them down"",
+  ""marketing_slogan"": ""We refuse to be undersold!""
+}"

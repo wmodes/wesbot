@@ -111,7 +111,7 @@ def routes(chatbot):
         #     tokens: 1978,
         #     status: 'success' }
 
-        print("routes.py: raw response:", response)
+        # print("routes.py: raw response:", response)
 
         # Pass on the response
         return flask.jsonify(response)
