@@ -183,3 +183,7 @@ ssh [your_login]@[your_server_domain] deploy default.git
 Your AI-powered instructor, is ready to answer your questions and provide guidance in the world of new media, art, and game design.
 
 Enjoy your learning journey with WesBot!
+
+## License
+
+This software is licensed under a [GNU General Public License 3.0 license](./LICENSE.md). 

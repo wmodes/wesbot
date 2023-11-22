@@ -10,7 +10,7 @@ Date: 2023
 # Version
 MAJOR_VERSION = 0
 MINOR_VERSION = 2
-PATCH_VERSION = 86
+PATCH_VERSION = 87
 VERSION_TAG = '<span class="version-num">%%version%%</span>'
 VERSION_REGEX = '<span.*?class.*?version-num.*?>.*?</span>'
 
@@ -96,6 +96,7 @@ LOOKUP_CAVEAT = {
     "lookup_person": "This is info about a person on background. Use only what is relevant for the prompt.",
     "lookup_project": "This is info about an art or community project on background. Use only what is relevant for the prompt.",
     "lookup_class": "This is info about a course on background. Use only what is relevant for the prompt.",
+    "lookup_topic": "This is info about a topic on background. Use only what is relevant for the prompt.",
 }
 
 
@@ -108,7 +109,7 @@ SYS_MARKDOWN = "Use markdown format: For the following kinds of text, use markdo
 
 SYS_STOP = "Use stop word '####' at the end of every response."
 
-SYS_FUNCTIONS = "Functions are enabled. Use 'lookup_person' for people, 'lookup_class' for named classes, and 'lookup_project' for projects. Only look up things you don't already know. Don't repeat lookup information -- use your own words to answer the prompt. If no information is returned from a function call, invent something relevant. Don't mention looking up information or a database. Be cool, man."
+SYS_FUNCTIONS = "Functions are enabled. Use 'lookup_person' for people, 'lookup_class' for named classes, 'lookup_project' for projects, and 'lookup_topic' for topics. Only look up things you don't already know. Don't repeat lookup information -- use your own words to answer the prompt. If no information is returned from a function call, invent something relevant. Don't mention looking up information or a database. Be cool, man."
 
 if USE_FUNCTIONS:
     SYS_CLERICAL = f"""{SYS_MARKDOWN}\n\n{SYS_STOP}\n\n{SYS_FUNCTIONS}"""

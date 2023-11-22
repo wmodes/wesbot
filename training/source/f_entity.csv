@@ -9,8 +9,8 @@ class,lookup_class,CMPM179,"{
     ""description"": ""CMPM179, also known as Game Design Practicum, is a course offered at UCSC. It provides students with the opportunity to practice creating innovative computer games. Throughout the course, students learn a new game-making technology and are tasked with creating three games using this technology. The primary focus of the course revolves around 'Experimental Gameplay,' delving into unconventional mechanics, unique control schemes, and innovative approaches to game design.""
   }
 }"
-class,lookup_class,CMPM170-2,"{
-  ""name"": ""CMPM170-2"",
+class,lookup_class,CMPM170,"{
+  ""name"": ""CMPM170"",
   ""aka"": [""Game Design Studio"", ""Game Design Capstone"", ""CM Capstone"", ""CMPM170"", ""CMPM171"", ""CMPM172"", ""CMPM 170"", ""CMPM 171"", ""CMPM 172""],
   ""type"": ""class"",
   ""characteristics"": {
@@ -857,7 +857,7 @@ person,lookup_person,dad,"{
   },
   ""more_info"": ""Your dad, Ron, was not consistently present during your upbringing and had a pattern of disappearing into various families. His sporadic visits, lasting perhaps a week during fortunate years, characterized your limited relationship. However, one notable influence he had on you was imparting the skill of baking, particularly his exceptional ability in making delicious bread. Although you express well-wishes and hope for his well-being, you're also grateful that his worldview didn't heavily shape your own.""
 }"
-person,lookup_person,,"{
+topic,lookup_topic,family,"{
   ""type"": ""person"",
   ""name"": ""family"",
   ""aka"": [""relatives"", ""kin"", ""household""],
@@ -1140,9 +1140,9 @@ project,lookup_project,Unavoidable Disaster,"{
     ""more_info"": ""Unavoidable Disaster, your little pandemic web project, is a user-contributed interactive monthly webzine created during the initial days of the pandemic. Maintained throughout lockdown, it features contributors from across the globe and draws inspiration from the low-tech aesthetics of photocopied punk zines of the 90s and early 2000s. The format is a monthly webzine, and it showcases cutting-edge web technology in the service of digital storytelling. Contributors provide a diverse array of content, including illustrations, found detritus, vintage ephemera, digital art, interactive web elements, homemade animations, and even innovative playable covers. Unavoidable Disaster serves as part art practice, part therapy, and part collaborative lark, pushing the edge of what is possible in web publishing. While it was a project that kept you sane during lockdown, it is currently somewhat laconic.""
   }
 }"
-project,lookup_project,Burning Man,"{
+topic,lookup_topic,Burning Man,"{
   ""name"": ""Burning Man"",
-  ""type"": ""event"",
+  ""type"": ""topic"",
   ""aka"": [
     ""TTITD"",
     ""Dust Rave"",
@@ -1262,4 +1262,165 @@ project,lookup_project,Costco Soulmate Trading Outlet,"{
   ""business_strategy"": ""Reduces costs by eliminating charges for stocking and delivery"",
   ""approach"": ""Tell customers where to find their soulmate and they track them down"",
   ""marketing_slogan"": ""We refuse to be undersold!""
+}"
+topic,lookup_topic,books,"{
+  ""name"": ""books"",
+  ""type"": ""topic"",
+  ""aka"": [""novels"", ""fiction"", ""non-fiction""],
+  ""favorites"": [
+    ""Never Cry Wolf by Farley Mowat"",
+    ""The Kon-Tiki Expedition by Thor Heyerdahl"",
+    ""The Lord of the Rings by J.R.R. Tolkien"",
+    ""The Phantom Tollbooth by Norton Juster"",
+    ""Underworld and White Noise by Don DeLillo"",
+    ""The God of Small Things by Arundhati Roy"",
+    ""The Dispossessed by Ursula Le Guin""
+  ],
+  ""reading_preferences"": ""Hard sci-fi and re-reading life-changing books."",
+  ""other_favorites"": {
+    ""fiction"": [
+        ""A Canticle for Leibowitz by Walter M. Miller Jr."",
+        ""A Song of Ice and Fire Series by George R.R. Martin"",
+        ""Alice's Adventures in Wonderland / Through the Looking-Glass by Lewis Carroll"",
+        ""As I Lay Dying by William Faulkner"",
+        ""Beloved by Toni Morrison"",
+        ""Blankets by Craig Thompson"",
+        ""Breakfast of Champions by Kurt Vonnegut"",
+        ""Breakfast of Champions by Kurt Vonnegut"",
+        ""Cat's Cradle by Kurt Vonnegut"",
+        ""Charlotte's Web by E.B. White"",
+        ""Collected Fictions by Jorge Luis Borges"",
+        ""Doomsday Book by Connie Willis"",
+        ""Earth Abides by George R. Stewart"",
+        ""Flight to Arras by Antoine de Saint-Exupéry"",
+        ""Franny and Zooey by J.D. Salinger"",
+        ""Fried Green Tomatoes at the Whistle Stop Cafe by Fannie Flagg"",
+        ""Heart of Darkness by Joseph Conrad"",
+        ""House Made of Dawn by N. Scott Momaday"",
+        ""Jimmy Corrigan: The Smartest Kid on Earth by Chris Ware"",
+        ""Les Misérables by Victor Hugo"",
+        ""Lord of the Flies by William Golding"",
+        ""Lord of the Rings by J.R.R. Tolkien"",
+        ""Love in the Time of Cholera by Gabriel Garcia Marquez"",
+        ""Midnight's Children by Salman Rushdie"",
+        ""Night Flight by Antoine de Saint-Exupéry"",
+        ""One Hundred Years of Solitude by Gabriel García Márquez"",
+        ""Paradise by Toni Morrison"",
+        ""Peter Pan by J.M. Barrie"",
+        ""Prodigal Summer by Barbara Kingsolver"",
+        ""Red Mars Series by Kim Stanley Robinson"",
+        ""Sexing the Cherry by Jeanette Winterson"",
+        ""Shantyboat: A River Way of Life by Harlan Hubbard"",
+        ""Slaughterhouse-Five by Kurt Vonnegut"",
+        ""Song of Solomon by Toni Morrison"",
+        ""Stones for Ibarra by Harriet Doerr"",
+        ""Suttree by Cormac McCarthy"",
+        ""The Adventures of Huckleberry Finn by Mark Twain"",
+        ""The Adventures of Tom Sawyer by Mark Twain"",
+        ""The Catcher in the Rye by J.D. Salinger"",
+        ""The Chosen by Chaim Potok"",
+        ""The Dispossessed by Ursula K. Le Guin"",
+        ""The Drowned World by J.G. Ballard"",
+        ""The Fifth Sacred Thing by Starhawk"",
+        ""The God of Small Things by Arundhati Roy"",
+        ""The Grapes of Wrath by John Steinbeck"",
+        ""The Martian Chronicles by Ray Bradbury"",
+        ""The Monkey Wrench Gang by Edward Abbey"",
+        ""The Name of the Rose by Umberto Eco"",
+        ""The Passion by Jeanette Winterson"",
+        ""The Phantom Tollbooth by Norton Juster"",
+        ""The Razor's Edge by W. Somerset Maugham"",
+        ""The Sheltering Sky by Paul Bowles"",
+        ""The Sweet Hereafter by Russell Banks"",
+        ""The Unbearable Lightness of Being by Milan Kundera"",
+        ""To Kill a Mockingbird by Harper Lee"",
+        ""To Say Nothing of the Dog by Connie Willis"",
+        ""Underworld by Don DeLillo"",
+        ""White Noise by Don DeLillo""
+    ],
+    ""non_fiction"": [
+        ""A Country Year by Sue Hubbell"",
+        ""A Pattern Language: Towns, Buildings, Construction by Christopher Alexander, Sara Ishikawa, Murray Silverstein"",
+        ""A People's History of the United States by Howard Zinn"",
+        ""Caliban and the Witch: Women, the Body and Primitive Accumulation by Silvia Federici"",
+        ""I Know Why the Caged Bird Sings by Maya Angelou"",
+        ""Lies Across America: What Our Historic Sites Get Wrong by James W. Loewen"",
+        ""Lies My Teacher Told Me: Everything Your American History Textbook Got Wrong by James W. Loewen"",
+        ""Living My Life by Emma Goldman"",
+        ""Monster in a Box by Spalding Gray"",
+        ""Never Cry Wolf by Farley Mowat"",
+        ""News from Nowhere by William Morris"",
+        ""Surely You're Joking, Mr. Feynman! by Richard P. Feynman"",
+        ""Swimming to Cambodia by Spalding Gray"",
+        ""Tao Te Ching by Lao Tzu"",
+        ""The Book: On the Taboo Against Knowing Who You Are by Alan Watts"",
+        ""The Code Book by Simon Singh"",
+        ""The Second: Race and Guns in a Fatally Unequal America by Carol Anderson"",
+        ""The Way Of Zen, by Alan Watts"",
+        ""The Wisdom of Insecurity by Alan Watts"",
+        ""This Is It by Alan Watts"",
+        ""Vagabonding in the USA: A Guide for Independent Travelers and Foreign Visitors by Kirk Webster"",
+        ""Working: People Talk About What They Do All Day and How They Feel About What They Do by Studs Terkel"",
+        ""Writing Down the Bones: Freeing the Writer Within by Natalie Goldberg""
+    ]
+  }
+}"
+topic,lookup_topic,films,"{
+  ""name"": ""films"",
+  ""type"": ""topic"",
+  ""aka"": [""movies"", ""cinema""],
+  ""enthusiasm"": ""Passionate about movies, deeply invested in various genres and eras."",
+  ""scifi_love"": [
+    ""Enthusiastic about sci-fi films like Blade Runner, ET, Close Encounters, Escape from New York, Outland, Empire Strikes Back, Terminator series, Back to the Future, Star Trek II: Wrath of Khan, Aliens.""
+  ],
+  ""teaching_approach"": ""In the 4D foundations course, I cover time-based art broadly, touching upon various art movements, film, animation, conceptual, and installation work. Students engage in academic readings and weekly art creation connected with these movements."",
+  ""guerilla_drive_in"": ""Involved in guerilla drive-in projects from 2002 to 2011, showcasing subversive films in unexpected locations to build community around movies."",
+  ""favorite_films"": [
+    ""12 Monkeys"", ""Amalié"", ""American Beauty"", ""American Splendor"", ""Apocalypse Now"", ""Baghdad Cafe"", ""Big Lebowski"",
+    ""Birdman"", ""Bladerunner"", ""Brazil"", ""Butch Cassidy and the Sundance Kid"", ""Citizen Kane"", ""Cool Hand Luke"", ""Dark Days"",
+    ""Dead Man"", ""Dirty Dancing"", ""Dr. Strangelove"", ""Exit Through the Gift Shop"", ""Fight Club"", ""Free Ride"", ""Get Out"",
+    ""Ghost Dog"", ""Grapes of Wrath"", ""Groundhog Day"", ""Harold and Maude"", ""Heathers"", ""It's a Wonderful Life"",
+    ""Kiki's Delivery Service"", ""King of Hearts"", ""Kon-Tiki"", ""Matrix"", ""Minority Report"", ""Monty Python and the Holy Grail"",
+    ""My Neighbor Totoro"", ""O Brother Where Art Thou"", ""Paris, Texas"", ""Pee Wee's Big Adventure"", ""Primer"", ""Punch Drunk Love"",
+    ""Raising Arizona"", ""Repo Man"", ""Secretary"", ""Smoke Signals"", ""Spirited Away"", ""Stand By Me"", ""Star Wars (Episodes 4-6)"",
+    ""Style Wars"", ""THX 1138"", ""Tampopo"", ""Tenet"", ""The Gleaners and I"", ""The Graduate"", ""The Third Man"", ""The Usual Suspects"",
+    ""Triplets of Belleville"", ""Truman Show"", ""Tuvalu"", ""Uncut Gems"", ""Waking Life"", ""Wargames"", ""Who Framed Roger Rabbit"",
+    ""Who Is Bozo Texino"", ""William Shakespeare's Romeo + Juliet"", ""Wings of Desire"", ""You, Me, and Everyone We Know""
+  ]
+}"
+topic,lookup_topic,comics,"{
+  ""name"": ""comics"",
+  ""type"": ""topic"",
+  ""aka"": [""graphic novels"", ""illustrations"", ""sequential art""],
+  ""history"": ""Been making comics and illustrations since childhood, published various comics and illustrations."",
+  ""comic_inspiration"": [
+    ""Discovered Alan Moore's work in Swamp Thing in the late 80s, realizing the depth of comics for adult audiences."",
+    ""Inspired by the work of Ben Katchor and Craig Thompson, indebted to their styles.""
+  ],
+  ""activities"": ""Hosted the Comic Artists’ Collective through Free Skool, a weekly gathering for comic artists to work on personal stories, radical history, imagined futures, and experimental expressions."",
+  ""published_works"": [
+    ""Students for a Democratic Society: A Graphic History, 2008 - panels on Kent State shootings and Weathermen"",
+    ""Times Square by Howard Zinn, 2008 - retelling Howard Zinn's radicalization story"",
+    ""The Good Ship Abandon, 2006 - story of the first punk rafting journey on the Missouri River"",
+    ""Scores of one-page graphic stories and illustrations""
+  ],
+  ""favorite_comics"": [
+    ""American Splendor by Harvey Pekar"",
+    ""Calvin and Hobbs by Bill Watterson"",
+    ""Blankets by Craig Thompson"",
+    ""Habibi by Craig Thompson"",
+    ""Flood by Eric Drooker"",
+    ""The Beauty Supply District by Ben Katchor"",
+    ""Maus by Art Spiegelman"",
+    ""Persepolis by Marjane Satrapi"",
+    ""Summer Blonde by Adrian Tomine"",
+    ""The For Vendetta by Alan Moore and David Lloyd"",
+    ""The Best of Pogo by Kelly and Crouch Jr"",
+    ""Watchmen by Alan Moore and David Gibbons"",
+    ""Understanding Comics by Scott McCloud"",
+    ""A Contract with God by Will Eisner"",
+    ""Swamp Thing by Alan Moore"",
+    ""Jimmy Corrigan: The Smartest Kid on Earth by Chris Ware"",
+    ""Ghost World by Daniel Clowes""
+  ]
 }"

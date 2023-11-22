@@ -49,7 +49,7 @@ def generate_lookup_dicts(source_directory):
 
     # Go through all the records in lookup_records
     for record in lookup_records:
-        entity = record.get('entity')
+        definitive_name = record.get('entity')
         data = record.get('data')
 
         # Convert data string to JSON object if possible
@@ -63,23 +63,24 @@ def generate_lookup_dicts(source_directory):
             name_data = data_json.get('name')
             aka_data = data_json.get('aka')
         else:
+            # print(f"Not a dict: {data_json} ")
             name_data = None
             aka_data = None
 
         # Create an index dict "lookup_index" for "name" and "aka" in "data" to the "entity" if name_data or aka_data exist
         if name_data:
-            lookup_index[entity.lower()] = entity.lower()
-            lookup_index[name_data.lower()] = entity.lower()
+            lookup_index[definitive_name.lower()] = definitive_name.lower()
+            lookup_index[name_data.lower()] = definitive_name.lower()
         if aka_data:
             if isinstance(aka_data, str):
-                lookup_index[aka_data.lower()] = entity.lower()
+                lookup_index[aka_data.lower()] = definitive_name.lower()
             elif isinstance(aka_data, list):
                 for aka_item in aka_data:
-                    lookup_index[aka_item.lower()] = entity.lower()
+                    lookup_index[aka_item.lower()] = definitive_name.lower()
 
         # Create a lookup dict "lookup_contents" using "name" as the key and "data" as the value
-        if entity and data:
-            lookup_contents[entity.lower()] = data
+        if definitive_name and data:
+            lookup_contents[definitive_name.lower()] = data
 
     return lookup_index, lookup_contents
 
