@@ -16,6 +16,7 @@ import logging
 import config
 import sys
 import json
+from helpers import super_strip
 sys.path.append('lookup')
 import lookup_index
 import lookup_contents  
@@ -29,7 +30,7 @@ class Lookup:
         self.index = lookup_index.lookup_index
         self.data = lookup_contents.lookup_contents
 
-    def lookup(self, function, args):
+    def lookup(self, function_name, args):
         """
         Look up information given a function and args.
 
@@ -40,12 +41,12 @@ class Lookup:
         Returns:
           The result of the function call.
         """
-        print("lookup() what did we get? ", function, args)
+        # print("lookup() what did we get? ", function_name, args)
         # if the function is lookup_person
         # fix the model's tendency to put a period rather than an underscore
-        function = function.replace(".", "_")
+        function_name = function_name.replace(".", "_")
         # if function == "lookup_person":
-        if function:
+        if function_name:
             # convert args to a dictionary
             args_dict = json.loads(args)
             name = args_dict.get('name').lower()
@@ -54,10 +55,22 @@ class Lookup:
                 # get the entity's definitive name from the index
                 entity = self.index.get(name)
                 # get the entity's data from self.data
-                data = self.data.get(entity)
-                # return the data
-                return f"{config.LOOKUP_CAVEAT[function]}\n\n{data}"
-        return config.LOOKUP_NOTFOUND
+                data = super_strip(self.data.get(entity))
+                # construct the lookup result
+                lookup_result = {
+                    "name": entity,
+                    "note_to_model": config.LOOKUP_CAVEAT[function_name],
+                    "data": data,
+                    "status": "success",
+                }
+                # return the lookup result
+                return lookup_result
+        lookup_result = {
+            "name": entity,
+            "note_to_model": config.LOOKUP_NOTFOUND,
+            "status": "error",
+        }
+        return lookup_result
 
 
         

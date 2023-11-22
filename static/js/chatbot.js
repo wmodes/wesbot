@@ -173,12 +173,13 @@ function handleUserInput() {
   if (userInput) {
     displayUserInput(userInput)
     addUserMsgToChat(userInput);
-    sendRequest(userInput);
+    sendUserRequest();
     $("#user-input").val(''); // Clear the input field
   }
 }
 
-function sendRequest(userInput) {
+// Function to send user request to the chatbot API
+function sendUserRequest() {
   // display entire chat to console:
   // console.log("Full chat:", chat);
 
@@ -187,7 +188,12 @@ function sendRequest(userInput) {
     messages: chat,
     client_id: clientId,
   };
+  // get response from assistant
+  getResponse(requestData);
+}
 
+// Function to send a request to the chatbot API
+function getResponse(requestData) {
   // Use $.ajax to make a POST request to the /api/chatbot endpoint
   $.ajax({
     type: "POST",
@@ -195,14 +201,14 @@ function sendRequest(userInput) {
     contentType: "application/json", // Set the content type to JSON
     data: JSON.stringify(requestData),
     success: function(response) {
-      handleResults(response);
+      handleAssistantResults(response);
     },
     error: function(xhr, status, error) {
       // Log detailed error information to the console
       console.error("Ajax request failed - " + status + ": " + error);
       
       // Provide a generic error message to handleResults
-      handleResults({
+      handleAssistantResults({
         reply: "I'm sorry, I had an error generating a response. Please try again later",
         tokens: -1,
         status: "error",
@@ -212,15 +218,24 @@ function sendRequest(userInput) {
 }
 
 // Function to handle the response from the chatbot
-// Response is an object of the form: 
-//     { 'message': {
-//           "role": "assistant",
-//           "content": "Hey there! Not much, just hangin'.'"
-//       },
-//       'tokens': 1978,
-//       'status': 'success' }
+// A normal response is an object of the form: 
+//    { 'message': {
+//       'role': 'assistant',
+//       'content': "Hey there! Not much, just hangin'.'"
+//    },
+//    'tokens': 1978,
+//    'status': 'success' }
 //
-function handleResults(response) {
+// A function response is an object of the form:
+//    { 'message': {
+//       'role': 'function',
+//       'name': 'lookup_person',
+//       'content': <structured data>
+//    },
+//    'tokens': -1,
+//    'status': 'success' }
+//
+function handleAssistantResults(response) {
   response_status = response['status'];
   if (response_status === "error") {
     // check if the response is an error
@@ -228,22 +243,55 @@ function handleResults(response) {
     displayResponse(response['reply']);
     return;
   }
-  message = response['message'];
-  tokens = response['tokens'];
+  // If the response is a "normal" response...
+  if (response.message.role === "assistant") {
+    message = response['message'];
+    tokens = response['tokens'];
 
-  // extract the token count from the response object
-  tokenCount = response['tokens'];
-  // console.log("Token Count:", tokenCount);
-  // record the token count
-  totalChatTokenCount = tokenCount;
+    // extract the token count from the response object
+    tokenCount = response['tokens'];
+    // console.log("Token Count:", tokenCount);
+    // record the token count
+    totalChatTokenCount = tokenCount;
 
-  // add the reply to the chat
-  chat.push(message);
+    // add the reply to the chat
+    chat.push(message);
 
-  // Store the chat
-  storeChat(); 
-  // Display the results
-  displayResponse(message.content); 
+    // Store the chat
+    storeChat(); 
+    // Display the results
+    displayResponse(message.content); 
+  }
+  // If the response is a "function" response...
+  else if (response.message.role === "function") {
+    console.log("Function response:", response);
+    message = {
+      "role": "function", 
+      "name": response.message.name, // function name, NOT lookup name, i.e., "lookup_person"
+      "content": JSON.stringify(response['message'])
+    }
+
+    // add the lookup to the chat
+    chat.push(message);
+
+    // Store the chat
+    storeChat(); 
+
+    // Function request data should be of the form:
+    //   { "role": "function", 
+    //     "name": "get_current_weather", 
+    //     "content": "{\"temperature\": "22", \"unit\": \"celsius\", \"description\": \"Sunny\"}"
+    //   }
+
+    // Create an object with the chat
+    var requestData = {
+      messages: chat,
+      client_id: clientId,
+    };
+    // get response from assistant
+    getResponse(requestData);
+
+  }
 }
 
 //
@@ -360,8 +408,6 @@ function renderHTMLInert(text) {
   });
   return text;
 }
-
-
 
 function getPrismCodeType(codeType) {
   // Check if the codeType exists in the formatTable

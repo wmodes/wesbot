@@ -52,7 +52,7 @@ OPENAI_FINE_TUNE_ID = "ft:gpt-3.5-turbo-0613:artist::8M1uARRP" # latest - functi
 #
 OPENAI_PARAMS = {
     "model": OPENAI_FINE_TUNE_ID,
-    "temperature": 0.7,
+    "temperature": 0.9,
     "top_p": 1.0,
     "frequency_penalty": 2.0,
     "presence_penalty": 0.0,
@@ -91,6 +91,7 @@ GOOGLE_SHEET_ID = "16vyzE7C16EzRJJsV0iqFR0K-BHoR0hr9ZHib9rAK3n8"
 LOOKUP_RECURSE_WARNING = "Lookup limit reached for this turn. Use the info you have."
 LOOKUP_RECURSE_LIMIT = 3
 LOOKUP_NOTFOUND = "No additional info found. You will have to invent something relevant."
+LOOKUP_DISABLED = "Sorry, functions are disabled. You will have to improvise a response to the prompt." 
 LOOKUP_CAVEAT = {
     "lookup_person": "This is info about a person on background. Use only what is relevant for the prompt.",
     "lookup_project": "This is info about an art or community project on background. Use only what is relevant for the prompt.",
@@ -105,10 +106,12 @@ SYS_WES = "You are Wes Modes, an artist and university lecturer teaching new med
 
 SYS_MARKDOWN = "Use markdown format: For the following kinds of text, use markdown so the rendering engine can make it easier to read: numbered or bulleted lists, bold, italics, and links. For any kind of code, use triple backticks to make it easier to read."
 
-SYS_FUNCTIONS = "Functions are enabled. Use 'lookup_person' for people, 'lookup_class' for named classes, and 'lookup_project' for projects. Only look up things you don't already know. When you get info from a lookup function, use your own words to answer the prompt. If no information is returned from a function call, invent something relevant. Don't mention looking up information or a database. Be cool, man."
+SYS_STOP = "Use stop word '####' at the end of every response."
+
+SYS_FUNCTIONS = "Functions are enabled. Use 'lookup_person' for people, 'lookup_class' for named classes, and 'lookup_project' for projects. Only look up things you don't already know. Don't repeat lookup information -- use your own words to answer the prompt. If no information is returned from a function call, invent something relevant. Don't mention looking up information or a database. Be cool, man."
 
 if USE_FUNCTIONS:
-    SYS_CLERICAL = f"""{SYS_MARKDOWN}\n\n{SYS_FUNCTIONS}"""
+    SYS_CLERICAL = f"""{SYS_MARKDOWN}\n\n{SYS_STOP}\n\n{SYS_FUNCTIONS}"""
 else:
     SYS_CLERICAL = f"""{SYS_MARKDOWN}"""
 

@@ -67,15 +67,15 @@ class Chatbot:
         if (not messages):
             messages = []
 
-        # Check the recursion depth against the limit
-        if recursion_depth >= config.LOOKUP_RECURSE_LIMIT:
-            # If the recursion limit is reached, return a response indicating the limit is exceeded
-            response = {
-                'reply': config.LOOKUP_RECURSE_WARNING,
-                'tokens': -1,
-                'status': 'error',
-            }
-            return response
+        # # Check the recursion depth against the limit
+        # if recursion_depth >= config.LOOKUP_RECURSE_LIMIT:
+        #     # If the recursion limit is reached, return a response indicating the limit is exceeded
+        #     response = {
+        #         'reply': config.LOOKUP_RECURSE_WARNING,
+        #         'tokens': -1,
+        #         'status': 'error',
+        #     }
+        #     return response
 
         # Prepend the system message to the conversation if it's not already there
         if messages[0]['role'] != 'system':
@@ -83,8 +83,8 @@ class Chatbot:
             system_content = super_strip(config.SYSTEM_MSGS[config.domain_common])
             messages.insert(0, {"role": "system", "content": system_content})
 
-        print("\nWhat were we passed (messages)?")
-        self.custom_pretty_print(messages)
+        # print("\nWhat were we passed (messages)?")
+        # self.custom_pretty_print(messages)
 
         # construct the chat params
         chatParams = config.OPENAI_PARAMS
@@ -111,7 +111,7 @@ class Chatbot:
             # If we have a response, extract the reply and number of tokens
             # (this is also the base case of any recursion)
             #
-            # Example assistant response:
+            # Example assistant response from API:
             #
             #     {   "choices": [
             #             { "message": {
@@ -144,7 +144,7 @@ class Chatbot:
             #
             # If we have a function call, get the function name and arguments
             #
-            # Example response with function call:
+            # Example response from API with function call:
             #
             #     {   "choices": [
             #             { "message": {
@@ -171,20 +171,27 @@ class Chatbot:
                 function_args = response['choices'][0]['message']['function_call']['arguments']
                 # print(f"function_name: {function_name}\nfunction_args: {function_args}")
                 # Call the Lookup class with the function name and arguments
-                results = self.lookup.lookup(function_name, function_args)
-                # print(f"results from lookup: {results}")
+                lookup_results = self.lookup.lookup(function_name, function_args)
+                print(f"results from lookup: {lookup_results}")
             # if functions are disabled
             else:
                 # return a message that functions are disabled
-                results = "Sorry, functions are disabled. You will have to improvise a response to the prompt." 
+                lookup_results = config.LOOKUP_DISABLED
 
             # Construct new message with results
             #   {"role": "function", "name": "get_current_weather", "content": "{\"temperature\": "22", \"unit\": \"celsius\", \"description\": \"Sunny\"}"}
             response = {
-                'role': 'function',
-                'name': function_name,
-                'content': results,
+                'message': {
+                    'role': 'function',
+                    'name': function_name,
+                    'content': lookup_results,
+                },
+                'tokens': -1,
+                'status': 'success',
             }
+
+            return response     
+
             # Add response to message history
             messages.append(response)
 
