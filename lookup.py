@@ -45,11 +45,11 @@ class Lookup:
         # if the function is lookup_person
         # fix the model's tendency to put a period rather than an underscore
         function_name = function_name.replace(".", "_")
+        # convert args to a dictionary
+        args_dict = json.loads(args)
+        name = args_dict.get('name').lower()
         # if function == "lookup_person":
         if function_name:
-            # convert args to a dictionary
-            args_dict = json.loads(args)
-            name = args_dict.get('name').lower()
             # if the entity is in the index
             if name in self.index:
                 # get the entity's definitive name from the index
@@ -66,7 +66,7 @@ class Lookup:
                 # return the lookup result
                 return lookup_result
         lookup_result = {
-            "name": entity,
+            "name": name,
             "note_to_model": config.LOOKUP_NOTFOUND,
             "status": "error",
         }

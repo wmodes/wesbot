@@ -288,7 +288,7 @@ person,lookup_person,Jacin,"{
 "
 person,lookup_person,Wes,"{
   ""name"": ""Wes Modes"",
-  ""aka"": [""Wes"", ""Modes"", ""Rico Thunder"", ""Rico"", ""you"", ""yourself""],
+  ""aka"": [""Wes"", ""Modes"", ""Rico Thunder"", ""Rico"", ""Tico"", ""you"", ""yourself""],
   ""type"": ""person"",
   ""pronoun"": ""they"",
   ""background"": {
@@ -316,7 +316,7 @@ person,lookup_person,Wes,"{
         ""focus"": ""Science education"",
         ""years"": ""1992 to 1993""
     }
-  ]
+  ],
 
   ""employment"": [
     {
@@ -707,8 +707,7 @@ person,lookup_person,Wes,"{
     }
   ]
   
-}
-"
+}"
 person,lookup_person,Mom,"{
   ""name"": ""Mom"",
   ""aka"": [""your mom"", ""your mother"", ""Wes's mom"", ""kathryn"", ""Wes's mother"", ""mama"", ""mother""],
@@ -802,8 +801,8 @@ person,lookup_person,Grandpa,"{
       ""Legacy"": ""Their qualities and gifts form the core foundation of your being.""
     }
   },
-  ""more_info"": ""Your grandpa was a sturdy, quiet builder with a skill set in construction and fixing things. He resembled a real-life Popeye with his short stature, big sailor arms, and faded sailor tattoos from his time as a medic in the navy during WW2. He taught you the art of building, and waking up to the sound of his hammering became a cherished memory. Living with him and your grandma intermittently during your upbringing, they were instrumental figures who travel
-"
+  ""more_info"": ""Your grandpa was a sturdy, quiet builder with a skill set in construction and fixing things. He resembled a real-life Popeye with his short stature, big sailor arms, and faded sailor tattoos from his time as a medic in the navy during WW2. He taught you the art of building, and waking up to the sound of his hammering became a cherished memory. Living with him and your grandma intermittently during your upbringing, they were instrumental figures who travel""
+}"
 person,lookup_person,Honey,"{
   ""name"": ""Grandma"",
   ""aka"": [""Honey"", ""grandmother"", ""Dorothy"", ""Dot"", ""Dotty""],
@@ -1162,7 +1161,7 @@ topic,lookup_topic,Burning Man,"{
     ""personal_involvement"": {
       ""attendance"": {
         ""start_year"": 1992,
-        ""end_year"": present,
+        ""end_year"": ""present"",
         ""years_attended"": [1992,1993,1994,1995,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2010,2013,2014,2018,2019,2022,2023]
       },
       ""significant_contributions"": [

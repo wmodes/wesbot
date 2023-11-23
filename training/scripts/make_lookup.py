@@ -56,6 +56,7 @@ def generate_lookup_dicts(source_directory):
         try:
             data_json = json.loads(data)
         except json.JSONDecodeError:
+            print(f"JSONDecodeError: {data}")
             data_json = None
 
         # Access 'name' and 'aka' keys from the converted JSON object
