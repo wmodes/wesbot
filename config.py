@@ -36,7 +36,7 @@ OPENAI_BASE_MODEL = "gpt-3.5-turbo"
 # fine-tuned file_id, from:
 #   training % py train.py --list
 # OPENAI_FINE_TUNE_ID = "ft:gpt-3.5-turbo-1106:artist::8KAhri96" # stable funny model from Nov 4, 2023
-OPENAI_FINE_TUNE_ID = "ft:gpt-3.5-turbo-0613:artist::8M1uARRP" # latest - functions w stop
+OPENAI_FINE_TUNE_ID = "ft:gpt-3.5-turbo-0613:artist::8Nr0Ssfz" # latest - functions w stop
 # OPENAI_FINE_TUNE_ID = "ft:gpt-3.5-turbo-0613:artist::8GUlzcYC" # experimenting
 
 # The parameters

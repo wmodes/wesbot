@@ -53,7 +53,7 @@ class Chatbot:
             else:
                 print(data)
 
-    def get_response(self, messages, recursion_depth=0):
+    def get_response(self, messages):
         """
         Generate a response to a conversation.
 
@@ -66,16 +66,6 @@ class Chatbot:
 
         if (not messages):
             messages = []
-
-        # # Check the recursion depth against the limit
-        # if recursion_depth >= config.LOOKUP_RECURSE_LIMIT:
-        #     # If the recursion limit is reached, return a response indicating the limit is exceeded
-        #     response = {
-        #         'reply': config.LOOKUP_RECURSE_WARNING,
-        #         'tokens': -1,
-        #         'status': 'error',
-        #     }
-        #     return response
 
         # Prepend the system message to the conversation if it's not already there
         if messages[0]['role'] != 'system':
@@ -191,15 +181,6 @@ class Chatbot:
             }
 
             return response     
-
-            # Add response to message history
-            messages.append(response)
-
-            # Increment the recursion depth for the recursive call
-            recursion_depth += 1
-
-            # Call this method recursively with the new message history and incremented depth
-            return self.get_response(messages, recursion_depth)
 
         except openai.error.OpenAIError as e:
             print(e)

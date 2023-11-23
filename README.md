@@ -54,7 +54,7 @@ The project uses an `mysecrets.py` file to store sensitive information like API 
 3. Once logged in, navigate to the API section to generate an API key.
 4. Copy the generated API key and paste it into your `mysecrets.py` file as follows:
 
-```
+```py
 # mysecrets.py
 
 OPENAI_API_KEY = "your-api-key-here"
@@ -68,7 +68,7 @@ The Chatbot project leverages the OpenAI Chat Completions API to interact with t
 
 Here's an example of the message format:
 
-```
+```json
 'messages': [
     {'role': 'system', 'content': 'You are a digital assistant.'},
     {'role': 'user', 'content': 'Tell me about your classes.'},
@@ -82,30 +82,70 @@ The 'system' message helps set the behavior or role of the assistant, while 'use
 
 For more details and examples, refer to the [OpenAI Chat Completions API documentation](https://platform.openai.com/docs/guides/gpt/chat-completions-api).
 
-### System Role and Domain-Specific Text
-In this implementation, we employ the 'system' role for two primary purposes. The default system message that accompanies every API call instructs the large language model to flag responses when certain topics are mentioned. This flag "[[*topic*]]" corresponds to keys in the `domain_content` dictionary in the config, and is restricted by the values in `domain_topics_string`.
+### Retrieval-Augmented Generation via OpenAI Functions
+In intricate conversational AI structures, Retrieval-Augmented Generation (RAG) combines precise information retrieval and context-based response creation. This setup bridges the gap between relevant, creative conversation from the model and accurate, factual data from a database.
 
+The OpenAI API enables developers to define "executable" functions for the model that we can use to trigger our RAG. We send a list of functions that should be considered by the model with each API call, like this example that the model will use to lookup a person who comes up for the first time in the conversation:
+
+```json
+{ 
+    functions: { "name": "lookup_person",
+        "description": "Get information about a person mentioned in the prompt for the first time.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The name of the person to look up, e.g. Benzy, mom."
+                }
+            },
+            "required": ["name"]
+        } 
+    } 
+}
 ```
-domain_topics_string = '"classes", "art", "research", or "community organizing". Any other topics should be flagged "other interests".'
 
-domain_content = {
-    "common": f"""
-        Whenever the user touches on any of the topics in the following list, flag your response at the beginning with [[topic]] where topic is restricted to one of the following in-depth domains: {domain_topics_string}...
+The model does not execute functions on the API side, but merely specifies (via JSON) which function and any arguments that should be executed by the system. This is an example response from the model:
 
-        Pretend you are Wes Modes, an artist and university instructor teaching new media, art, and game design...
-    """
+```json
+{
+  "id": "chatcmpl-123",
+  ...
+  "choices": [{
+    "index": 0,
+    "message": {
+      "role": "assistant",
+      "content": null,
+      "function_call": {
+        "name": "lookup_person",
+        "arguments": "{ \"name\": \"Wes\"}"
+      }
+    },
+    "finish_reason": "function_call"
+  }]
+}
+```
 
-    "classes": """
-        As a teacher, you are always interested in blurring the lines between teacher and learner....
-    """
+Our back-end system has a custom lookup class that retrieves information requested by the model, first checking an index for definitive names, then querying the lookup table for specific data. The integration of functions like lookup_person enriches the AI's abilities to retrieve tailored information. Here's an example of structured data returned (as a string) from the Lookup class:
+
+```json
+{
     # ...
+    "art75": "{\n  \"name\": \"ART75\",\n  \"aka\": [\"ART 75\", \"Intro to Digital Video Art\"],\n  \"type\": \"class\",\n  \"characteristics\": {\n    \"university\": \"SJSU\",\n    \"duration\": \"2017-18\",\n    \"description\": \"ART75, also known as Intro to Digital Video Art, is a course at SJSU introducing fundamental skills, software, and techniques used in digital video production. The course explores critical discourse and contemporary art theories related to digital video art.\"\n  }\n}",
+    # ...
+}
 ```
 
-When the API responds, the AI model includes "[[*topic*]]" as appropriate. The JavaScript code responsible for handling the response filters out the tag and sets a `domainFocus` variable for subsequent interactions.
+To help the model handle lookup data smoothly, system messages guide the model, suggesting functions for information retrieval and preventing repetitive data. Extensive training refines the model's understanding of function utilization, enriching generated responses.
 
-On the next user input, the specific text associated with the domain is appended to the default system message. This provides domain-specific information, allowing it to provide contextually relevant responses aligned with the user's intended topic of discussion.
+```json
+{"messages": [
+    {"role": "system", "content": "Functions are enabled. Use 'lookup_person' for people, 'lookup_class' for named classes, 'lookup_project' for projects, and 'lookup_topic' for topics. Only look up things you don't already know. Don't repeat lookup information -- use your own words to answer the prompt. If no information is returned from a function call, invent something relevant. Don't mention looking up information or a database. Be cool, man."}, 
+    # ... 
+]}
+```
 
-This approach enables the chatbot to engage in meaningful and domain-specific conversations, ensuring that the AI's responses are both accurate and contextually appropriate. Additionally, it helps reduce the size of the system message necessary to operate within OpenAI's token limits, enhancing the efficiency and effectiveness of the chatbot's interactions.
+These implementations empower the AI to retrieve and skillfully utilize information, fostering contextually informed conversations.
 
 ## Installation & Deployment
 1. Clone the repository to your local machine:
