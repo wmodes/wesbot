@@ -10,7 +10,7 @@ Date: 2023
 # Version
 MAJOR_VERSION = 0
 MINOR_VERSION = 2
-PATCH_VERSION = 88
+PATCH_VERSION = 90
 VERSION_TAG = '<span class="version-num">%%version%%</span>'
 VERSION_REGEX = '<span.*?class.*?version-num.*?>.*?</span>'
 

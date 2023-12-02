@@ -56,3 +56,5 @@ graphics/*
 log/*
 log/
 analysis/*.cspell/*
+experiments
+experiments/*
