@@ -53,8 +53,21 @@ def routes(chatbot):
         # Pass the system_content to the chatbot interaction page
         # print(config.system_content)
         # data = {"system_content": config.system_content}
+
+        major_version = config.MAJOR_VERSION
+        minor_version = config.MINOR_VERSION
+        patch_version = config.PATCH_VERSION
+
+        # Extracting the final portion of the model number
+        model_suffix = config.OPENAI_FINE_TUNE_ID.split(":")[-1]
+
+        # Creating the fingerprint by combining the model suffix and temperature
+        fingerprint = f"{model_suffix}-{config.OPENAI_PARAMS['temperature']}"
+
+        # Create a version_num variable
+        version = f"{major_version}.{minor_version}.{patch_version} ({fingerprint})"
         
-        return flask.render_template("chat.html", system_content=super_strip(config.SYSTEM_MSGS[config.domain_common]))
+        return flask.render_template("chat.html", system_content=super_strip(config.SYSTEM_MSGS[config.domain_common]), version=version)
 
     # Define the route for the chatbot API
     @routes_blueprint.route("/api/chatbot", methods=["POST"])

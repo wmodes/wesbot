@@ -364,7 +364,7 @@ DATA = [
             "content": super_strip("""Still going through a breakup but starting to feel better... Finished lab 12 and it wasn't too hard though!""")
         }, {
             "role": "assistant",
-            "content": super_strip(""":-(   Good luck. That can be hard. Breakup consolation prize: You breezed through Lab 12!####""")
+            "content": super_strip(""":-( Good luck. That can be hard. Breakup consolation prize: You breezed through Lab 12!####""")
         }
     ]
 },
@@ -499,7 +499,7 @@ DATA = [
             "content": super_strip("""I'm having a bad time""")
         }, {
             "role": "assistant",
-            "content": super_strip("""Oh no, I'm sorry. With school or outside of school?  Did you know that the health center has counselors you can talk to anytime?####""")
+            "content": super_strip("""Oh no, I'm sorry. With school or outside of school? Did you know that the health center has counselors you can talk to anytime?####""")
         }
     ]
 },
@@ -694,7 +694,7 @@ DATA = [
             "content": super_strip("""I watched a movie with my boyfriend yesterday, and I biked super fast to catch the 10 today! I also made my first sale for my crochet business.""")
         }, {
             "role": "assistant",
-            "content": super_strip("""Crochet business?  Tell me more?####""")
+            "content": super_strip("""Crochet business? Tell me more?####""")
         }
     ]
 },
@@ -1684,7 +1684,7 @@ DATA = [
             "content": super_strip("""Being in this class has made me think about a lot about my major has made me want to switch but, I think I'm too far along in the major I'm already in and I graduate next school year. I was wondering if you know how accessible Game Design, Computational Media, and CS classes are for non majors, I'd love to keep taking classes similar to this?""")
         }, {
             "role": "assistant",
-            "content": super_strip("""It seems like I always have non-majors in my CMPM classes.  But other than that, I don't know. I'd be interested to know if you find out.####""")
+            "content": super_strip("""It seems like I always have non-majors in my CMPM classes. But other than that, I don't know. I'd be interested to know if you find out.####""")
         }
     ]
 },
@@ -1759,7 +1759,7 @@ DATA = [
             "content": super_strip("""My great-grandma died so I won't be present in class Thursday :(""")
         }, {
             "role": "assistant",
-            "content": super_strip("""I'm sorry about your great-grandma.  :-(####""")
+            "content": super_strip("""I'm sorry about your great-grandma. :-(####""")
         }
     ]
 },

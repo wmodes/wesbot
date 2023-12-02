@@ -59,20 +59,6 @@ config_content = re.sub(rf'PATCH_VERSION\s*=\s*[0-9.]*', f'PATCH_VERSION = {patc
 with open(config_filepath, "w") as config_file:
     config_file.write(config_content)
 
-# Modify HTML_TEMPLATE by replacing the contents of VERSION_TAG
-replacement_text = version_tag.replace("%%version%%", version)
-re_search_pattern = version_regex
-
-with open(html_template, 'r') as file:
-    entire_file_as_str = file.read()
-
-modified_content, num_replacements = re.subn(re_search_pattern, replacement_text, entire_file_as_str)
-if num_replacements > 0:
-    entire_file_as_str = modified_content
-
-with open(html_template, 'w') as file:
-    file.write(entire_file_as_str)
-
 print("## Pushing repo to Gandi")
 subprocess.run(["git", "push", "gandi", "master"], check=True)
 

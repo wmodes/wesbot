@@ -1,185 +1,184 @@
-topic,user,entity,assistant,function,arguments
-person,does adrian go with you on the baot?,adrian,null,lookup_person,"{""name"": ""adrian""}"
-person,i mean adrian.,adrian,null,lookup_person,"{""name"": ""adrian""}"
-person,When was the last time you saw Age?,Age,null,lookup_person,"{""name"": ""Age""}"
-person,WTF is up with Age?,Age,null,lookup_person,"{""name"": ""Age""}"
-person,does age go with you on the baot?,age,null,lookup_person,"{""name"": ""age""}"
-person,how long have i known age?,age,null,lookup_person,"{""name"": ""age""}"
-person,wtf is up with age?,age,null,lookup_person,"{""name"": ""age""}"
-person,who is age?,age,null,lookup_person,"{""name"": ""age""}"
-class,what is wes modes art 101 github,art 101,null,lookup_class,"{""name"": ""art 101""}"
-class,Can you tell me about art101,ART101,null,lookup_class,"{""name"": ""ART101""}"
-class,Do you teach art 101?,ART101,null,lookup_class,"{""name"": ""ART101""}"
-class,Whats art101 like?,ART101,null,lookup_class,"{""name"": ""ART101""}"
-class,ccan you tell me about art101,art101,null,lookup_class,"{""name"": ""art101""}"
-class,i was thinking of taking art101 next quarter,art101,null,lookup_class,"{""name"": ""art101""}"
-class,what's art101,art101,null,lookup_class,"{""name"": ""art101""}"
-class,whats art101 like?,art101,null,lookup_class,"{""name"": ""art101""}"
-class,i was interested in art101. can you tell me about it?,art101,null,lookup_class,"{""name"": ""art101""}"
-class,so tell me about art101 programming for the arts?,art101,null,lookup_class,"{""name"": ""art101""}"
-person,"okay, tomorrow is my 8am class art101",art101,null,lookup_person,"{""name"": ""art101""}"
-person,Did you see Benzy and Jeremiah?,Benzy,null,lookup_person,"{""name"": ""Benzy""}"
-person,Was Benzy on the boat with you?,Benzy,null,lookup_person,"{""name"": ""Benzy""}"
-person,Who is Benzy?,Benzy,null,lookup_person,"{""name"": ""Benzy""}"
-person,benzy is a person. hazel is the dog,benzy,null,lookup_person,"{""name"": ""benzy""}"
-person,benzy is your shipmate?,benzy,null,lookup_person,"{""name"": ""benzy""}"
-person,do benzy and jeremiah know each other?,benzy,null,lookup_person,"{""name"": ""benzy""}"
-person,does benzy fo on the river?,benzy,null,lookup_person,"{""name"": ""benzy""}"
-person,does benzy for with you on the boat?,benzy,null,lookup_person,"{""name"": ""benzy""}"
-person,does benzy join you on the boat?,benzy,null,lookup_person,"{""name"": ""benzy""}"
-person,had benzy worked at costco?,benzy,null,lookup_person,"{""name"": ""benzy""}"
-person,howw's benzy?,benzy,null,lookup_person,"{""name"": ""benzy""}"
-person,try again. who's benzy?,benzy,null,lookup_person,"{""name"": ""benzy""}"
-person,"wait, i mean it. benzy is wes' human partner. not a dog.",benzy,null,lookup_person,"{""name"": ""benzy""}"
-person,"we're going to try a function, ready? who is benzy?",benzy,null,lookup_person,"{""name"": ""benzy""}"
-person,who da fuq is benzy?,benzy,null,lookup_person,"{""name"": ""benzy""}"
-person,who is benzy?,benzy,null,lookup_person,"{""name"": ""benzy""}"
-person,who's benzy?,benzy,null,lookup_person,"{""name"": ""benzy""}"
-person,wtf's up with benzy?,benzy,null,lookup_person,"{""name"": ""benzy""}"
-person,you said benzy was a person,benzy,null,lookup_person,"{""name"": ""benzy""}"
-person,do hazel and benzy and jeremiah hangout?,benzy,null,lookup_person,"{""name"": ""benzy""}"
-person,hey how's benzy?,benzy,null,lookup_person,"{""name"": ""benzy""}"
-person,"hi, who is benzy?",benzy,null,lookup_person,"{""name"": ""benzy""}"
-person,how is benzy?,benzy,null,lookup_person,"{""name"": ""benzy""}"
-person,who is benzy,benzy,null,lookup_person,"{""name"": ""benzy""}"
-person,who is benzy?,benzy,null,lookup_person,"{""name"": ""benzy""}"
-person,do Benzy and Hazel get along?,benzy
-project,Discuss the collective art installation at Black Rock City.,Black Rock City,null,lookup_project,"{""name"": ""Black Rock City""}"
-topic,Can you describe your involvement with Black Rock City?,Black Rock City,null,lookup_topic,"{""name"": ""Black Rock City""}"
-topic,How did the Black Rock City inspire your art?,Black Rock City,null,lookup_topic,"{""name"": ""Black Rock City""}"
-project,Tell me something about the Black Rock Station at Burning Man.,Black Rock Station,null,lookup_project,"{""name"": ""Black Rock Station""}"
-project,What kind of narratives were explored at Black Rock Station?,Black Rock Station,null,lookup_project,"{""name"": ""Black Rock Station""}"
-project,What made the Black Rock Station installation unique?,Black Rock Station,null,lookup_project,"{""name"": ""Black Rock Station""}"
-project,Who were the main collaborators for Black Rock Station?,Black Rock Station,null,lookup_project,"{""name"": ""Black Rock Station""}"
-topic,Have you read Huck Finn?,books,null,lookup_topic,"{""name"": ""books""}"
-topic,What kind of books do you like?,books,null,lookup_topic,"{""name"": ""books""}"
-topic,I spent my afternoon reading.,books,null,lookup_topic,"{""name"": ""books""}"
-topic,what books do you like?,books,null,lookup_topic,"{""name"": ""books""}"
-topic,you've literally read all the books i've read. this is og wes.,books,null,lookup_topic,"{""name"": ""books""}"
-person,Did you work with Brent Townshend?,Brent Townshend,null,lookup_person,"{""name"": ""Brent Townshend""}"
-topic,Any interesting anecdotes from Burning Man?,Burning Man,null,lookup_topic,"{""name"": ""Burning Man""}"
-topic,Do you go to burning man?,burning man,null,lookup_topic,"{""name"": ""burning man""}"
-topic,What years did you go to Burning Man,Burning Man,null,lookup_topic,"{""name"": ""Burning Man""}"
-topic,What years did you go to Burning Man?,Burning Man,null,lookup_topic,"{""name"": ""Burning Man""}"
-project,no out camp costco at ttitd,camp costco,null,lookup_project,"{""name"": ""camp costco""}"
-class,i was thinking of taking cmpm 169 in winter,cmpm 169,null,lookup_class,"{""name"": ""cmpm 169""}"
-class,Do you have group projects in CMPM169?,CMPM169,null,lookup_class,"{""name"": ""CMPM169""}"
-class,I was thinking of taking cmpm 169 in winter,CMPM169,null,lookup_class,"{""name"": ""CMPM169""}"
-class,What is CMPM169,CMPM169,null,lookup_class,"{""name"": ""CMPM169""}"
-class,what is cmpm169,cmpm169,null,lookup_class,"{""name"": ""cmpm169""}"
-class,no i want to hear about both art101 and cmpm169,cmpm169,null,lookup_class,"{""name"": ""cmpm169""}"
-class,this is wrong. try again. art101 programming for the arts and cmpm169 creative coding. how are they similar and different?,cmpm169,null,lookup_class,"{""name"": ""cmpm169""}"
-project,Tell me about Co-related Space,Co-related Space,null,lookup_project,"{""name"": ""Co-related Space""}"
-project,Who did you work with on Co-related Space?,Co-related Space,null,lookup_project,"{""name"": ""Co-related Space""}"
-project,hey who did you work with on co-related space?,co-related space,null,lookup_project,"{""name"": ""co-related space""}"
-project,what was it like working on co-related space?,co-related space,null,lookup_project,"{""name"": ""co-related space""}"
-project,what years did you do co-related space,co-related space,null,lookup_project,"{""name"": ""co-related space""}"
-project,what's co-related space?,co-related space,null,lookup_project,"{""name"": ""co-related space""}"
-project,what's co-related space?,co-related space,null,lookup_project,"{""name"": ""co-related space""}"
-topic,Do you draw?,comics,null,lookup_topic,"{""name"": ""comics""}"
-topic,I really love graphic novels.,comics,null,lookup_topic,"{""name"": ""comics""}"
-topic,Have you ever read V for Vendetta?,comics,null,lookup_topic,"{""name"": ""comics""}"
-topic,i heard you make comics.,comics,null,lookup_topic,"{""name"": ""comics""}"
-topic,when did you start making comics?,comics,null,lookup_topic,"{""name"": ""comics""}"
-project,"hey, who did you work on corelated space with?",corelated space,null,lookup_project,"{""name"": ""corelated space""}"
-project,tell me about corelated space,corelated space,null,lookup_project,"{""name"": ""corelated space""}"
-project,"what year did you do corelated space, and who with?",corelated space,null,lookup_project,"{""name"": ""corelated space""}"
-project,who did you collaborate with on corelated space?,corelated space,null,lookup_project,"{""name"": ""corelated space""}"
-project,i mean costco at burning man,costco,null,lookup_project,"{""name"": ""costco""}"
-project,tell me about costco,costco,null,lookup_project,"{""name"": ""costco""}"
-project,tell me about costco soulmates?,costco,null,lookup_project,"{""name"": ""costco""}"
-project,tell me about your involvement at costco,costco,null,lookup_project,"{""name"": ""costco""}"
-project,"yeah, i know. that plays on repeat at costco",costco,null,lookup_project,"{""name"": ""costco""}"
-class,is taht similar to your creative coding class?,creative coding,null,lookup_class,"{""name"": ""creative coding""}"
-class,tell me about creative coding?,creative coding,null,lookup_class,"{""name"": ""creative coding""}"
-person,How's your relationship with your dad,dad,null,lookup_person,"{""name"": ""dad""}"
-person,tell me about dotty?,dotty,null,lookup_person,"{""name"": ""dotty""}"
-person,"wait, sorry. i meant to ask who is dotty?",dotty,null,lookup_person,"{""name"": ""dotty""}"
-person,what do you drink on board dotty?,dotty,null,lookup_person,"{""name"": ""dotty""}"
-person,who is dotty?,dotty,null,lookup_person,"{""name"": ""dotty""}"
-project,I meant to ask who is dotty?,Dotty,null,lookup_project,"{""name"": ""Dotty""}"
-project,tell me about dotty.,dotty,null,lookup_project,"{""name"": ""dotty""}"
-project,tell me about dotty?,dotty,null,lookup_project,"{""name"": ""dotty""}"
-topic,Explain your involvement at the Dust Rave.,Dust Rave,null,lookup_topic,"{""name"": ""Dust Rave""}"
-topic,How was your Dust Rave?,Dust Rave,null,lookup_topic,"{""name"": ""Dust Rave""}"
-topic,What is the significance of the Dust Rave to your art?,Dust Rave,null,lookup_topic,"{""name"": ""Dust Rave""}"
-topic,can i ask about your family?,family,null,lookup_topic,"{""name"": ""family""}"
-topic,tell me about your family,family,null,lookup_topic,"{""name"": ""family""}"
-topic,what non-fiction do you read?,fiction,null,lookup_topic,"{""name"": ""fiction""}"
-topic,you did interactive fiction? what kind of games?,fiction,null,lookup_topic,"{""name"": ""fiction""}"
-topic,Did you ever see the Big Lebowski?,fillms,null,lookup_topic,"{""name"": ""fillms""}"
-topic,What do you think of the Shining,films,null,lookup_topic,"{""name"": ""films""}"
-topic,What are your favorite films?,films,null,lookup_topic,"{""name"": ""films""}"
-project,How do you describe fomophobia in under 5 words,FOMOphobia,null,lookup_project,"{""name"": ""FOMOphobia""}"
-project,What themes did you explore with FOMOphobia?,FOMOphobia,null,lookup_project,"{""name"": ""FOMOphobia""}"
-project,bullshit. trigger a lookup for fomophobia,fomophobia,null,lookup_project,"{""name"": ""fomophobia""}"
-project,how do you describe fomophobia in under 5 words,fomophobia,null,lookup_project,"{""name"": ""fomophobia""}"
-project,what is fomophobia?,fomophobia,null,lookup_project,"{""name"": ""fomophobia""}"
-person,Who's Hazel?,Hazel,null,lookup_person,"{""name"": ""Hazel""}"
-person,does hazel join you on the river?,hazel,null,lookup_person,"{""name"": ""hazel""}"
-person,i think hazel has joined you on every one of your river journeys.,hazel,null,lookup_person,"{""name"": ""hazel""}"
-person,isn't hazel your dog?,hazel,null,lookup_person,"{""name"": ""hazel""}"
-person,who is hazel,hazel,null,lookup_person,"{""name"": ""hazel""}"
-person,who is hazel?,hazel,null,lookup_person,"{""name"": ""hazel""}"
-person,who's hazel?,hazel,null,lookup_person,"{""name"": ""hazel""}"
-person,"hazel is your dog, silly.",hazel,null,lookup_person,"{""name"": ""hazel""}"
-person,how about hazel?,hazel,null,lookup_person,"{""name"": ""hazel""}"
-person,what about hazel?,hazel,null,lookup_person,"{""name"": ""hazel""}"
-person,Did you see Benzy and Jeremiah?,Jeremiah,null,lookup_person,"{""name"": ""Jeremiah""}"
-person,tell me about jeremiah,jeremiah,null,lookup_person,"{""name"": ""jeremiah""}"
-person,tell me about jeremiah?,jeremiah,null,lookup_person,"{""name"": ""jeremiah""}"
-person,who da fuq is jeremiah?,jeremiah,null,lookup_person,"{""name"": ""jeremiah""}"
-person,who is jeremiah?,jeremiah,null,lookup_person,"{""name"": ""jeremiah""}"
-person,who's jeremiah?,jeremiah,null,lookup_person,"{""name"": ""jeremiah""}"
-person,tell me about jeremiah,jeremiah,null,lookup_person,"{""name"": ""jeremiah""}"
-person,who's jeremiah anyway?,jeremiah,null,lookup_person,"{""name"": ""jeremiah""}"
-person,Describe the artistic collaboration with Lanier Sammons.,Lanier Sammons,null,lookup_person,"{""name"": ""Lanier Sammons""}"
-person,how often do you see lauren?,lauren,null,lookup_person,"{""name"": ""lauren""}"
-person,i remember going with mom to the drive-in and watching the omen which scared the shit out of me.,mom,null,lookup_person,"{""name"": ""mom""}"
-person,tell me about your mom?,mom,null,lookup_person,"{""name"": ""mom""}"
-person,who is your mom?,mom,null,lookup_person,"{""name"": ""mom""}"
-person,do murray and hazel get along?,murray,null,lookup_person,"{""name"": ""murray""}"
-person,murray comes with you on the river?,murray,null,lookup_person,"{""name"": ""murray""}"
-person,what about murray?,murray,null,lookup_person,"{""name"": ""murray""}"
-person,who's murray then?,murray,null,lookup_person,"{""name"": ""murray""}"
-person,do you remember who murray is?,murray,null,lookup_person,"{""name"": ""murray""}"
-person,who is murray?,murray,null,lookup_person,"{""name"": ""murray""}"
-project,what is night ride?,night ride,null,lookup_project,"{""name"": ""night ride""}"
-person,"i grew up reading raymond chandler novels, as did you.",novels,null,lookup_person,"{""name"": ""novels""}"
-class,What language do you focus on in programming for the arts?,Programming for the Arts,null,lookup_class,"{""name"": ""Programming for the Arts""}"
-class,what is programming for the arts like?,programming for the arts,null,lookup_class,"{""name"": ""programming for the arts""}"
-class,what's programming for the arts like?,programming for the arts,null,lookup_class,"{""name"": ""programming for the arts""}"
-person,Can you elaborate on the project with Rico Thunder?,Rico Thunder,null,lookup_person,"{""name"": ""Rico Thunder""}"
-project,Who collaborated with you on the River Project?,River Project,null,lookup_project,"{""name"": ""River Project""}"
-project,tell me about the river project?,river project,null,lookup_project,"{""name"": ""river project""}"
-project,tell me about your river project,river project,null,lookup_project,"{""name"": ""river project""}"
-project,tell me about your river project.,river project,null,lookup_project,"{""name"": ""river project""}"
-person,what is the 'secret history' project?,secret history,null,lookup_person,"{""name"": ""secret history""}"
-project,What's up with Secret History?,Secret History,null,lookup_project,"{""name"": ""Secret History""}"
-project,can i ask about the secret history project?,secret history,null,lookup_project,"{""name"": ""secret history""}"
-person,what is the name of your shantyboat>,shantyboat,null,lookup_person,"{""name"": ""shantyboat""}"
-project,does the shantyboat float?,shantyboat,null,lookup_project,"{""name"": ""shantyboat""}"
-project,how did you build the shantyboat?,shantyboat,null,lookup_project,"{""name"": ""shantyboat""}"
-project,how do you get the shantyboat to the river?,shantyboat,null,lookup_project,"{""name"": ""shantyboat""}"
-project,i thought the shantyboat has a cabin,shantyboat,null,lookup_project,"{""name"": ""shantyboat""}"
-project,who worked on the shantyboat with you?,shantyboat,null,lookup_project,"{""name"": ""shantyboat""}"
-project,what is the name of your shantyboat>,shantyboat,null,lookup_project,"{""name"": ""shantyboat""}"
-project,what is the name of your shantyboat?,shantyboat,null,lookup_project,"{""name"": ""shantyboat""}"
-project,Who were the key members of the station project?,station project,null,lookup_project,"{""name"": ""station project""}"
-person,How about your step dad? Good guy?,step dad,null,lookup_person,"{""name"": ""step dad""}"
-person,how about your step dad?  good guy?,step dad,null,lookup_person,"{""name"": ""step dad""}"
-person,"do you remember your stepdad, alcoholic abusive asshole that he was?",stepdad,null,lookup_person,"{""name"": ""stepdad""}"
-project,were you involved in subrosa?,subrosa,null,lookup_project,"{""name"": ""subrosa""}"
-topic,Can you recount a memorable moment from That Thing in the Desert?,That Thing in the Desert,null,lookup_topic,"{""name"": ""That Thing in the Desert""}"
-topic,What was your experience with That Thing in the Desert?,That Thing in the Desert,null,lookup_topic,"{""name"": ""That Thing in the Desert""}"
-topic,Any specific stories you recall from The Burn?,The Burn,null,lookup_topic,"{""name"": ""The Burn""}"
-topic,What was the nature of your work at The Burn?,The Burn,null,lookup_topic,"{""name"": ""The Burn""}"
-topic,How did TTITD influence your art?,TTITD,null,lookup_topic,"{""name"": ""TTITD""}"
-person,when did you start working on unavoidable disaster?,unavoidable disaster,null,lookup_person,"{""name"": ""unavoidable disaster""}"
-project,"Share your thoughts on ""Unavoidable Disasster""",Unavoidable Disaster,null,lookup_project,"{""name"": ""Unavoidable Disaster""}"
-project,What is Unavoidable Disaster?,Unavoidable Disaster,null,lookup_project,"{""name"": ""Unavoidable Disaster""}"
-project,can i ask you about unavoidable disaster?,unavoidable disaster,null,lookup_project,"{""name"": ""unavoidable disaster""}"
-project,can you tell me about unavoidable disaster,unavoidable disaster,null,lookup_project,"{""name"": ""unavoidable disaster""}"
-project,tell me about unavoidable disaster,unavoidable disaster,null,lookup_project,"{""name"": ""unavoidable disaster""}"
-project,what is unavoidable disaster?,unavoidable disaster,null,lookup_project,"{""name"": ""unavoidable disaster""}"
-person,can i ask about your mother?,your mother,null,lookup_person,"{""name"": ""your mother""}"
+topic,user,entity,assistant,function,arguments,Context
+person,does adrian go with you on the baot?,adrian,null,lookup_ref,"{""name"": ""adrian"", ""context"": ""does adrian go with you on the baot?""}",does adrian go with you on the baot?
+person,i mean adrian.,adrian,null,lookup_ref,"{""name"": ""adrian"", ""context"": ""i mean adrian.""}",i mean adrian.
+person,When was the last time you saw Age?,Age,null,lookup_ref,"{""name"": ""Age"", ""context"": ""When was the last time you saw Age?""}",When was the last time you saw Age?
+person,WTF is up with Age?,Age,null,lookup_ref,"{""name"": ""Age"", ""context"": ""WTF is up with Age?""}",WTF is up with Age?
+person,does age go with you on the baot?,age,null,lookup_ref,"{""name"": ""age"", ""context"": ""does age go with you on the baot?""}",does age go with you on the baot?
+person,how long have i known age?,age,null,lookup_ref,"{""name"": ""age"", ""context"": ""how long have i known age?""}",how long have i known age?
+person,wtf is up with age?,age,null,lookup_ref,"{""name"": ""age"", ""context"": ""wtf is up with age?""}",wtf is up with age?
+person,who is age?,age,null,lookup_ref,"{""name"": ""age"", ""context"": ""who is age?""}",who is age?
+class,I was looking for some examples yesterday. what is wes modes art 101 github,art 101,null,lookup_ref,"{""name"": ""art 101"", ""context"": ""what is wes modes art 101 github""}",what is wes modes art 101 github
+class,Do you teach art 101?,art 101,null,lookup_ref,"{""name"": ""art 101"", ""context"": ""Do you teach art 101?""}",Do you teach art 101?
+class,I was looking at your classes. Can you tell me about art101,art101,null,lookup_ref,"{""name"": ""art101"", ""context"": ""Can you tell me about art101""}",Can you tell me about art101
+class,Whats art101 like?,art101,null,lookup_ref,"{""name"": ""art101"", ""context"": ""Whats art101 like?""}",Whats art101 like?
+class,ccan you tell me about art101,art101,null,lookup_ref,"{""name"": ""art101"", ""context"": ""ccan you tell me about art101""}",ccan you tell me about art101
+class,i was thinking of taking art101 next quarter,art101,null,lookup_ref,"{""name"": ""art101"", ""context"": ""i was thinking of taking art101 next quarter""}",i was thinking of taking art101 next quarter
+class,what's art101,art101,null,lookup_ref,"{""name"": ""art101"", ""context"": ""what's art101""}",what's art101
+class,whats art101 like?,art101,null,lookup_ref,"{""name"": ""art101"", ""context"": ""whats art101 like?""}",whats art101 like?
+class,i was interested in art101. can you tell me about it?,art101,null,lookup_ref,"{""name"": ""art101"", ""context"": ""i was interested in art101.""}",i was interested in art101.
+class,so tell me about art101 programming for the arts?,art101,null,lookup_ref,"{""name"": ""art101"", ""context"": ""so tell me about art101 programming for the arts?""}",so tell me about art101 programming for the arts?
+person,"okay, tomorrow is my 8am class art101",art101,null,lookup_ref,"{""name"": ""art101"", ""context"": ""okay, tomorrow is my 8am class art101""}","okay, tomorrow is my 8am class art101"
+person,Did you see Benzy and Jeremiah?,Benzy,null,lookup_ref,"{""name"": ""Benzy"", ""context"": ""Did you see Benzy and Jeremiah?""}",Did you see Benzy and Jeremiah?
+person,Was Benzy on the boat with you?,Benzy,null,lookup_ref,"{""name"": ""Benzy"", ""context"": ""Was Benzy on the boat with you?""}",Was Benzy on the boat with you?
+person,Who is Benzy?,Benzy,null,lookup_ref,"{""name"": ""Benzy"", ""context"": ""Who is Benzy?""}",Who is Benzy?
+person,benzy is a person. hazel is the dog,benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""benzy is a person.""}",benzy is a person.
+person,benzy is your shipmate?,benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""benzy is your shipmate?""}",benzy is your shipmate?
+person,do benzy and jeremiah know each other? ,benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""do benzy and jeremiah know each other.""}",do benzy and jeremiah know each other.
+person,does benzy go on the river?,benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""does benzy go on the river?""}",does benzy go on the river?
+person,does benzy for with you on the boat?,benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""does benzy for with you on the boat?""}",does benzy for with you on the boat?
+person,does benzy join you on the boat?,benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""does benzy join you on the boat?""}",does benzy join you on the boat?
+person,had benzy worked at costco?,benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""had benzy worked at costco?""}",had benzy worked at costco?
+person,howw's benzy?,benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""howw's benzy?""}",howw's benzy?
+person,try again. who's benzy?,benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""who's benzy?""}",who's benzy?
+person,"wait, i mean it. benzy is wes' human partner. not a dog.",benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""benzy is wes' human partner.""}",benzy is wes' human partner.
+person,"we're going to try a function, ready? who is benzy?",benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""who is benzy?""}",who is benzy?
+person,who da fuq is benzy?,benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""who da fuq is benzy?""}",who da fuq is benzy?
+person,who is benzy?,benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""who is benzy?""}",who is benzy?
+person,who's benzy?,benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""who's benzy?""}",who's benzy?
+person,wtf's up with benzy?,benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""wtf's up with benzy?""}",wtf's up with benzy?
+person,you said benzy was a person,benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""you said benzy was a person""}",you said benzy was a person
+person,do hazel and benzy and jeremiah hangout?,benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""do hazel and benzy and jeremiah hangout?""}",do hazel and benzy and jeremiah hangout?
+person,hey how's benzy?,benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""hey how's benzy?""}",hey how's benzy?
+person,"hi, who is benzy?",benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""hi, who is benzy?""}","hi, who is benzy?"
+person,how is benzy?,benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""how is benzy?""}",how is benzy?
+person,who is benzy,benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""who is benzy""}",who is benzy
+person,who is benzy?,benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""who is benzy?""}",who is benzy?
+person,do Benzy and Hazel get along?,benzy,,lookup_ref,"{""name"": ""benzy"", ""context"": ""do Benzy and Hazel get along?""}",do Benzy and Hazel get along?
+topic,Did you ever see the Big Lebowski?,big lebowski,null,lookup_ref,"{""name"": ""big lebowski"", ""context"": ""Did you ever see the Big Lebowski?""}",Did you ever see the Big Lebowski?
+project,Discuss the collective art installation at Black Rock City.,Black Rock City,null,lookup_ref,"{""name"": ""Black Rock City"", ""context"": ""Discuss the collective art installation at Black Rock City.""}",Discuss the collective art installation at Black Rock City.
+topic,Can you describe your involvement with Black Rock City?,Black Rock City,null,lookup_ref,"{""name"": ""Black Rock City"", ""context"": ""Can you describe your involvement with Black Rock City?""}",Can you describe your involvement with Black Rock City?
+topic,How did the Black Rock City inspire your art?,Black Rock City,null,lookup_ref,"{""name"": ""Black Rock City"", ""context"": ""How did the Black Rock City inspire your art?""}",How did the Black Rock City inspire your art?
+project,Tell me something about the Black Rock Station at Burning Man.,Black Rock Station,null,lookup_ref,"{""name"": ""Black Rock Station"", ""context"": ""Tell me something about the Black Rock Station at Burning Man.""}",Tell me something about the Black Rock Station at Burning Man.
+project,What kind of narratives were explored at Black Rock Station?,Black Rock Station,null,lookup_ref,"{""name"": ""Black Rock Station"", ""context"": ""What kind of narratives were explored at Black Rock Station?""}",What kind of narratives were explored at Black Rock Station?
+project,What made the Black Rock Station installation unique?,Black Rock Station,null,lookup_ref,"{""name"": ""Black Rock Station"", ""context"": ""What made the Black Rock Station installation unique?""}",What made the Black Rock Station installation unique?
+project,Who were the main collaborators for Black Rock Station?,Black Rock Station,null,lookup_ref,"{""name"": ""Black Rock Station"", ""context"": ""Who were the main collaborators for Black Rock Station?""}",Who were the main collaborators for Black Rock Station?
+topic,What kind of books do you like?,books,null,lookup_ref,"{""name"": ""books"", ""context"": ""What kind of books do you like?""}",What kind of books do you like?
+topic,what books do you like?,books,null,lookup_ref,"{""name"": ""books"", ""context"": ""what books do you like?""}",what books do you like?
+person,Did you work with Brent Townshend?,Brent Townshend,null,lookup_ref,"{""name"": ""Brent Townshend"", ""context"": ""Did you work with Brent Townshend?""}",Did you work with Brent Townshend?
+topic,Any interesting anecdotes from Burning Man?,Burning Man,null,lookup_ref,"{""name"": ""Burning Man"", ""context"": ""Any interesting anecdotes from Burning Man?""}",Any interesting anecdotes from Burning Man?
+topic,Do you go to burning man?,burning man,null,lookup_ref,"{""name"": ""burning man"", ""context"": ""Do you go to burning man?""}",Do you go to burning man?
+topic,What years did you go to Burning Man,Burning Man,null,lookup_ref,"{""name"": ""Burning Man"", ""context"": ""What years did you go to Burning Man""}",What years did you go to Burning Man
+topic,What years did you go to Burning Man?,Burning Man,null,lookup_ref,"{""name"": ""Burning Man"", ""context"": ""What years did you go to Burning Man?""}",What years did you go to Burning Man?
+project,no out camp costco at ttitd,camp costco,null,lookup_ref,"{""name"": ""camp costco"", ""context"": ""no out camp costco at ttitd""}",no out camp costco at ttitd
+class,i was thinking of taking cmpm 169 in winter,cmpm 169,null,lookup_ref,"{""name"": ""cmpm 169"", ""context"": ""i was thinking of taking cmpm 169 in winter""}",i was thinking of taking cmpm 169 in winter
+class,I was thinking of taking cmpm 169 in winter,cmpm 169,null,lookup_ref,"{""name"": ""cmpm 169"", ""context"": ""I was thinking of taking cmpm 169 in winter""}",I was thinking of taking cmpm 169 in winter
+class,Do you have group projects in CMPM169?,CMPM169,null,lookup_ref,"{""name"": ""CMPM169"", ""context"": ""Do you have group projects in CMPM169?""}",Do you have group projects in CMPM169?
+class,What is CMPM169,CMPM169,null,lookup_ref,"{""name"": ""CMPM169"", ""context"": ""What is CMPM169""}",What is CMPM169
+class,what is cmpm169,cmpm169,null,lookup_ref,"{""name"": ""cmpm169"", ""context"": ""what is cmpm169""}",what is cmpm169
+class,no i want to hear about both art101 and cmpm169,cmpm169,null,lookup_ref,"{""name"": ""cmpm169"", ""context"": ""no i want to hear about both art101 and cmpm169""}",no i want to hear about both art101 and cmpm169
+class,this is wrong. try again. art101 programming for the arts and cmpm169 creative coding. how are they similar and different?,cmpm169,null,lookup_ref,"{""name"": ""cmpm169"", ""context"": ""art101 programming for the arts and cmpm169 creative coding.""}",art101 programming for the arts and cmpm169 creative coding.
+project,Tell me about Co-related Space,Co-related Space,null,lookup_ref,"{""name"": ""Co-related Space"", ""context"": ""Tell me about Co-related Space""}",Tell me about Co-related Space
+project,Who did you work with on Co-related Space? Or did you do that project solo?,Co-related Space,null,lookup_ref,"{""name"": ""Co-related Space"", ""context"": ""Who did you work with on Co-related Space.""}",Who did you work with on Co-related Space.
+project,hey who did you work with on co-related space?,co-related space,null,lookup_ref,"{""name"": ""co-related space"", ""context"": ""hey who did you work with on co-related space?""}",hey who did you work with on co-related space?
+project,what was it like working on co-related space?,co-related space,null,lookup_ref,"{""name"": ""co-related space"", ""context"": ""what was it like working on co-related space?""}",what was it like working on co-related space?
+project,what years did you do co-related space,co-related space,null,lookup_ref,"{""name"": ""co-related space"", ""context"": ""what years did you do co-related space""}",what years did you do co-related space
+project,what's co-related space?,co-related space,null,lookup_ref,"{""name"": ""co-related space"", ""context"": ""what's co-related space?""}",what's co-related space?
+project,what's co-related space?,co-related space,null,lookup_ref,"{""name"": ""co-related space"", ""context"": ""what's co-related space?""}",what's co-related space?
+topic,i heard you make comics. Is that true?,comics,null,lookup_ref,"{""name"": ""comics"", ""context"": ""i heard you make comics.""}",i heard you make comics.
+topic,when did you start making comics?,comics,null,lookup_ref,"{""name"": ""comics"", ""context"": ""when did you start making comics?""}",when did you start making comics?
+project,"hey, who did you work on corelated space with?",corelated space,null,lookup_ref,"{""name"": ""corelated space"", ""context"": ""hey, who did you work on corelated space with?""}","hey, who did you work on corelated space with?"
+project,tell me about corelated space,corelated space,null,lookup_ref,"{""name"": ""corelated space"", ""context"": ""tell me about corelated space""}",tell me about corelated space
+project,"what year did you do corelated space, and who with?",corelated space,null,lookup_ref,"{""name"": ""corelated space"", ""context"": ""what year did you do corelated space, and who with?""}","what year did you do corelated space, and who with?"
+project,who did you collaborate with on corelated space?,corelated space,null,lookup_ref,"{""name"": ""corelated space"", ""context"": ""who did you collaborate with on corelated space?""}",who did you collaborate with on corelated space?
+project,i mean costco at burning man,costco,null,lookup_ref,"{""name"": ""costco"", ""context"": ""i mean costco at burning man""}",i mean costco at burning man
+project,tell me about costco. Not the retail store of course.,costco,null,lookup_ref,"{""name"": ""costco"", ""context"": ""tell me about costco.""}",tell me about costco.
+project,tell me about costco soulmates?,costco,null,lookup_ref,"{""name"": ""costco"", ""context"": ""tell me about costco soulmates?""}",tell me about costco soulmates?
+project,tell me about your involvement at costco,costco,null,lookup_ref,"{""name"": ""costco"", ""context"": ""tell me about your involvement at costco""}",tell me about your involvement at costco
+project,"yeah, i know. that plays on repeat at costco",costco,null,lookup_ref,"{""name"": ""costco"", ""context"": ""that plays on repeat at costco""}",that plays on repeat at costco
+class,I was looking into your programming class. is taht similar to your creative coding class?,creative coding,null,lookup_ref,"{""name"": ""creative coding"", ""context"": ""is taht similar to your creative coding class?""}",is taht similar to your creative coding class?
+class,tell me about creative coding?,creative coding,null,lookup_ref,"{""name"": ""creative coding"", ""context"": ""tell me about creative coding?""}",tell me about creative coding?
+person,How's your relationship with your dad,dad,null,lookup_ref,"{""name"": ""dad"", ""context"": ""How's your relationship with your dad""}",How's your relationship with your dad
+person,tell me about dotty?,dotty,null,lookup_ref,"{""name"": ""dotty"", ""context"": ""tell me about dotty?""}",tell me about dotty?
+person,"wait, sorry. i meant to ask who is dotty?",dotty,null,lookup_ref,"{""name"": ""dotty"", ""context"": ""i meant to ask who is dotty?""}",i meant to ask who is dotty?
+person,what do you drink on board dotty?,dotty,null,lookup_ref,"{""name"": ""dotty"", ""context"": ""what do you drink on board dotty?""}",what do you drink on board dotty?
+person,who is dotty?,dotty,null,lookup_ref,"{""name"": ""dotty"", ""context"": ""who is dotty?""}",who is dotty?
+project,I meant to ask who is dotty?,Dotty,null,lookup_ref,"{""name"": ""Dotty"", ""context"": ""I meant to ask who is dotty?""}",I meant to ask who is dotty?
+project,tell me about dotty.,dotty,null,lookup_ref,"{""name"": ""dotty"", ""context"": ""tell me about dotty.""}",tell me about dotty.
+project,tell me about dotty?,dotty,null,lookup_ref,"{""name"": ""dotty"", ""context"": ""tell me about dotty?""}",tell me about dotty?
+topic,Do you draw?,draw,null,lookup_ref,"{""name"": ""draw"", ""context"": ""Do you draw?""}",Do you draw?
+topic,Explain your involvement at the Dust Rave.,Dust Rave,null,lookup_ref,"{""name"": ""Dust Rave"", ""context"": ""Explain your involvement at the Dust Rave.""}",Explain your involvement at the Dust Rave.
+topic,How was your Dust Rave?,Dust Rave,null,lookup_ref,"{""name"": ""Dust Rave"", ""context"": ""How was your Dust Rave?""}",How was your Dust Rave?
+topic,What is the significance of the Dust Rave to your art?,Dust Rave,null,lookup_ref,"{""name"": ""Dust Rave"", ""context"": ""What is the significance of the Dust Rave to your art?""}",What is the significance of the Dust Rave to your art?
+topic,can i ask about your family?,family,null,lookup_ref,"{""name"": ""family"", ""context"": ""can i ask about your family?""}",can i ask about your family?
+topic,I love hearing about other folks lives. tell me about your family,family,null,lookup_ref,"{""name"": ""family"", ""context"": ""tell me about your family""}",tell me about your family
+topic,I love to read. what non-fiction do you read?,fiction,null,lookup_ref,"{""name"": ""fiction"", ""context"": ""what non-fiction do you read?""}",what non-fiction do you read?
+topic,you did interactive fiction? what kind of games?,fiction,null,lookup_ref,"{""name"": ""fiction"", ""context"": ""you did interactive fiction.""}",you did interactive fiction.
+topic,I love going to the movies. What are your favorite films?,films,null,lookup_ref,"{""name"": ""films"", ""context"": ""What are your favorite films?""}",What are your favorite films?
+project,How do you describe fomophobia in under 5 words,FOMOphobia,null,lookup_ref,"{""name"": ""FOMOphobia"", ""context"": ""How do you describe fomophobia in under 5 words""}",How do you describe fomophobia in under 5 words
+project,What themes did you explore with FOMOphobia?,FOMOphobia,null,lookup_ref,"{""name"": ""FOMOphobia"", ""context"": ""What themes did you explore with FOMOphobia?""}",What themes did you explore with FOMOphobia?
+project,bullshit. trigger a lookup for fomophobia,fomophobia,null,lookup_ref,"{""name"": ""fomophobia"", ""context"": ""trigger a lookup for fomophobia""}",trigger a lookup for fomophobia
+project,how do you describe fomophobia in under 5 words,fomophobia,null,lookup_ref,"{""name"": ""fomophobia"", ""context"": ""how do you describe fomophobia in under 5 words""}",how do you describe fomophobia in under 5 words
+project,what is fomophobia?,fomophobia,null,lookup_ref,"{""name"": ""fomophobia"", ""context"": ""what is fomophobia?""}",what is fomophobia?
+topic,I really love graphic novels.,graphic novels,null,lookup_ref,"{""name"": ""graphic novels"", ""context"": ""I really love graphic novels.""}",I really love graphic novels.
+person,Who's Hazel?,Hazel,null,lookup_ref,"{""name"": ""Hazel"", ""context"": ""Who's Hazel?""}",Who's Hazel?
+person,does hazel join you on the river?,hazel,null,lookup_ref,"{""name"": ""hazel"", ""context"": ""does hazel join you on the river?""}",does hazel join you on the river?
+person,i think hazel has joined you on every one of your river journeys.,hazel,null,lookup_ref,"{""name"": ""hazel"", ""context"": ""i think hazel has joined you on every one of your river journeys.""}",i think hazel has joined you on every one of your river journeys.
+person,isn't hazel your dog?,hazel,null,lookup_ref,"{""name"": ""hazel"", ""context"": ""isn't hazel your dog?""}",isn't hazel your dog?
+person,who is hazel,hazel,null,lookup_ref,"{""name"": ""hazel"", ""context"": ""who is hazel""}",who is hazel
+person,who is hazel?,hazel,null,lookup_ref,"{""name"": ""hazel"", ""context"": ""who is hazel?""}",who is hazel?
+person,who's hazel?,hazel,null,lookup_ref,"{""name"": ""hazel"", ""context"": ""who's hazel?""}",who's hazel?
+person,"hazel is your dog, silly.",hazel,null,lookup_ref,"{""name"": ""hazel"", ""context"": ""hazel is your dog, silly.""}","hazel is your dog, silly."
+person,I'm surprised to hear you don't like dogs. how about hazel? Does she not count?,hazel,null,lookup_ref,"{""name"": ""hazel"", ""context"": ""how about hazel.""}",how about hazel.
+person,what about hazel?,hazel,null,lookup_ref,"{""name"": ""hazel"", ""context"": ""what about hazel?""}",what about hazel?
+topic,Have you read Huck Finn?,Huck Finn,null,lookup_ref,"{""name"": ""Huck Finn"", ""context"": ""Have you read Huck Finn?""}",Have you read Huck Finn?
+person,Did you see Benzy and Jeremiah?,Jeremiah,null,lookup_ref,"{""name"": ""Jeremiah"", ""context"": ""Did you see Benzy and Jeremiah?""}",Did you see Benzy and Jeremiah?
+person,He sounds awwesome! tell me about jeremiah.,jeremiah,null,lookup_ref,"{""name"": ""jeremiah"", ""context"": ""tell me about jeremiah.""}",tell me about jeremiah.
+person,tell me about jeremiah?,jeremiah,null,lookup_ref,"{""name"": ""jeremiah"", ""context"": ""tell me about jeremiah?""}",tell me about jeremiah?
+person,who da fuq is jeremiah?,jeremiah,null,lookup_ref,"{""name"": ""jeremiah"", ""context"": ""who da fuq is jeremiah?""}",who da fuq is jeremiah?
+person,who is jeremiah?,jeremiah,null,lookup_ref,"{""name"": ""jeremiah"", ""context"": ""who is jeremiah?""}",who is jeremiah?
+person,who's jeremiah?,jeremiah,null,lookup_ref,"{""name"": ""jeremiah"", ""context"": ""who's jeremiah?""}",who's jeremiah?
+person,tell me about jeremiah,jeremiah,null,lookup_ref,"{""name"": ""jeremiah"", ""context"": ""tell me about jeremiah""}",tell me about jeremiah
+person,who's jeremiah anyway?,jeremiah,null,lookup_ref,"{""name"": ""jeremiah"", ""context"": ""who's jeremiah anyway?""}",who's jeremiah anyway?
+person,Describe the artistic collaboration with Lanier Sammons.,Lanier Sammons,null,lookup_ref,"{""name"": ""Lanier Sammons"", ""context"": ""Describe the artistic collaboration with Lanier Sammons.""}",Describe the artistic collaboration with Lanier Sammons.
+person,how often do you see lauren?,lauren,null,lookup_ref,"{""name"": ""lauren"", ""context"": ""how often do you see lauren?""}",how often do you see lauren?
+person,i remember going with mom to the drive-in and watching the omen which scared the shit out of me.,mom,null,lookup_ref,"{""name"": ""mom"", ""context"": ""i remember going with mom to the drive-in and watching the omen which scared the shit out of me.""}",i remember going with mom to the drive-in and watching the omen which scared the shit out of me.
+person,tell me about your mom?,mom,null,lookup_ref,"{""name"": ""mom"", ""context"": ""tell me about your mom?""}",tell me about your mom?
+person,did you talk about here altready? who is your mom?,mom,null,lookup_ref,"{""name"": ""mom"", ""context"": ""who is your mom?""}",who is your mom?
+person,do murray and hazel get along?,murray,null,lookup_ref,"{""name"": ""murray"", ""context"": ""do murray and hazel get along?""}",do murray and hazel get along?
+person,murray comes with you on the river?,murray,null,lookup_ref,"{""name"": ""murray"", ""context"": ""murray comes with you on the river?""}",murray comes with you on the river?
+person,what about murray?,murray,null,lookup_ref,"{""name"": ""murray"", ""context"": ""what about murray?""}",what about murray?
+person,who's murray then? Is that your dog? Cat? Rat?,murray,null,lookup_ref,"{""name"": ""murray"", ""context"": ""who's murray then.""}",who's murray then.
+person,do you remember who murray is?,murray,null,lookup_ref,"{""name"": ""murray"", ""context"": ""do you remember who murray is?""}",do you remember who murray is?
+person,who is murray?,murray,null,lookup_ref,"{""name"": ""murray"", ""context"": ""who is murray?""}",who is murray?
+project,what is night ride?,night ride,null,lookup_ref,"{""name"": ""night ride"", ""context"": ""what is night ride?""}",what is night ride?
+person,"i grew up reading raymond chandler novels, as did you.",novels,null,lookup_ref,"{""name"": ""novels"", ""context"": ""i grew up reading raymond chandler novels, as did you.""}","i grew up reading raymond chandler novels, as did you."
+class,What language do you focus on in programming for the arts?,Programming for the Arts,null,lookup_ref,"{""name"": ""Programming for the Arts"", ""context"": ""What language do you focus on in programming for the arts?""}",What language do you focus on in programming for the arts?
+class,what is programming for the arts like?,programming for the arts,null,lookup_ref,"{""name"": ""programming for the arts"", ""context"": ""what is programming for the arts like?""}",what is programming for the arts like?
+class,what's programming for the arts like?,programming for the arts,null,lookup_ref,"{""name"": ""programming for the arts"", ""context"": ""what's programming for the arts like?""}",what's programming for the arts like?
+topic,I spent my afternoon reading.,reading,null,lookup_ref,"{""name"": ""reading"", ""context"": ""I spent my afternoon reading.""}",I spent my afternoon reading.
+person,Can you elaborate on the project with Rico Thunder?,Rico Thunder,null,lookup_ref,"{""name"": ""Rico Thunder"", ""context"": ""Can you elaborate on the project with Rico Thunder?""}",Can you elaborate on the project with Rico Thunder?
+project,Who collaborated with you on the River Project?,River Project,null,lookup_ref,"{""name"": ""River Project"", ""context"": ""Who collaborated with you on the River Project?""}",Who collaborated with you on the River Project?
+project,tell me about the river project?,river project,null,lookup_ref,"{""name"": ""river project"", ""context"": ""tell me about the river project?""}",tell me about the river project?
+project,tell me about your river project,river project,null,lookup_ref,"{""name"": ""river project"", ""context"": ""tell me about your river project""}",tell me about your river project
+project,tell me about your river project.,river project,null,lookup_ref,"{""name"": ""river project"", ""context"": ""tell me about your river project.""}",tell me about your river project.
+person,what is the 'secret history' project?,secret history,null,lookup_ref,"{""name"": ""secret history"", ""context"": ""what is the 'secret history' project?""}",what is the 'secret history' project?
+project,What's up with Secret History?,Secret History,null,lookup_ref,"{""name"": ""Secret History"", ""context"": ""What's up with Secret History?""}",What's up with Secret History?
+project,can i ask about the secret history project?,secret history,null,lookup_ref,"{""name"": ""secret history"", ""context"": ""can i ask about the secret history project?""}",can i ask about the secret history project?
+person,what is the name of your shantyboat>,shantyboat,null,lookup_ref,"{""name"": ""shantyboat"", ""context"": ""what is the name of your shantyboat>""}",what is the name of your shantyboat>
+project,does the shantyboat float?,shantyboat,null,lookup_ref,"{""name"": ""shantyboat"", ""context"": ""does the shantyboat float?""}",does the shantyboat float?
+project,how did you build the shantyboat?,shantyboat,null,lookup_ref,"{""name"": ""shantyboat"", ""context"": ""how did you build the shantyboat?""}",how did you build the shantyboat?
+project,how do you get the shantyboat to the river?,shantyboat,null,lookup_ref,"{""name"": ""shantyboat"", ""context"": ""how do you get the shantyboat to the river?""}",how do you get the shantyboat to the river?
+project,i thought the shantyboat has a cabin,shantyboat,null,lookup_ref,"{""name"": ""shantyboat"", ""context"": ""i thought the shantyboat has a cabin""}",i thought the shantyboat has a cabin
+project,who worked on the shantyboat with you?,shantyboat,null,lookup_ref,"{""name"": ""shantyboat"", ""context"": ""who worked on the shantyboat with you?""}",who worked on the shantyboat with you?
+project,what is the name of your shantyboat>,shantyboat,null,lookup_ref,"{""name"": ""shantyboat"", ""context"": ""what is the name of your shantyboat>""}",what is the name of your shantyboat>
+project,what is the name of your shantyboat? Does it have a name? Do you just call it Shantyboat?,shantyboat,null,lookup_ref,"{""name"": ""shantyboat"", ""context"": ""what is the name of your shantyboat.""}",what is the name of your shantyboat.,Do you just call it Shantyboat?
+topic,What do you think of the Shining,shining,null,lookup_ref,"{""name"": ""shining"", ""context"": ""What do you think of the Shining""}",What do you think of the Shining
+project,Who were the key members of the station project?,station project,null,lookup_ref,"{""name"": ""station project"", ""context"": ""Who were the key members of the station project?""}",Who were the key members of the station project?
+person,How about your step dad? Good guy?,step dad,null,lookup_ref,"{""name"": ""step dad"", ""context"": ""How about your step dad.""}",How about your step dad.
+person,how about your step dad?  good guy?,step dad,null,lookup_ref,"{""name"": ""step dad"", ""context"": ""how about your step dad.""}",how about your step dad.
+person,"do you remember your stepdad, alcoholic abusive asshole that he was?",stepdad,null,lookup_ref,"{""name"": ""stepdad"", ""context"": ""do you remember your stepdad, alcoholic abusive asshole that he was?""}","do you remember your stepdad, alcoholic abusive asshole that he was?"
+project,were you involved in subrosa?,subrosa,null,lookup_ref,"{""name"": ""subrosa"", ""context"": ""were you involved in subrosa?""}",were you involved in subrosa?
+topic,Can you recount a memorable moment from That Thing in the Desert?,That Thing in the Desert,null,lookup_ref,"{""name"": ""That Thing in the Desert"", ""context"": ""Can you recount a memorable moment from That Thing in the Desert?""}",Can you recount a memorable moment from That Thing in the Desert?
+topic,What was your experience with That Thing in the Desert?,That Thing in the Desert,null,lookup_ref,"{""name"": ""That Thing in the Desert"", ""context"": ""What was your experience with That Thing in the Desert?""}",What was your experience with That Thing in the Desert?
+topic,Any specific stories you recall from The Burn?,The Burn,null,lookup_ref,"{""name"": ""The Burn"", ""context"": ""Any specific stories you recall from The Burn?""}",Any specific stories you recall from The Burn?
+topic,"Oh, that's awesome. What was the nature of your work at The Burn?",The Burn,null,lookup_ref,"{""name"": ""The Burn"", ""context"": ""What was the nature of your work at The Burn?""}",What was the nature of your work at The Burn?
+topic,How did TTITD influence your art?,TTITD,null,lookup_ref,"{""name"": ""TTITD"", ""context"": ""How did TTITD influence your art?""}",How did TTITD influence your art?
+project,"Share your thoughts on ""Unavoidable Disasster""",Unavoidable Disasster,null,lookup_ref,"{""name"": ""Unavoidable Disasster"", ""context"": ""Share your thoughts on ""Unavoidable Disasster""""}","Share your thoughts on ""Unavoidable Disasster"""
+person,when did you start working on unavoidable disaster?,unavoidable disaster,null,lookup_ref,"{""name"": ""unavoidable disaster"", ""context"": ""when did you start working on unavoidable disaster?""}",when did you start working on unavoidable disaster?
+project,What is Unavoidable Disaster?,Unavoidable Disaster,null,lookup_ref,"{""name"": ""Unavoidable Disaster"", ""context"": ""What is Unavoidable Disaster?""}",What is Unavoidable Disaster?
+project,can i ask you about unavoidable disaster?,unavoidable disaster,null,lookup_ref,"{""name"": ""unavoidable disaster"", ""context"": ""can i ask you about unavoidable disaster?""}",can i ask you about unavoidable disaster?
+project,can you tell me about unavoidable disaster,unavoidable disaster,null,lookup_ref,"{""name"": ""unavoidable disaster"", ""context"": ""can you tell me about unavoidable disaster""}",can you tell me about unavoidable disaster
+project,tell me about unavoidable disaster,unavoidable disaster,null,lookup_ref,"{""name"": ""unavoidable disaster"", ""context"": ""tell me about unavoidable disaster""}",tell me about unavoidable disaster
+project,what is unavoidable disaster? Is that one of the installations you've made?,unavoidable disaster,null,lookup_ref,"{""name"": ""unavoidable disaster"", ""context"": ""what is unavoidable disaster.""}",what is unavoidable disaster.
+topic,Have you ever read V for Vendetta?,v for vendetta,null,lookup_ref,"{""name"": ""v for vendetta"", ""context"": ""Have you ever read V for Vendetta?""}",Have you ever read V for Vendetta?
+person,can i ask about your mother?,your mother,null,lookup_ref,"{""name"": ""your mother"", ""context"": ""can i ask about your mother?""}",can i ask about your mother?

@@ -127,11 +127,11 @@ $(\"body\").css(\"background-color\", \"red\");
 
 1. I'll need to see your HTML, but I suspect you forgot to put a hashtag in front of my-button. 
 
-2. Or maybe you forgot to put DEFER when you included your JavaScript in your HTML?
+1. Or maybe you forgot to put DEFER when you included your JavaScript in your HTML?
 
-2. Also, rather than modifying the CSS directly from your JavaScript with `$(\"body\").css()`, it is better practice to define a class in your CSS and add that to the body instead.
+1. Also, rather than modifying the CSS directly from your JavaScript with `$(\"body\").css()`, it is better practice to define a class in your CSS and add that to the body instead.
 
-3. Okay, one more thing. There's some style issues. Lemme fix 'em. Try this:
+1. Okay, one more thing. There's some style issues. Lemme fix 'em. Try this:
 
 
 ```JavaScript
@@ -319,10 +319,10 @@ console.log(scrambledString);
 Let's look at what I fixed:
 
 1. I fixed the indentation so the code was readable.
-2. I added lots of comments so we know what's going on
-3. I added var before variable declarations (always a good idea)
-4. Added the missing 'str' parameter to the scrambleString function
-5. There were some missing pararenthis, which I balanced.
+1. I added lots of comments so we know what's going on
+1. I added var before variable declarations (always a good idea)
+1. Added the missing 'str' parameter to the scrambleString function
+1. There were some missing pararenthis, which I balanced.
 
 These changes correct syntax errors, add missing 'var' declarations, and improve code readability and clarity.####""")
         }
@@ -701,7 +701,7 @@ At that point, I noped out of computer science. Was it really so lacking in coop
     <title>Change Div Color</title>
 
     <link rel=\"stylesheet\" type=\"text/css\" href=\"css/styles.css\">
-    <script src=\"//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js\"></script>    
+    <script src=\"//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js\"></script>
     <script src=\"js/script.js\"></script>
 </head>
 <body>
@@ -748,7 +748,7 @@ $(document).ready(function() {
             "content": super_strip("""Pure javascript or jQuery?""")
         }, {
             "role": "assistant",
-            "content": super_strip("""Oh fuck pure js. If I have to do another getElementById, somebody gonna die. ####""")
+            "content": super_strip("""Oh fuck pure js. If I have to do another getElementById, somebody gonna die.####""")
         }
     ]
 },

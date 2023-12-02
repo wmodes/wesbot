@@ -141,8 +141,8 @@ class Chatbot:
             #                     "role": "assistant",
             #                     "content": null,
             #                     "function_call": {
-            #                         "name": "lookup_proper_noun",
-            #                         "arguments": "{\"name\":\"Benzy\"}"
+            #                         "context": "lookup_proper_noun",
+            #                         "arguments": "{\"context\":\"Who is Benzy?\"}"
             #                     }
             #                 },
             #                 "finish_reason": "function_call"
@@ -155,39 +155,49 @@ class Chatbot:
                 # print(f"We have a function call!")
                 # Add function call message to message history
                 #   {"role": "assistant", "content": null, "function_call": {"name": "get_current_weather", "arguments": "{ \"location\": \"Boston, MA\"}"}},
-                messages.append(response['choices'][0]['message'])
+                # NOTE: we don't need to do this because the results of the lookup will be added to the message history as a client message
+                # messages.append(response['choices'][0]['message'])
                 # Extract the function name and arguments
                 function_name = response['choices'][0]['message']['function_call']['name']
                 function_args = response['choices'][0]['message']['function_call']['arguments']
+                # Extract the user prompt
+                prompt = messages[-1]['content']
+                print(f"Here was the prompt that triggered a lookup: {prompt}")
                 # print(f"function_name: {function_name}\nfunction_args: {function_args}")
-                # Call the Lookup class with the function name and arguments
-                lookup_results = self.lookup.lookup(function_name, function_args)
+                # Call the Lookup class with the prompt, function_name, and function_args
+                #   It returns a string that we will assemble into a message
+                lookup_results = self.lookup.lookup(prompt, function_name, function_args)
                 print(f"results from lookup: {lookup_results}")
             # if functions are disabled
             else:
                 # return a message that functions are disabled
                 lookup_results = config.LOOKUP_DISABLED
-
-            # Construct new message with results
-            #   {"role": "function", "name": "get_current_weather", "content": "{\"temperature\": "22", \"unit\": \"celsius\", \"description\": \"Sunny\"}"}
+            
+            # Response is an object of the form: 
+            #     { 'message': {
+            #             "role": "assistant",
+            #             "content": "Hey there! Not much, just hangin'.'"
+            #         },
+            #         'tokens': 1978,
+            #         'status': 'success' }
             response = {
                 'message': {
-                    'role': 'function',
-                    'name': function_name,
+                    'role': 'lookup',
                     'content': lookup_results,
                 },
                 'tokens': -1,
                 'status': 'success',
             }
-
-            return response     
+            return response
 
         except openai.error.OpenAIError as e:
             print(e)
-            reply = "I'm sorry, I had an error generating a response. Please try again later."
 
             response = {
-                'reply': reply,
+                'message': {
+                    'role': 'lookup',
+                    'content': config.CHATBOT_ERROR_MSG,
+                },
                 'tokens': -1,
                 'status': 'error',
               }

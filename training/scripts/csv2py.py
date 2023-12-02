@@ -19,7 +19,7 @@ BASE_DIR = config.BASE_DIR
 SOURCE_DIR = config.SOURCE_DIR  # Use SOURCE_DIR from config
 
 # Define exclusions
-FILE_EXCLUDE_REGEX = re.compile(r'^f_', re.IGNORECASE)
+FILE_EXCLUDE_REGEX = re.compile(r'^f_|^functions', re.IGNORECASE)
 
 file_template = """
 import sys
@@ -119,15 +119,24 @@ def process_csv_file(csv_file_path):
         with open(python_file_path, 'w') as python_file:
             python_file.write(data_content)
 
-# Process all CSV files in the SOURCE_DIR
-for root, dirs, files in os.walk(SOURCE_DIR):
-    for filename in files:
-        # if it's a CSV file and not in exclusions
-        if filename.endswith(".csv") and not FILE_EXCLUDE_REGEX.match(filename):
-            csv_file_path = os.path.join(root, filename)
-            # Print the filename being processed
-            print(f"Processing {filename}...")
-            process_csv_file(csv_file_path)
+if __name__ == "__main__":
 
-# Print a message indicating the conversion is complete
-print("CSV to Python conversion and file creation completed.")
+    # if config.USE_FUNCTIONS is false, then remove functions.py from the SOURCE_DIR
+    if not config.USE_FUNCTIONS:
+        try:
+            os.remove(os.path.join(SOURCE_DIR, "functions.py"))
+        except FileNotFoundError:
+            pass
+
+    # Process all CSV files in the SOURCE_DIR
+    for root, dirs, files in os.walk(SOURCE_DIR):
+        for filename in files:
+            # if it's a CSV file and not in exclusions
+            if filename.endswith(".csv") and not FILE_EXCLUDE_REGEX.match(filename):
+                csv_file_path = os.path.join(root, filename)
+                # Print the filename being processed
+                print(f"Processing {filename}...")
+                process_csv_file(csv_file_path)
+
+    # Print a message indicating the conversion is complete
+    print("CSV to Python conversion and file creation completed.")

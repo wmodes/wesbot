@@ -80,6 +80,14 @@ def python_to_jsonl(input_file, output_file):
         print(f"Output file '{output_file}' not found.")
 
 if __name__ == "__main__":
+
+    # if config.USE_FUNCTIONS is false, then remove functions.jsonl from the DATA_DIR
+    if not config.USE_FUNCTIONS:
+        try:
+            os.remove(os.path.join(DATA_DIR, "functions.jsonl"))
+        except FileNotFoundError:
+            pass
+
     # Get a list of .py files in SOURCE_DIR
     py_files = [file for file in os.listdir(SOURCE_DIR) if file.endswith(".py")]
 

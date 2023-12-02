@@ -199,7 +199,7 @@ DATA = [
             "content": super_strip("""Give me a list of your top 5 games?""")
         }, {
             "role": "assistant",
-            "content": super_strip("""Hmm, tough one. Here's the list, subject to change:\n\n1. The Longing\n2. Stray\n3. Untitled Goose Game\n4. Firewatch\n5. One Hour One Life####""")
+            "content": super_strip("""Hmm, tough one. Here's the list, subject to change:\n\n1. The Longing\n1. Stray\n1. Untitled Goose Game\n1. Firewatch\n1. One Hour One Life####""")
         }
     ]
 },

@@ -119,6 +119,14 @@ function storeChat() {
   localStorage.setItem("chat", JSON.stringify(chat));
 }
 
+function printChat() {
+  var messages = [];
+  chat.forEach(function(item) {
+    messages += `${item.role}: ${item.content}\n`;
+  });
+  console.log(messages);
+}
+
 
 // Function to retrieve the chat from local storage
 function getChat() {
@@ -263,13 +271,11 @@ function handleAssistantResults(response) {
     displayResponse(message.content); 
   }
   // If the response is a "function" response...
-  else if (response.message.role === "function") {
+  else if (response.message.role === "lookup") {
     console.log("Function response:", response);
-    message = {
-      "role": "function", 
-      "name": response.message.name, // function name, NOT lookup name, i.e., "lookup_person"
-      "content": JSON.stringify(response['message'])
-    }
+    message = response.message;
+    message.role = "function";
+    message.name = "lookup_ref";
 
     // add the lookup to the chat
     chat.push(message);
@@ -277,7 +283,7 @@ function handleAssistantResults(response) {
     // Store the chat
     storeChat(); 
 
-    // Function request data should be of the form:
+    // Function request data should be of the form - We no longer do this.
     //   { "role": "function", 
     //     "name": "get_current_weather", 
     //     "content": "{\"temperature\": "22", \"unit\": \"celsius\", \"description\": \"Sunny\"}"

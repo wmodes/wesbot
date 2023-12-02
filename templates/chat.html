@@ -1,36 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
     <title>WesBot by Wes Modes</title>
-
-    <!-- Metadata for Twitter -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@wmodes">
-    <meta name="twitter:title" content="WesBot by Wes Modes">
-    <meta name="twitter:description" content="We've brought university educator and artist, Wes Modes, into the digital realm through an advanced neural network. Meet WesBot, an AI-powered chatbot that connects you with Wes to explore the worlds of new media, art, and game design.">
-    <meta name="twitter:image" content="{{ url_for('static', filename='img/wesbot-logo.png') }}">
-
-    <!-- Metadata for Facebook -->
-    <meta property="og:title" content="WesBot by Wes Modes">
-    <meta property="og:description" content="We've brought university educator and artist, Wes Modes, into the digital realm through an advanced neural network. Meet WesBot, an AI-powered chatbot that connects you with Wes to explore the worlds of new media, art, and game design.">
-    <meta property="og:image" content="{{ url_for('static', filename='img/wesbot-logo.png') }}">
-    <meta property="og:url" content="https://bot.wmod.es/">
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-      // Create a JavaScript variable and assign the content from the server-side variable.
-      var systemContent = {{ system_content|tojson|safe }};
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
-    <!-- <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet"> -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/prism-gruvbox-dark.css') }}">
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>    
-    <script src="{{ url_for('static', filename='js/chatbot.js') }}" DEFER></script>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/chatbot.css') }}">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    {% include 'meta.html' %}
 </head>
 <body>
   <main id="content">
@@ -55,7 +27,7 @@
       <div class="disclaimer disclaimer1">
         Privacy note: We do some basic logging to improve WesBot, so please avoid sharing sensitive information.
       </div>
-      <div class="version version1">Version: <span class="version-num">0.2.90 (8Nr0Ssfz-0.9)</span></div>
+      <div class="version version1">Version: <span class="version-num">{{ version|safe }}</span></div>
     </nav>
     <section id="main-panel">
       <div id="chat-wrapper">
@@ -69,7 +41,8 @@
               <g><polygon class="fil0" points="358,159 0,0 34,136 159,159 34,182 0,318 "/></g></svg>
           </button>
         </div>
-        <div class="disclaimer disclaimer2">Privacy: Conversations are logged to improve WesBot, so avoid sharing sensitive information. Version: <span class="version-num">0.2.90 (8Nr0Ssfz-0.9)</span></div>
+        <div class="disclaimer disclaimer2">Privacy: Conversations are logged to improve WesBot, so avoid sharing sensitive information. Version: <span class="version-num">{{ version|safe }}</span></div>
+        <div></div>
       </div>
     </section>
   </main>

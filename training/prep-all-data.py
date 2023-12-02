@@ -29,6 +29,12 @@ DATA_DIR = f"{TRAINING_DIR}/data"
 FINAL_DATA = f"{DATA_DIR}/data.jsonl"
 # Path to lookup dir
 LOOKUP_DIR = f"{ROOT_DIR}/lookup"
+# Path to embeddings dir
+EMBED_DIR = f"{TRAINING_DIR}/embeddings"
+
+#files
+SOURCE_EMBED_FILE = f"{EMBED_DIR}/f_entity.csv"
+DEST_EMBED_FILE = f"{LOOKUP_DIR}/lookup-embeddings.csv"
 
 # Script directories
 #
@@ -46,6 +52,8 @@ CONCATENATE_SCRIPT = '/bin/cat'
 SPLIT_DATA_SCRIPT = f"{SCRIPT_DIR}/split-data.py"
 # Script to check the data
 CHECK_SCRIPT = f"{SCRIPT_DIR}/check-data.py"
+# Script to generate embeddings file
+EMBEDDINGS_SCRIPT = f"{SCRIPT_DIR}/generate_embeddings.py"
 
 # extensions for training data files
 CSV_EXT = "csv"
@@ -106,5 +114,14 @@ subprocess.run(check_command)
 #   mv data/lookup*.py ../data/
 print("\n# GENERATING LOOKUP FILES")
 subprocess.run(['python', f"{SCRIPT_DIR}/make_lookup.py"])
+print("Moving lookup files to data directory")
 subprocess.run(['mv', f"{DATA_DIR}/lookup_contents.py", LOOKUP_DIR])
 subprocess.run(['mv', f"{DATA_DIR}/lookup_index.py", LOOKUP_DIR])
+
+# Run generate_embeddings.py script
+#   py scripts/generate_embeddings.py
+print("\n# GENERATING EMBEDDINGS")
+subprocess.run(['python', EMBEDDINGS_SCRIPT])
+print("Copying embeddings file to lookup directory")
+# copy the embeddings file to the lookup directory
+subprocess.run(['cp', SOURCE_EMBED_FILE, DEST_EMBED_FILE])
