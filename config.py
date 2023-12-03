@@ -50,7 +50,7 @@ OPENAI_PARAMS = {
 # Version
 MAJOR_VERSION = 0
 MINOR_VERSION = 3
-PATCH_VERSION = 3
+PATCH_VERSION = 5
 
 # Log file locations
 ACCESS_LOG = "log/access.log"

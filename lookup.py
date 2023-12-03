@@ -62,7 +62,7 @@ class Lookup:
         data, relatednesses = self.strings_ranked_by_relatedness(prompt, top_n=config.LOOKUP_MAX_NUM)
         # trim strings that are under config.MIN_RELATEDNESS
         for i, relatedness in enumerate(relatednesses):
-            print(f"\nrelatedness: {relatedness}\ndata: {data[i]}")
+            # print(f"\nrelatedness: {relatedness}\ndata: {data[i]}")
             if relatedness < config.LOOKUP_MIN_RELATEDNESS:
                 data = data[:i]
                 relatednesses = relatednesses[:i]
@@ -105,6 +105,6 @@ class Lookup:
                 # but we can do it in chatbot.py
                 new_prompt += next_datum
             new_prompt += f"\n\nUser prompt: {prompt}"
-            print(f"\nAfter lookup, here's the new prompt: {new_prompt}")
+            # print(f"\nAfter lookup, here's the new prompt: {new_prompt}")
             return new_prompt
         

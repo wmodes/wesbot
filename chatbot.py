@@ -96,7 +96,7 @@ class Chatbot:
             chatParams['functions'] = config.OPENAI_FUNCTIONS
 
         # print("\nWhat are we passing (chatParams)?")
-        self.custom_pretty_print(chatParams)
+        # self.custom_pretty_print(chatParams)
 
         try:
             # Use the OpenAI API to generate a response
@@ -171,11 +171,11 @@ class Chatbot:
                 function_args = response['choices'][0]['message']['function_call']['arguments']
                 # Extract the user prompt
                 prompt = messages[-1]['content']
-                print(f"Here was the prompt that triggered a lookup: {prompt}")
+                # print(f"Here was the prompt that triggered a lookup: {prompt}")
                 # print(f"function_name: {function_name}\nfunction_args: {function_args}")
                 # Call the Lookup class which returns a string that we will assemble into a message
                 lookup_results = self.lookup.lookup(prompt, function_name, function_args)
-                print(f"results from lookup: {lookup_results}")
+                # print(f"results from lookup: {lookup_results}")
             # if functions are disabled
             else:
                 # return a message that functions are disabled
