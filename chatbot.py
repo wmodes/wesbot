@@ -58,7 +58,8 @@ class Chatbot:
         Generate a response to a conversation.
 
         Args:
-          messages: A list of message objects representing the conversation.
+          messages: A list of message objects representing the conversation
+            including the latest message from the user.
 
         Returns:
           The chatbot's response.
@@ -73,8 +74,16 @@ class Chatbot:
             system_content = super_strip(config.SYSTEM_MSGS[config.domain_common])
             messages.insert(0, {"role": "system", "content": system_content})
 
-        # print("\nWhat were we passed (messages)?")
-        # self.custom_pretty_print(messages)
+        # If full lookup is enabled, we call the lookup class to get additional data
+        if config.USE_FULL_LOOKUP:
+            # get the user prompt
+            prompt = messages[-1]['content']
+            # get the lookup data
+            lookup_data = self.lookup.lookup(prompt)
+            # print(f"\nlookup data returned: {lookup_data}")
+            # if we got lookup data, replace the user prompt with the lookup data (which includes the user prompt)
+            if lookup_data:
+                messages[-1]['content'] = lookup_data
 
         # construct the chat params
         chatParams = config.OPENAI_PARAMS
@@ -86,15 +95,15 @@ class Chatbot:
         if config.USE_FUNCTIONS:
             chatParams['functions'] = config.OPENAI_FUNCTIONS
 
-        print("\nWhat are we passing (chatParams)?")
+        # print("\nWhat are we passing (chatParams)?")
         self.custom_pretty_print(chatParams)
 
         try:
             # Use the OpenAI API to generate a response
             response = openai.ChatCompletion.create(**chatParams)
         
-            print("\nWhat did we get (response)?")
-            self.custom_pretty_print(response)
+            # print("\nWhat did we get (response)?")
+            # self.custom_pretty_print(response)
 
             # ASSISTANT RESPONSE
             #
@@ -164,8 +173,7 @@ class Chatbot:
                 prompt = messages[-1]['content']
                 print(f"Here was the prompt that triggered a lookup: {prompt}")
                 # print(f"function_name: {function_name}\nfunction_args: {function_args}")
-                # Call the Lookup class with the prompt, function_name, and function_args
-                #   It returns a string that we will assemble into a message
+                # Call the Lookup class which returns a string that we will assemble into a message
                 lookup_results = self.lookup.lookup(prompt, function_name, function_args)
                 print(f"results from lookup: {lookup_results}")
             # if functions are disabled

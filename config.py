@@ -17,11 +17,12 @@ OPENAI_BASE_MODEL = "gpt-3.5-turbo"
 # fine-tuned file_id, from:
 #   training % py train.py --list
 # OPENAI_FINE_TUNE_ID = "ft:gpt-3.5-turbo-1106:artist::8KAhri96" # stable funny model from Nov 4, 2023
-OPENAI_FINE_TUNE_ID = "ft:gpt-3.5-turbo-0613:artist::8Nr0Ssfz" # latest - functions w stop
+OPENAI_FINE_TUNE_ID = "ft:gpt-3.5-turbo-0613:artist::8RUvQYtu" # latest - without functions
 # OPENAI_FINE_TUNE_ID = "ft:gpt-3.5-turbo-0613:artist::8GUlzcYC" # experimenting
 
 # User-serviceable parts
 USE_FUNCTIONS = False
+USE_FULL_LOOKUP = True
 STOP_WORD = "####"
 
 # The parameters
@@ -69,7 +70,7 @@ CHATBOT_ERROR_MSG = "I'm sorry, I had an error generating a response. Please try
 # LOOKUP CONFIG
 #
 
-LOOKUP_MAX_NUM = 3
+LOOKUP_MAX_NUM = 5
 LOOKUP_MIN_RELATEDNESS = 0.75
 LOOKUP_RECURSE_WARNING = "Lookup limit reached for this turn. Use the info you have."
 LOOKUP_NOTFOUND = "No additional info found. You will have to invent something relevant."

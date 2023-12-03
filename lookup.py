@@ -69,7 +69,7 @@ class Lookup:
                 break
         return data
 
-    def lookup(self, prompt, function, args):
+    def lookup(self, prompt):
         """
         Look up information given a function and args.
 
@@ -94,14 +94,15 @@ class Lookup:
 
         # if the data array is empty
         if not data:
-            new_prompt = f"{config.LOOKUP_NOTFOUND}\n\nUser prompt: {prompt}" 
-            return new_prompt
+            # we return nothing
+            return None
         # if we have data
         else:
             new_prompt = config.LOOKUP_CAVEAT
             for string in data:
-                next_datum = f'\n\nData section:\n"""\n{string}\n"""'
-                # we should probably check to make sure we are not over the token limit, but we don't
+                next_datum = f'\n\Relevant data:\n"""\n{string}\n"""'
+                # we should probably check to make sure we are not over the token limit, 
+                # but we can do it in chatbot.py
                 new_prompt += next_datum
             new_prompt += f"\n\nUser prompt: {prompt}"
             print(f"\nAfter lookup, here's the new prompt: {new_prompt}")
