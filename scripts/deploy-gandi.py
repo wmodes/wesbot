@@ -33,8 +33,6 @@ major_version = config.MAJOR_VERSION
 minor_version = config.MINOR_VERSION
 patch_version = config.PATCH_VERSION
 html_template = config.HTML_TEMPLATE
-version_tag = config.VERSION_TAG
-version_regex = config.VERSION_REGEX  
 
 # Increment PATCH_VERSION
 patch_version += 1
