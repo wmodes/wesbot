@@ -9,15 +9,15 @@ Date: 2023
 
 #
 # OPENAI CONFIG
-#
+#       
 
 OPENAI_ORG = "org-6Sx3QSqdmkskgXbQf8AsccbW"
 # generic openai model
-OPENAI_BASE_MODEL = "gpt-3.5-turbo"
+OPENAI_BASE_MODEL = "gpt-3.5-turbo-1106"
 # fine-tuned file_id, from:
 #   training % py train.py --list
 # OPENAI_FINE_TUNE_ID = "ft:gpt-3.5-turbo-1106:artist::8KAhri96" # stable funny model from Nov 4, 2023
-OPENAI_FINE_TUNE_ID = "ft:gpt-3.5-turbo-0613:artist::8RUvQYtu" # latest - without functions
+OPENAI_FINE_TUNE_ID = "ft:gpt-3.5-turbo-1106:artist::8SVaPYmn" # latest - without functions
 # OPENAI_FINE_TUNE_ID = "ft:gpt-3.5-turbo-0613:artist::8GUlzcYC" # experimenting
 
 # User-serviceable parts
@@ -38,9 +38,9 @@ STOP_WORD = "####"
 #
 OPENAI_PARAMS = {
     "model": OPENAI_FINE_TUNE_ID,
-    "temperature": 0.9,
+    "temperature": 0.7,
     "top_p": 1.0,
-    "frequency_penalty": 2.0,
+    "frequency_penalty": 1.0,
     "presence_penalty": 0.0,
     # "max_tokens": 2048,
     "stream": False,
@@ -50,7 +50,7 @@ OPENAI_PARAMS = {
 # Version
 MAJOR_VERSION = 0
 MINOR_VERSION = 3
-PATCH_VERSION = 5
+PATCH_VERSION = 7
 
 # Log file locations
 ACCESS_LOG = "log/access.log"
