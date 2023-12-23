@@ -38,7 +38,7 @@ STOP_WORD = "####"
 #
 OPENAI_PARAMS = {
     "model": OPENAI_FINE_TUNE_ID,
-    "temperature": 0.7,
+    "temperature": 0.8,
     "top_p": 1.0,
     "frequency_penalty": 1.0,
     "presence_penalty": 0.0,
