@@ -11,6 +11,9 @@ Date: 2023
 import subprocess
 import os
 import re
+import sys  
+sys.path.append('..')
+import config
 
 # Config globals
 
@@ -60,8 +63,12 @@ CSV_EXT = "csv"
 PY_EXT = "py"
 DATA_EXT = "jsonl"
 
-# exclude files that start with f_
-FILE_EXCLUDE_REGEX = r'^(f_)'
+
+# exclude files that start with f_ or functions if config.SOURCE_DIR is true
+if config.SOURCE_DIR:
+    FILE_EXCLUDE_REGEX = r'^(f_|functions)'
+else:
+    FILE_EXCLUDE_REGEX = r''
 
 # Get the csv files from google sheets
 print("\n# GETTING DATA FROM SHEETS")

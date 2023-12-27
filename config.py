@@ -17,8 +17,9 @@ OPENAI_BASE_MODEL = "gpt-3.5-turbo-1106"
 # fine-tuned file_id, from:
 #   training % py train.py --list
 # OPENAI_FINE_TUNE_ID = "ft:gpt-3.5-turbo-1106:artist::8KAhri96" # stable funny model from Nov 4, 2023
-OPENAI_FINE_TUNE_ID = "ft:gpt-3.5-turbo-1106:artist::8SVaPYmn" # latest - without functions
+OPENAI_FINE_TUNE_ID = "ft:gpt-3.5-turbo-1106:artist::8aX5o0sq" # latest - without functions
 # OPENAI_FINE_TUNE_ID = "ft:gpt-3.5-turbo-0613:artist::8GUlzcYC" # experimenting
+TOKEN_MAX = 4096
 
 # User-serviceable parts
 USE_FUNCTIONS = False
@@ -42,7 +43,7 @@ OPENAI_PARAMS = {
     "top_p": 1.0,
     "frequency_penalty": 1.0,
     "presence_penalty": 0.0,
-    # "max_tokens": 2048,
+    "max_tokens": TOKEN_MAX,
     "stream": False,
     "stop": [STOP_WORD]
 }
@@ -50,7 +51,7 @@ OPENAI_PARAMS = {
 # Version
 MAJOR_VERSION = 0
 MINOR_VERSION = 3
-PATCH_VERSION = 7
+PATCH_VERSION = 8
 
 # Log file locations
 ACCESS_LOG = "log/access.log"

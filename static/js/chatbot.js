@@ -16,7 +16,7 @@
 */
 
 // Configurable variables
-const tokenMax = 4000;
+// const tokenMax = 4000; // This is now passed by the server
 const tokenPaddingFactor = 0.2;
 const tokenEstTHumbRuleFactor = 2.5
 

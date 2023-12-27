@@ -67,7 +67,10 @@ def routes(chatbot):
         # Create a version_num variable
         version = f"{major_version}.{minor_version}.{patch_version} ({fingerprint})"
         
-        return flask.render_template("chat.html", system_content=super_strip(config.SYSTEM_MSGS[config.domain_common]), version=version)
+        return flask.render_template("chat.html", 
+                system_content=super_strip(config.SYSTEM_MSGS[config.domain_common]),
+                token_max=config.TOKEN_MAX,
+                version=version)
 
     # Define the route for the chatbot API
     @routes_blueprint.route("/api/chatbot", methods=["POST"])
