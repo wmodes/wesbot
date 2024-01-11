@@ -19,6 +19,7 @@ OPENAI_BASE_MODEL = "gpt-3.5-turbo-1106"
 # OPENAI_FINE_TUNE_ID = "ft:gpt-3.5-turbo-1106:artist::8KAhri96" # stable funny model from Nov 4, 2023
 OPENAI_FINE_TUNE_ID = "ft:gpt-3.5-turbo-1106:artist::8aX5o0sq" # latest - without functions
 # OPENAI_FINE_TUNE_ID = "ft:gpt-3.5-turbo-0613:artist::8GUlzcYC" # experimenting
+TEMPERATURE = 0.8
 TOKEN_MAX = 4096
 
 # User-serviceable parts
@@ -39,7 +40,7 @@ STOP_WORD = "####"
 #
 OPENAI_PARAMS = {
     "model": OPENAI_FINE_TUNE_ID,
-    "temperature": 0.8,
+    "temperature": TEMPERATURE,
     "top_p": 1.0,
     "frequency_penalty": 1.0,
     "presence_penalty": 0.0,
@@ -51,7 +52,7 @@ OPENAI_PARAMS = {
 # Version
 MAJOR_VERSION = 0
 MINOR_VERSION = 3
-PATCH_VERSION = 8
+PATCH_VERSION = 9
 
 # Log file locations
 ACCESS_LOG = "log/access.log"
