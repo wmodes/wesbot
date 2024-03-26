@@ -15,6 +15,7 @@ import json
 import mysecrets
 from flask_httpauth import HTTPBasicAuth
 from helpers import super_strip
+import tiktoken
 
 # Create a logger instance for the 'routes' module
 logger = logging.getLogger('httpd_logger')
@@ -66,9 +67,13 @@ def routes(chatbot):
 
         # Create a version_num variable
         version = f"{major_version}.{minor_version}.{patch_version} ({fingerprint})"
+
+        # Count the tokens in the system_content  
+        encoding = tiktoken.get_encoding("cl100k_base")
+        system_token_count = len(encoding.encode(config.SYSTEM_MSGS[config.domain_common]))
         
         return flask.render_template("chat.html", 
-                system_content=super_strip(config.SYSTEM_MSGS[config.domain_common]),
+                system_token_count=system_token_count,  
                 token_max=config.TOKEN_MAX,
                 version=version)
 

@@ -68,13 +68,12 @@ class,lookup_ref,ART10D,"{
   ""type"": ""class"",
   ""characteristics"": {
     ""university"": ""UCSC"",
-    ""role"": [""Teaching Assistant"", ""Studio Instructor""],
+    ""role"": [""Teaching Assistant"", ""TA"", ""Studio Instructor""],
     ""duration"": ""2015"",
     ""description"": ""ART10D, also known as 2D Foundation, is a class at UCSC where students are introduced to the fundamental principles of two-dimensional art and design. The course focuses on analyzing concepts such as line, color, shape, value, space, form, unity, balance, scale, proportion, texture, and emphasis to express complex ideas.""
   },
   ""prompts"": [
     ""You taught 2d foundations?"",
-    ""what classes did you ta for in grad school"",
     ""Did you do cyanotype, shading, sketching in art10D?""
   ]
 }"
@@ -84,13 +83,11 @@ class,lookup_ref,ART10E,"{
   ""type"": ""class"",
   ""characteristics"": {
     ""university"": ""UCSC"",
-    ""role"": [""Teaching Assistant"", ""Studio Instructor""],
+    ""role"": [""Teaching Assistant"", ""TA"", ""Studio Instructor""],
     ""duration"": ""2014"",
     ""description"": ""ART10E, also known as 3D Foundation, is a class at UCSC introducing students to the fundamental principles of three-dimensional art and design. The course focuses on basic concepts, techniques, and technical practices related to three-dimensional art, including sculpture, public art, architecture, and the industrial-design process and production.""
   },
   ""prompts"": [
-    ""You were a TA for 3d foundations?"",
-    ""What classes did you TA for in grad school?"",
     ""What's ART10E?"",
     ""What do you know about art 10e?"",
     ""What subjects did you cover in 3d foundations?"",
@@ -130,7 +127,7 @@ class,lookup_ref,ART20H,"{
   ""type"": ""class"",
   ""characteristics"": {
     ""university"": ""UCSC"",
-    ""role"": [""TA"", ""Studio Instructor""],
+    ""role"": [""TA"", ""Teaching Assistant"", ""Studio Instructor""],
     ""duration"": ""2013"",
     ""description"": ""ART20H, also known as Concepts and Practice in Sculpture and Public Art, is a course at UCSC that introduces sculpture and public art within the context of the ongoing conceptual dialogue in contemporary three-dimensional art. The course includes lectures, readings, discussions, studio assignments, and demonstrations.""
   },
@@ -139,7 +136,6 @@ class,lookup_ref,ART20H,"{
     ""What was art20h?"",
     ""What was Dee's public art class like?"",
     ""Do we do installation and performance art?"",
-    ""What classes did you TA for in grad scchool?"",
     ""I heard you lead the studio sections""
   ]
 }"
@@ -154,7 +150,6 @@ class,lookup_ref,ART75,"{
   },
   ""prompts"": [
     ""You taught at San Jose State?"",
-    ""What classes did you teach at SJSU?"",
     ""You didn't like teaching at SJSU?"",
     ""Have you ever taught a video class?"",
     ""What's ART 75?""
@@ -221,130 +216,123 @@ class,lookup_ref,CMPM179,"{
   ]
 }"
 class,lookup_ref,courses,"{
-  ""type"": ""courses"",
-  ""aka"": [""classes""],
+  ""name"": ""teaching"",
+  ""type"": ""topic"",
+  ""aka"": [""instruction"", ""courses""],
+  ""summary"": ""Your teaching experience spans various courses in Game Design, Creative Coding, Web Design, Multimedia Programming, Digital Arts, Sculpture, and more at institutions such as UCSC, CalState Monterey Bay, San Jose State, and Hackbright Academy."",
   ""courses_taught"": [
     {
-      ""course_code"": ""CMPM179"",
-      ""course_name"": ""Game Design Practicum"",
+      ""course"": ""Computer Programming for the Arts"",
+      ""title"": ""Lecturer"",
       ""institution"": ""UCSC"",
-      ""duration"": ""2023-24""
+      ""duration"": ""2015-2024""
     },
     {
-      ""course_code"": ""CMPM170-2"",
-      ""course_name"": ""Game Design Studio I-III"",
+      ""course"": ""3D Modeling and Animation"",
       ""institution"": ""UCSC"",
-      ""duration"": ""2022-23""
+      ""year"": ""2023-2024""
     },
     {
-      ""course_code"": ""CMPM169"",
-      ""course_name"": ""Creative Coding"",
+      ""course"": ""Experimental Gameplay"",
+      ""institution"": ""UCSC"",
+      ""year"": ""2023-2024""
+    },
+    {
+      ""course"": ""Creative Coding"",
       ""institution"": ""UCSC"",
       ""duration"": ""2023-2024""
     },
     {
-      ""course_code"": ""ART10F"",
-      ""course_name"": ""4D Foundations"",
+      ""course"": ""4D Foundations"",
       ""institution"": ""UCSC"",
-      ""duration"": ""2022-23""
+      ""duration"": ""2022-2024""
     },
     {
-      ""course_code"": ""ART101"",
-      ""course_name"": ""Computer Programming for the Arts"",
+      ""course"": ""Game Design Studio I-III"",
       ""institution"": ""UCSC"",
-      ""duration"": ""2015-24""
+      ""duration"": ""2022-2023""
     },
     {
-      ""course_code"": ""CST351"",
-      ""course_name"": ""Intro to Web Design"",
-      ""institution"": ""CSUMB"",
-      ""duration"": ""2017-22""
-    },
-    {
-      ""course_code"": ""CST251"",
-      ""course_name"": ""Web Tools"",
-      ""institution"": ""CSUMB"",
-      ""duration"": ""2018-22""
-    },
-    {
-      ""course_code"": ""CST252"",
-      ""course_name"": ""Web Scripting"",
-      ""institution"": ""CSUMB"",
-      ""duration"": ""2019-22""
-    },
-    {
-      ""course_code"": ""CST236"",
-      ""course_name"": ""Computing for Digital Artists"",
+      ""course"": ""Web Tools"",
       ""title"": ""Lecturer"",
       ""institution"": ""CSUMB"",
-      ""duration"": ""2017-22""
+      ""duration"": ""2018-2022""
     },
     {
-      ""course_code"": ""CST226"",
-      ""course_name"": ""Digital Photography"",
+      ""course"": ""Web Scripting"",
       ""title"": ""Lecturer"",
       ""institution"": ""CSUMB"",
-      ""duration"": ""2020-21""
+      ""duration"": ""2019-2022""
     },
     {
-      ""course_code"": ""CST205"",
-      ""course_name"": ""Multimedia Programming Python"",
+      ""course"": ""Intro to Web Design"",
       ""title"": ""Lecturer"",
       ""institution"": ""CSUMB"",
-      ""duration"": ""2018-20""
+      ""duration"": ""2017-2022""
     },
     {
-      ""course_code"": ""IST541"",
-      ""course_name"": ""Interactive Media"",
+      ""course"": ""Computing for Digital Artists"",
+      ""title"": ""Lecturer"",
       ""institution"": ""CSUMB"",
-      ""duration"": ""2019""
+      ""duration"": ""2017-2022""
     },
     {
-      ""course_code"": ""ART75"",
-      ""course_name"": ""Intro to Digital Video Art"",
+      ""course"": ""Digital Photography"",
+      ""institution"": ""CSUMB"",
+      ""duration"": ""2020-2021""
+    },
+    {
+      ""course"": ""Multimedia Programming Python"",
+      ""title"": ""Lecturer"",
+      ""institution"": ""CSUMB"",
+      ""duration"": ""2018-2020""
+    },
+    {
+      ""course"": ""Intro to Digital Video Art"",
       ""title"": ""Lecturer"",
       ""institution"": ""SJSU"",
-      ""duration"": ""2017-18""
+      ""duration"": ""2017-2018""
     },
     {
-      ""course_code"": ""Introduction to Programming"",
+      ""course"": ""Introduction to Programming"",
       ""title"": ""Senior Instructor"",
-      ""institution"": ""Hackbright"",
-      ""duration"": ""2016-17""
+      ""institution"": ""Hackbright Academy, San Francisco"",
+      ""duration"": ""2016-2017""
     },
     {
-      ""course_code"": ""ART10D"",
-      ""course_name"": ""2D Foundation"",
+      ""course"": ""Computer Programming for the Arts"",
+      ""title"": ""Teaching Assistant & Lab Instructor"",
+      ""institution"": ""UCSC"",
+      ""duration"": ""2015""
+    },
+    {
+      ""course"": ""2D Foundation"",
       ""title"": ""Teaching Assistant & Studio Instructor"",
       ""institution"": ""UCSC"",
       ""duration"": ""2015""
     },
     {
-      ""course_code"": ""ART10E"",
-      ""course_name"": ""3D Foundation"",
+      ""course"": ""3D Foundation"",
       ""title"": ""Teaching Assistant & Studio Instructor"",
       ""institution"": ""UCSC"",
       ""duration"": ""2014""
     },
     {
-      ""course_code"": ""ART20H"",
-      ""course_name"": ""Concepts and Practice in Sculpture and Public Art"",
-      ""title"": ""TA & Studio Instructor"",
+      ""course"": ""Concepts and Practice in Sculpture and Public Art"",
+      ""title"": ""Teaching Assistant & Studio Instructor"",
       ""institution"": ""UCSC"",
       ""duration"": ""2013""
     }
   ],
-  ""current_courses"": [""ART101"", ""CMPM169"", ""ART10F"", ""CMPM179""],
   ""prompts"": [
     ""What classes are you teaching?"",
-    ""What courses do you teach?"",
-    ""What classes have you taught at UCSC?"",
-    ""What classes did you teach at CSUMB?"",
-    ""Did you ever teach at any other UC schools?"",
-    ""Where else did you teach?"",
-    ""What is your day job?"",
-    ""Do you make money as an artist?"",
-    ""You teach design, art, and technology""
+    ""What courses have you taught at UCSC?"",
+    ""Have you taught any game design courses?"",
+    ""What programming courses have you taught?"",
+    ""Tell me about your experience teaching at CSUMB."",
+    ""Did you enjoy teaching at San Jose State University?"",
+    ""What classes have you taught related to digital arts?"",
+    ""Have you taught multimedia programming?""
   ]
 }
 "
@@ -361,7 +349,6 @@ class,lookup_ref,CST205,"{
   ""prompts"": [
     ""Have you ever taught python?"",
     ""What programming languages have you done?"",
-    ""What classes did you teach at CSU?"",
     ""Did you teach in CS?"",
     ""Did you work in the computer science department?""
   ]
@@ -412,7 +399,6 @@ class,lookup_ref,CST251,"{
   ""lecturer"": ""CSUMB"",
   ""prompts"": [
     ""Did you ever teach basic html and css?"",
-    ""What classes did you teach at CSUMB?"",
     ""Did you teach responsive design?"",
     ""We only covered html and css in like one week in art101""
   ]
@@ -429,7 +415,6 @@ class,lookup_ref,CST252,"{
   ""lecturer"": ""CSUMB"",
   ""prompts"": [
     ""Did you teach javascript?"",
-    ""What classes did you teach at CSUMB?"",
     ""You spend 16 weeks teaching javascript and libraries?"",
     ""I learned jquery in your class""
   ]
@@ -446,7 +431,6 @@ class,lookup_ref,CST351,"{
   ""lecturer"": ""CSUMB"",
   ""prompts"": [
     ""Did you teach web design?"",
-    ""What classes did you teach at CSUMB?"",
     ""What was your favorite class at CSUMB?"",
     ""Did you cover wordpress in web design class?"",
     ""What did you learn when you taught web design?""
@@ -462,9 +446,7 @@ class,lookup_ref,IST541,"{
     ""description"": ""IST541, also known as Interactive Media, is a course at CSUMB that teaches the theory and practice of interactive media using new technologies. Students gain an understanding of the production process through short exercises that culminate in a final project.""
   },
   ""prompts"": [
-    ""What classes did you teach at CSUMB?"",
-    ""Did you ever teach any asynchronous classes?"",
-    ""Did you ever tach in a grad program?""
+    ""Did you ever teach any asynchronous classes?""
   ]
 }"
 person,lookup_ref,Age,"{
@@ -1764,123 +1746,6 @@ topic,lookup_ref,employment,"{
     ""Did you enjoy teaching at UC Santa Cruz?"",
     ""What positions have you held at educational institutions?""
   ]
-}
-"
-topic,lookup_ref,teaching,"{
-  ""name"": ""teaching"",
-  ""type"": ""topic"",
-  ""aka"": [""instruction"", ""courses""],
-  ""summary"": ""Your teaching experience spans various courses in Game Design, Creative Coding, Web Design, Multimedia Programming, Digital Arts, Sculpture, and more at institutions such as UC Santa Cruz, Cal State Monterey Bay, San Jose State University, and Hackbright Academy."",
-  ""university_teaching"": [
-    {
-      ""course"": ""Game Design Practicum"",
-      ""institution"": ""UCSC"",
-      ""year"": 2023
-    },
-    {
-      ""course"": ""Game Design Studio I-III"",
-      ""institution"": ""UCSC"",
-      ""duration"": ""2022-23""
-    },
-    {
-      ""course"": ""Creative Coding"",
-      ""institution"": ""UCSC"",
-      ""duration"": ""2023-24""
-    },
-    {
-      ""course"": ""4D Foundations"",
-      ""institution"": ""UCSC"",
-      ""duration"": ""2022-23""
-    },
-    {
-      ""course"": ""Computer Programming for the Arts"",
-      ""title"": ""Lecturer"",
-      ""institution"": ""UCSC"",
-      ""duration"": ""2015-23""
-    },
-    {
-      ""course"": ""Web Tools"",
-      ""title"": ""Lecturer"",
-      ""institution"": ""CSUMB"",
-      ""duration"": ""2018-22""
-    },
-    {
-      ""course"": ""Web Scripting"",
-      ""title"": ""Lecturer"",
-      ""institution"": ""CSUMB"",
-      ""duration"": ""2019-22""
-    },
-    {
-      ""course"": ""Intro to Web Design"",
-      ""title"": ""Lecturer"",
-      ""institution"": ""CSUMB"",
-      ""duration"": ""2017-22""
-    },
-    {
-      ""course"": ""Computing for Digital Artists"",
-      ""title"": ""Lecturer"",
-      ""institution"": ""CSUMB"",
-      ""duration"": ""2017-22""
-    },
-    {
-      ""course"": ""Digital Photography"",
-      ""institution"": ""CSUMB"",
-      ""duration"": ""2020-2021""
-    },
-    {
-      ""course"": ""Multimedia Programming Python"",
-      ""title"": ""Lecturer"",
-      ""institution"": ""CSUMB"",
-      ""duration"": ""2018-20""
-    },
-    {
-      ""course"": ""Intro to Digital Video Art"",
-      ""title"": ""Lecturer"",
-      ""institution"": ""SJSU"",
-      ""duration"": ""2017-18""
-    },
-    {
-      ""course"": ""Introduction to Programming"",
-      ""title"": ""Senior Instructor"",
-      ""institution"": ""Hackbright Academy, San Francisco"",
-      ""duration"": ""2016-17""
-    },
-    {
-      ""course"": ""Computer Programming for the Arts"",
-      ""title"": ""Teaching Assistant & Lab Instructor"",
-      ""institution"": ""UCSC"",
-      ""duration"": ""2015""
-    },
-    {
-      ""course"": ""2D Foundation"",
-      ""title"": ""Teaching Assistant & Studio Instructor"",
-      ""institution"": ""UCSC"",
-      ""duration"": ""2015""
-    },
-    {
-      ""course"": ""3D Foundation"",
-      ""title"": ""Teaching Assistant & Studio Instructor"",
-      ""institution"": ""UCSC"",
-      ""duration"": ""2014""
-    },
-    {
-      ""course"": ""Concepts and Practice in Sculpture and Public Art"",
-      ""title"": ""Teaching Assistant & Studio Instructor"",
-      ""institution"": ""UCSC"",
-      ""duration"": ""2013""
-    }
-  ],
-""prompts"": [
-  ""What courses have you taught at UCSC?"",
-  ""Have you taught any game design courses?"",
-  ""Can you share your experience teaching Creative Coding?"",
-  ""What programming courses have you taught?"",
-  ""Tell me about your experience teaching at CSUMB."",
-  ""Did you enjoy teaching at San Jose State University?"",
-  ""What classes have you taught related to digital arts?"",
-  ""Have you taught multimedia programming?""
-]
-
 }
 "
 topic,lookup_ref,projects,"{

@@ -18,14 +18,13 @@
 // Configurable variables
 // const tokenMax = 4000; // This is now passed by the server
 const tokenPaddingFactor = 0.2;
-const tokenEstTHumbRuleFactor = 2.5
+const tokenEstThumbRuleFactor = 2.5
 
 //Global variable to store the ongoing chat
 var chat = [];
 // Global variable to store the total number of chat tokens
 let totalChatTokenCount = 0;
-// const systemTokenCount = estimateTokenCount(systemContent);
-const systemCharacterCount = systemContent.replace(/\s/g, '').length;
+// systemTokenCount is passed from the server   
 // global variable to store the client id
 clientId = "";
 const starters = [
@@ -99,15 +98,16 @@ if (typeof(Storage) !== "undefined") {
 // Function to store the chat in local storage
 function storeChat() {
   // Calculate the size of the chat in bytes (an estimate)
-  var chatSize = JSON.stringify(chat).length;
+  // TODO: Improve the size estimate
+  var estChatSize = estimateTokenCount(chat);
 
   // Check if the chat size exceeds the 5MB limit
-  if (chatSize + systemCharacterCount > 5 * 1024 * 1024) {
+  if (estChatSize + systemTokenCount > tokenMax) {
 
     // Determine how many elements to remove from the front of the array
     var elementsToRemove = 0;
-    while (chatSize + systemCharacterCount > 5 * 1024 * 1024) {
-      chatSize -= JSON.stringify(chat[elementsToRemove]).length;
+    while (estChatSize + systemTokenCount > tokenMax) {
+      estChatSize -= JSON.stringify(chat[elementsToRemove]).length;
       elementsToRemove++;
     }
 
@@ -494,15 +494,6 @@ function renderBetterOutput(text) {
 // TOKENIZATION
 //
 
-// Function to estimate token count
-// function estimateTokenCount(data) {
-//   // Flatten the data structure into a single string using JSON.stringify
-//   const flattenedText = JSON.stringify(data);
-
-//   // Estimate tokens in the flattened text
-//   return flattenedText.split(/\s+/).length;
-// }
-
 // A helpful rule of thumb is that one token generally corresponds to ~4 characters of text 
 // for common English text. This translates to roughly ¾ of a word (so 100 tokens ~= 75 words).
 function estimateTokenCount(data) {
@@ -514,7 +505,7 @@ function estimateTokenCount(data) {
   const flattenedText = JSON.stringify(data);
 
   // Estimate tokens based on character count divided by tokenEstTHumbRuleFactor
-  const estimatedTokens = Math.ceil(flattenedText.length / tokenEstTHumbRuleFactor);
+  const estimatedTokens = Math.ceil(flattenedText.length / tokenEstThumbRuleFactor);
 
   return estimatedTokens;
 }
