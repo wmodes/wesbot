@@ -49,13 +49,13 @@ OPENAI_PARAMS = {
     "presence_penalty": 0.0,
     "max_tokens": TOKEN_MAX,
     "stream": False,
-    "stop": [STOP_WORD]
+    # "stop": [STOP_WORD]
 }
 
 # Version
 MAJOR_VERSION = 0
 MINOR_VERSION = 3
-PATCH_VERSION = 11
+PATCH_VERSION = 13
 
 # Log file locations
 ACCESS_LOG = "log/access.log"
