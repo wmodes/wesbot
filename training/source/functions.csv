@@ -18,32 +18,32 @@ class,whats art101 like?,art101,null,lookup_ref,"{""name"": ""art101"", ""contex
 class,i was interested in art101. can you tell me about it?,art101,null,lookup_ref,"{""name"": ""art101"", ""context"": ""i was interested in art101.""}",i was interested in art101.
 class,so tell me about art101 programming for the arts?,art101,null,lookup_ref,"{""name"": ""art101"", ""context"": ""so tell me about art101 programming for the arts?""}",so tell me about art101 programming for the arts?
 person,"okay, tomorrow is my 8am class art101",art101,null,lookup_ref,"{""name"": ""art101"", ""context"": ""okay, tomorrow is my 8am class art101""}","okay, tomorrow is my 8am class art101"
-person,Did you see Benzy and Jeremiah?,Benzy,null,lookup_ref,"{""name"": ""Benzy"", ""context"": ""Did you see Benzy and Jeremiah?""}",Did you see Benzy and Jeremiah?
-person,Was Benzy on the boat with you?,Benzy,null,lookup_ref,"{""name"": ""Benzy"", ""context"": ""Was Benzy on the boat with you?""}",Was Benzy on the boat with you?
-person,Who is Benzy?,Benzy,null,lookup_ref,"{""name"": ""Benzy"", ""context"": ""Who is Benzy?""}",Who is Benzy?
-person,benzy is a person. hazel is the dog,benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""benzy is a person.""}",benzy is a person.
-person,benzy is your shipmate?,benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""benzy is your shipmate?""}",benzy is your shipmate?
-person,do benzy and jeremiah know each other? ,benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""do benzy and jeremiah know each other.""}",do benzy and jeremiah know each other.
-person,does benzy go on the river?,benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""does benzy go on the river?""}",does benzy go on the river?
-person,does benzy for with you on the boat?,benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""does benzy for with you on the boat?""}",does benzy for with you on the boat?
-person,does benzy join you on the boat?,benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""does benzy join you on the boat?""}",does benzy join you on the boat?
-person,had benzy worked at costco?,benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""had benzy worked at costco?""}",had benzy worked at costco?
-person,howw's benzy?,benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""howw's benzy?""}",howw's benzy?
-person,try again. who's benzy?,benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""who's benzy?""}",who's benzy?
-person,"wait, i mean it. benzy is wes' human partner. not a dog.",benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""benzy is wes' human partner.""}",benzy is wes' human partner.
-person,"we're going to try a function, ready? who is benzy?",benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""who is benzy?""}",who is benzy?
-person,who da fuq is benzy?,benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""who da fuq is benzy?""}",who da fuq is benzy?
-person,who is benzy?,benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""who is benzy?""}",who is benzy?
-person,who's benzy?,benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""who's benzy?""}",who's benzy?
-person,wtf's up with benzy?,benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""wtf's up with benzy?""}",wtf's up with benzy?
-person,you said benzy was a person,benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""you said benzy was a person""}",you said benzy was a person
-person,do hazel and benzy and jeremiah hangout?,benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""do hazel and benzy and jeremiah hangout?""}",do hazel and benzy and jeremiah hangout?
-person,hey how's benzy?,benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""hey how's benzy?""}",hey how's benzy?
-person,"hi, who is benzy?",benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""hi, who is benzy?""}","hi, who is benzy?"
-person,how is benzy?,benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""how is benzy?""}",how is benzy?
-person,who is benzy,benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""who is benzy""}",who is benzy
-person,who is benzy?,benzy,null,lookup_ref,"{""name"": ""benzy"", ""context"": ""who is benzy?""}",who is benzy?
-person,do Benzy and Hazel get along?,benzy,,lookup_ref,"{""name"": ""benzy"", ""context"": ""do Benzy and Hazel get along?""}",do Benzy and Hazel get along?
+person,Did you see Blintz and Jeremiah?,Blintz,null,lookup_ref,"{""name"": ""Blintz"", ""context"": ""Did you see Blintz and Jeremiah?""}",Did you see Blintz and Jeremiah?
+person,Was Blintz on the boat with you?,Blintz,null,lookup_ref,"{""name"": ""Blintz"", ""context"": ""Was Blintz on the boat with you?""}",Was Blintz on the boat with you?
+person,Who is Blintz?,Blintz,null,lookup_ref,"{""name"": ""Blintz"", ""context"": ""Who is Blintz?""}",Who is Blintz?
+person,Blintz is a person. hazel is the dog,Blintz,null,lookup_ref,"{""name"": ""Blintz"", ""context"": ""Blintz is a person.""}",Blintz is a person.
+person,Blintz is your shipmate?,Blintz,null,lookup_ref,"{""name"": ""Blintz"", ""context"": ""Blintz is your shipmate?""}",Blintz is your shipmate?
+person,do Blintz and jeremiah know each other? ,Blintz,null,lookup_ref,"{""name"": ""Blintz"", ""context"": ""do Blintz and jeremiah know each other.""}",do Blintz and jeremiah know each other.
+person,does Blintz go on the river?,Blintz,null,lookup_ref,"{""name"": ""Blintz"", ""context"": ""does Blintz go on the river?""}",does Blintz go on the river?
+person,does Blintz for with you on the boat?,Blintz,null,lookup_ref,"{""name"": ""Blintz"", ""context"": ""does Blintz for with you on the boat?""}",does Blintz for with you on the boat?
+person,does Blintz join you on the boat?,Blintz,null,lookup_ref,"{""name"": ""Blintz"", ""context"": ""does Blintz join you on the boat?""}",does Blintz join you on the boat?
+person,had Blintz worked at costco?,Blintz,null,lookup_ref,"{""name"": ""Blintz"", ""context"": ""had Blintz worked at costco?""}",had Blintz worked at costco?
+person,howw's Blintz?,Blintz,null,lookup_ref,"{""name"": ""Blintz"", ""context"": ""howw's Blintz?""}",howw's Blintz?
+person,try again. who's Blintz?,Blintz,null,lookup_ref,"{""name"": ""Blintz"", ""context"": ""who's Blintz?""}",who's Blintz?
+person,"wait, i mean it. Blintz is wes' human partner. not a dog.",Blintz,null,lookup_ref,"{""name"": ""Blintz"", ""context"": ""Blintz is wes' human partner.""}",Blintz is wes' human partner.
+person,"we're going to try a function, ready? who is Blintz?",Blintz,null,lookup_ref,"{""name"": ""Blintz"", ""context"": ""who is Blintz?""}",who is Blintz?
+person,who da fuq is Blintz?,Blintz,null,lookup_ref,"{""name"": ""Blintz"", ""context"": ""who da fuq is Blintz?""}",who da fuq is Blintz?
+person,who is Blintz?,Blintz,null,lookup_ref,"{""name"": ""Blintz"", ""context"": ""who is Blintz?""}",who is Blintz?
+person,who's Blintz?,Blintz,null,lookup_ref,"{""name"": ""Blintz"", ""context"": ""who's Blintz?""}",who's Blintz?
+person,wtf's up with Blintz?,Blintz,null,lookup_ref,"{""name"": ""Blintz"", ""context"": ""wtf's up with Blintz?""}",wtf's up with Blintz?
+person,you said Blintz was a person,Blintz,null,lookup_ref,"{""name"": ""Blintz"", ""context"": ""you said Blintz was a person""}",you said Blintz was a person
+person,do hazel and Blintz and jeremiah hangout?,Blintz,null,lookup_ref,"{""name"": ""Blintz"", ""context"": ""do hazel and Blintz and jeremiah hangout?""}",do hazel and Blintz and jeremiah hangout?
+person,hey how's Blintz?,Blintz,null,lookup_ref,"{""name"": ""Blintz"", ""context"": ""hey how's Blintz?""}",hey how's Blintz?
+person,"hi, who is Blintz?",Blintz,null,lookup_ref,"{""name"": ""Blintz"", ""context"": ""hi, who is Blintz?""}","hi, who is Blintz?"
+person,how is Blintz?,Blintz,null,lookup_ref,"{""name"": ""Blintz"", ""context"": ""how is Blintz?""}",how is Blintz?
+person,who is Blintz,Blintz,null,lookup_ref,"{""name"": ""Blintz"", ""context"": ""who is Blintz""}",who is Blintz
+person,who is Blintz?,Blintz,null,lookup_ref,"{""name"": ""Blintz"", ""context"": ""who is Blintz?""}",who is Blintz?
+person,do Blintz and Hazel get along?,Blintz,,lookup_ref,"{""name"": ""Blintz"", ""context"": ""do Blintz and Hazel get along?""}",do Blintz and Hazel get along?
 topic,Did you ever see the Big Lebowski?,big lebowski,null,lookup_ref,"{""name"": ""big lebowski"", ""context"": ""Did you ever see the Big Lebowski?""}",Did you ever see the Big Lebowski?
 project,Discuss the collective art installation at Black Rock City.,Black Rock City,null,lookup_ref,"{""name"": ""Black Rock City"", ""context"": ""Discuss the collective art installation at Black Rock City.""}",Discuss the collective art installation at Black Rock City.
 topic,Can you describe your involvement with Black Rock City?,Black Rock City,null,lookup_ref,"{""name"": ""Black Rock City"", ""context"": ""Can you describe your involvement with Black Rock City?""}",Can you describe your involvement with Black Rock City?
@@ -121,7 +121,7 @@ person,"hazel is your dog, silly.",hazel,null,lookup_ref,"{""name"": ""hazel"", 
 person,I'm surprised to hear you don't like dogs. how about hazel? Does she not count?,hazel,null,lookup_ref,"{""name"": ""hazel"", ""context"": ""how about hazel.""}",how about hazel.
 person,what about hazel?,hazel,null,lookup_ref,"{""name"": ""hazel"", ""context"": ""what about hazel?""}",what about hazel?
 topic,Have you read Huck Finn?,Huck Finn,null,lookup_ref,"{""name"": ""Huck Finn"", ""context"": ""Have you read Huck Finn?""}",Have you read Huck Finn?
-person,Did you see Benzy and Jeremiah?,Jeremiah,null,lookup_ref,"{""name"": ""Jeremiah"", ""context"": ""Did you see Benzy and Jeremiah?""}",Did you see Benzy and Jeremiah?
+person,Did you see Blintz and Jeremiah?,Jeremiah,null,lookup_ref,"{""name"": ""Jeremiah"", ""context"": ""Did you see Blintz and Jeremiah?""}",Did you see Blintz and Jeremiah?
 person,He sounds awwesome! tell me about jeremiah.,jeremiah,null,lookup_ref,"{""name"": ""jeremiah"", ""context"": ""tell me about jeremiah.""}",tell me about jeremiah.
 person,tell me about jeremiah?,jeremiah,null,lookup_ref,"{""name"": ""jeremiah"", ""context"": ""tell me about jeremiah?""}",tell me about jeremiah?
 person,who da fuq is jeremiah?,jeremiah,null,lookup_ref,"{""name"": ""jeremiah"", ""context"": ""who da fuq is jeremiah?""}",who da fuq is jeremiah?

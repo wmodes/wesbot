@@ -6,10 +6,10 @@ Author: Wes Modes
 Date: 2023
 """
 
-import google_sheets_auth as google_sheets_auth  # Import your authentication module
 import sys
 import os
-sys.path.append('..')
+sys.path.append(['..', './scripts'])
+import google_auth
 import config 
 from googleapiclient.discovery import build
 import csv
@@ -20,7 +20,7 @@ SOURCE_FOLDER = config.SOURCE_DIR
 
 def get_credentials():
     # Get the Google Sheets credentials
-    return google_sheets_auth.get_credentials()
+    return google_auth.get_credentials()
 
 def get_sheet_names(credentials, sheet_id):
     # Use the credentials and sheet ID to access the sheet

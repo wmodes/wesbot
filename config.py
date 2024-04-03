@@ -13,11 +13,13 @@ Date: 2023
 
 OPENAI_ORG = "org-6Sx3QSqdmkskgXbQf8AsccbW"
 # generic openai model
-OPENAI_BASE_MODEL = "gpt-3.5-turbo-0125"
+OPENAI_BASE_MODEL = "gpt-3.5-turbo-1106"
 # fine-tuned file_id, from:
 #   training % py train.py --list
 # OPENAI_FINE_TUNE_ID = "ft:gpt-3.5-turbo-1106:artist::8KAhri96" # stable funny model from Nov 4, 2023
-OPENAI_FINE_TUNE_ID = "ft:gpt-3.5-turbo-0125:artist::96q5PkLO" # latest - without functions
+# OPENAI_FINE_TUNE_ID = "ft:gpt-3.5-turbo-1106:artist::8aX5o0sq" # latest - without functions
+# OPENAI_FINE_TUNE_ID = "ft:gpt-3.5-turbo-1106:artist::976bJXYA" # Mar 26, 2024
+OPENAI_FINE_TUNE_ID = "ft:gpt-3.5-turbo-1106:artist::9A39lnqP" # Apr 3, 2024
 # OPENAI_FINE_TUNE_ID = "ft:gpt-3.5-turbo-0613:artist::8GUlzcYC" # experimenting
 TEMPERATURE = 0.8
 TOKEN_MAX = 4096
@@ -25,7 +27,8 @@ TOKEN_MAX = 4096
 # User-serviceable parts
 USE_FUNCTIONS = False
 USE_FULL_LOOKUP = True
-STOP_WORD = "####"
+# STOP_WORD = "####"
+STOP_WORD = ""
 
 # The parameters
 #
@@ -52,7 +55,7 @@ OPENAI_PARAMS = {
 # Version
 MAJOR_VERSION = 0
 MINOR_VERSION = 3
-PATCH_VERSION = 9
+PATCH_VERSION = 11
 
 # Log file locations
 ACCESS_LOG = "log/access.log"

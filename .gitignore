@@ -58,3 +58,4 @@ log/
 analysis/*.cspell/*
 experiments
 experiments/*
+*.mbox
